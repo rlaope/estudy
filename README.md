@@ -39,7 +39,7 @@
   - [Netty Thread Model](http://github.com/esperar/estudy/blob/master/Back-End/netty_thread.md)
   - [Netty Message Flow](http://github.com/esperar/estudy/blob/master/Back-End/netty_flow.md)
 - [Reactive Programming 이것만큼은 알고가자](http://github.com/esperar/estudy/blob/master/Back-End/backend/reactive_programming.md)
-- [우아한테크세미나 - 우아한스프링배치 by 이동욱](http://github.com/esperar/estudy/blob/master/Back-End/baemin_batch.md)
+- [우아한 테크 세미나 - 우아한 스프링 배치](http://github.com/esperar/estudy/blob/master/Back-End/baemin_batch.md)
 - [Cache - Eviction, Expiration, Passivation](http://github.com/esperar/estudy/blob/master/Back-End/backend/eviction.md)
 - [Protocol Buffers](http://github.com/esperar/estudy/blob/master/Back-End/backend/protobuf.md)
 - [Redis 분산락 + WebFlux 프로젝트](https://github.com/esperar/concurrency-project)
