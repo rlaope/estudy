@@ -20,7 +20,7 @@
 
 #### Software as liberal arts
 - [소프트웨어 엔지니어로서 성장하기](http://github.com/esperar/estudy/blob/master/Essentials/growth.md)
-- [왜 선배들은 Hello World를 찍으라할까?]()
+- [왜 선배들은 Hello World를 찍으라할까?](http://github.com/esperar/estudy/blob/master/Essentials/helloworld.md)
 - [YAGNI 넌 분명 이게 필요 없을거야]()
 - [애자일 소프트웨어 개발]()
 
