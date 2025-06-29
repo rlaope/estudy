@@ -62,6 +62,7 @@
   - [Kafka Disk I/O (Sequenctial I/O, Page Cache, Zero Copy)](http://github.com/esperar/estudy/blob/master/Back-End/kafka/disk.md)
   - [Kafka Replication 작동 원리](http://github.com/esperar/estudy/blob/master/Back-End/kafka/replica.md)
   - [Kakfa Partition](http://github.com/esperar/estudy/blob/master/Back-End/kafka/partition.md)
+- [State Machine Model](http://github.com/esperar/estudy/blob/master/Back-End/state_machine2.md)
 - [State Machine Pattern](http://github.com/esperar/estudy/blob/master/Back-End/state_machine.md)
 - [다중 환경에서 세션은 어떻게 공유하고 관리할까?](http://github.com/esperar/estudy/blob/master/Back-End/backend/multi_session.md)
 - [분산 환경 합의 알고리즘 Paxos](http://github.com/esperar/estudy/blob/master/Back-End/backend/paxos.md)
