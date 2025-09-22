@@ -57,7 +57,7 @@
 
 혹은 Ridge/Lasso 같은 규제 기법 도입으로 계수 안정화를 하거나 차원 축소 PCA같은 방법으로 상관관계를 줄이고 효율적으로 표현한다.
 
-> **PCA(Principal Component Analysis)**
+> **PCA(Principal Component Analysis)**  
 > 정의: 고차원 데이터를 더 적은 차원으로 줄이면서, 데이터의 분산(정보)을 최대한 보존하는 차원 축소 기법.  
 > 핵심 아이디어:  
 > 원래 데이터에 있는 여러 변수들을 직교(orthogonal)하는 새로운 축으로 변환  
