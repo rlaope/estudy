@@ -729,3 +729,9 @@
 - [다익스트라 알고리즘](http://github.com/esperar/estudy/blob/master/Algorithm/dijkstra.md)
 - [벨만 포드 알고리즘](http://github.com/esperar/estudy/blob/master/Algorithm/bellman_ford.md)
 - [플로이드 와샬 알고리즘](http://github.com/esperar/estudy/blob/master/Algorithm/floyd_warshall.md)
+
+----
+
+#### AI(ML/DL)
+
+- [One-Hot Encoding, 다중공선성](http://github.com/esperar/estudy/blob/master/AI/onehot.md)
