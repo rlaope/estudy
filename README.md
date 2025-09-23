@@ -735,3 +735,4 @@
 #### AI(ML/DL)
 
 - [One-Hot Encoding, 다중공선성](http://github.com/esperar/estudy/blob/master/AI/onehot.md)
+- [과대적합, 과소적합](http://github.com/esperar/estudy/blob/master/AI/overfit.md)
