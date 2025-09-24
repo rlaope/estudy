@@ -736,3 +736,5 @@
 
 - [One-Hot Encoding, 다중공선성](http://github.com/esperar/estudy/blob/master/AI/onehot.md)
 - [과대적합, 과소적합](http://github.com/esperar/estudy/blob/master/AI/overfit.md)
+- [가중치w, 편향b](http://github.com/esperar/estudy/blob/master/AI/wb.md)
+- [하이퍼 파라미터](http://github.com/esperar/estudy/blob/master/AI/hparam.md)
