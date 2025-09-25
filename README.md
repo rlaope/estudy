@@ -738,3 +738,4 @@
 - [과대적합, 과소적합](http://github.com/esperar/estudy/blob/master/AI/overfit.md)
 - [가중치w, 편향b](http://github.com/esperar/estudy/blob/master/AI/wb.md)
 - [하이퍼 파라미터](http://github.com/esperar/estudy/blob/master/AI/hparam.md)
+- [회귀 모델 성능평가 지표](http://github.com/esperar/estudy/blob/master/AI/mae.md)
