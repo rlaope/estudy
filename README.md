@@ -739,3 +739,4 @@
 - [가중치w, 편향b](http://github.com/esperar/estudy/blob/master/AI/wb.md)
 - [하이퍼 파라미터](http://github.com/esperar/estudy/blob/master/AI/hparam.md)
 - [회귀 모델 성능평가 지표](http://github.com/esperar/estudy/blob/master/AI/mae.md)
+- [로지스틱 회귀분석 이론](http://github.com/esperar/estudy/blob/master/AI/lr.md)
