@@ -740,3 +740,4 @@
 - [하이퍼 파라미터](http://github.com/esperar/estudy/blob/master/AI/hparam.md)
 - [회귀 모델 성능평가 지표](http://github.com/esperar/estudy/blob/master/AI/mae.md)
 - [로지스틱 회귀분석 이론](http://github.com/esperar/estudy/blob/master/AI/lr.md)
+- [훈련세트 데이터 스케일 문제, 전처리](http://github.com/esperar/estudy/blob/master/AI/scale.md)
