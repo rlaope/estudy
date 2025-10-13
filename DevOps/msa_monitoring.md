@@ -1,4 +1,4 @@
-# Micro Service Monitoring System (cc. Loki/Grafana)
+# MicroService Monitoring System (cc. Loki/Grafana)
 
 요구사항을 먼저 정의하고 들어가보자.
 
