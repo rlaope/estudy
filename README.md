@@ -24,6 +24,7 @@
 - [애자일 소프트웨어 개발](http://github.com/esperar/estudy/blob/master/Essentials/agilesw.md)
 - [일을 잘한다와 개발을 잘한다의 정의](http://github.com/esperar/estudy/blob/master/Essentials/works.md)
 - [나만의 역량 강화, 지속 가능한 성장 방법](http://github.com/esperar/estudy/blob/master/Essentials/steady.md)
+- [카르페디엠(Carpe Diem)](http://github.com/esperar/estudy/blob/master/Essentials/carpedm.md)
 
 ---
 
