@@ -29,7 +29,7 @@
 ---
 
 
-#### Server & SRE
+#### Server
 
 - [KISS, YAGNI, DRY](http://github.com/esperar/estudy/blob/master/Back-End/kyd.md)
 - [인증(Authentication), 인가(Authorization)](http://github.com/esperar/estudy/blob/master/Back-End/backend/auth.md)
@@ -109,6 +109,7 @@
 - [Socket Programming](http://github.com/esperar/estudy/blob/master/Back-End/socketp.md)
 - [Encryption Algorithm, AES256](http://github.com/esperar/estudy/blob/master/Back-End/encrypt.md)
 - [Low Level, JVM Async Programming](https://github.com/rlaope/estudy/blob/master/Back-End/backend/async.md)
+- [수치 기반 사고(Observability + Capacity Planning)](https://github.com/rlaope/estudy/blob/master/Back-End/backend/think.md)
 
 ---
 
