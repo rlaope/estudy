@@ -201,6 +201,7 @@
   - [AWS ECR(Elastic Container Registry)](http://github.com/esperar/estudy/blob/master/DevOps/aws/ecr.md)
   - [AWS ELK(Elastic Search Logstash Kibana)](http://github.com/esperar/estudy/blob/master/DevOps/aws/ELK.md)
   - [Bastion 서버로 Private EC2에 접속하는 방법 + Hi-v2 트러블 슈팅](http://github.com/esperar/estudy/blob/master/DevOps/aws/bastion.md)
+  - [CloudWatch](http://github.com/esperar/estudy/blob/master/DevOps/aws/cloudwatch2.md)
   - [EKS](http://github.com/esperar/estudy/blob/master/DevOps/aws/eks/eks.md)
     - [EKS VPC CNI](http://github.com/esperar/estudy/blob/master/DevOps/aws/eks/cni.md)
     - [파드간 통신 과정](http://github.com/esperar/estudy/blob/master/DevOps/aws/eks/communicate.md)
