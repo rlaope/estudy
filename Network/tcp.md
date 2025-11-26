@@ -180,3 +180,149 @@ app이 accept() 호출하면 해당 소켓 반환
 ```
 
 ![](https://miro.medium.com/1%2ArgXykunw7cXVE2OnnFH4YA.jpeg)
+
+<br>
+
+### TCP Header
+
+TCP 헤더는 tcp가 신뢰성을 구현하기 위해 반드시 필요한 정보들을 담고있는 구조인데
+
+```
+  0               15 16              31
+ +-----------------+-------------------+
+ |   Source Port   |   Dest Port       |
+ +-----------------+-------------------+
+ |           Sequence Number           |
+ +-------------------------------------+
+ |         Acknowledgment Number       |
+ +--------+------+-------+------------+
+ | Data   | Res  |Flags |  Window     |
+ |Offset  |erved |       |   Size     |
+ +--------+------+-------+------------+
+ |       Checksum        | Urgent Ptr |
+ +------------------------+-----------+
+ |        Options (if any, variable)  |
+ +-------------------------------------+
+ |        Application Data ...        |
+```
+
+위와같은 구조고 tcp헤더(옵션 제외)는 20 byte다
+
+![](https://www.pynetlabs.com/wp-content/uploads/2024/01/tcp-header-format.jpeg)
+
+
+#### Source Port, Dest Portt
+
+어떤 프로세스가 통신하는지 구분함 출발지 목적지
+
+os 커널에서 소켓 매핑을 위해 사용됨 이값들은
+
+#### Sequence Number
+
+TCP 핵심으로 순서 보장을 위해 사용됨
+
+송신자가 보낸 바이트 스트림의 시작위치를 나타냄
+
+예시
+- 처음 보낼때 ISN(Initial Sequence Number) = 1000
+- 100바이트 보냈다면 그다음은 1100
+
+Receive queue 에서는 이 번호를 통해 순서 재정렬(reassembly)를 진행함
+
+#### Acknowledgement Number (32bit)
+
+상대방으로부터 받은 바이트중 다음으로 받고싶은 바이트 번호를 의미함.
+
+예시
+- 내가 상대방으로 부터 1000~1999까지 수신했으면 ACK는 2000임
+
+이 동작으로 tcp가 신뢰성있는 프로토콜이 되는기반임. 재전송도 ack 번호를 통해 판단할 수 있음
+
+#### Data Offset (4bit)
+
+tcp 헤더 길이를 나타내고 옵션이 있으면 헤더 길이가 증가하기 때문에 데이터 시작위치를 알려주는 필드
+
+#### Flag (6 bit or 8bit depending on version)
+
+tcp 동작을 제어하는 플래그
+
+| Flag    | 설명                                     |
+| ------- | -------------------------------------- |
+| **SYN** | 연결 시작                                  |
+| **ACK** | Acknowledgment 유효                      |
+| **FIN** | 연결 종료 요청                               |
+| **RST** | 연결 즉시 초기화                              |
+| **PSH** | 버퍼링하지 말고 바로 위로 전달                      |
+| **URG** | Urgent pointer 사용함                     |
+| **ECE** | 혼잡 제어 Explicit Congestion Notification |
+| **CWR** | ECN 응답, 혼잡 윈도우 감소                      |
+
+핵심은 SYN ACK FIN RST다.
+
+3way handshake랑 4way fin이 이 플래그로 이루어 지니까요
+
+#### Window Size (16 bit)
+
+Receiver가 보낼 수 있는 최대 수신량 (수신 버퍼 크기)를 의미함
+
+즉, 
+
+```
+너 지금 최대 x바이트 만큼 더 보내도 돼
+```
+
+라는 의미이다. 이게 flow control(흐름제어)의 핵심이다. receive queue가 꽉 차면 window size = 0으로 보내서 송신을 막는다.
+
+#### Checksum (16bit)
+
+tcp 세그먼트가 손상되지 않았는지 검증함
+
+응용 프로그램 레벨의 데이터 손상을 막기위한 엔드 투 엔드 오류 검증임.
+
+NIC Offload 기능이 있을때에는 하드웨어가 계산하기도 함.
+
+#### Urgent Pointer
+
+URG 플래그와 함께 사용함. 거의 사용되지 않음
+
+TCP 긴급 데이터 OOB 관련 기능이다.
+
+#### Options (가변 길이)
+
+TCP 확장 기능이 들어가는 공간이다.
+
+중요 옵션들:
+
+| 옵션           | 설명                                              |
+| ------------ | ----------------------------------------------- |
+| MSS          | Maximum Segment Size (상대방이 받아줄 수 있는 최대 세그먼트 크기) |
+| Window Scale | Window 크기를 16bit 이상으로 확장                        |
+| SACK         | Selective ACK (부분 재전송)                          |
+| Timestamps   | RTT 측정, PAWS 보호                                 |
+| Fast Open    | 핸드쉐이크 없이 데이터 전송 가능                              |
+
+
+실제 패킷 예시
+
+```css
+Flags [S], seq 1234567890, win 64240, options [mss 1460,sackOK,TS val 12345 ecr 0, wscale 7]
+```
+
+- Flags[S] → SYN
+- seq → 초기 시퀀스 번호
+- win → 윈도우 크기
+- options → MSS, SACK, timestamp, window scale 옵션
+
+### TCP 헤더가 없으면 tcp가 불가능한 이유
+
+TCP 헤더는 단순한 정보 구조가 아님. 이 핵심 기능들을 달성하기 위해 존재함
+
+- 순서 보장 -> sequence number
+- 신뢰성 -> acknowledgement number
+- 흐름 제어 -> window size
+- 혼잡 제어 -> ECN/ECE/CWR
+- 연결 수립/해제 -> SYN/ACK/FIN
+- 오류 검증 -> checksum
+- 성능최적화 -> Options(MSS, Sack, Timestamp)
+
+TCP 헤더가 없으면 절대로 만들어질 수 없다.
