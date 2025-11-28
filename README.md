@@ -352,6 +352,7 @@
   - [CAS (Compare And Swap)](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/cas.md)
   - [vDSO(virtual Dynamic Shared Object)](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/vdso.md)
   - [Object Header Mark Word](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/markword.md)
+  - [GC Write Barrier](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/writebarrier.md)
 - [Kotlin](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/kotlin.md)
   - [Kotlin DSL, gradle.kts](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/dsl.md)
   - [mapOf(), to로 Pair 인스턴스 생성하기](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/toPair.md)
