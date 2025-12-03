@@ -357,7 +357,7 @@
   - [GC Write Barrier](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/writebarrier.md)
   - [Card Table](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/cardtable.md)
   - [G1GC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/g1.md)
-    - [EvacuationFailure](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/evafailed.md)
+    - [Evacuatio Failure](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/evafailed.md)
 - [Kotlin](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/kotlin.md)
   - [Kotlin DSL, gradle.kts](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/dsl.md)
   - [mapOf(), to로 Pair 인스턴스 생성하기](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/toPair.md)
