@@ -209,6 +209,7 @@
     - [파드간 통신 과정](http://github.com/esperar/estudy/blob/master/DevOps/aws/eks/communicate.md)
     - [ALB Contorller](http://github.com/esperar/estudy/blob/master/DevOps/aws/eks/alb_controller.md)
     - [NLB, ALB 생성과 삭제](http://github.com/esperar/estudy/blob/master/DevOps/aws/eks/nlb_alb.md)
+  - [Site to Site VPN](http://github.com/esperar/estudy/blob/master/DevOps/aws/s2s.md)
 - [모놀리식 아키텍처 (Monolithic Architecture)](http://github.com/esperar/estudy/blob/master/Back-End/backend/mono.md)
 - [APM(Application Performance Management)](http://github.com/esperar/estudy/blob/master/DevOps/apm.md)
 - [gRPC, RPC, 작동원리, HTTP API 비교](http://github.com/esperar/estudy/blob/master/DevOps/grpc.md)
