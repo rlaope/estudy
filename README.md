@@ -113,6 +113,7 @@
 - [Low Level, JVM Async Programming](https://github.com/rlaope/estudy/blob/master/Back-End/backend/async.md)
 - [수치 기반 사고(Observability + Capacity Planning)](https://github.com/rlaope/estudy/blob/master/Back-End/backend/think.md)
 - [Failover Consistency](https://github.com/rlaope/estudy/blob/master/Back-End/backend/failcon.md)
+- [Netty Proxy](https://github.com/rlaope/estudy/blob/master/Back-End/backend/nettyproxy.md)
 
 ---
 
