@@ -114,7 +114,7 @@
 - [수치 기반 사고(Observability + Capacity Planning)](https://github.com/rlaope/estudy/blob/master/Back-End/backend/think.md)
 - [Failover Consistency](https://github.com/rlaope/estudy/blob/master/Back-End/backend/failcon.md)
 - [Netty Proxy](https://github.com/rlaope/estudy/blob/master/Back-End/backend/nettyproxy.md)
-- [TCP SYN/ACCEPT Queue 성능 튜닝](https://github.com/rlaope/estudy/blob/master/Back-End/network/tcpqueue.md)
+- [TCP SYN/ACCEPT Queue 성능 튜닝](https://github.com/rlaope/estudy/blob/master/Network/tcpqueue.md)
 
 ---
 
