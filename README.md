@@ -106,6 +106,7 @@
 - [서비스 메시 Service Mesh](http://github.com/esperar/estudy/blob/master/DevOps/service_mesh.md)
 - [Istio](http://github.com/esperar/estudy/blob/master/DevOps/istio.md)  
   - [Envoy Proxy Internal Architecture](http://github.com/esperar/estudy/blob/master/DevOps/envoy.md)
+  - [xDS Protocol, Control Plane (Istio Pilot)](http://github.com/esperar/estudy/blob/master/DevOps/xds.md)
 - [마이크로서비스에서 분산 트랜잭션 관리하기](http://github.com/esperar/estudy/blob/master/MSA/disitribution.md)
 - [SRE](http://github.com/esperar/estudy/blob/master/SRE/)
   - [SLO, SLI, SLA](http://github.com/esperar/estudy/blob/master/SRE/slo.md)
