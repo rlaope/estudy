@@ -241,7 +241,7 @@
 
 ---
 
-#### SRE
+#### SRE (작성중)
 
 - [Pod Pending 상태의 주요 원인](http://github.com/esperar/estudy/blob/master/SRE/question/q_1.md)
 - [kube-proxy의 역할](http://github.com/esperar/estudy/blob/master/SRE/question/q_2.md)
