@@ -1,4 +1,4 @@
-# NUMA Architecture
+# NUMA
 
 NUMA Non-Uniform Memory Access는 멀티프로세서 시스템에서 **메모리에 접근하는 시간이 프로세서와 메모리의 물리적 위치에 따라 달라지는 메모리 구조다.**
 
