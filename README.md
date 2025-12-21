@@ -119,6 +119,7 @@
 - [Failover Consistency](https://github.com/rlaope/estudy/blob/master/Back-End/backend/failcon.md)
 - [Netty Proxy](https://github.com/rlaope/estudy/blob/master/Back-End/backend/nettyproxy.md)
 - [TCP SYN/ACCEPT Queue 성능 튜닝](https://github.com/rlaope/estudy/blob/master/Network/tcpqueue.md)
+- [외부 연동 시스템 리소스 제약과 쏟아지는 트래픽 대응](https://github.com/rlaope/estudy/blob/master/Back-End/nice.md)
 
 ---
 
