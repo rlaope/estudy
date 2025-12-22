@@ -10,6 +10,26 @@ Concurrent Marking은 g1gc가 애플리케이션을 멈추지 않고 힙 내의 
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbtksbS%2FbtsJyKslIOz%2FAAAAAAAAAAAAAAAAAAAAANN-zXo236hff-P6l0Ehm2mBfxLFdZmwKTdtF7184dkL%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1767193199%26allow_ip%3D%26allow_referer%3D%26signature%3Dn%252FTAni8%252F8MfsP4QYFovBxaRk5X0%253D)
 
+Concurrent Marking이 시작되는 trigger는 정확히 IHOP 고정임계치에 의한 경우와 g1gc가 스스로 학습하여 결정하는 adaptive 방식 두가지로 나뉜다.
+
+`-XX:InitiatingHeapOccupancyPercent` 보통 young gc가 끝난후 이 비율을 계산하고 계산 결과가 넘으면 (디폴트 45) 다음 young gc가 시작될때 initial mark가 함께 시작된다.
+
+jdk9부터는 Adaptive IHOP가 켜져있는데 `-XX:+G1UseAdaptiveIHOP` G1GC가 단순히 45%의 숫자에 의존하지 않고 예측하기 시작한다.
+
+마킹 시간 측정: 과거에는 얼마나 걸렸을까
+
+할당 시간 측정: 애플리케이션이 메모리를 얼마나 빨리 채우는걸까
+
+위의 질문을 스스로 한 뒤에 45라면 너무 늦어 30에 시작해야겠다하고, 생각하고 반대로 여유가 있으면 45보다 더 늦게 생각도 가능하다.
+
+이 기능이 켜져있으면 사용자가 설정한 값은 초기값으로만 사용되고 g1gc가 알아서 타이밍을 조절한다.
+
+그 외에도 Humongous Object 할당시 old region 크기를 50%를 넘는 거대 객체가 할당될때 g1gc는 힙이 급격하게 찰것을 우려해 즉시 마킹 사이클을 체크하거나 시작할 수 있다. jdk 버전에 따라 다르긴함
+
+Metaspace 부족시에도 트리거된다 힙 메모리가 넉넉해도 클래스 메타데이터를 저장하는 Metaspace 영역이 꽉 차서 확장이 필요하면 언로딩을 위해 Concurrent Marking을 시작할 수 있다.
+
+혹은 수동 호출
+
 ### Initial Mark (초기 마킹)
 
 **상태: STW (멈춤)**
@@ -63,3 +83,48 @@ STW가 발생하지만 멀티 스레드로 병렬 처리해 최대한 빨리 끝
 3. Empty Region Reclaim(Concurrent): 살아있는 객체가 하나도 없는 100% 가비지 Region은 즉시 초기화하여 Free List에 반환한다. 
 
 Cleanup단계가 끝나면 YoungGC 부터 Mixed GC 모드로 전환되어 아까 적어둔 Candidate Set의 Old Region들을 Young Gen과 함계 청소하기 시작한다.
+
+
+```log
+[0.005s][info][gc] Using G1
+
+#1
+[0.167s][info][gc] GC(0) Pause Young (Normal) (G1 Evacuation Pause) 23M->3M(260M) 0.941ms
+[0.308s][info][gc] GC(1) Pause Young (Normal) (G1 Evacuation Pause) 43M->4M(260M) 1.245ms
+
+#2
+[0.662s][info][gc] GC(2) Pause Young (Normal) (GCLocker Initiated GC) 152M->8M(260M) 3.542ms
+
+#3
+[0.874s][info][gc] GC(3) Pause Young (Concurrent Start) (Metadata GC Threshold) 109M->10M(260M) 3.362ms
+
+#4
+[0.874s][info][gc] GC(4) Concurrent Mark Cycle
+[0.878s][info][gc] GC(4) Pause Remark 11M->11M(54M) 0.746ms
+[0.878s][info][gc] GC(4) Pause Cleanup 11M->11M(54M) 0.002ms
+[0.878s][info][gc] GC(4) Concurrent Mark Cycle 3.754ms
+
+#5
+[1.000s][info][gc] GC(5) Pause Young (Normal) (G1 Preventive Collection) 40M->11M(54M) 4.661ms
+[1.101s][info][gc] GC(6) Pause Young (Normal) (G1 Evacuation Pause) 33M->12M(54M) 5.834ms
+[1.219s][info][gc] GC(7) Pause Young (Normal) (G1 Evacuation Pause) 40M->13M(54M) 3.073ms
+[1.294s][info][gc] GC(8) Pause Young (Normal) (G1 Evacuation Pause) 37M->14M(54M) 3.314ms
+```
+
+로그 분석을 좀 해보자.
+
+GC(0) Pause Young (Normal)은 Young Gen에서 JVM이 처음 수행안 일반적인 gc다
+
+G1 Evacuation Pause 달려있는애들은 Young Generation 과정에서 살아남은 객체를 old generation으로 이동시키는 작업이다.
+
+이 과정에서 잠시 gc가 멈추며 evacuation 작업이 수행된다 23 -> 3 은 gc이후에 메모리 변화량이다.
+
+GCLocker Initiated GC라는건 GCLocker는 JNI코드가 실행되는 동안 gc를 방지하고 잠금이 해제된 이후 GC를 강제로 유발할수있는기능이다.
+
+Pause Young(Concurrent Start)는 young gc가 발생함과 동시에 old gen에서 concurrent mark cycle을 시작한다.
+
+Metadata GC Threashold를 보니 메타데이터 영역이 gc 임계값에 도달해 gc가 발생했다 주로 클래스 메타데이터나 관련 정보가 많이 쌓일때 트리거된다.
+
+Concurrent Mark Cycle: old gen에 대한 마크 작업을 진행하고 이는 young gc와 별개로 old generation의 객체를 마크하고 추적하는 동작이다.
+
+Pause Remark는 Concurrent Mark 작업이 완료된 이후 Remark 단계에서 GC가 일시적으로 중단된것이고 Pause Cleanup은 청소 작업을 위해 GC 일시적 중단이다.
