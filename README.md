@@ -120,6 +120,7 @@
 - [Netty Proxy](https://github.com/rlaope/estudy/blob/master/Back-End/backend/nettyproxy.md)
 - [TCP SYN/ACCEPT Queue 성능 튜닝](https://github.com/rlaope/estudy/blob/master/Network/tcpqueue.md)
 - [외부 연동 시스템 리소스 제약과 쏟아지는 트래픽 대응](https://github.com/rlaope/estudy/blob/master/Back-End/nice.md)
+- [성능 테스트](https://github.com/rlaope/estudy/blob/master/Back-End/ftest.md)
 
 ---
 
@@ -369,6 +370,7 @@
   - [G1GC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/g1.md)
     - [Evacuation Failure](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/evfailed.md)
     - [G1GC는 왜 Incremental Update가 아니라 SATB를 선택했는가](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/whysatb.md)
+    - [Mixed GC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/mixedgc.md)
   - [ZGC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/zgc.md)
     - [G1GC, ZGC 성능 비교 테스트](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/gctest.md)
 - [Kotlin](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/kotlin.md)
