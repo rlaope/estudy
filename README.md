@@ -376,6 +376,7 @@
     - [Concurrent Mark](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/cm.md)
   - [ZGC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/zgc.md)
     - [G1GC, ZGC 성능 비교 테스트](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/gctest.md)
+  - [Parallel GC to G1GC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/g1pagc.md)
 - [Kotlin](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/kotlin.md)
   - [Kotlin DSL, gradle.kts](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/dsl.md)
   - [mapOf(), to로 Pair 인스턴스 생성하기](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/toPair.md)
