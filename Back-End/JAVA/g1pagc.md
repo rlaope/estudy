@@ -79,7 +79,7 @@ Heap Size는 4GB로 진행하고 100RPS요청을 Duration 5m동안 진행한다.
 
 요청당 1mb~5mb 더미를 생성했다가 버리고, 이로 인해 eden은 빠르게 차고 survivor -> old gen으로 객체가 이동해 gc압박을 준다.
 
-```
+```java
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
