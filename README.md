@@ -247,6 +247,7 @@
 
 #### SRE (작성중)
 
+- [Full GC Hang Alert & Task 시스템 최적화 사례](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/hang.md)
 - [Pod Pending 상태의 주요 원인](http://github.com/esperar/estudy/blob/master/SRE/question/q_1.md)
 - [kube-proxy의 역할](http://github.com/esperar/estudy/blob/master/SRE/question/q_2.md)
 - [iptables와 ipvs의 차이](http://github.com/esperar/estudy/blob/master/SRE/question/q_3.md)
