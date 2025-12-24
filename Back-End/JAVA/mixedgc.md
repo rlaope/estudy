@@ -64,3 +64,21 @@ Full GC가 가끔  발생하면 `InitatingHeapOccupancyPercent`를 낮춰서 마
 Mixed GC시간이 너무 길다면 `G1MixedGCCountTarget`을 늘려 작업을 더 잘개 쪼개거나 `G1MixedGCLiveThresholdPercent`를 낮춰서 가성비 좋은 region만 청소하게 하라
 
 CPU 사용량이 너무 높다면 Mixed GC가 너무 자주 일어나는지 확인하고 `InitiatingHeapOccupancyPercent`를 높여보는것도 좋다.
+
+### vs YoungGC
+
+YoungGC는 막 태어난 객체들이라 누가 오래 살지 모른다, 무조건 다 살리려고 copy 시도를 한다. 그러다가 evacuation failure가 발생하게 되면 mixed gc에게 맞기도록 일단 눌러앉게 냅두고 old로 승격시켜버린다.
+
+mixed gc 시점에서는 시간이 좀 지나면 눌러 앉았던 객체들 중 상당수가 그 사이에 죽어서 garbage가 되어있다. g1은 이제 살아남은 소수만 옮기면 되므로 비용이 훨씬 적게 든다.
+
+YoungGC는 일단 Eden에 있는것은 다 옮겨!처럼 동작하게 되고 MixedGC Concurrent Marking이라는 과정에서는 region별로 성적표를 매긴다 regionA는 생존률 90% 가비지 10%, B는 생존률 10% 가비지 90% 어 그러면 90퍼를 확보할 수 있는 B를 먼저 수집해야겠다. 이렇게 판단할 수 있다.
+
+즉, Mixed GC가 더 효율적인 이유는 쓰레기가 많은 곳만 골라서 garbage first 청소하기 때문이다.
+
+아까 눌러앉았던 곳은 정리가 안된 상태라 쓰레기 비율이 높을 확률이 크고 그래서 mixed gc의 최우선 타겟(prime targe)이 되어 아주 효율적으로 회수된다.
+
+> 참고: mixed gc가 ihop 기준으로 트리거 된다면, young gc는 그냥 무조건 eden이 꽉 찼을때 allocation pressure가 발생될때 트리거 된다. concurrent marking에 cleanup이 하는일은 mixed gc 시작 결정이므로 eden이 꽉차있으면 mixed gc를 넣고 eden + 성적좋은 old region을 몇개 같이 청소시킨다.
+>
+> 당연한 이야기겟지만 young gc가 더 빠르다 그 이유는 eden만 청소하기 때문에, old까지 청소하는 mixed보다는 범위가 좁아 빠르다
+
+$$Time(Mixed) = Time(Young) + Time(Old\_Evacuation)$$
