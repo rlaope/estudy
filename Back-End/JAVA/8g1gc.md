@@ -81,6 +81,16 @@ RSet은 Region의 객체를 참조하고 있는 다른 region의 주소들을 �
   - Bitmaps: 참조가 많아지면 비트맵 방식으로 전환하여 메모리 사용량을 고정시킨다.
   - 결과로는 동일한 워크로드에서 RSet이 차지하는 Native Memory의 양이 jdk8대비 50%이상 감소했다.
 
+깨알 HashTable vs HashMap을 알아보자면
+
+물론 gc에서 쓰는 HashTable은 C++레벨의 코드지만
+
+일단 HashTable은 java에서는 Synchronized에 모든 메서드에 락이 걸려있어 멀티 스레드 환경에서 안전하지만 매우 느리다. 병목 발생하고 key value에 널값도 못넣고 chaining이ㅏ라고 해시 충돌시 리스트로만 연결해 데이터가 많아지면 검색속도가 저하된다. 구식 Enumration 인터페이스를 쓰기도하고
+
+HashMap은 Unsynchronized로 락이 없어서 매우 빠르고 멀티 스레드 환경에서는 ConcurrentHashMap을 써야하긴한다. key1개 value n개 null 허용한다. 더 유연한 데이터 처리가 가능하고 Chaining으로 LinkedList에 담아두다가 버킷에 일정한 수가 넘어가면 Red-Black Tree로 변환해 검색속도를 O(log n)으로 개선되었다. Iterator 인터페이스를 사용한다.
+
+근데 gc에서 나온 hashtable은 c++개념이라 좀 다르긴하다 성능저하 이런게 있진않음
+
 #### IHOP(Initiating Heap Occupancy Percent)의 적응형 변화
 
 JDK8: `-XX:InitiatingHeapOccupancyPercent` (기본 45퍼센트) 고정값에 의존했다. 45% 찰때까지 기다리다가, 갑자기 할당이 몰리면 대응이 늦어 FullGC가 터졌었다.
