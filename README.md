@@ -370,6 +370,7 @@
   - [GC Write Barrier](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/writebarrier.md)
   - [Card Table](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/cardtable.md)
   - [Incremental Update](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/incru.md)
+  - [Parallel GC Tuning](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/parg.md)
   - [G1GC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/g1.md)
     - [Evacuation Failure](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/evfailed.md)
     - [G1GC는 왜 Incremental Update가 아니라 SATB를 선택했는가](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/whysatb.md)
