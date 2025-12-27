@@ -122,6 +122,7 @@
 - [TCP SYN/ACCEPT Queue 성능 튜닝](https://github.com/rlaope/estudy/blob/master/Network/tcpqueue.md)
 - [외부 연동 시스템 리소스 제약과 쏟아지는 트래픽 대응](https://github.com/rlaope/estudy/blob/master/Back-End/nice.md)
 - [성능 테스트](https://github.com/rlaope/estudy/blob/master/Back-End/ftest.md)
+- [WAL, 분산 시스템 데이터 일관성과 장애 복구 패턴](https://github.com/rlaope/estudy/blob/master/Back-End/dist.md)
 
 ---
 
