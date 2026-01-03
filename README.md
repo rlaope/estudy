@@ -48,6 +48,7 @@
   - [네티의 핵심 컴포넌트](https://github.com/esperar/netty.io/blob/master/1-3%20Component/netty_component.md)
   - [Netty Thread Model](http://github.com/esperar/estudy/blob/master/Back-End/netty_thread.md)
   - [Netty Message Flow](http://github.com/esperar/estudy/blob/master/Back-End/netty_flow.md)
+  - [EventLoop, Thread Model, Tuning(ioRatio, epoll)](http://github.com/esperar/estudy/blob/master/Back-End/eventloopnetty.md)
 - [Reactive Programming 이것만큼은 알고가자](http://github.com/esperar/estudy/blob/master/Back-End/backend/reactive_programming.md)
 - [우아한 테크 세미나 - 우아한 스프링 배치](http://github.com/esperar/estudy/blob/master/Back-End/baemin_batch.md)
 - [Cache - Eviction, Expiration, Passivation](http://github.com/esperar/estudy/blob/master/Back-End/backend/eviction.md)
