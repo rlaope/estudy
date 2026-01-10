@@ -53,6 +53,7 @@
   - [Netty가 완료된 작업을 식별하는 메커니즘](http://github.com/esperar/estudy/blob/master/Back-End/nettyiden.md)
   - [Netty Async Flow Control(Future, Promise, Listener)](http://github.com/esperar/estudy/blob/master/Back-End/netty_async.md)
   - [EventLoopGroup](http://github.com/esperar/estudy/blob/master/Back-End/netty/netty_elg.md)
+  - [NioEventLoop vs EpollEventLoop](http://github.com/esperar/estudy/blob/master/Back-End/netty/nioepoll.md)
 - [Reactive Programming](http://github.com/esperar/estudy/blob/master/Back-End/backend/reactive_programming.md)
 - [우아한 테크 세미나 - 우아한 스프링 배치](http://github.com/esperar/estudy/blob/master/Back-End/baemin_batch.md)
 - [Cache - Eviction, Expiration, Passivation](http://github.com/esperar/estudy/blob/master/Back-End/backend/eviction.md)
