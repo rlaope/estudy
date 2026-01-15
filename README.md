@@ -385,6 +385,7 @@
     - [Mixed GC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/mixedgc.md)
     - [Concurrent Mark](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/cm.md)
     - [G1GC OpenJDK 8 vs 11](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/8g1gc.md)
+    - [Humongous Object, Mixed GC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/humong.md)
   - [ZGC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/zgc.md)
     - [G1GC, ZGC 성능 비교 테스트](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/gctest.md)
   - [Parallel GC to G1GC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/g1pagc.md)
