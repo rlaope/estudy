@@ -1,0 +1,53 @@
+# Humongous Object, Mixed GC Trigger
+
+복기좀 해보자.
+
+### Humongous Object란
+
+g1gc는 heap을 동일한 크기의 region으로 나누어 관리한다.
+
+이때 region 크기의 50%를 초과하는 크기를 가진 객체를 humongous object라고 부른다.
+
+판단 기준: 만약 region의 크기가 8mb라면 4mb를 초과하는 객체 모두 humongous object가 된다.
+
+일반적인 객체처럼 에덴에 할당되어 복사되는 과정을 거치지 않는다, 객체가 너무 커서 복사 비용이 너무 높기 때문
+
+### 배치되는 공간은?
+
+humongous object는 humongouse region이라는 전용 공간에 배치된다.
+
+논리적 위치로는 humongous region은 논리적으로 **old gen에 속한다.** 객체 크기가 region 하나보다 크기면 여러개의 연속된 region을 점유힌다.
+
+> 근데 Old gen으로 뜨긴하는데 별도의 영역으로 관리되었던거같다.  jcmd jvm info이걸로 보고 다음글에 적어놔야겠다.
+
+이때문에 메모리 단편화가 발생하기 쉽고, 연속된 공간을 찾지 못해 조기에 full gc가 발생할 수 있다.
+
+원래는 full gc나 clean up 단계에서만 해제되었으나, 최신 jdk 버전에서는 주기적인 young gc 단계에서도 참조가 없다면 조기에 해제되도록 최적화되었다.
+
+## Mixed GC Trigger
+
+IHOP에 의해 시작된 concurrent marking cycle이 성공적으로 완료된 직후에 발생한다.
+
+하지만 단순히 ihop를 넘었다고해서 무조건 mixed gc가 활발히 일어나는것은 아니다.
+
+다음의 파라미터들이 트리거와 실행 여부에 관여한다.
+
+**G1HeapWastePercent(가장 중요한 트리거 조건)**
+- concurrent marking이 끝나고 g1은 회수가능한 공간이 얼마나 되는지 계산한다.
+  - 조건: 힙 전체에서 회수 가능한 공간의 비율이 `G1HeapWastePercent`보다 낮다면, g1은 굳은 비용이 큰 mixed gc를 수행하지 않는다. 즉 쓰레기가 충분히 쌓여야 mixed gc 실행
+  
+> 아 이거 알았는데 하; 답못하면 모른거지 그래 ㅇ
+
+**G1MixedGCLiveThresholdPercent**
+- 조건: 특정 region 내의 살아있는 객체 비율이 설정값보다 (기본은 85) 낮아야 해당 region이 mixed gc 대상 (CSet)에 포함된다.
+
+**G1MixedGcCountTarget**
+- MixedGC는 한번에 모든 Old 영역을 치우지 않고 여러번 나누어 수행한다.
+- 이 횟수 목표에 따라 매번 얼마만큼의 old region을 수집할지 결정되며, 작업 효율이 안나온다고 판단되면 중간에 mixed gc 사이클이 중단될수도 있다.
+
+**유도된 트리거 evacuation failure**
+- young gc도중 survivor 영역이나 old영역으로 객체를 이동시킬 공간이 부족하면 evacuation failure가 발생한다. 이 상황은 g1이 공격적으로 mixed gc를 시도하게 하거나 최악의 경우 full gc로 이어지게 만드는 트리거가 된다.
+
+요약하면 Humongous object는 region 절반 이상을 차지하는 거대 객체로 old 영역의 연속된 region(별도관리는 코드파보자) 할당된다.
+
+mixed gc는 IHOP으로 시작되지만 실제 실행 여부는 G1HeapWastePercent를 통해 최소 청소할 가치가 있는가를  최종 결정? 
