@@ -63,11 +63,67 @@ bool is_continues_humongous() const { return _type == ContinuesHumongous; }
 
 `src/hotspot/share/gc/g1/g1CollectedHeap.cpp` 여기보면 young gc 시점에 이 메서드 호출해서 RSet이 비어있는 humongous 객체를 즉시 메모리에서 해체하기도 함. 대용량 객체가 메모리를 빠르게 확보하기 위한 전략
 
+```cpp
+void G1CollectedHeap::eagerly_reclaim_humongous_regions() {
+  assert_at_safepoint_on_vm_thread();
+
+  // 1. Eager Reclaim 옵션이 꺼져있거나 후보가 없으면 바로 리턴
+  if (!G1EagerReclaimHumongousObjects ||
+      _humongous_reclaim_candidates.is_empty()) {
+    return;
+  }
+
+  G1TraceEagerReclaimHumongousObjects tlog(_humongous_reclaim_candidates.length());
+
+  // 2. 클로저(Closure)를 생성하여 힙 리전을 순회하며 조건에 맞는 객체를 찾음
+  G1EagerlyReclaimHumongousObjectsClosure cl;
+  heap_region_iterate(&cl);
+
+  // 3. 통계 업데이트
+  tlog.set_reclaimed(cl.reclaimed_count());
+}
+```
+
+```cpp
+bool G1EagerlyReclaimHumongousObjectsClosure::do_heap_region(HeapRegion* r) {
+  G1CollectedHeap* g1h = G1CollectedHeap::heap();
+
+  // 1. StartsHumongous 리전인지 확인 (객체의 시작점)
+  if (!r->is_starts_humongous()) {
+    return false;
+  }
+
+  uint region_idx = r->hrm_index();
+
+  // 2. 이 리전이 수거 후보군에 등록되어 있는지 확인
+  if (!g1h->is_humongous_reclaim_candidate(region_idx)) {
+    return false;
+  }
+
+  // 3. 핵심 체크: Remembered Set(다른 영역에서 이 객체를 참조하는 정보)이 비어있는지 확인
+  // 만약 다른 곳에서 참조하고 있다면 수거하면 안 됨
+  G1RememberedSet* rs = r->rem_set();
+  if (!rs->is_empty()) {
+    // 참조가 남아있으므로 후보에서 제외
+    g1h->set_humongous_is_not_reclaim_candidate(region_idx);
+    return false;
+  }
+
+  // 4. 수거 확정: free_humongous_region을 호출하여 메모리 해제
+  // 이 단계에서 Old Gen 영역이 즉시 비워짐
+  _reclaimed_count++;
+  g1h->free_humongous_region(r, &_free_region_list);
+
+  return false;
+}`
+```
 
 
 어쨋든 humongous 때문에 메모리 단편화가 발생하기 쉽고, 연속된 공간을 찾지 못해 조기에 full gc가 발생할 수 있다.
 
-원래는 full gc나 clean up 단계에서만 해제되었으나, 최신 jdk 버전에서는 주기적인 young gc 단계에서도 참조가 없다면 조기에 해제되도록 최적화되었다.
+원래는 full gc나 clean up 단계에서만 해제되었으나, **최신 jdk 버전에서는 주기적인 young gc 단계에서도 참조가 없다면 조기에 해제되도록 최적화되었다.** 아마 이게 아까 위에서 본 부분일듯 eagerly_reclaim_humongous_regions ㅇㅇ
+
+
 
 
 
