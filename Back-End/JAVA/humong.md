@@ -18,11 +18,58 @@ humongous object는 humongouse region이라는 전용 공간에 배치된다.
 
 논리적 위치로는 humongous region은 논리적으로 **old gen에 속한다.** 객체 크기가 region 하나보다 크기면 여러개의 연속된 region을 점유힌다.
 
-> 근데 Old gen으로 뜨긴하는데 별도의 영역으로 관리되었던거같다.  jcmd jvm info이걸로 보고 다음글에 적어놔야겠다.
+> 근데 Old gen으로 뜨긴하는데 별도의 영역으로 관리되었던거같다. jcmd jvm info이걸로 보고, jdk좀 뜯어봐야할듯 
 
-이때문에 메모리 단편화가 발생하기 쉽고, 연속된 공간을 찾지 못해 조기에 full gc가 발생할 수 있다.
+### +Humongous 
+
+humongos는 논리적으로 old gen에 속하지만 일반 객체들과 달리 humongous region이라는 별도 영역에서 특별 관리된다.
+
+openjkd 11 ~ 17 코드 기준으로
+
+`src/hotspot/share/gc/g1/heapRegion.hpp` 여기 보면 
+- StartsHumongous (SH): 객체의 시작부분이 들어있는 리전
+- ContinuesHumongous(CH): 객체가 커서 다음 리전까지 이어질때 사용되는 연속 리전들 정보가 있다.
+
+할당 로직에서도 `G1CollectedHeap::attempt_allocation_humongous` 를 보면 attempt_allocation이라는 일반 객체와 다르게 분리된 경로를 타는걸 볼수있는데
+
+`src/hotspot/share/gc/g1/g1CollectedHeap.cpp`
+
+https://github.com/openjdk/jdk/blob/master/src/hotspot/share/gc/g1/g1CollectedHeap.cpp
+
+```cpp
+// g1CollectedHeap.cpp 예시 (의사 코드)
+HeapWord* G1CollectedHeap::attempt_allocation_humongous(size_t word_size) {
+    // 1. 몇 개의 리전이 필요한지 계산
+    uint num_regions = humongous_obj_allocate_find_first(num_regions, word_size);
+    // 2. 연속된 리전 확보 시도
+    // 3. 해당 리전들을 Humongous 타입으로 설정
+}
+```
+
+이 메서드에서는 필요한만큼 연속된 빈 리전을 찾고 객체는 빈 리전 아무데나 들어가면 되지만 humongous는 덩어리가 커서 기차 칸처럼 붙어있는 공간을 찾아야됨
+
+타입도 분리되어있음 G1RegionType `src/hotspot/share/gc/g1/g1RegionType.hpp`
+
+https://github.com/openjdk/jdk/blob/master/src/hotspot/share/gc/g1/g1HeapRegionType.hpp
+
+```cpp
+// 리전 타입을 정의하는 부분에서 Humongous를 별도로 구분합니다.
+bool is_humongous() const { return _type >= HumongousMask; }
+bool is_starts_humongous() const { return _type == StartsHumongous; }
+bool is_continues_humongous() const { return _type == ContinuesHumongous; }
+```
+
+`G1CollectedHeap:eagerly_reclaim_humongous_regions`  Humongous가 old gen이면서도 특별하게 취급되는 이유. 보통은 old gen은 full gc나 concurrent marking이 끝나야 정리되는데 humongous 객체는 참조가 없다면 youngc때도 수거될수있음
+
+`src/hotspot/share/gc/g1/g1CollectedHeap.cpp` 여기보면 young gc 시점에 이 메서드 호출해서 RSet이 비어있는 humongous 객체를 즉시 메모리에서 해체하기도 함. 대용량 객체가 메모리를 빠르게 확보하기 위한 전략
+
+
+
+어쨋든 humongous 때문에 메모리 단편화가 발생하기 쉽고, 연속된 공간을 찾지 못해 조기에 full gc가 발생할 수 있다.
 
 원래는 full gc나 clean up 단계에서만 해제되었으나, 최신 jdk 버전에서는 주기적인 young gc 단계에서도 참조가 없다면 조기에 해제되도록 최적화되었다.
+
+
 
 ## Mixed GC Trigger
 
@@ -51,3 +98,6 @@ IHOP에 의해 시작된 concurrent marking cycle이 성공적으로 완료된 �
 요약하면 Humongous object는 region 절반 이상을 차지하는 거대 객체로 old 영역의 연속된 region(별도관리는 코드파보자) 할당된다.
 
 mixed gc는 IHOP으로 시작되지만 실제 실행 여부는 G1HeapWastePercent를 통해 최소 청소할 가치가 있는가를  최종 결정? 
+
+<br>
+
