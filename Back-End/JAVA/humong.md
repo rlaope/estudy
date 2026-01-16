@@ -84,6 +84,8 @@ void G1CollectedHeap::eagerly_reclaim_humongous_regions() {
 }
 ```
 
+실제로 수거할지 말지 결정하는 로직은 이 클로저 객체 내부의 함수에 들어있음
+
 ```cpp
 bool G1EagerlyReclaimHumongousObjectsClosure::do_heap_region(HeapRegion* r) {
   G1CollectedHeap* g1h = G1CollectedHeap::heap();
