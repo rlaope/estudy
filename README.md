@@ -658,6 +658,7 @@
 - [분석 함수를 활용해 쿼리 성능 높히기](http://github.com/esperar/estudy/blob/master/DataBase/analytic_function.md)
 - [Deadlock](http://github.com/esperar/estudy/blob/master/DataBase/dlock.md)
 - [MySQL, MyISAM, InnoDB Storage Engine](http://github.com/esperar/estudy/blob/master/DataBase/se.md)
+- [MySQL WAL](http://github.com/esperar/estudy/blob/master/DataBase/wal.md)
 
 ---
 
