@@ -132,6 +132,7 @@
 - [WAL, 분산 시스템 데이터 일관성과 장애 복구 패턴](https://github.com/rlaope/estudy/blob/master/Back-End/dist.md)
 - [캐시 시스템 설계 이론](https://github.com/rlaope/estudy/blob/master/Back-End/cache.md)
 - [캐시 시스템 설계 구현](https://github.com/rlaope/estudy/blob/master/Back-End/cache2.md)
+- [캐시 무중단 마이그레이션 (Lazy Migration)](https://github.com/rlaope/estudy/blob/master/Back-End/cachemigrate.md)
 - [장애 지점 식별 및 C/A 시스템 설계](https://github.com/rlaope/estudy/blob/master/Back-End/dist_consist.md)
 
 ---
