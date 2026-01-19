@@ -86,6 +86,117 @@ void G1CollectedHeap::eagerly_reclaim_humongous_regions() {
 }
 ```
 
+근데 지금 github에 올라와있는버전은 위 의사코드가 아니라 객체가 이미 죽었는지 RSet이 완전한지 pinned상태가 아닌지 확인해 최종 후보로 등록하도록 동작하넹
+
+```java
+bool humongous_region_is_candidate(G1HeapRegion* region) const {
+      assert(region->is_starts_humongous(), "Must start a humongous object");
+
+      oop obj = cast_to_oop(region->bottom());
+
+      // Dead objects cannot be eager reclaim candidates. Due to class
+      // unloading it is unsafe to query their classes so we return early.
+      if (_g1h->is_obj_dead(obj, region)) {
+        return false;
+      }
+
+      // If we do not have a complete remembered set for the region, then we can
+      // not be sure that we have all references to it.
+      if (!region->rem_set()->is_complete()) {
+        return false;
+      }
+      // We also cannot collect the humongous object if it is pinned.
+      if (region->has_pinned_objects()) {
+        return false;
+      }
+      // Candidate selection must satisfy the following constraints
+      // while concurrent marking is in progress:
+      //
+      // * In order to maintain SATB invariants, an object must not be
+      // reclaimed if it was allocated before the start of marking and
+      // has not had its references scanned.  Such an object must have
+      // its references (including type metadata) scanned to ensure no
+      // live objects are missed by the marking process.  Objects
+      // allocated after the start of concurrent marking don't need to
+      // be scanned.
+      //
+      // * An object must not be reclaimed if it is on the concurrent
+      // mark stack.  Objects allocated after the start of concurrent
+      // marking are never pushed on the mark stack.
+      //
+      // Nominating only objects allocated after the start of concurrent
+      // marking is sufficient to meet both constraints.  This may miss
+      // some objects that satisfy the constraints, but the marking data
+      // structures don't support efficiently performing the needed
+      // additional tests or scrubbing of the mark stack.
+      //
+      // We handle humongous objects specially, because frequent allocation and
+      // dropping of large binary blobs is an important use case for eager reclaim,
+      // and this special handling increases needed headroom.
+      // It also helps with G1 allocating humongous objects as old generation
+      // objects although they might also die quite quickly.
+      //
+      // TypeArray objects are allowed to be reclaimed even if allocated before
+      // the start of concurrent mark.  For this we rely on mark stack insertion
+      // to exclude is_typeArray() objects, preventing reclaiming an object
+      // that is in the mark stack.  We also rely on the metadata for
+      // such objects to be built-in and so ensured to be kept live.
+      //
+      // Non-typeArrays that were allocated before marking are excluded from
+      // eager reclaim during marking.  One issue is the problem described
+      // above with scrubbing the mark stack, but there is also a problem
+      // causing these humongous objects being collected incorrectly:
+      //
+      // E.g. if the mutator is running, we may have objects o1 and o2 in the same
+      // region, where o1 has already been scanned and o2 is only reachable by
+      // the candidate object h, which is humongous.
+      //
+      // If the mutator read the reference to o2 from h and installed it into o1,
+      // no remembered set entry would be created for keeping alive o2, as o1 and
+      // o2 are in the same region.  Object h might be reclaimed by the next
+      // garbage collection. o1 still has the reference to o2, but since o1 had
+      // already been scanned we do not detect o2 to be still live and reclaim it.
+      //
+      // There is another minor problem with non-typeArray regions being the source
+      // of remembered set entries in other region's remembered sets.  There are
+      // two cases: first, the remembered set entry is in a Free region after reclaim.
+      // We handle this case by ignoring these cards during merging the remembered
+      // sets.
+      //
+      // Second, there may be cases where eagerly reclaimed regions were already
+      // reallocated.  This may cause scanning of these outdated remembered set
+      // entries, containing some objects. But apart from extra work this does
+      // not cause correctness issues.
+      // There is no difference between scanning cards covering an effectively
+      // dead humongous object vs. some other objects in reallocated regions.
+      //
+      // TAMSes are only reset after completing the entire mark cycle, during
+      // bitmap clearing. It is worth to not wait until then, and allow reclamation
+      // outside of actual (concurrent) SATB marking.
+      // This also applies to the concurrent start pause - we only set
+      // mark_in_progress() at the end of that GC: no mutator is running that can
+      // sneakily install a new reference to the potentially reclaimed humongous
+      // object.
+      // During the concurrent start pause the situation described above where we
+      // miss a reference can not happen. No mutator is modifying the object
+      // graph to install such an overlooked reference.
+      //
+      // After the pause, having reclaimed h, obviously the mutator can't fetch
+      // the reference from h any more.
+      if (!obj->is_typeArray()) {
+        // All regions that were allocated before marking have a TAMS != bottom.
+        bool allocated_before_mark_start = region->bottom() != _g1h->concurrent_mark()->top_at_mark_start(region);
+        bool mark_in_progress = _g1h->collector_state()->mark_in_progress();
+
+        if (allocated_before_mark_start && mark_in_progress) {
+          return false;
+        }
+      }
+      return _g1h->is_potential_eager_reclaim_candidate(region);
+    }
+
+```
+
 실제로 수거할지 말지 결정하는 로직은 이 클로저 객체 내부의 함수에 들어있음
 
 ```cpp
@@ -131,6 +242,18 @@ virtual bool do_heap_region(G1HeapRegion* hr) {
     }
 }
 ```
+
+```java
+ if (humongous_region_is_candidate(hr)) {
+        _g1h->register_humongous_candidate_region_with_region_attr(index);
+        _worker_humongous_candidates++;
+        // We will later handle the remembered sets of these regions.
+      } else {
+        _g1h->update_region_attr(hr);
+      }
+```
+
+do heap region에 위 부근 보면 후보로 등록된 humongous 리전들이 나중에 young gc 끝날때 수거 대상이 된다.
 
 
 어쨋든 humongous 때문에 메모리 단편화가 발생하기 쉽고, 연속된 공간을 찾지 못해 조기에 full gc가 발생할 수 있다.
