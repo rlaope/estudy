@@ -63,6 +63,8 @@ bool is_continues_humongous() const { return _type == ContinuesHumongous; }
 
 `src/hotspot/share/gc/g1/g1CollectedHeap.cpp` 여기보면 young gc 시점에 이 메서드 호출해서 RSet이 비어있는 humongous 객체를 즉시 메모리에서 해체하기도 함. 대용량 객체가 메모리를 빠르게 확보하기 위한 전략
 
+근데 https://github.com/openjdk/jdk/blob/master/src/hotspot/share/gc/g1/g1YoungCollector.cpp 여기로 옮겨진듯 해당 코드들이 여기서 확인가능함 아래 함수들은
+
 ```cpp
 void G1CollectedHeap::eagerly_reclaim_humongous_regions() {
   assert_at_safepoint_on_vm_thread();
@@ -87,37 +89,47 @@ void G1CollectedHeap::eagerly_reclaim_humongous_regions() {
 실제로 수거할지 말지 결정하는 로직은 이 클로저 객체 내부의 함수에 들어있음
 
 ```cpp
-bool G1EagerlyReclaimHumongousObjectsClosure::do_heap_region(HeapRegion* r) {
-  G1CollectedHeap* g1h = G1CollectedHeap::heap();
+virtual bool do_heap_region(G1HeapRegion* hr) {
+      // First prepare the region for scanning
+      _g1h->rem_set()->prepare_region_for_scan(hr);
 
-  // 1. StartsHumongous 리전인지 확인 (객체의 시작점)
-  if (!r->is_starts_humongous()) {
-    return false;
-  }
+      // Now check if region is a humongous candidate
+      if (!hr->is_starts_humongous()) {
+        _g1h->update_region_attr(hr);
+        return false;
+      }
 
-  uint region_idx = r->hrm_index();
+      uint index = hr->hrm_index();
+      if (humongous_region_is_candidate(hr)) {
+        _g1h->register_humongous_candidate_region_with_region_attr(index);
+        _worker_humongous_candidates++;
+        // We will later handle the remembered sets of these regions.
+      } else {
+        _g1h->update_region_attr(hr);
+      }
 
-  // 2. 이 리전이 수거 후보군에 등록되어 있는지 확인
-  if (!g1h->is_humongous_reclaim_candidate(region_idx)) {
-    return false;
-  }
+      // Sample card set sizes for humongous regions before GC: this makes the policy
+      // to give back memory to the OS keep the most recent amount of memory for these regions.
+      _humongous_card_set_stats.add(hr->rem_set()->card_set_memory_stats());
 
-  // 3. 핵심 체크: Remembered Set(다른 영역에서 이 객체를 참조하는 정보)이 비어있는지 확인
-  // 만약 다른 곳에서 참조하고 있다면 수거하면 안 됨
-  G1RememberedSet* rs = r->rem_set();
-  if (!rs->is_empty()) {
-    // 참조가 남아있으므로 후보에서 제외
-    g1h->set_humongous_is_not_reclaim_candidate(region_idx);
-    return false;
-  }
+      log_debug(gc, humongous)("Humongous region %u (object size %zu @ " PTR_FORMAT ") remset %zu code roots %zu "
+                               "marked %d pinned count %zu reclaim candidate %d type %s",
+                               index,
+                               cast_to_oop(hr->bottom())->size() * HeapWordSize,
+                               p2i(hr->bottom()),
+                               hr->rem_set()->occupied(),
+                               hr->rem_set()->code_roots_list_length(),
+                               _g1h->concurrent_mark()->mark_bitmap()->is_marked(hr->bottom()),
+                               hr->pinned_count(),
+                               _g1h->is_humongous_reclaim_candidate(index),
+                               cast_to_oop(hr->bottom())->is_typeArray() ? "tA"
+                                                                         : (cast_to_oop(hr->bottom())->is_objArray() ? "oA" : "ob")
+                              );
+      _worker_humongous_total++;
 
-  // 4. 수거 확정: free_humongous_region을 호출하여 메모리 해제
-  // 이 단계에서 Old Gen 영역이 즉시 비워짐
-  _reclaimed_count++;
-  g1h->free_humongous_region(r, &_free_region_list);
-
-  return false;
-}`
+      return false;
+    }
+}
 ```
 
 
