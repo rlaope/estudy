@@ -826,6 +826,7 @@
 - [NUMA](http://github.com/esperar/estudy/blob/master/Operating-System/numa.md)
 - [NUMA (Kernel Level)](http://github.com/esperar/estudy/blob/master/Operating-System/numa2.md)
 - [Page Cache, Buffer Cache](http://github.com/esperar/estudy/blob/master/Operating-System/pbcache.md)
+- [inode(index node)](http://github.com/esperar/estudy/blob/master/Operating-System/inode.md)
 
 ---
 
