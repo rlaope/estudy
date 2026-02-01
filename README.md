@@ -872,3 +872,5 @@
 - [훈련세트 데이터 스케일 문제, 전처리](http://github.com/esperar/estudy/blob/master/AI/scale.md)
 - [scikit-learn](http://github.com/esperar/estudy/blob/master/AI/sklearn.md)
 - [서포트 벡터 머신](http://github.com/esperar/estudy/blob/master/AI/svm.md)
+- [GPU 아키텍처](http://github.com/esperar/estudy/blob/master/AI/gpu.md)
+- 
