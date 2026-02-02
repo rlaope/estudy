@@ -875,3 +875,4 @@
 - [GPU 아키텍처](http://github.com/esperar/estudy/blob/master/AI/gpu.md)
   - [CUDA](http://github.com/esperar/estudy/blob/master/AI/cuda.md)
 - [연산자 융합, 양자화](http://github.com/esperar/estudy/blob/master/AI/of.md)
+- [TensorRT](http://github.com/esperar/estudy/blob/master/AI/tensorrt.md)
