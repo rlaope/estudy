@@ -874,6 +874,7 @@
 - [scikit-learn](http://github.com/esperar/estudy/blob/master/AI/sklearn.md)
 - [서포트 벡터 머신](http://github.com/esperar/estudy/blob/master/AI/svm.md)
 - [신경망 Perception](http://github.com/esperar/estudy/blob/master/AI/perception.md)
+- [Tensor 차원](http://github.com/esperar/estudy/blob/master/AI/tensor.md)
 - [GPU 아키텍처](http://github.com/esperar/estudy/blob/master/AI/gpu.md)
   - [CUDA](http://github.com/esperar/estudy/blob/master/AI/cuda.md)
 - [연산자 융합, 양자화](http://github.com/esperar/estudy/blob/master/AI/of.md)
