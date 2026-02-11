@@ -877,3 +877,4 @@
   - [CUDA](http://github.com/esperar/estudy/blob/master/AI/cuda.md)
 - [연산자 융합, 양자화](http://github.com/esperar/estudy/blob/master/AI/of.md)
 - [TensorRT](http://github.com/esperar/estudy/blob/master/AI/tensorrt.md)
+- [LLM Architecture](http://github.com/esperar/estudy/blob/master/AI/llm.md)
