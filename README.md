@@ -394,6 +394,7 @@
     - [Humongous Object, Mixed GC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/humong.md)
   - [ZGC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/zgc.md)
     - [G1GC, ZGC 성능 비교 테스트](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/gctest.md)
+    - [Marked0/1, Good/Bad Color (TODO)](http://github.com/esperar/estudy/blob/master/JVM/marked_pointer.md)
   - [Parallel GC to G1GC](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/g1pagc.md)
   - [TLAB(Thread-Local Allocation Buffer)](http://github.com/esperar/estudy/blob/master/Back-End/JAVA/tlab.md)
   - [Safepoint, Polling Page](http://github.com/esperar/estudy/blob/master/JVM/safepoint.md)
