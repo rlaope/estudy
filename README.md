@@ -135,6 +135,7 @@
 - [캐시 무중단 마이그레이션 (Lazy Migration)](https://github.com/rlaope/estudy/blob/master/Back-End/cachemigrate.md)
 - [장애 지점 식별 및 C/A 시스템 설계](https://github.com/rlaope/estudy/blob/master/Back-End/dist_consist.md)
 - [Distributed Lock 취득 후 master node가 다운되었을때](https://github.com/rlaope/estudy/blob/master/Back-End/distlock.md)
+- [캐시 스템피드 현상 제어 (Distributed Lock, PER)](https://github.com/rlaope/estudy/blob/master/Back-End/stampede.md)_
 
 ---
 
