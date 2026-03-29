@@ -136,11 +136,12 @@
 - [장애 지점 식별 및 C/A 시스템 설계](https://github.com/rlaope/estudy/blob/master/Back-End/dist_consist.md)
 - [Distributed Lock 취득 후 master node가 다운되었을때](https://github.com/rlaope/estudy/blob/master/Back-End/distlock.md)
 - [캐시 스템피드 현상 제어 (Distributed Lock, PER)](https://github.com/rlaope/estudy/blob/master/Back-End/stampede.md)
+- [대규모 DB 및 데이터 마이그레이션](https://github.com/rlaope/estudy/blob/master/Back-End/dbmigrate.md)
 
 ---
 
 
-#### DevOps 
+#### DevOps
 
 - [DevOps Engineer](http://github.com/esperar/estudy/blob/master/DevOps/devops.md)
 - [도커와 쿠버네티스](http://github.com/esperar/estudy/blob/master/정보처리/doker.md)
