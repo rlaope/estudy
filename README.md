@@ -196,7 +196,7 @@
   - [Kubernetes Network](http://github.com/esperar/estudy/blob/master/DevOps/k8s/network.md)
   - [Kubernetes 배포 전략, Probe](http://github.com/esperar/estudy/blob/master/DevOps/k8s/network.md)
   - [RBAC, Security Policy](http://github.com/esperar/estudy/blob/master/DevOps/k8s/security.md)
-- [애자일(Agile) 방법론](http://github.com/esperar/estudy/blob/master/DevOps/agile.md)
+- [애자일(Agile) 방법론](http://github.com/esperar/estudy/blob/master/DevOps/agile.mdp)
 - [클라우드 아키텍처 Cloud Architecture](http://github.com/esperar/estudy/blob/master/DevOps/cloud_architecture.md)
 - [하이브리드 클라우드 Hybird Cloud](http://github.com/esperar/estudy/blob/master/DevOps/hybrid.md)
 - [테스트의 종류 알아보기](http://github.com/esperar/estudy/blob/master/정보처리/test.md)
@@ -557,7 +557,6 @@
 - [플러시 (flush)](http://github.com/esperar/estudy/blob/master/Back-End/jpa/persistence/flush.md)
 - [객체와 테이블 매핑](http://github.com/esperar/estudy/blob/master/Back-End/jpa/table/entity.md)
 - [데이터베이스 스키마 자동 생성](http://github.com/esperar/estudy/blob/master/Back-End/jpa/table/util.md)
-- [Team.MSG GAuth-BackEnd 동적 검색 API QueryDSL 적용 사례](https://velog.io/@hope0206/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B2%AB-QueryDSL-%EC%A0%81%EC%9A%A9%EA%B8%B0)
 - [Hibernate 하이버 네이트, Spring Data JPA](http://github.com/esperar/estudy/blob/master/Back-End/jpa/hibernate.md)
 - [임베디드 타입, @Embedded, @Embeddable, @AttributeOverride](http://github.com/esperar/estudy/blob/master/Back-End/jpa/embedded.md)
 - [@Query 어노테이션에서 FK로 객체를 찾는 방법](http://github.com/esperar/estudy/blob/master/Back-End/jpa/queryfk.md)
@@ -568,6 +567,7 @@
 - [프록시(Proxy)와 지연 로딩](http://github.com/esperar/estudy/blob/master/Back-End/jpa/proxy.md)
 - [OSIV(Open Session In View)](http://github.com/esperar/estudy/blob/master/Back-End/jpa/osiv.md)
 - [벌크 수정, 삭제 연산과 영속성 컨텍스트](http://github.com/esperar/estudy/blob/master/Back-End/jpa/bulk.md)
+- [Spring @Transactional 트랜잭션 바인딩과 Auto-Commit](http://github.com/esperar/estudy/blob/master/Back-End/spring/trx_autocommit.md)
 
 
 ---
