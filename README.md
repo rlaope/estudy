@@ -672,7 +672,7 @@
 - [Deadlock](http://github.com/esperar/estudy/blob/master/DataBase/dlock.md)
 - [MySQL, MyISAM, InnoDB Storage Engine](http://github.com/esperar/estudy/blob/master/DataBase/se.md)
 - [MySQL WAL](http://github.com/esperar/estudy/blob/master/DataBase/wal.md)
-- [InfluxDB]
+- [InfluxDB](http://github.com/esperar/estudy/blob/master/DataBase/influx.md)
 
 ---
 
