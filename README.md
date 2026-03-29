@@ -137,6 +137,7 @@
 - [Distributed Lock 취득 후 master node가 다운되었을때](https://github.com/rlaope/estudy/blob/master/Back-End/distlock.md)
 - [캐시 스템피드 현상 제어 (Distributed Lock, PER)](https://github.com/rlaope/estudy/blob/master/Back-End/stampede.md)
 - [대규모 DB 및 데이터 마이그레이션](https://github.com/rlaope/estudy/blob/master/Back-End/dbmigrate.md)
+- [SNAT 포트 고갈, DNS 해상도 지연 문제 해결](https://github.com/rlaope/estudy/blob/master/Back-End/trafficportdns.md)
 
 ---
 
