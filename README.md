@@ -841,7 +841,8 @@
 - [NUMA (Kernel Level)](http://github.com/esperar/estudy/blob/master/Operating-System/numa2.md)
 - [Page Cache, Buffer Cache](http://github.com/esperar/estudy/blob/master/Operating-System/pbcache.md)
 - [inode(index node)](http://github.com/esperar/estudy/blob/master/Operating-System/inode.md)
-
+- [CPU Out-of-Order Execution, Barrier, Happens-Before](http://github.com/esperar/estudy/blob/master/Operating-System/cpuooo.md)
+- 
 ---
 
 
