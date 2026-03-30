@@ -407,6 +407,7 @@
   - [PGO(Profile-Guided Optimization)](http://github.com/esperar/estudy/blob/master/JVM/pgo.md)
   - [JVM이 구현하는 다형성 탈가상화 Devirtualization](http://github.com/esperar/estudy/blob/master/JVM/devirtual.md)
   - [JVM의 5가지 메서드 호출 명령어(vtable, itable)](http://github.com/esperar/estudy/blob/master/JVM/jvm_command.md)
+  - [JMM과 하드웨어 교차점](http://github.com/esperar/estudy/blob/master/JVM/jmm.md)
 - [Kotlin](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/jit_graal.md)
   - [Kotlin DSL, gradle.kts](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/dsl.md)
   - [mapOf(), to로 Pair 인스턴스 생성하기](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/toPair.md)
