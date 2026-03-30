@@ -138,6 +138,7 @@
 - [캐시 스템피드 현상 제어 (Distributed Lock, PER)](https://github.com/rlaope/estudy/blob/master/Back-End/stampede.md)
 - [대규모 DB 및 데이터 마이그레이션](https://github.com/rlaope/estudy/blob/master/Back-End/dbmigrate.md)
 - [SNAT 포트 고갈, DNS 해상도 지연 문제 해결](https://github.com/rlaope/estudy/blob/master/Back-End/trafficportdns.md)
+- [Kafka 파티션 리밸런싱중 발생하는 중복 메시지 처리, 멱등성 보장](https://github.com/rlaope/estudy/blob/master/Back-End/idem.md)
 
 ---
 
