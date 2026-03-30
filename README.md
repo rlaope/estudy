@@ -408,6 +408,7 @@
   - [JVM이 구현하는 다형성 탈가상화 Devirtualization](http://github.com/esperar/estudy/blob/master/JVM/devirtual.md)
   - [JVM의 5가지 메서드 호출 명령어(vtable, itable)](http://github.com/esperar/estudy/blob/master/JVM/jvm_command.md)
   - [JMM과 하드웨어 교차점](http://github.com/esperar/estudy/blob/master/JVM/jmm.md)
+  - [JVM Observability 도구별 원리 해부학](http://github.com/esperar/estudy/blob/master/JVM/jvm_observability.md)
 - [Kotlin](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/jit_graal.md)
   - [Kotlin DSL, gradle.kts](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/dsl.md)
   - [mapOf(), to로 Pair 인스턴스 생성하기](http://github.com/esperar/estudy/blob/master/Back-End/kotlin/toPair.md)
@@ -842,7 +843,7 @@
 - [Page Cache, Buffer Cache](http://github.com/esperar/estudy/blob/master/Operating-System/pbcache.md)
 - [inode(index node)](http://github.com/esperar/estudy/blob/master/Operating-System/inode.md)
 - [CPU Out-of-Order Execution, Barrier, Happens-Before](http://github.com/esperar/estudy/blob/master/Operating-System/cpuooo.md)
-- 
+
 ---
 
 
