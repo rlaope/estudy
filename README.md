@@ -844,6 +844,7 @@
 - [inode(index node)](http://github.com/esperar/estudy/blob/master/Operating-System/inode.md)
 - [CPU Out-of-Order Execution, Barrier, Happens-Before](http://github.com/esperar/estudy/blob/master/Operating-System/cpuooo.md)
 - [Copy-on-Write (CoW)와 fork()의 메모리 최적화](http://github.com/esperar/estudy/blob/master/Operating-System/cow.md)
+- [CAS와 ABA 문제](http://github.com/esperar/estudy/blob/master/Operating-System/casaba.md)
 
 ---
 
