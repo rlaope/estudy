@@ -140,6 +140,7 @@
 - [SNAT 포트 고갈, DNS 해상도 지연 문제 해결](https://github.com/rlaope/estudy/blob/master/Back-End/trafficportdns.md)
 - [Kafka 파티션 리밸런싱중 발생하는 중복 메시지 처리, 멱등성 보장](https://github.com/rlaope/estudy/blob/master/Back-End/idem.md)
 - [분산 합의 (Consensus) 알고리즘](https://github.com/rlaope/estudy/blob/master/Back-End/paxra.md)
+- [Zookeeper가 Paxos를 기용한 이유](https://github.com/rlaope/estudy/blob/master/Back-End/zookeeperpaxos.md)
 
 ---
 
