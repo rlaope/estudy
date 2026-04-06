@@ -881,7 +881,7 @@
 
 ----
 
-#### AI(ML/DL)
+#### AI
 
 - [One-Hot Encoding, 다중공선성](http://github.com/esperar/estudy/blob/master/AI/onehot.md)
 - [과대적합, 과소적합](http://github.com/esperar/estudy/blob/master/AI/overfit.md)
@@ -900,3 +900,4 @@
 - [TensorRT](http://github.com/esperar/estudy/blob/master/AI/tensorrt.md)
 - [LLM Architecture](http://github.com/esperar/estudy/blob/master/AI/llm.md)
 - [LLM Agent 아키텍처](http://github.com/esperar/estudy/blob/master/AI/llmagent.md)
+- [검색 증강 생성(RAG) 고도화 전략](http://github.com/esperar/estudy/blob/master/AI/rag.md)
