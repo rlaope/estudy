@@ -901,3 +901,4 @@
 - [LLM Architecture](http://github.com/esperar/estudy/blob/master/AI/llm.md)
 - [LLM Agent 아키텍처](http://github.com/esperar/estudy/blob/master/AI/llmagent.md)
 - [검색 증강 생성(RAG) 고도화 전략](http://github.com/esperar/estudy/blob/master/AI/rag.md)
+- [이미지 특징점 추출 Feature Extraction](http://github.com/esperar/estudy/blob/master/AI/feature_extraction.md)
