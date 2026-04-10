@@ -903,3 +903,4 @@
 - [검색 증강 생성(RAG) 고도화 전략](http://github.com/esperar/estudy/blob/master/AI/rag.md)
 - [이미지 특징점 추출 Feature Extraction](http://github.com/esperar/estudy/blob/master/AI/feature_extraction.md)
 - [ORB(Oriented FAST and Rotated BRIEF)](http://github.com/esperar/estudy/blob/master/AI/orb.md)
+- [CNN(Convolution Neural Network) 기반 특징 추출](http://github.com/esperar/estudy/blob/master/AI/cnn.md)
