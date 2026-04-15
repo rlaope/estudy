@@ -906,4 +906,5 @@
 - [CNN(Convolution Neural Network) 기반 특징 추출](http://github.com/rlaope/estudy/blob/master/AI/cnn.md)
 - [LSH(Locality-Sensitive Hashing)](http://github.com/rlaope/estudy/blob/master/AI/lsh.md)
 - [Elasticsearch Indexing & Vector Search](http://github.com/rlaope/estudy/blob/master/AI/esiv.md)
-- [객체 탐지 (Object Detection)](http://github.com/rlaope/estudy/blob/master/AI/objecct_detection.md))
+- [객체 탐지 (Object Detection)](http://github.com/rlaope/estudy/blob/master/AI/objecct_detection.md)
+- [검색 시스템 정량적 평가 지표 (IR Metrics & Evaluation)](http://github.com/rlaope/estudy/blob/master/AI/irmetric.md)
