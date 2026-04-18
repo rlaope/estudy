@@ -911,3 +911,4 @@
 - [Metric Learning & CLIP](http://github.com/rlaope/estudy/blob/master/AI/clip.md)
 - [근사 검색 알고리즘, HNSW (ANN & FAISS)](http://github.com/rlaope/estudy/blob/master/AI/hnsw.md)
 - [Elasticsearch 8.x Native Vector Search와 하이브리드 아키텍처](http://github.com/rlaope/estudy/blob/master/AI/hybridsearch.md)
+- [AI 모델 경량화 및 추론 가속 (ONNX & TensorRT)](http://github.com/rlaope/estudy/blob/master/AI/modelx.md)
