@@ -909,3 +909,4 @@
 - [객체 탐지 (Object Detection)](http://github.com/rlaope/estudy/blob/master/AI/objecct_detection.md)
 - [검색 시스템 정량적 평가 지표 (IR Metrics & Evaluation)](http://github.com/rlaope/estudy/blob/master/AI/irmetric.md)
 - [Metric Learning & CLIP](http://github.com/rlaope/estudy/blob/master/AI/clip.md)
+- [근사 검색 알고리즘, HNSW (ANN & FAISS)](http://github.com/rlaope/estudy/blob/master/AI/hnsw.md)
