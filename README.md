@@ -914,3 +914,4 @@
 - [AI 모델 경량화 및 추론 가속 (ONNX & TensorRT)](http://github.com/rlaope/estudy/blob/master/AI/modelx.md)
 - [AI 서빙 아키텍처 (Triton Inference Server & Dynamic Batching)](http://github.com/rlaope/estudy/blob/master/AI/serving.md)
 - [Triton Inference Server](http://github.com/rlaope/estudy/blob/master/AI/triton.md)
+- [vLLM](http://github.com/rlaope/estudy/blob/master/AI/vllm.md)
