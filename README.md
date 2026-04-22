@@ -915,3 +915,5 @@
 - [AI 서빙 아키텍처 (Triton Inference Server & Dynamic Batching)](http://github.com/rlaope/estudy/blob/master/AI/serving.md)
 - [Triton Inference Server](http://github.com/rlaope/estudy/blob/master/AI/triton.md)
 - [vLLM](http://github.com/rlaope/estudy/blob/master/AI/vllm.md)
+- [LLM/Agent 공통 플랫폼 아키텍처](http://github.com/rlaope/estudy/blob/master/AI/llmagent)
+  - [LLM Gateway와 다중 모델(SaaS & Self-hosted) 통합 라우팅](http://github.com/rlaope/estudy/blob/master/AI/llmagent/routing.md)
