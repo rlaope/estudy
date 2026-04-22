@@ -919,3 +919,4 @@
   - [LLM Gateway와 다중 모델(SaaS & Self-hosted) 통합 라우팅](http://github.com/rlaope/estudy/blob/master/AI/llmagent/routing.md)
   - [모듈형 RAG 파이프라인 및 통합 인터페이스 설계](http://github.com/rlaope/estudy/blob/master/AI/llmagent/rag_pipeline.md)
   - [AI Agent 도구화(Tooling) 및 동적 프롬프트·컨텍스트 관리 플랫폼](http://github.com/rlaope/estudy/blob/master/AI/llmagent/ai_tooling.md)
+  - [RAG 및 Agent 서빙 파이프라인](http://github.com/rlaope/estudy/blob/master/AI/llmagent/agent_serving.md)
