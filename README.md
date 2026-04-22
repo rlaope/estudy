@@ -920,3 +920,5 @@
   - [모듈형 RAG 파이프라인 및 통합 인터페이스 설계](http://github.com/rlaope/estudy/blob/master/AI/llmagent/rag_pipeline.md)
   - [AI Agent 도구화(Tooling) 및 동적 프롬프트·컨텍스트 관리 플랫폼](http://github.com/rlaope/estudy/blob/master/AI/llmagent/ai_tooling.md)
   - [RAG 및 Agent 서빙 파이프라인](http://github.com/rlaope/estudy/blob/master/AI/llmagent/agent_serving.md)
+  - [LLM/Agent 정량적 Evaluation 시스템](http://github.com/rlaope/estudy/blob/master/AI/llmagent/evaluation.md)
+  - [멀티 테넌트(Multi-tenant) LLM 플랫폼 환경과 자원 격리](http://github.com/rlaope/estudy/blob/master/AI/llmagent/multitenant.md)

@@ -150,3 +150,30 @@ def platform_rag_ask(request: RAGRequest):
         }
     }
 ```
+
+그리고 실무에서는 redis 젖아 조회 로직을 직접 구현하지 않고도 LangGraph가 제공하는 `Checkpointer` 객체 (RedisSaver, PostgreSaver등) 컴파일 시점에 주입하여 모든 io를 프레임워크에 위임한다.
+
+```py
+from langgraph.graph import StateGraph
+from langgraph.checkpoint.postgres import PostgresSaver
+from psycopg_pool import ConnectionPool
+
+# 1. State와 Node 정의 (이전과 동일)
+workflow = StateGraph(AgentState)
+workflow.add_node("llm_node", llm_reasoning_node)
+# ... 노드 및 엣지 연결 생략 ...
+
+# 2. 프로덕션용 Checkpointer 연결 (PostgreSQL 예시)
+# DB 커넥션 풀을 생성하고 프레임워크에 주입합니다.
+pool = ConnectionPool("postgresql://user:pass@host/db")
+checkpointer = PostgresSaver(pool)
+
+# 3. 그래프 컴파일 (이 시점에 상태 자동 저장 로직이 내장됨)
+app = workflow.compile(checkpointer=checkpointer)
+
+# 4. 실무 API 호출 방식
+# 개발자는 단순히 thread_id만 config로 넘기면, 
+# DB에서 상태를 불러오고, 노드 실행 후 다시 덮어쓰는 전 과정이 자동화됩니다.
+config = {"configurable": {"thread_id": "thread_12345"}}
+final_state = app.invoke({"messages": ["고객 데이터 조회해줘"]}, config=config)
+```
