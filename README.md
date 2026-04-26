@@ -922,3 +922,4 @@
   - [RAG 및 Agent 서빙 파이프라인](http://github.com/rlaope/estudy/blob/master/AI/llmagent/agent_serving.md)
   - [LLM/Agent 정량적 Evaluation 시스템](http://github.com/rlaope/estudy/blob/master/AI/llmagent/evaluation.md)
   - [멀티 테넌트(Multi-tenant) LLM 플랫폼 환경과 자원 격리](http://github.com/rlaope/estudy/blob/master/AI/llmagent/multitenant.md)
+- [모델 경량화 및 추론 지연 시간 최적화 파이프라인 (ONNXRuntime,  TensorRT)](http://github.com/rlaope/estudy/blob/master/AI/optimize_runtime/opti1.md)
