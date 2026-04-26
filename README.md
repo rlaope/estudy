@@ -924,3 +924,4 @@
   - [멀티 테넌트(Multi-tenant) LLM 플랫폼 환경과 자원 격리](http://github.com/rlaope/estudy/blob/master/AI/llmagent/multitenant.md)
 - [모델 경량화 및 추론 지연 시간 최적화 파이프라인 (ONNXRuntime,  TensorRT)](http://github.com/rlaope/estudy/blob/master/AI/optimize_runtime/opti1.md)
 - [Triton Inference Server config.pbtxt 튜닝](http://github.com/rlaope/estudy/blob/master/AI/optimize_runtime/opti2.md)
+- [vLLM 엔진 PagedAttention 기반 메모리 최적화 테스트](http://github.com/rlaope/estudy/blob/master/AI/optimize_runtime/opti3.md)
