@@ -926,3 +926,4 @@
 - [Triton Inference Server config.pbtxt 튜닝](http://github.com/rlaope/estudy/blob/master/AI/optimize_runtime/opti2.md)
 - [vLLM 엔진 PagedAttention 기반 메모리 최적화](http://github.com/rlaope/estudy/blob/master/AI/optimize_runtime/opti3.md)
 - [코어 추론 엔진과 통신하는 고성능 비동기 API 레이어 구현](http://github.com/rlaope/estudy/blob/master/AI/optimize_runtime/opti4.md)
+- [Continuous Batching 알고리즘](http://github.com/rlaope/estudy/blob/master/AI/optimize_runtime/opti5.md)
