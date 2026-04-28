@@ -931,3 +931,4 @@
   - [Nesight Systems, PyTorch Profiler VRAM 메모리 병목 프로파일링](http://github.com/rlaope/estudy/blob/master/AI/optimize_runtime/opti6.md)
 - [LLM Gateway 및 멀티테넌트 환경 아키텍처](http://github.com/rlaope/estudy/blob/master/AI/llm_gateway)
   - [LiteLLM 프록시 서버 구성](http://github.com/rlaope/estudy/blob/master/AI/llm_gateway/lg1.md)
+  - [테넌트별 요청 분리 권한 인가 미들웨어 개발](http://github.com/rlaope/estudy/blob/master/AI/llm_gateway/lg2.md)
