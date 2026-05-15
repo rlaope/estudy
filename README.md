@@ -938,3 +938,5 @@
   - [LLM API 응답 가공](http://github.com/rlaope/estudy/blob/master/AI/llm_gateway/lg6.md)
 - [상태 머신 기반 Agent Pipeline](http://github.com/rlaope/estudy/blob/master/AI/agent_state/)
   - [LangGraph 기반 Agent DAG](http://github.com/rlaope/estudy/blob/master/AI/agent_state/st1.md)
+  - [Stateless 프로토콜에서 Agent 문맥 식별 라우터](http://github.com/rlaope/estudy/blob/master/AI/agent_state/st1.md)
+  - [Checkpointing 구현](http://github.com/rlaope/estudy/blob/master/AI/agent_state/st1.md)
