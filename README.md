@@ -947,4 +947,5 @@
 
 - [CPU와 GPU의 설계 철학 차이](http://github.com/rlaope/estudy/blob/master/MLOps/cpu_gpu.md)
 - [GPU 스레드 실행 모델](http://github.com/rlaope/estudy/blob/master/MLOps/gpu_thread.md)
+- [GPU 내부 메모리 계층 구조](http://github.com/rlaope/estudy/blob/master/MLOps/gpu_mem.md)
 - [CUDA, Tensor Core](http://github.com/rlaope/estudy/blob/master/MLOps/cuda.md)
