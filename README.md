@@ -949,3 +949,4 @@
 - [GPU 스레드 실행 모델](http://github.com/rlaope/estudy/blob/master/MLOps/gpu_thread.md)
 - [GPU 내부 메모리 계층 구조](http://github.com/rlaope/estudy/blob/master/MLOps/gpu_mem.md)
 - [CUDA, Tensor Core](http://github.com/rlaope/estudy/blob/master/MLOps/cuda.md)
+- [HBM, Roofline 모델](http://github.com/rlaope/estudy/blob/master/MLOps/hbm.md)
