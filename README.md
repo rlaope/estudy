@@ -952,3 +952,4 @@
 - [HBM, Roofline 모델](http://github.com/rlaope/estudy/blob/master/MLOps/hbm.md)
 - [PCIe 레인 구조, GPUDirect Storage, NUMA Optimization](http://github.com/rlaope/estudy/blob/master/MLOps/pcle.md)
 - [NVLink, NVSwitch](http://github.com/rlaope/estudy/blob/master/MLOps/nv.md)
+- [ZeRO Optimizer (DeepSpeed, FSDP)](http://github.com/rlaope/estudy/blob/master/MLOps/zeroopt.md)
