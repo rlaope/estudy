@@ -942,6 +942,8 @@
   - [Checkpointing 구현](http://github.com/rlaope/estudy/blob/master/AI/agent_state/st1.md)
 - [RNN에서 Attention까지 발전 과정](http://github.com/rlaope/estudy/blob/master/AI/rnn.md)
 - [Self-Attention, Multi-Head Attention](http://github.com/rlaope/estudy/blob/master/AI/attetion.md)
+- [Positional Encoding, Encoder-Decoder](http://github.com/rlaope/estudy/blob/master/AI/ende.md)
+- [BERT, GPT](http://github.com/rlaope/estudy/blob/master/AI/bert.md)
 
 ----
 
