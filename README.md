@@ -940,6 +940,8 @@
   - [LangGraph 기반 Agent DAG](http://github.com/rlaope/estudy/blob/master/AI/agent_state/st1.md)
   - [Stateless 프로토콜에서 Agent 문맥 식별 라우터](http://github.com/rlaope/estudy/blob/master/AI/agent_state/st1.md)
   - [Checkpointing 구현](http://github.com/rlaope/estudy/blob/master/AI/agent_state/st1.md)
+- [RNN에서 Attention까지 발전 과정](http://github.com/rlaope/estudy/blob/master/AI/rnn.md)
+- [Self-Attention, Multi-Head Attention](http://github.com/rlaope/estudy/blob/master/AI/attetion.md)
 
 ----
 
