@@ -958,3 +958,5 @@
 - [PCIe 레인 구조, GPUDirect Storage, NUMA Optimization](http://github.com/rlaope/estudy/blob/master/MLOps/pcle.md)
 - [NVLink, NVSwitch](http://github.com/rlaope/estudy/blob/master/MLOps/nv.md)
 - [ZeRO Optimizer (DeepSpeed, FSDP)](http://github.com/rlaope/estudy/blob/master/MLOps/zeroopt.md)
+- [Transformer 추론 실행 구조 이해](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/llm_infer.md)
+- [LLM Serving Benchmark와 성능 지표](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/bench.md)
