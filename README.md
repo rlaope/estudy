@@ -960,3 +960,4 @@
 - [ZeRO Optimizer (DeepSpeed, FSDP)](http://github.com/rlaope/estudy/blob/master/MLOps/zeroopt.md)
 - [Transformer 추론 실행 구조 이해](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/llm_infer.md)
 - [LLM Serving Benchmark와 성능 지표](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/bench.md)
+- [KV Cache와 Batching 최적화](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/kvopt.md)
