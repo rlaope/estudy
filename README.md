@@ -963,4 +963,5 @@
 - [KV Cache와 Batching 최적화](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/kvopt.md)
 - [Quantization과 Multi-GPU Parallelism](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/quant.md)
 - [Production Model Serving과 Capacity Planning](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/serving.md)
-- [Agent 구성요소와 State Model 설계](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/serving.md)
+- [Agent 구성요소와 State Model 설계](http://github.com/rlaope/estudy/blob/master/MLOps/durable_agent/serving.md)
+- [Tool Calling과 MCP 기반 Tool 설계](http://github.com/rlaope/estudy/blob/master/MLOps/durable_agent/tool_call.md)
