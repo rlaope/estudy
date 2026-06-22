@@ -946,6 +946,7 @@
 - [Positional Encoding, Encoder-Decoder](http://github.com/rlaope/estudy/blob/master/AI/ende.md)
 - [BERT, GPT](http://github.com/rlaope/estudy/blob/master/AI/bert.md)
 - [SFT, Policy Learning](http://github.com/rlaope/estudy/blob/master/AI/sft.md)
+- [Off-policy Distillation과 Teacher-Student 학습](http://github.com/rlaope/estudy/blob/master/AI/opd.md)
 
 ----
 
