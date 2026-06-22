@@ -947,6 +947,7 @@
 - [BERT, GPT](http://github.com/rlaope/estudy/blob/master/AI/bert.md)
 - [SFT, Policy Learning](http://github.com/rlaope/estudy/blob/master/AI/sft.md)
 - [Off-policy Distillation과 Teacher-Student 학습](http://github.com/rlaope/estudy/blob/master/AI/opd.md)
+- [On-policy SFT와 Rejection Sampling Fine-Tuning](http://github.com/rlaope/estudy/blob/master/AI/onsft.md)
 
 ----
 
