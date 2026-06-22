@@ -945,6 +945,7 @@
 - [Self-Attention, Multi-Head Attention](http://github.com/rlaope/estudy/blob/master/AI/attetion.md)
 - [Positional Encoding, Encoder-Decoder](http://github.com/rlaope/estudy/blob/master/AI/ende.md)
 - [BERT, GPT](http://github.com/rlaope/estudy/blob/master/AI/bert.md)
+- [SFT, Policy Learning](http://github.com/rlaope/estudy/blob/master/AI/sft.md)
 
 ----
 
@@ -965,3 +966,4 @@
 - [Production Model Serving과 Capacity Planning](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/serving.md)
 - [Agent 구성요소와 State Model 설계](http://github.com/rlaope/estudy/blob/master/MLOps/durable_agent/serving.md)
 - [Tool Calling과 MCP 기반 Tool 설계](http://github.com/rlaope/estudy/blob/master/MLOps/durable_agent/tool_call.md)
+
