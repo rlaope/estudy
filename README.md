@@ -949,6 +949,7 @@
 - [Off-policy Distillation과 Teacher-Student 학습](http://github.com/rlaope/estudy/blob/master/AI/opd.md)
 - [On-policy SFT와 Rejection Sampling Fine-Tuning](http://github.com/rlaope/estudy/blob/master/AI/onsft.md)
 - [Preference Optimization: DPO 계열](http://github.com/rlaope/estudy/blob/master/AI/dpo.md)
+- [Online RL: PPO, GRPO, RLVR](http://github.com/rlaope/estudy/blob/master/AI/rl.md)
 
 ----
 
