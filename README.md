@@ -951,6 +951,7 @@
 - [Preference Optimization: DPO 계열](http://github.com/rlaope/estudy/blob/master/AI/dpo.md)
 - [Online RL: PPO, GRPO, RLVR](http://github.com/rlaope/estudy/blob/master/AI/rl.md)
 - [Self-Distillation과 Iterative Self-Improvement](http://github.com/rlaope/estudy/blob/master/AI/sd.md)
+- [Policy Distribution와 On-Policy / Off-Policy](http://github.com/rlaope/estudy/blob/master/AI/policydis.md)
 
 ----
 
