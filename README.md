@@ -952,9 +952,8 @@
 - [Online RL: PPO, GRPO, RLVR](http://github.com/rlaope/estudy/blob/master/AI/rl.md)
 - [Self-Distillation과 Iterative Self-Improvement](http://github.com/rlaope/estudy/blob/master/AI/sd.md)
 - [Policy Distribution와 On-Policy / Off-Policy](http://github.com/rlaope/estudy/blob/master/AI/policydis.md)
-- [Agent 구성요소와 State Model 설계](http://github.com/rlaope/estudy/blob/master/MLOps/durable_agent/serving.md)
-- [Tool Calling과 MCP 기반 Tool 설계](http://github.com/rlaope/estudy/blob/master/MLOps/durable_agent/tool_call.md)
-- [Durable Execution과 Workflow 복구](http://github.com/rlaope/estudy/blob/master/MLOps/durable_agent/durableworkflow.md)
+- [LLM Model Tuning](http://github.com/rlaope/estudy/blob/master/AI/llmtun/README.md)
+  - [Transformer와 Causal LM 구조 이해](http://github.com/rlaope/estudy/blob/master/AI/llmtun/transformer.md)
 
 
 ----
@@ -974,3 +973,6 @@
 - [KV Cache와 Batching 최적화](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/kvopt.md)
 - [Quantization과 Multi-GPU Parallelism](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/quant.md)
 - [Production Model Serving과 Capacity Planning](http://github.com/rlaope/estudy/blob/master/MLOps/llm_performance/serving.md)
+- [Agent 구성요소와 State Model 설계](http://github.com/rlaope/estudy/blob/master/AI/durable_agent/serving.md)
+- [Tool Calling과 MCP 기반 Tool 설계](http://github.com/rlaope/estudy/blob/master/MLOps/durable_agent/tool_call.md)
+- [Durable Execution과 Workflow 복구](http://github.com/rlaope/estudy/blob/master/MLOps/durable_agent/durableworkflow.md)
