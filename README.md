@@ -955,6 +955,7 @@
 - [LLM Model Tuning](http://github.com/rlaope/estudy/blob/master/AI/llmtun/README.md)
   - [Transformer와 Causal LM 구조 이해](http://github.com/rlaope/estudy/blob/master/AI/llmtun/transformer.md)
   - [Tokenizer와 Context Length](http://github.com/rlaope/estudy/blob/master/AI/llmtun/token.md)
+  - [Pretraining Objective와 Loss 이해](http://github.com/rlaope/estudy/blob/master/AI/llmtun/loss.md)
 
 
 ----
