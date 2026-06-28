@@ -957,6 +957,7 @@
   - [Tokenizer와 Context Length](http://github.com/rlaope/estudy/blob/master/AI/llmtun/token.md)
   - [Pretraining Objective와 Loss 이해](http://github.com/rlaope/estudy/blob/master/AI/llmtun/loss.md)
   - [Base Model, Instruct Model, Chat Model](http://github.com/rlaope/estudy/blob/master/AI/llmtun/model.md)
+  - [Continual Pretraining과 Fine-tuning 차이](http://github.com/rlaope/estudy/blob/master/AI/llmtun/tuning.md)
 
 
 ----
