@@ -987,3 +987,4 @@
 #### Math
 
 - [연립선형방정식과 행렬](http://github.com/rlaope/estudy/blob/master/Math/math1.md)
+- [가우스-조르당 소고법과 여러 가지 행렬](http://github.com/rlaope/estudy/blob/master/Math/math2.md)
