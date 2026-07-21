@@ -981,3 +981,9 @@
 - [Agent 구성요소와 State Model 설계](http://github.com/rlaope/estudy/blob/master/AI/durable_agent/serving.md)
 - [Tool Calling과 MCP 기반 Tool 설계](http://github.com/rlaope/estudy/blob/master/MLOps/durable_agent/tool_call.md)
 - [Durable Execution과 Workflow 복구](http://github.com/rlaope/estudy/blob/master/MLOps/durable_agent/durableworkflow.md)
+
+----
+
+#### Math
+
+- [연립선형방정식과 행렬](http://github.com/rlaope/estudy/blob/master/Math/math1.md)
