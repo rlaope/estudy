@@ -994,4 +994,3 @@
   - [고윳값과 케일리-해밀턴 정리](http://github.com/rlaope/estudy/blob/master/Math/math5.md)
   - [행렬 분해](http://github.com/rlaope/estudy/blob/master/Math/math6.md)
 - [미분적분학](http://github.com/rlaope/estudy/blob/master/Math/README.md)
-  - 
