@@ -959,6 +959,7 @@
   - [Base Model, Instruct Model, Chat Model](http://github.com/rlaope/estudy/blob/master/AI/llmtun/model.md)
   - [Continual Pretraining과 Fine-tuning 차이](http://github.com/rlaope/estudy/blob/master/AI/llmtun/tuning.md)
   - [Pretraning Data와 SFT Data 구분](http://github.com/rlaope/estudy/blob/master/AI/llmtun/data.md)
+- [Hermes Agent, Agent Memory Layer](http://github.com/rlaope/estudy/blob/master/AI/hermes_memory.md)
 
 
 ----
