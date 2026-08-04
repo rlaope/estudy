@@ -960,6 +960,7 @@
   - [Continual Pretraining과 Fine-tuning 차이](http://github.com/rlaope/estudy/blob/master/AI/llmtun/tuning.md)
   - [Pretraning Data와 SFT Data 구분](http://github.com/rlaope/estudy/blob/master/AI/llmtun/data.md)
 - [Hermes Agent, Agent Memory Layer](http://github.com/rlaope/estudy/blob/master/AI/hermes_memory.md)
+- [OpenWeight Model(Kimi, GLM, Qwen, DeepSeek) 고고학](http://github.com/rlaope/estudy/blob/master/AI/openweight.md)
 
 
 ----
