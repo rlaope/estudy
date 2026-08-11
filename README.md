@@ -967,6 +967,7 @@
   - [Kimi](http://github.com/rlaope/estudy/blob/master/AI/ow/kimi.md)
 - [LLM 추론 서빙 엔진 SGLang 리서치](http://github.com/rlaope/estudy/blob/master/AI/llm_serving_opt.md)
 - [Agent Long Term Memory System](http://github.com/rlaope/estudy/blob/master/AI/longterm.md)
+- [QWEN 모델 분석](http://github.com/rlaope/estudy/blob/master/AI/qwen_deepdive.md)
 
 ----
 
