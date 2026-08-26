@@ -992,6 +992,7 @@
 - [Durable Execution과 Workflow 복구](http://github.com/rlaope/estudy/blob/master/MLOps/durable_agent/durableworkflow.md)
 - [GPU 하드웨어와 성능 모델](http://github.com/rlaope/estudy/blob/master/MLOps/gpu.md)
 - [SGLang 서빙 실전 케이스북](http://github.com/rlaope/estudy/blob/master/MLOps/sglang.md)
+- [병렬화 전략 - TP, PP, EP, DP](http://github.com/rlaope/estudy/blob/master/MLOps/np.md)
 
 ----
 
