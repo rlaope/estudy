@@ -995,6 +995,7 @@
 - [모델 아키텍처별 서빙 플레이북](http://github.com/rlaope/estudy/blob/master/MLOps/serving.md)
 - [병렬화 전략 - TP, PP, EP, DP](http://github.com/rlaope/estudy/blob/master/MLOps/np.md)
 - [GPU 위에 모델이 뜨는 과정](http://github.com/rlaope/estudy/blob/master/MLOps/gpumodel.md)
+- [분산 서빙과 통신](http://github.com/rlaope/estudy/blob/master/MLOps/distribute_serving.md)
 
 ----
 
