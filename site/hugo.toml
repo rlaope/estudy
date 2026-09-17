@@ -1,0 +1,110 @@
+# estudy — Hugo site shell (LANE L3)
+# Run from the repo root:
+#   hugo --config site/hugo.toml --destination /tmp/l3-out
+# contentDir defaults to the staged tree produced by L1 (.cache/content).
+# Override with `--contentDir .` to build straight from the raw repo
+# (that drops the 75 DataBase notes: DataBase/index.md makes a leaf bundle — expected).
+
+baseURL = 'https://rlaope.github.io/estudy/'
+title = 'estudy'
+locale = 'ko'
+defaultContentLanguage = 'ko'
+hasCJKLanguage = true
+copyright = 'rlaope'
+
+# Every dir below is resolved against the working dir (= repo root when run as above).
+contentDir = '.cache/content'
+layoutDir = 'site/layouts'    # NOTE: Hugo key is singular `layoutDir`; `layoutsDir` is silently ignored
+assetDir = 'site/assets'
+staticDir = 'site/static'
+dataDir = 'site/data'
+i18nDir = 'site/i18n'
+archetypeDir = 'site/archetypes'
+resourceDir = 'site/.hugo_resources'   # build cache for processed assets; gitignore (L4)
+
+# Notes are plain .md files with Korean / uppercase names and `./image/x.png` refs.
+# Ugly URLs keep every note at <dir>/<name>.html so the relative image links resolve.
+uglyURLs = true
+disablePathToLower = true
+canonifyURLs = false
+relativeURLs = false
+enableRobotsTXT = true
+timeout = '120s'
+summaryLength = 60
+pluralizeListTitles = false   # section titles stay as directory names (Back-End, not Back-Ends)
+titleCaseStyle = 'none'
+
+# Raw-repo builds (--contentDir .) must not ingest the shell, tools or notebooks.
+# Matched against the absolute source path — never list `.cache/` here (it would hide the staged content tree itself).
+ignoreFiles = ['/site/', '/tools/', '/\.omh/', '/\.cargo/', '/\.github/', '/target/', '\.ipynb$', '/Cargo\.(toml|lock)$']
+
+disableKinds = ['taxonomy', 'term', 'rss']
+
+[pagination]
+  pagerSize = 1000
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = 'github'
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = false
+        title = true
+    [markup.goldmark.renderer]
+      unsafe = true          # notes use raw <br>, <img>, <details>
+      hardWraps = false
+      xhtml = false
+    [markup.goldmark.extensions]
+      table = true
+      strikethrough = true
+      linkify = true
+      linkifyProtocol = 'https'
+      taskList = true
+      definitionList = true
+      footnote = true
+      typographer = false    # keep ASCII quotes/dashes as written
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$']]
+          inline = [['$', '$']]
+    [markup.goldmark.renderHooks]
+      [markup.goldmark.renderHooks.image]
+        useEmbedded = 'never'   # site/layouts/_markup/render-image.html
+      [markup.goldmark.renderHooks.link]
+        useEmbedded = 'never'   # site/layouts/_markup/render-link.html
+
+  [markup.highlight]
+    style = 'github'
+    noClasses = false        # classes only -> site/assets/css/chroma.css is required
+    codeFences = true
+    guessSyntax = false
+    lineNos = false
+    lineNumbersInTable = false
+    tabWidth = 4
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+[outputs]
+  home = ['html']
+  section = ['html']
+  page = ['html']
+
+[params]
+  description = 'rlaope의 지식의 숲 — 소프트웨어를 공부하고 연구하며 남긴 기록들의 집합'
+  repoURL = 'https://github.com/rlaope/estudy'
+  repoBranch = 'master'
+  graphPath = 'graph.html'   # built by L2; home links to it
+
+[minify]
+  disableXML = true
+  [minify.tdewolff.html]
+    keepWhitespace = false
+    keepComments = false

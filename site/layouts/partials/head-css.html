@@ -1,0 +1,7 @@
+{{- /* One CSS bundle: Pretendard dynamic-subset @font-face slices + tokens/layout + Chroma light/dark */ -}}
+{{- $parts := slice -}}
+{{- range slice "css/pretendard-subset.css" "css/site.css" "css/chroma.css" "css/chroma-dark.css" -}}
+  {{- with resources.Get . }}{{ $parts = $parts | append . }}{{ else }}{{ errorf "missing asset %q" . }}{{ end -}}
+{{- end -}}
+{{- $css := $parts | resources.Concat "css/bundle.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

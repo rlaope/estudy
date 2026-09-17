@@ -1,0 +1,10 @@
+{{- /* Image render hook: relative paths (./image/x.png, ../image/y.png, gc.png) stay relative — uglyURLs keeps the
+     page next to its image dir so the browser resolves them; remote/data URLs pass through. Lazy + async decode, no JS. */ -}}
+{{- $src := .Destination -}}
+{{- $remote := or (hasPrefix $src "http://") (hasPrefix $src "https://") (hasPrefix $src "//") -}}
+{{- $alt := .PlainText | default .Text -}}
+{{- $isBlock := .IsBlock -}}
+{{- if $isBlock }}<figure>{{ end -}}
+<img src="{{ $src | safeURL }}" alt="{{ $alt }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async"{{ if $remote }} referrerpolicy="no-referrer"{{ end }}>
+{{- if and $isBlock .Title }}<figcaption>{{ .Title }}</figcaption>{{ end -}}
+{{- if $isBlock }}</figure>{{ end -}}

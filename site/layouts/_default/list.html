@@ -1,0 +1,42 @@
+{{ define "main" -}}
+{{- $sec := . -}}
+{{- $pages := .RegularPagesRecursive -}}
+{{- $title := partial "secname.html" . -}}
+{{- $h1 := partial "title.html" . -}}
+<div class="layout layout--wide">
+  {{ partial "sidenav.html" . }}
+  <main id="main" class="main">
+    <header class="index-header">
+      <nav class="crumbs meta" aria-label="경로">
+        <a href="{{ site.Home.RelPermalink }}">estudy</a>
+        {{- range .Ancestors.Reverse }}{{ if not .IsHome }}<span class="sep">/</span><a href="{{ .RelPermalink }}">{{ partial "secname.html" . }}</a>{{ end }}{{ end -}}
+      </nav>
+      <h1 class="index-title">{{ $title }}</h1>
+      {{- if ne $h1 $title }}<p class="home-lead">{{ $h1 }}</p>{{ end }}
+      <p class="meta"><span class="num">{{ len $pages }}</span> notes{{ with .Sections }}<span class="sep">·</span><span class="num">{{ len . }}</span> sub-sections{{ end }}</p>
+    </header>
+    {{- with .Content -}}
+    {{- $c := replaceRE `(?s)\A\s*<h1[^>]*>.*?</h1>` "" . 1 -}}
+    {{- $c = replaceRE `<table>` `<div class="table-wrap"><table>` $c -}}
+    {{- $c = replaceRE `</table>` `</table></div>` $c -}}
+    <div class="prose" lang="ko">{{ $c | safeHTML }}</div>
+    {{- end -}}
+    <div class="index-groups">
+      {{- range (partial "group-by-dir.html" (dict "sec" $sec "pages" $pages)) -}}
+        {{- $rel := .rel }}{{ $items := .pages -}}
+      <section class="index-group">
+        <h2><span>{{ if $rel }}{{ $rel }}/{{ else }}./{{ end }}</span><span class="num">{{ len $items }}</span></h2>
+        <ul class="index-list">
+          {{- range $items -}}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ partial "title.html" . }}</a>
+            <span class="meta num">{{ .WordCount | lang.FormatNumberCustom 0 }}w</span>
+          </li>
+          {{- end -}}
+        </ul>
+      </section>
+      {{- end -}}
+    </div>
+  </main>
+</div>
+{{- end }}

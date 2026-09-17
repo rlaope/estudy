@@ -1,0 +1,43 @@
+{{- /* Left rail: every note of the current top-level section, grouped by sub-directory (no JS; <details> for collapsed groups) */ -}}
+{{- $cur := . -}}
+{{- $sec := .FirstSection -}}
+{{- if .IsSection }}{{ $sec = . }}{{ end -}}
+{{- $curDir := "" }}{{ with .File }}{{ $curDir = .Dir }}{{ end -}}
+{{- if not $sec.IsHome -}}
+{{- $pages := $sec.RegularPagesRecursive -}}
+<nav class="sidenav" aria-label="{{ partial "secname.html" $sec }} 노트">
+  <div class="group">
+    <span class="group-title">
+      <a href="{{ $sec.RelPermalink }}"{{ if eq $cur $sec }} aria-current="page"{{ end }}>{{ partial "secname.html" $sec }}</a>
+      <span class="count meta num">{{ len $pages }}</span>
+    </span>
+  </div>
+  {{- range (partial "group-by-dir.html" (dict "sec" $sec "pages" $pages)) -}}
+    {{- $open := eq .dir $curDir -}}
+    {{- if eq .rel "" -}}
+  <ul class="notes root">
+      {{- range .pages -}}
+    <li><a href="{{ .RelPermalink }}"{{ if eq . $cur }} aria-current="page"{{ end }}>{{ partial "title.html" . }}</a></li>
+      {{- end -}}
+  </ul>
+    {{- else -}}
+  <details class="group"{{ if $open }} open{{ end }}>
+    <summary class="group-title"><span class="dir">{{ .rel }}/</span> <span class="count meta num">{{ len .pages }}</span></summary>
+    <ul class="notes">
+      {{- range .pages -}}
+      <li><a href="{{ .RelPermalink }}"{{ if eq . $cur }} aria-current="page"{{ end }}>{{ partial "title.html" . }}</a></li>
+      {{- end -}}
+    </ul>
+  </details>
+    {{- end -}}
+  {{- end -}}
+  <div class="group sections">
+    <span class="group-title">섹션</span>
+    <ul class="dirs">
+      {{- range site.Sections -}}
+      <li><a href="{{ .RelPermalink }}"{{ if eq . $sec }} aria-current="true"{{ end }}>{{ partial "secname.html" . }} <span class="count meta num">{{ len .RegularPagesRecursive }}</span></a></li>
+      {{- end -}}
+    </ul>
+  </div>
+</nav>
+{{- end -}}

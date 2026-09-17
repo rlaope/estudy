@@ -1,0 +1,8 @@
+<header class="site-header">
+  <a class="brand" href="{{ site.Home.RelPermalink }}">estudy<span class="dot">.</span></a>
+  <nav class="site-nav" aria-label="사이트">
+    <a href="{{ site.Home.RelPermalink }}"{{ if .IsHome }} aria-current="page"{{ end }}>색인</a>
+    <a href="{{ site.Params.graphPath | relURL }}">그래프</a>
+    <a href="{{ site.Params.repoURL }}" rel="noopener">GitHub</a>
+  </nav>
+</header>

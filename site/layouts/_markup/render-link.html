@@ -1,0 +1,28 @@
+{{- /* Link render hook.
+     - relative *.md / *.html (L1 rewrites .md -> .html in the staged tree) -> resolve against this page's directory, keep uglyURLs
+     - absolute http(s) -> external, rel="noopener"
+     - anchors / mailto / data -> untouched */ -}}
+{{- $u := .Destination -}}
+{{- $href := $u -}}
+{{- $external := false -}}
+{{- if or (hasPrefix $u "http://") (hasPrefix $u "https://") (hasPrefix $u "//") -}}
+  {{- $external = true -}}
+  {{- /* links into our own repo that L1 didn't rewrite still work on GitHub */ -}}
+{{- else if or (hasPrefix $u "#") (hasPrefix $u "mailto:") (hasPrefix $u "tel:") (hasPrefix $u "data:") (hasPrefix $u "/") -}}
+  {{- $href = $u -}}
+{{- else -}}
+  {{- /* relative path: split off fragment, map .md -> .html, try to resolve to a page for a canonical URL */ -}}
+  {{- $parts := split $u "#" -}}
+  {{- $path := index $parts 0 -}}
+  {{- $frag := "" }}{{ if gt (len $parts) 1 }}{{ $frag = printf "#%s" (index $parts 1) }}{{ end -}}
+  {{- $path = replaceRE `\.md$` ".html" $path -}}
+  {{- $target := "" -}}
+  {{- if strings.HasSuffix $path ".html" -}}
+    {{- $mdPath := replaceRE `\.html$` ".md" $path -}}
+    {{- with .Page.GetPage $mdPath }}{{ $target = .RelPermalink }}{{ end -}}
+    {{- if not $target }}{{ with .PageInner.GetPage $mdPath }}{{ $target = .RelPermalink }}{{ end }}{{ end -}}
+  {{- end -}}
+  {{- if $target }}{{ $href = printf "%s%s" $target $frag }}{{ else }}{{ $href = printf "%s%s" $path $frag }}{{ end -}}
+{{- end -}}
+<a href="{{ $href | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $external }} rel="noopener"{{ end }}>{{ .Text }}</a>
+{{- /* no trailing newline */ -}}

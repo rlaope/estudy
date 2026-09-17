@@ -1,0 +1,3 @@
+{{- /* Publish every self-hosted font file to /fonts/** (same origin, referenced from CSS as ../fonts/...) */ -}}
+{{- range resources.Match "fonts/**.woff2" -}}{{ .Publish }}{{- end -}}
+{{- range resources.Match "fonts/**LICENSE*" -}}{{ .Publish }}{{- end -}}

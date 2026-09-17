@@ -1,0 +1,12 @@
+{{- /* Title: front matter > first H1 in the file > Hugo .Title > last path segment */ -}}
+{{- $t := "" -}}
+{{- with .Params.title }}{{ $t = . }}{{ end -}}
+{{- if and (not $t) .File -}}
+  {{- range .Fragments.Headings -}}
+    {{- if and (not $t) (eq .Level 1) }}{{ $t = .Title | plainify | htmlUnescape }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $t }}{{ $t = .Title }}{{ end -}}
+{{- if not $t }}{{ $t = path.Base .Path }}{{ end -}}
+{{- if .IsHome }}{{ $t = site.Title }}{{ end -}}
+{{- return (trim $t " ") -}}

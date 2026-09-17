@@ -1,0 +1,7 @@
+{{- /* Section label = real directory name (Back-End, 정보처리, DataBase…), never the _index.md H1.
+     .Path is lowercased by Hugo, so prefer the file dir when the section has an _index.md. */ -}}
+{{- $n := "" -}}
+{{- with .File }}{{ $n = path.Base (strings.TrimSuffix "/" .Dir) }}{{ end -}}
+{{- if not $n }}{{ $n = .Title }}{{ end -}}
+{{- if not $n }}{{ $n = path.Base .Path }}{{ end -}}
+{{- return $n -}}

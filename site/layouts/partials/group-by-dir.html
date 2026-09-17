@@ -1,0 +1,19 @@
+{{- /* Group a page collection by its file directory (relative to $sec). Returns a sorted slice of dicts: {rel, dir, pages} */ -}}
+{{- $sec := .sec }}{{ $pages := .pages -}}
+{{- $s := newScratch -}}
+{{- $dirs := slice -}}
+{{- range $pages -}}
+  {{- with .File -}}
+    {{- $s.Add .Dir (slice $) -}}
+    {{- $dirs = $dirs | append .Dir -}}
+  {{- end -}}
+{{- end -}}
+{{- $out := slice -}}
+{{- $secDir := strings.TrimPrefix "/" $sec.Path -}}
+{{- if $secDir }}{{ $secDir = printf "%s/" $secDir }}{{ end -}}
+{{- range ($dirs | uniq | sort) -}}
+  {{- $rel := strings.TrimPrefix $secDir . -}}
+  {{- $rel = strings.TrimSuffix "/" $rel -}}
+  {{- $out = $out | append (dict "rel" $rel "dir" . "pages" (sort ($s.Get .) "Title")) -}}
+{{- end -}}
+{{- return $out -}}

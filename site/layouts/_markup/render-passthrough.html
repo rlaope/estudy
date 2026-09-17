@@ -1,0 +1,11 @@
+{{- /* Server-side math: goldmark passthrough ($…$ / $$…$$) -> KaTeX HTML at build time. Zero client JS. */ -}}
+{{- $opts := dict "output" "htmlAndMathml" "displayMode" (eq .Type "block") "throwOnError" false "strict" "ignore" "trust" false -}}
+{{- with try (transform.ToMath .Inner $opts) -}}
+  {{- with .Err -}}
+    {{- warnf "KaTeX %s: %s (%s)" $.Type . $.Position -}}
+    {{- if eq $.Type "block" }}<pre class="math-error">{{ $.Inner }}</pre>{{ else }}<code class="math-error">{{ $.Inner }}</code>{{ end -}}
+  {{- else -}}
+    {{- $.Page.Store.Set "hasMath" true -}}
+    {{- if eq $.Type "block" }}<div class="math-block">{{ .Value }}</div>{{ else }}<span class="math-inline">{{ .Value }}</span>{{ end -}}
+  {{- end -}}
+{{- end -}}

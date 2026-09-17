@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+{{- /* Render content first so render hooks can flag per-page needs (e.g. KaTeX) into .Store */ -}}
+{{- $noop := .WordCount -}}
+{{- $title := partial "title.html" . -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }} — 지식의 숲{{ else }}{{ $title }} · {{ site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsHome }}{{ site.Params.description }}{{ else }}{{ $title }} — {{ site.Params.description }}{{ end }}{{ end }}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a">
+<meta name="generator" content="Hugo {{ hugo.Version }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="ko_KR">
+{{- /* README.md is the home page; its own URL is a duplicate */ -}}
+{{- $isReadme := and .File (eq .File.Path "README.md") -}}
+<link rel="canonical" href="{{ if $isReadme }}{{ site.Home.Permalink }}{{ else }}{{ .Permalink }}{{ end }}">
+{{- if $isReadme }}<meta name="robots" content="noindex,follow">{{ end }}
+{{- partial "head-css.html" . -}}
+{{- if .Store.Get "hasMath" -}}
+{{- with resources.Get "css/katex.css" }}{{ with . | minify | fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{- end }}{{ end -}}
+{{- end -}}
+{{- partialCached "publish-fonts.html" . -}}
+</head>
+<body>
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+<div class="site">
+{{- partial "header.html" . -}}
+{{ block "main" . }}{{ end }}
+{{- partial "footer.html" . -}}
+</div>
+</body>
+</html>

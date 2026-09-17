@@ -1,0 +1,2 @@
+{{- /* Headings: github-style ids + a hover anchor link (pure HTML) */ -}}
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text }}{{ if ge .Level 2 }} <a class="anchor" href="#{{ .Anchor | safeURL }}" aria-label="이 절로 링크">#</a>{{ end }}</h{{ .Level }}>
