@@ -6,9 +6,9 @@
 use std::collections::{BTreeSet, HashMap};
 
 /// 한 노트에 유지하는 관련 엣지 수(상위 k).
-pub const TOP_K: usize = 5;
+pub const TOP_K: usize = 8;
 /// 채택 최소 코사인 유사도.
-pub const MIN_SCORE: f32 = 0.05;
+pub const MIN_SCORE: f32 = 0.04;
 /// 문서 빈도 상한 비율 — 이보다 흔한 토큰은 주제 신호가 아니므로 버린다.
 const MAX_DF_RATIO: f32 = 0.10;
 const MIN_TOKEN_CHARS: usize = 2;

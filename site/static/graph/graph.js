@@ -515,7 +515,7 @@ function draw() {
   const nSec = SEC_PALETTE.length;
   const dimBySec = Array.from({ length: nSec }, () => []);
   const inkBySec = Array.from({ length: nSec }, () => []);
-  const hubArr = [], neighArr = [], curArr = [], sec = S.secOf;
+  const hubArr = [], neighArr = [], curArr = [], relSelArr = [], sec = S.secOf;
   const vis = S.visible, match = S.match, hubMask = S.hubMask;
   let drawn = 0;
   for (let i = 0; i < S.n; i++) {
@@ -527,6 +527,8 @@ function draw() {
     const si = sec[i] % nSec;
     if (i === S.current) curArr.push(sx, sy, r);
     else if (hs && hs.set[i]) neighArr.push(sx, sy, r);
+    // 선택한 노트의 '관련 노트'는 섹션 색 그대로 두고 테두리 링으로 표시한다.
+    else if (S.relSel && S.relSel.has(i)) { relSelArr.push(sx, sy, r); inkBySec[si].push(sx, sy, r); }
     else if ((hs && !hs.set[i]) || (match && !match[i])) dimBySec[si].push(sx, sy, r);
     else if (hubMask[i]) hubArr.push(sx, sy, r);
     else inkBySec[si].push(sx, sy, r);
@@ -563,6 +565,17 @@ function draw() {
   fillGroup(hubArr, TOKENS.neighbor, 1);
   fillGroup(neighArr, TOKENS.neighbor, 1);
   fillGroup(curArr, TOKENS.current, 1);
+  // 관련 노트 링(선택 시에만)
+  if (relSelArr.length) {
+    ctx.globalAlpha = 0.9; ctx.strokeStyle = TOKENS.current; ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    for (let k = 0; k < relSelArr.length; k += 3) {
+      const rr = relSelArr[k + 2] + 1.6;
+      ctx.moveTo(relSelArr[k] + rr, relSelArr[k + 1]);
+      ctx.arc(relSelArr[k], relSelArr[k + 1], rr, 0, Math.PI * 2);
+    }
+    ctx.stroke(); ctx.lineWidth = 1;
+  }
   ctx.globalAlpha = 1;
 
   // 포커스 링 (키보드 포커스 / ego 중심 / 선택) — accent 1px
@@ -641,7 +654,7 @@ function bindUI() {
         else { markVisited(id); selectNode(id); }
       } else if ((S.selected !== NONE || S.focus !== NONE) && S.ego === NONE) {
         // 빈 곳 클릭: 선택 해제 → 사이드가 요약으로 돌아간다
-        S.selected = NONE; S.focus = NONE; updateFocusBox(); renderList(); requestDraw();
+        S.selected = NONE; S.focus = NONE; S.relSel = null; updateFocusBox(); renderList(); requestDraw();
       }
     }
     if (pointers.size === 0) { drag = null; canvas.classList.remove('dragging'); }
@@ -654,7 +667,11 @@ function bindUI() {
     const k = Math.exp(-e.deltaY * (e.deltaMode === 1 ? 0.05 : 0.0015));
     zoomAt(e.offsetX, e.offsetY, k);
   }, { passive: false });
-  canvas.addEventListener('dblclick', (e) => { zoomAt(e.offsetX, e.offsetY, 1.8); });
+  canvas.addEventListener('dblclick', (e) => {
+    const id = wasm.hit_test_masked(e.offsetX, e.offsetY, S.visible);
+    if (id !== NONE) { markVisited(id); selectNode(id); location.href = S.nodes[id].url; return; }
+    zoomAt(e.offsetX, e.offsetY, 1.8);
+  });
 
   // 툴바
   qEl.addEventListener('input', onSearch);
@@ -670,7 +687,7 @@ function bindUI() {
     if (S.scope === 'local') setScope('global', S.scopeHub); else setScope('local', S.scopeHub);
   });
   clearBtn.addEventListener('click', () => {
-    qEl.value = ''; S.match = null; S.searchHits = null; S.ego = NONE; S.selected = NONE; S.focus = NONE;
+    qEl.value = ''; S.match = null; S.searchHits = null; S.ego = NONE; S.selected = NONE; S.focus = NONE; S.relSel = null;
     recomputeVisible(); fitToVisible(true); updateFocusBox(); renderList(); requestDraw();
   });
   fitBtn.addEventListener('click', () => { fitToVisible(true); requestDraw(); });
@@ -802,6 +819,7 @@ function renderList(append = false) {
 // 노드 선택: 오른쪽 사이드에 제목·발췌를 띄운다(열기는 사이드의 '열기').
 function selectNode(id) {
   S.selected = id; S.focus = id;
+  S.relSel = new Set(S.relOf[id] || []);
   updateFocusBox(); renderList(); ensureOnScreen(id); requestDraw();
 }
 
