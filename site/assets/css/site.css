@@ -175,11 +175,25 @@ h4, h5, h6 { font-size: 17px; }
 .profile-name { margin: 0; color: var(--muted); font-size: 15px; }
 .home-title { text-align: center; margin: var(--space-4) 0 var(--space-6); font-size: 36px; }
 
-/* 홈: 카테고리 레일(넓은 화면에서 좌측 sticky) + 목록 */
+/* 홈: 카테고리 레일 + 목록
+   - 넓은 화면(≥1200px): 본문 컬럼은 640px 그대로 중앙 정렬하고, 레일은 컬럼 바깥 왼쪽에 고정
+     (컬럼 왼쪽 끝에서 38px = 기존 32px + 20% 떨어짐)
+   - 좁은 화면: 레일이 목록 위로 스택 */
 .home-layout { display: grid; grid-template-columns: 1fr; gap: var(--space-5); }
-@media (min-width: 1080px) {
+@media (min-width: 1080px) and (max-width: 1199px) {
   .home-layout { grid-template-columns: 216px 1fr; gap: var(--space-6); }
   .cat-rail { position: sticky; top: var(--space-4); align-self: start; max-height: calc(100vh - 32px); overflow-y: auto; }
+}
+@media (min-width: 1200px) {
+  .home-layout { display: block; }
+  .cat-rail {
+    position: fixed;
+    top: var(--space-5);
+    left: calc(50% - var(--measure) / 2 - 38px - 216px);
+    width: 216px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+  }
 }
 .cat-rail ul { list-style: none; margin: 0; padding: 0; }
 .cat-rail li { margin: 0 0 2px; }
