@@ -58,8 +58,7 @@ jobs:
       - name: Publish graph data artifacts
         run: |
           mkdir -p public/generated
-          cp site/generated/pos.bin site/generated/graph.bin \
-             site/generated/search.json site/generated/meta.json public/generated/
+          cp site/generated/*.bin site/generated/*.json public/generated/
           ls -l public/generated
 
       - name: Report build output
