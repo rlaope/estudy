@@ -12,7 +12,9 @@
 {{- with $desc }}<meta name="description" content="{{ . }}">
 {{ end -}}
 <meta name="color-scheme" content="light dark">
-<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="icon" href="{{ "favicon-32.png" | relURL }}" sizes="32x32" type="image/png">
+<link rel="icon" href="{{ "favicon-512.png" | relURL }}" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="{{ "favicon-180.png" | relURL }}">
 <script>
 (function () {
   try {
