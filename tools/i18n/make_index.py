@@ -22,8 +22,8 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from translate import api_key, call_model, strip_wrapper  # noqa: E402 (같은 디렉터리 모듈)
 
 REPO = pathlib.Path(__file__).resolve().parents[2]
-KO_README = REPO / 'README.ko.md'   # 한국어 원본(사이트 KO 홈 색인의 출처)
-EN_README = REPO / 'README.md'      # GitHub 기본 README = 영어판(이 스크립트가 생성)
+KO_README = REPO / 'README.md'      # 한국어 원본(레포 기본 문서 + 사이트 KO 홈 색인의 출처)
+EN_README = REPO / 'README.en.md'   # 영어판(이 스크립트가 생성)
 EN_ROOT = REPO / 'brains-en'
 # 기본은 파이프라인 EN 스테이지 위치. 로컬 실험/다른 스테이지에는 환경변수로 덮어쓴다.
 OUT = pathlib.Path(os.environ.get('ESTUDY_EN_README_OUT', REPO / '.cache/content-en/README.md'))
@@ -120,9 +120,10 @@ def main() -> int:
             intro_en = translate_intro(intro_ko)
         except Exception as e:
             print(f'인트로 번역 실패({str(e)[:80]}) — 한국어 유지')
-    # GitHub 에서 언어를 오갈 수 있게 첫 줄에 상호 링크를 둔다.
-    header = '*English · [한국어](https://rlaope.github.io/estudy/)*\n'
-    doc = '\n'.join([header, intro_en, '', *out_lines]).rstrip() + '\n'
+    # 레포 기본 문서는 한국어 README.md 이고, 이 파일은 영어판이다(헤더 장식 없이 본문만).
+    header = ''
+    head_parts = [p for p in (header, intro_en) if p]
+    doc = '\n'.join([*head_parts, '', *out_lines]).rstrip() + '\n'
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(doc, encoding='utf-8')

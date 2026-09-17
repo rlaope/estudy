@@ -27,9 +27,9 @@ pub const EXCLUDED_ROOT_FILES: &[&str] = &[
     "Cargo.toml",
     "Cargo.lock",
     ".hugo_build.lock",
-    // 영어 README — GitHub 기본 문서(도구가 생성). KO 사이트의 노트가 아니다.
-    // 한국어 README 는 `README.ko.md` 로 남아 KO 홈 색인 출처이자 노트다.
-    "README.md",
+    // 영어 README — KO 사이트의 노트가 아니다(EN 스테이지에서 홈 색인 소스로만 쓴다).
+    // 한국어 `README.md` 는 레포 기본 문서이자 KO 홈 색인의 출처(노트로도 포함된다).
+    "README.en.md",
 ];
 
 #[derive(Debug, Clone)]
