@@ -95,7 +95,7 @@ class EventService(
 
 이를 보완하기위한 대안으로 PER이 잇는데 PER은 Probabilistic Early Recomputation으로 **락을 걸어 다른 스레드를 대기시키는 대신, 캐시가 만료되기 직전에 접근하는 스레드중 무작위 한명에게 선제적으로 캐시 갱신 임무를 부여하자**라는 아이디어에서 출발한 락 프리 알고리즘이다.
 
-이론적으로 Varnish, Redis 환경에서 주로 구현되는 XFetch 알고리즘의 핵심 수식은 아래와 같다. 
+이론적으로 Varnish, Redis 환경에서 주로 구현되는 XFetch 알고리즘의 핵심 수식은 아래와 같다.
 
 $$t \ge t_{exp} - \Delta \cdot \beta \cdot \log(rand())$$
 
@@ -111,7 +111,7 @@ $$t \ge t_{exp} - \Delta \cdot \beta \cdot \log(rand())$$
 
 근데 결론은 PER은 TTL이 만료된 후에 복구하는 것이 아니라 만료되기 직전에 선제적으로 캐시를 갱신하는 방법으로 redis 기본 기능에만 의존해 ttl이 지나는 순간 데이터가 삭제되면 이 알고리즘은 성립할 수 없다.
 
-그래서 보통 TTL을 논리적 TTL과 물리적 TTL로 분리하는 아키텍처를 사용하기도한다. 
+그래서 보통 TTL을 논리적 TTL과 물리적 TTL로 분리하는 아키텍처를 사용하기도한다.
 
 #### 물리적 만료와 논리적 만료
 

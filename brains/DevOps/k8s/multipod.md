@@ -24,7 +24,7 @@
 
 <br>
 
-### 사이드카 (Sidecar) 컨테이너 
+### 사이드카 (Sidecar) 컨테이너
 
 사이드카 컨테이너는 서로 다른 두 컨테이너가 같은 파일 시스템을 공유해 보조하는 패턴이다.
 
@@ -84,7 +84,7 @@ spec:
 
 ![](https://seongjin.me/content/images/2022/02/adapter-container.png)
 
-예시 상황으로 dataformat을 볼 수 있다. 
+예시 상황으로 dataformat을 볼 수 있다.
 
 여러 오픈소스들을 사용하다보면 date를 가지고 올때 `YYYY-MM-DD`형식이나 `DD/MM/YYYY` 형식처럼 같은 데이터지만, 다른 규격의 출력물들을 얻을 수 있는 것을 확인할 수 있다.
 

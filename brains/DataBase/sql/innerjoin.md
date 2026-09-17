@@ -34,7 +34,7 @@ OUTER JOIN은 여러가지가 있다.
 지정된 테이블의 값은 모두 출력된다. 즉 NULL 을 허용하기도 한다.
   
 LEFT OUTER JOIN을 사용해보겠다.  
-아래의 결과는 캐스트 멤버들이 있는 행은 모두 출력되고 캐스트 멤버가 없는 행은 캐스트 멤버칸에 NULL이 출력된다. 
+아래의 결과는 캐스트 멤버들이 있는 행은 모두 출력되고 캐스트 멤버가 없는 행은 캐스트 멤버칸에 NULL이 출력된다.
 ```sql
 SELECT A.VIDEO_NAME, A.CATEGORY, B.CAST_MEMBER, B.BIRTHDAY
 FROM NETFLIX A

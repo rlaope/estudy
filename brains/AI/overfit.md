@@ -14,7 +14,7 @@
 
 검은색 선들은 주어진 데이터들을 통해 어느정도 오차는 있겠지만, 새로운 데이터에 대하여 예측할 수 있는 선들로 나타내진다, 하지만 파란색선은 데이터마다 커다란 변동성이 있어 모델의 안정성이 떨어진다.
 
-예시로 어떤게 있을까? 공에 대한 데이터를 학습한 머신러닝 모델이 있다고 가정해보자. 축구공, 농구공, 야구공을 학습하고있다. 
+예시로 어떤게 있을까? 공에 대한 데이터를 학습한 머신러닝 모델이 있다고 가정해보자. 축구공, 농구공, 야구공을 학습하고있다.
 
 근데 모델이 너무 과대적합하게 학습하는 경우는 동그란 형체가 공이라고 판단하는것 외에 실밥, 무게, 밀도, 가죽등을 학습했다고 쳐보자. 그럼 탁구공같은 데이터가 새로 들어오게된다면? 모델은 탁구공을 공으로 분류하지 못할것이다.
 
@@ -31,7 +31,7 @@
 
 ## 과소적합
 
-과소적합은 과대랑 반대로 모델이 너무나도 단순해 훈련 세트를 잘 학습하지 못하는 경우다. 
+과소적합은 과대랑 반대로 모델이 너무나도 단순해 훈련 세트를 잘 학습하지 못하는 경우다.
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbL11gd%2Fbtq3mYZWvZ1%2FAAAAAAAAAAAAAAAAAAAAAKPC0KJ3bey_xldh8QQRLHu12Hqubs8qO1inMac7HicD%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1759244399%26allow_ip%3D%26allow_referer%3D%26signature%3DdgRQqTDBxLkl5OQ%252FWVoFED13BPw%253D)
 

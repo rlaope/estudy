@@ -111,7 +111,7 @@ public void joinTest() {
 
 쿼리는 Join이 된 형태로 실행되었지만 갑자기 `LazyInitializationException`이 발생합니다.  
   
-> LazyInitializationException은 일반적으로 Session(Transaction) 없이 Lazy Entity를 사용하는 경우가 주 원인입니다.) 
+> LazyInitializationException은 일반적으로 Session(Transaction) 없이 Lazy Entity를 사용하는 경우가 주 원인입니다.)
   
 breakpoint를 찍어보면 왜 `LazyInitalizationException`이 발생했는지 알 수 있습니다.
 

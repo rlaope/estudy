@@ -23,7 +23,7 @@ Probe는 총 세 가지의 방식으로 컨테이너의 상태를 진단한다.
 ![](https://seongjin.me/content/images/2022/02/probes-1.png)
 
 
-### Liveness 
+### Liveness
 위의 세 가지 방식(HTTP, TCP, Exec)으로 컨테이너의 상태를 확인하고 Failure가 나온다면 컨테이너를 재시작한다.
 
 이 프로브를 통해 컨테이너 내에 일부 문제가 있더라도 높은 가용성을 보장받을 수 있다.

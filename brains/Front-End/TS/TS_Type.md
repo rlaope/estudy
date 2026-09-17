@@ -105,5 +105,4 @@
 - 할당이 가능한 값은 undefined 입니다.
 
 
-
 ## [예제](https://github.com/KIMHUEMANG/Study_TypeScript/tree/main/TypeScript_Essentials)

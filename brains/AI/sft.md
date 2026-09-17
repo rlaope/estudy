@@ -52,7 +52,7 @@ Base Model은 사용자와 비서의 개념이 없고 따라서 특수한 토큰
 
 ### Token-Level Loss 구조
 
-SFT의 손실함수 Loss Fucntion은 다음 토큰을 예측하는 Cross Entropy이다. 
+SFT의 손실함수 Loss Fucntion은 다음 토큰을 예측하는 Cross Entropy이다.
 
 Label Masking이 적용된 손실 함수 수식은 다음과 같다.
 

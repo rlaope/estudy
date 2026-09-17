@@ -117,7 +117,6 @@ public class ArrQueue {
 public class main {
 
 
-
 	public static void main(String[] args) {
 
 		ArrQueue arrQueue = new ArrQueue(4);
@@ -137,7 +136,6 @@ public class main {
 		}
 
 	}
-
 
 
 }

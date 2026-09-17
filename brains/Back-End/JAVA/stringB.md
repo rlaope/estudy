@@ -15,7 +15,7 @@
 
 #### String vs StringBuilder, StringBuffer
 
-Java에서 String 객체는 한번 값이 할당되면 그 공간은 변하지 않는다. 하지만 
+Java에서 String 객체는 한번 값이 할당되면 그 공간은 변하지 않는다. 하지만
 
 StringBuilder, StringBuffer 객체는 한번 값이 할당되더라도 한번 더 다른 값이 할당되면
 
@@ -61,9 +61,9 @@ String 변수에 값을 할당하는 방법은 2가지가 있다.
 
 String을 리터럴 값으로 할당하는 경우에는 Heap 메모리 영역인 특별한 메모리 공간인
 
-String constant pool이라는 공간에 저장이 된다. 
+String constant pool이라는 공간에 저장이 된다.
 
-만약 String constant pool에 존재하는 리터럴 값을 사용하게 된다면 새롭게 리터럴 값을 만들어 
+만약 String constant pool에 존재하는 리터럴 값을 사용하게 된다면 새롭게 리터럴 값을 만들어
 
 String constant pool에 저장하는 것이 아닌 **현재 존재하는 값**을 사용하게 된다.
 
@@ -71,7 +71,7 @@ String constant pool에 저장하는 것이 아닌 **현재 존재하는 값**�
 
 **new 키워드로 값을 할당하는 경우**
 
-new 키워드를 통해 String 변수에 값을 할당하게 되면 일반적인 객체와 동일하게 
+new 키워드를 통해 String 변수에 값을 할당하게 되면 일반적인 객체와 동일하게
 
 **Heap 영역에 동적으로 메모리 공간이 할당되게 됩니다.**
 
@@ -95,7 +95,6 @@ AbstractStringBuilder 추상클래스의 멤버 변수엔 다음 2가지 변수�
 \- value: 문자열 값을 저장하는 바이트형 배열
 
 \- count: 현재 문자열 크기의 값을 가지는 int형 변수
-
 
 
 StringBuilder, StringBuffer클래스의 문자열을 수정하고싶으면 append()라는 메서드를 사용하게 된다.

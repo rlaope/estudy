@@ -3,7 +3,7 @@
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbtJ8zK%2FbtsldOrf5Oe%2FvBsFdLt02vrG4MOSb1Vrnk%2Fimg.png)
 
-테라폼은 코드를 읽고 코드가 실행 가능한지 분석한다. 
+테라폼은 코드를 읽고 코드가 실행 가능한지 분석한다.
 
 그 이후 대상에서 지원하는 API를 사용하여 코드를 대상에 반영한다.
 

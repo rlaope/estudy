@@ -6,7 +6,7 @@ CUDA는 NVIDIA가 설계한 병렬 컴퓨팅 플랫폼이자 프로그래밍 모
 
 과거에는 gpu를 그래픽 렌더링 용으로만 사용했으나, 이를 일반적인 연산 GPGPU(General Purpose computing on Graphics Processing Units)에 사용할 수 있도록 c cpp등의 언어를 확장해 하드웨어에 직접 제어할 수 있게 만든 인터페이스다.
 
-- 복잡한 gpu 하드웨어 명령어를 프로그래머가 익숙한 cpp 문법으로 다룰 수 있고 
+- 복잡한 gpu 하드웨어 명령어를 프로그래머가 익숙한 cpp 문법으로 다룰 수 있고
 - 수천개의 스레드를 하드웨어 연산 유닛에 효율적으로 분배하며
 - cpu, gpu간 데이터 전송 및 gpu 내부 메모리 계층을 제어한다.
 
@@ -57,14 +57,14 @@ cpu와 gpu는 물리적으로 분리된 메모리 공간을 갖는다. Discrete 
 
 gpu는 비동기로 방식으로 동작한다.
 
-cpu가 커널을 실행하라고 명령을 내린 직후, 커널 완료를 기다리지 않고 다음 명령을 수행한다. 
+cpu가 커널을 실행하라고 명령을 내린 직후, 커널 완료를 기다리지 않고 다음 명령을 수행한다.
 
 따라서 정확한 결과를 위해 동기화 필수적이다.
 
 **스레드 수준 동기화(Barrier)**
 - CUDA: `__syncthreads()`
 - Metal: `threadgroup_barrier(mem_flags::mem_threadgroup)`
-- 목적은 공유 메모리에 데이털ㄹ 쓰고 읽을 때 발생할 수 있는 RAW(Read After Write) Hazard를 방지하기 위해서 
+- 목적은 공유 메모리에 데이털ㄹ 쓰고 읽을 때 발생할 수 있는 RAW(Read After Write) Hazard를 방지하기 위해서
 
 동일한 블록 thread group 내의 스레드들이 특정 지점에 도달할 때까지 대기하게 된다.
 

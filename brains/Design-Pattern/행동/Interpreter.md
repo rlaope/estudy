@@ -1,9 +1,8 @@
-# 인터프리터 패턴 
+# 인터프리터 패턴
 
 인터프리터 패턴은 **자주 사용되는 표현식 expression을 별개의 언어로 정의하고 재사용**하는 디자인 패턴이다.
 
 간단한 언어(규칙)의 문법을 정의하고 해석하는 패턴이라고 볼 수 있다 (ex.정규식 분석)
-
 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Interpreter_UML_class_diagram.svg/1920px-Interpreter_UML_class_diagram.svg.png)

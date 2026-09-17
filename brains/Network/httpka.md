@@ -1,4 +1,4 @@
-# HTTP Keep-Alive 
+# HTTP Keep-Alive
 
 HTTP Keep-Alive는 한 TCP 연결이 맺어지게 된다면 특정 시간동안 해당 연결을 유지해
 
@@ -39,7 +39,7 @@ HTTP/1.1 Keep-Alive는 단순히 하나의 tcp 연결 위에서 요청을 순차
 
 대역폭 효율화는 되지만 Head of Line Blocking 문제가 존재한다.
 
-HTTP/2는 
+HTTP/2는
 - 단일 TCP 연결
 - 멀티플렉싱(Stream ID기반)
 - 헤더 압축(HPACK)

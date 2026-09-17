@@ -47,7 +47,7 @@ MongoDB는 아래 3개의 기본 데이터베이스를 제공한다. (루트 권
 
 - Collection을 단위로 인덱스를 생성할 수 있다.
 - Collection을 단위로 Shard를 나눌 수 있다.
-	- 즉, Index나 Sharding Key 등의 활용을 하기 위해서는 Schema를 어느정도 유지를 해줘야한다.
+    - 즉, Index나 Sharding Key 등의 활용을 하기 위해서는 Schema를 어느정도 유지를 해줘야한다.
 
 <br>
 

@@ -32,5 +32,5 @@ var s2: String = "" // null이 될 수 없음
 
 ## 코틀린 빌드 과정
 
-![](https://github.com/cheese10yun/TIL/raw/master/assets/kotlin-complie-flow.png)
+![](https://github.com/cheese10yun/TIL/raw/master/assets/kotlin-complie-flow.png)  
 코틀린 컴파일러로 컴파일한 코드는 코틀린 런타임 라이브러리에 의존된다.

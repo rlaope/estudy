@@ -46,7 +46,7 @@ fun main() = runBlocking<Unit> {
 
 #### start() or join()
 
-Lazy하게 생성된 Job은 start()를 통해 실행이 가능하다. 
+Lazy하게 생성된 Job은 start()를 통해 실행이 가능하다.
 
 start() or join() 를 호출하면 생성된 코루틴을 즉시 실행시킨다.
 

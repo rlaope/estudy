@@ -77,7 +77,7 @@ public abstract class AbstractTemplate {
     protected abstract void call();
 }
 ```
-- 공통된 로직을 갖고 있는 추상 클래스 입니다. 
+- 공통된 로직을 갖고 있는 추상 클래스 입니다.
 - `execute()` 메서드 내부에는 비즈니스 로직 부분은 `call()` 메서드 호출로 대체합니다.
 - `call()` 메서드는 이 추상 클래스를 상속하는 자식 클래스에서 오버라이딩 합니다.
 

@@ -2,7 +2,7 @@
 
 스레드를 만들고 관리하는 작업을 고수준의 api에게 위임하는게 Executors 이다.  
   
-스레드를 만들고 처리하고 실행하고 종료하는 것을 해주는 역할을 한다. 
+스레드를 만들고 처리하고 실행하고 종료하는 것을 해주는 역할을 한다.
 
 ## ExecutorService
 우선 ExecutorService는 Executor를 상속받은 인터페이스로, Callable도 실행할 수 있으며 Executor를 종료시키거나, Callable을 동시에 실행하는 동의 기능을 제공한다.

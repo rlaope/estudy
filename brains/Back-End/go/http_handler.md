@@ -16,7 +16,7 @@ func HandleFunc(pattern string, handler func(ResponseWriter, *Request))
 
 ## Handle
 
-Handle 함수에는 인자로 Handler가 필요합니다. 
+Handle 함수에는 인자로 Handler가 필요합니다.
   
 Handler는 ServeHTTP를 가지고 있는 interface입니다.
 

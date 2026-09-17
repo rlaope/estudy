@@ -10,7 +10,7 @@ g1gc는 목표 pause time을 지정하여 조절할 수 있는 장점이 있지�
 
 오히려 fullGC가 발생하게 되면 serial gc처럼 그냥 영역 전체를 스캔해 진행하게 된다.
 
-### OpenJDK 8 
+### OpenJDK 8
 
 **Serail Full GC** 가장 치명적인 문제로 Concurrent하게 작동하지만, 메모리 회수 속도가 할당 속도를 따라가지 못하면 Evacuation Failure가 발생하고 FullGC로 전환된다.
 

@@ -37,4 +37,4 @@ Worker Node는 다음과 같은 그림으로 구성되어 있습니다.
 ### 컴포넌트
 - pod: 컨테이너화된 애플리케이션 그룹
 - kubelet: Node에 할당된 pod의 상태를 체크하고 관리
-- kube-proxy: pod로 연결되는 네트워크를 관리 
+- kube-proxy: pod로 연결되는 네트워크를 관리

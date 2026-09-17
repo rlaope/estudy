@@ -6,7 +6,7 @@ HotSpot JVM 객체 메모리 구조에서 보이듯이, 모든 자바 객체 인
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FcaT8fy%2FbtsQ1XlvM5O%2FAAAAAAAAAAAAAAAAAAAAABJkufEpLzAlOU9P_3DliY3pMc0dYRg9qMWNVvYJBSub%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1761922799%26allow_ip%3D%26allow_referer%3D%26signature%3D6l%252BJukuTTSTlgAODct%252F6iwbPgAU%253D)
 
-위와 같은 정보들이 모여서 하나의 객체가 되는건데, 여기서 객체 헤더를 알아보자. 
+위와 같은 정보들이 모여서 하나의 객체가 되는건데, 여기서 객체 헤더를 알아보자.
 
 <br>
 
@@ -81,6 +81,6 @@ kclass word는 모든 클래스가 공유하는 메타데이터 정보기 때문
 
 정렬 패딩 부분은 존재하지 않을 수 있으며 특별한 의미 없이 자리를 확보하는 역할만 한다.
 
-핫스팟에서 자동 메모리 관리 시스템에서 객체의 시작 주소는 반드시 8바이트 정수여야 하는데, 
+핫스팟에서 자동 메모리 관리 시스템에서 객체의 시작 주소는 반드시 8바이트 정수여야 하는데,
 
 달리 말하면 모든 객체의 크기가 8바이트 정수배여야 한다는 뜻이도 따라서 인스턴스 데이터가 조건을 충족하지 못하는경우 **패딩으로 채운다.**

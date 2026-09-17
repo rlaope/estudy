@@ -2,7 +2,7 @@
 
 [이 글](http://github.com/esperar/estudy/blob/master/Back-End/dbmigrate.md) 에서 언급한 내용중에서 다중 데이터소스환경에서 `@Transactional` 활용을 하면 동작은해도 트랜잭션 정합성이 보장이 안될 수 있다고 했다.
 
-그 이유는 다중 데이터베이스 환경이기 때문에 이 어노테이션을 함수로 두고 
+그 이유는 다중 데이터베이스 환경이기 때문에 이 어노테이션을 함수로 두고
 
 ```kt
 @Transactional
@@ -79,7 +79,7 @@ class TargetDbWriteService(
 
 과거에는 이러한 문제를 임시방편으로 묶기위해 spring data에서 `ChainedTransactionManager`라는 것을 제공했다.
 
-SourceDB가 성공하면 TargetDB도 커밋하고 하나라도 실패하면 둘 다 롤백하려는 시도다. 
+SourceDB가 성공하면 TargetDB도 커밋하고 하나라도 실패하면 둘 다 롤백하려는 시도다.
 
 하지만 두 번째 트랜잭션을 커밋하던 찰나에 순간에 네트워크가 단절되면 첫 번째 트랜잭션은 이미 커밋되는 결함 있는 2PC 였기 때문에, spring에서는 이를 deprecated 처리했다.
 

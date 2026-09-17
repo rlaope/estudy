@@ -1,6 +1,6 @@
 # Envoy Proxy Internal Architecture
 
-Istio는 정책을 내리는 두뇌역할일뿐이다, 실제 데이터 흐름을 제어하고 패킷을 쪼개서 전달하는 역할은 Envoy Proxy이다. 
+Istio는 정책을 내리는 두뇌역할일뿐이다, 실제 데이터 흐름을 제어하고 패킷을 쪼개서 전달하는 역할은 Envoy Proxy이다.
 
 서비스 메시 최적화 그리고 트러블 슈팅 90%는 envoy 내부를 이해하는것에 따라 달라진다.
 
@@ -25,7 +25,7 @@ Envoy로 들어온 모든 데이터는, fitler chain이라는 파이프랑인을
 
 1. Network Filter(L3/L4): ip, tcp 레벨의 데이터를 다룬다. (예, tls inspector, rbac 필터)
 2. http connection manager(HCM): L4 데이터를 L7으로 해석하는 핵심 필터
-3. http filter(L7): HTTP 헤더 수정, 라이팅, gRPC 변환, 압축 등을 수행한다. (ex. 
+3. http filter(L7): HTTP 헤더 수정, 라이팅, gRPC 변환, 압축 등을 수행한다. (ex.
 4. router filter)
 
 필터 체인은 **순서**가 중요하다 인증 필터가 라우팅 필터보다 먼저 실행되어야만 무단 접근을 차단할 수 있다는 것을 생각해보면 된다.

@@ -53,7 +53,7 @@ plugins {
 }
 ```
 
-먼저 kotlin(...)와 id(...)이 있다. 
+먼저 kotlin(...)와 id(...)이 있다.
   
 kotlin(...)은 코틀린 전용 id를 축약해 놓은 것이다. 따라서 kotlin(...)은 id(...)로 표현할 수 있으며 `id('org.jetbrains.kotlin.<...>)`와 동일한 의미를 가진다.
 

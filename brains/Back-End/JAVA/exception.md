@@ -34,7 +34,7 @@ int c = 4 / 0;
 Exception in thread "main" java.lang.ArithmeticException: / by zero
     at Test.main(Test.java:14)
 ```
-4를 0으로 나누면 `ArithmeticException` 예외가 발생한다. 
+4를 0으로 나누면 `ArithmeticException` 예외가 발생한다.
   
 마지막으로 한가지 오류만 더 들어 보자. 다음의 오류는 정말 빈번하게 일어난다.
 

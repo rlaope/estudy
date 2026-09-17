@@ -36,9 +36,8 @@ min.insync.replicas 옵션이 1이기 때문에 프로듀서가 리더에게 메
 
 리더는 producer로 부터 메세지를 받고 저장한 후 팔로워는 해당 메세지를 가져와 저장한다. 리더는 팔로워에게 메세지가 잘 복제되었는지 확인한다. min.insync.replica 옵션이 3이기 때문에 리더1, 팔로워 2개에 대해 확인하고 acks를 보낸다.
 
-여기서 권장되는 옵션은 `ack=all` `min.insync.replicas=2`이다. 
+여기서 권장되는 옵션은 `ack=all` `min.insync.replicas=2`이다.
 
 그 이유는 min.insync.replicas 옵션이 2라면 하나의 브로커에 문제가 생겨도 클러스터 전체 장애로 이어지는 것이 아니다. (복제본 하나가 문제가 생겼을때 ISR 그룹에서 하나가 제외됨) 그러나 3을 사용했을 때는 하나의 브로커에 문제가 생겨도 클러스터 전체 장애로 이어진다. 그렇기 때문에 min.insync.replicas 옵션 2와 ack=all 옵션을 적용하는 것을 권장한다.
-
 
 

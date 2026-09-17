@@ -37,7 +37,7 @@
 - Belady's Anomaly(FIFO anomaly)
 실제로 그렇지 않게 되는 현상이 나타날 수 있다.
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbBk7Bp%2Fbtq9Vka7iP3%2FOyRlrUsTMJ4owdIJDC1KL0%2Fimg.jpg)
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbBk7Bp%2Fbtq9Vka7iP3%2FOyRlrUsTMJ4owdIJDC1KL0%2Fimg.jpg)  
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fukhyy%2Fbtq9NROjAZc%2Fy1yPHPRuZenlX3VTUBIq01%2Fimg.jpg)
 
 ## LRU(Least Recently Used) 가장 오랫동안 사용하지 않은 페이지를 교체

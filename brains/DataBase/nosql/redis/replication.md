@@ -19,7 +19,7 @@ Redis Replication 특징으로는 다음과 같다.
 - Redis는 replica를 여러 개 둘 수 있다.
 - 복제 서버는 또 복제 서버를 만들 수 있다. (ex replica1 -> replica2)
 - master는 많은 데이터가 있는 상태에서 복제 서버를 시작하면, 대량의 master 데이터가 복제 서버로 보내진다. 이 때도 master는 멈추지 않고 정상적으로 요청을 처리한다.
-	- 이는 데이터 복제를 서버로 보내는(RDB파일을 생성하는) 작업은 자식 프로세스가 처리하기 때문이다.
+    - 이는 데이터 복제를 서버로 보내는(RDB파일을 생성하는) 작업은 자식 프로세스가 처리하기 때문이다.
 - 복제 서버에서 조회요청을 처리하도록 하는 것도 부하 분산에 좋은 방법이다. 특히 sort 같은 명령어들은 복제 서버에서 수행하는 것을 추천한다.
 - master에서 부하를 줄이기 위해 AOF 쓰기, RDB 파일 생성을 복제 서버에서 수행하는 것도 좋은 방법이다. 하지만 이런 설정을 했을 경우 master를 자동 시작 하도록 하면 데이터가 유실될 수 있다.
 
@@ -42,7 +42,7 @@ redis master, replica의 데이터 동기화, 복제 방식에 대해서 하나�
 
 - master가 다운되면 복제 서버는 1초에 한번씩 master에 connect request를 보낸다.
 
-- master가 살아나게되면 복제 서버에 복제 순서에 따라 sync를 한다. 
+- master가 살아나게되면 복제 서버에 복제 순서에 따라 sync를 한다.
 
 - 복제 서버가 여러 개일때도 RDB 파일은 하나만 생성한다.
 
@@ -62,7 +62,7 @@ backlog-buffer의 크기는 `repl-backlog-size` 파라미터로 설정한다.
 master나 복제 서버 중 한쪽이 재시작 했을 경우에도 전체 동기화를 한다.
 
 
-#### master: disk를 사용하지 않는 동기화 
+#### master: disk를 사용하지 않는 동기화
 
 > Redis 버전 2.8.18 부터 디스크를 사용하지 않는 동기화 기능을 제공
 
@@ -92,7 +92,6 @@ redis.conf의 `redis-diskless-load disabled/on-empty-db/swapdb, default disabled
 - disabled: diskless를 사용하지 않음 (디스크를 사용함)
 - on-empty-db: 복제 서버에 데이터가 없을 경우 적용, 데이터가 존재하면 RDB 파일을 생성후 복제
 - swapdb: 복제 서버에 데이터 여부와 상관없이 diskless로 동작한다. 이 경우 만약의 사태에 대비해서 기존 데이터를 메모리(RAM)에 보존한다. 복제가 성공하면 RAM에 보존한 데이터는 지운다. 복제가 실패하면 RAM에 보존한 데이터로 복구한다. 이 경우 기존 데이터 + 새 데이터 만큼 메모리가 필요하므로 충분한 메모리가 필요하다
-
 
 
 > 이 밖에도 복제서버는 읽기 전용으로만 사용할 수 있는 방법도 존재한다. Redis 2.6부터 redis.conf에 replica-read-only (default no) 옵션을 yes로 설정해서 read only로 사용할 수 있다. 복제 서버에 데이터를 입력 했어도, master와 resync되면 복제 서버에 입력된 데이터는 사라진다.

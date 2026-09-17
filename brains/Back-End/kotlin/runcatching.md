@@ -154,7 +154,7 @@ runCatching {
 
 map이 runCatching이 성공할 경우 호출되었다면 recover은 실패했을 경우 호출됩니다.
 
-만약 runCatching문에서 에러가 발생할 경우 recover, recoverCatching 문이 호출된 후 리턴 값을 onSuccess로 전달합니다. 
+만약 runCatching문에서 에러가 발생할 경우 recover, recoverCatching 문이 호출된 후 리턴 값을 onSuccess로 전달합니다.
 
 하지만 map과 마찬가지로 블록 내에서 에러가 발생했을 경우 다르게 처리합니다.
 

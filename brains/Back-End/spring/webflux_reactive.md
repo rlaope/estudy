@@ -63,7 +63,7 @@ Reactive Stream은 Publisher-Subscriber 패턴을 사용해, Publisher는 데이
 
 R2DBC (Reactive Relational Deatabase Connectivity)는 **적은 수의 스레드**로 동시성을 처리하고 더 **적은 하드웨어 리소스**로 확장할 수 있는 Non-Blocking 애플리케이션 스택이다.
 
-궁합으로는 
+궁합으로는
 
 * spirng mvc : jpa
 * spring webflux: r2dbc

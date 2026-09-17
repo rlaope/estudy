@@ -34,7 +34,7 @@ Accept: text/*, text/plain, text/plain;format=flowed, */*
 ```
 
 구체적인 것이 우선한다.
-- Accept: text/, text/plain, text/plain;format=flowed, /* 
+- Accept: text/, text/plain, text/plain;format=flowed, /*
   1. text/plain;format=flowed
   2. text/plain
   3. text/*

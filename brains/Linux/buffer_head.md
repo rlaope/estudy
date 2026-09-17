@@ -29,7 +29,7 @@ page와 buffer head관계를 알아보면, 만약 시스템 페이지 크기가 
 이때 커널은 다음과 같이 데이터를 배치한다.
 
 1. `struct page`: 물리 메모리 4kb를 관리, 이 구조체의 private 필드 첫번째가 buffer_head를 가리킨다.
-2. `struct_buffer_head` 리스트: 각 buffer_head는 1kb 영역에 대한 정보를 담는다. 
+2. `struct_buffer_head` 리스트: 각 buffer_head는 1kb 영역에 대한 정보를 담는다.
    1. b_this_page 필드를 통해 4개의 buffer_head가 **Circular Linked List(순환 연결 리스트)** 형태로 묶인다
    2. b_data는 해당 페이지 내의 특정 오프셋(0, 1024, 2048, 3072)을 가리킨다.
 

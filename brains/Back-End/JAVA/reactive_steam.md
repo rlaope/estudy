@@ -1,4 +1,4 @@
-# Reactive Streams 
+# Reactive Streams
 
 ## Reactive Streams
 

@@ -51,7 +51,7 @@ systemd        1           root   91u  unix 0xffff9b9f565a6300      0t0   24191 
 
 ### mysql.sock
 
-tcp/ip 소켓이 아이피 주소와 포트를 이용해 접속을 하듯 Unix Domain Socket은 파일을 이용한다. 
+tcp/ip 소켓이 아이피 주소와 포트를 이용해 접속을 하듯 Unix Domain Socket은 파일을 이용한다.
 
 `mysql.sock` 이라는 것은 바로 이용도로 사용되는 파일이다. 따라서 mysqld를 실행시키면 mysql.sock 파일이 존재하지만 중지시키면 사라지게 된다.
 

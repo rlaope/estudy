@@ -84,7 +84,7 @@ Netty가 ByteBuf를 할당할때 샘플링/옵션에 따라서 해당 버퍼에 
 
 #### Level
 
-LeakDetector는 성능 비용을 줄이기 위해 얼마나 빡세게 추적할지를 기준으로 레벨이 존재하는데 버전마다 세부는 다르지만 
+LeakDetector는 성능 비용을 줄이기 위해 얼마나 빡세게 추적할지를 기준으로 레벨이 존재하는데 버전마다 세부는 다르지만
 
 - **Simple:**: 샘플링으로 일부만 추적한다 누수는 잡을 수 있지만 스택 정보가 제한적일 수 있다. 비용이 비교적 낮다.
 - **ADVANCED**: Simple보다 더 많은 더 자세한 스택을 추적하고 스테이징에서 누수 잡을때 많이 쓴다 비용은 올라가지만 어느 코드가 누수 냈는지 찾기 쉽다
@@ -134,7 +134,7 @@ public void channelWritabilityChanged(ChannelHandlerContext ctx) {
 
 #### unwritable 이후에 실제 일어나는 동작
 
-Netty 내부에서 
+Netty 내부에서
 - totalPendingWriteBytes >= highWaterMark이 된다면
 - channel.isWritable()이 false로 바뀐다
 - channelWritabilityChanged() 이벤트가 발생한다

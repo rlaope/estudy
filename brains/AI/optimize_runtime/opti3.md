@@ -140,7 +140,7 @@ async def generate_endpoint(prompt: str):
 
 미리 많은 공간을 할당한다는 점을 희생하고 효율적으로 처리한다는 이점을 얻은것이다.
 
-100GB의 VRAM이 있다고 가정했을 때, 두 방식의 내부 메모리 적재 상태를 보면 
+100GB의 VRAM이 있다고 가정했을 때, 두 방식의 내부 메모리 적재 상태를 보면
 
 ```mermaid
 graph TD

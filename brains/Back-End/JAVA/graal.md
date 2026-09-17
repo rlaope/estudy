@@ -55,11 +55,7 @@ GraalVM의 모든 JAR와 네이티브 라이브러리를 재사용하는 완전�
 **즉 JVM위에서 서로 다른 언어로 작성된 프로그램을 실행시킬 수 있다!**
 
 
-
-
 > **OpenJDK와 GraalVM**
   가장 먼저 Open JDK9에 [JEP 243](https://openjdk.org/jeps/243)에 따라 JVMCI(자바 컴파일러를 위한 인터페이스)가 추가되었다. 그리고 [JEP 295](https://openjdk.org/jeps/295)에 따라 Open JDK 9에는 GraalVM의 AoT 컴파일러가 추가되었고, 이후에 Open JDK 10에서는 [JEP 317](https://openjdk.org/jeps/317)에 따라 Graal JIT 컴파일러가 추가되었다. 하지만 Open JDK 17부터는 Graal JIT 컴파일러와 AoT가 빠지게 되었고, JVMCI만이 그대로 남았다. 이는 Graal이 더 이상 불필요해졌기 때문이 아니다. **대부분의 GraalVM 사용자들이 GraalVM을 직접 설치해서 사용하지, OpenJDK에 내장된 기능을 활용하지 않기 때문이다.** GraalVM은 앞으로도 계속해서 발전할 예정이다.
-
-
 
 

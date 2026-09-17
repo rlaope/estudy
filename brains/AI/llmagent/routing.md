@@ -108,7 +108,7 @@ def gateway_routing_with_fallback(prompt: str):
 # print(gateway_routing_with_fallback("안녕하세요."))
 ```
 
-LiteLLM 프록시 환경 설정 
+LiteLLM 프록시 환경 설정
 
 직접 라우팅 코드를 짜지는 않고, `LiteLLM`과 같은 전문 Gateway 프레임워크를 컨테이너로 띄워 사용한다.
 

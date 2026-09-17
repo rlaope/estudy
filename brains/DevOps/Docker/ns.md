@@ -95,6 +95,6 @@ unshare이라는 syscall을 호출하는데 바로 윗줄을 보면 `prctl(PR_SE
 
 한마디로 새로운 프로세스를 만들어서 부모 프로세스로 fork 때리는거다.
 
-**간지나니까 영어문서 넣겠다**. -> https://man7.org/linux/man-pages/man2/unshare.2.html 
+**간지나니까 영어문서 넣겠다**. -> https://man7.org/linux/man-pages/man2/unshare.2.html
 
 정리해보면 컨테이너는 namespace로 부터 격리된 공간이며 runc가 실제로 컨테이너 생성 및 관리를 하고있으며 runc의 하위 스레드가 unshare() syscall을 통해서 새로운 namespace를 만든다.

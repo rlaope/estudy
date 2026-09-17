@@ -37,7 +37,7 @@ key-value형식은 마찬가지로 위와 같이 정의하면 된다.
 
 ### 파일로 정의
 
-파일 저장 형식은 file.txt 파일을 작성했다고 했을때 
+파일 저장 형식은 file.txt 파일을 작성했다고 했을때
 
 ```bash
 kubectl create configmap dev-file --from-file=./file.txt

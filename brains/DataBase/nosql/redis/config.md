@@ -52,18 +52,13 @@ sysctl -w net.ipv4.tcp_max_syn_backlog=1024
 sysctl -w net.core.somaxconn=1024
 ```
 
- 
+
  **크게 설정해야하는 이유?**
- 
+
  syn_backlog은 tcp half open 시 syn + ack flag packet을 보내고 3-way handshaking 전까지 backlog에 저장한다. 클라이언트에서 ACK 응답이오면 비워지고 오지않으면 timeout 까지 보관하며, redis의 backlog 크기는 syn_backlog , somaxconn 설정값을 넘을 수 없게된다.
 
 syn_backlog 또는 somaxconn = 128 이면 128 +1 = 129  -> 129 * 2 = 258 -> 258 의 근사값 = 256 즉 redis에서 약 256개 이상 backlog를 가져갈 수 없다. redis에서는 tcp-backlog 511 이지만 syn_backlog, somaxconn = 128 이면 256개 밖에 처리 못한다.
 
 > 쉽게 말해서 레디스가 리눅스에 연결될 client의 수를 저장할 backlog 큐의 사이즈는 크지만 레디스가 적어 효율적으로 처리할 수 없게 되니 설정을 통해서 늘려준다는 것이다.
-
-
-
-
-
 
 

@@ -13,7 +13,7 @@ Document DataBase는 데이터가 문서 자체에 포함되어 있어 하나의
 hash function을 이용해 각 항목의 키 값을 해시코드로 변환하고, 이 해시코드를 인덱스로 사용해 데이터를 빠르게 찾을 수 있게 해준다. 각각의 key안에 value들은 실제 데이터가 disk에 저장되어있는 위치인 byteoffset을 저장하고 있으며 hash index를 통해 빠르게 byteoffset으로 접근하여 조회 성능을 올릴 수 있다.
 
 ### 속도
-- **조회 속도**: Hash Index의 조회 속도는 평균적으로 key에 속한 element의 개수가 하나라면 O(1)이고 해시 함수를 사용하여 키 값을 해시코드로 변환하고, 이 해시 코드를 바탕으로 데이터의 위치를 찾을 수 있기 때문에 정말 빠르게 조회가 가능하다. 
+- **조회 속도**: Hash Index의 조회 속도는 평균적으로 key에 속한 element의 개수가 하나라면 O(1)이고 해시 함수를 사용하여 키 값을 해시코드로 변환하고, 이 해시 코드를 바탕으로 데이터의 위치를 찾을 수 있기 때문에 정말 빠르게 조회가 가능하다.
 - **쓰기 속도**: Hash Index의 쓰기 속도는 평균적인 경우 O(1)이고, 새로운 데이터를 추가할 때 새로운 해시 함수를 통해 계산된 위치에 데이터를 저장하기 때문에 빠른 처리가 가능하다. 그러나 해시 테이블에서 **해시키 충돌**이 발생하면 추가적인 시간이 소요될 수 있으며, 이는 최악의 경우 O(n)까지 증가할 수 있다.
 
 
@@ -30,7 +30,7 @@ hash function을 이용해 각 항목의 키 값을 해시코드로 변환하고
 
 ### Segment
 
-log structured storage engine에서 데이터를 append-only 방식으로 저장하다보면 나중에는 디스크 공간이 부족해지기 때문에 데이터를 읽을때마다 full scan을 해야하는 입장에서는 매우 높은 성능 저하가 예상된다. 
+log structured storage engine에서 데이터를 append-only 방식으로 저장하다보면 나중에는 디스크 공간이 부족해지기 때문에 데이터를 읽을때마다 full scan을 해야하는 입장에서는 매우 높은 성능 저하가 예상된다.
 
 그렇기 때문에 일정한 크기에 데이터가 logfile에 저장된다면 데이터를 특정 크기의 segment로 나누게 되고 active하지 않은 데이터, 세그먼트를 컴팩션하는 과정도 거친다.
 
@@ -46,7 +46,7 @@ hash index의 단점으로는 range query가 불가능하단 점, 메모리에 �
 
 ![](https://velog.velcdn.com/images/salgu1998/post/721a61d9-8e90-4c47-acc9-1c17f4ba5a36/image.png)
 
-LSM Tree의 memtable은 balanced binary tree를 이루며 정렬되어있고 특정 사이즈만큼 커지면 sstable에 flush하는 방식으로 되어있다. 
+LSM Tree의 memtable은 balanced binary tree를 이루며 정렬되어있고 특정 사이즈만큼 커지면 sstable에 flush하는 방식으로 되어있다.
 
 모든 쓰기 작업은 memtable을 통해서 진행된다. memtable은 메모리에 위치하므로 데이터베이스 쓰기 연산은 매우 빠르게 처리될 수 있다 disk io가 없으니까!
 
@@ -59,10 +59,10 @@ LSM Tree의 memtable은 balanced binary tree를 이루며 정렬되어있고 특
 결과적으로 LSM Tree는
 - Write가 빠르다. Memtable과 logfile만 업데이트하면 끝
 - Sparse Index
-	- memtable이 모든 키 값을 가지고 있지 않아도 돼 적은 공간 활용
-	- 하지만 주어진 레코드를 찾는데 키를 안갖고 있으면 시간이 더 걸리긴함
+    - memtable이 모든 키 값을 가지고 있지 않아도 돼 적은 공간 활용
+    - 하지만 주어진 레코드를 찾는데 키를 안갖고 있으면 시간이 더 걸리긴함
 - sstable은 정렬되어있는 상태기 때문에 컴팩션 과정에서 merge하기 쉬움
 
 그러나 단점으로는
-- compaction 과정에서 **SSD 쓰기 증폭으로 인해 오버헤드** 발생 
+- compaction 과정에서 **SSD 쓰기 증폭으로 인해 오버헤드** 발생
 - SSD의 쓰기 증폭을 줄이기 위해서 **compaction을 최소화 할 것인가 읽기 최적화를 위해서 compaction을 자주할 것인가**에 대한 고민 필요

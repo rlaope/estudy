@@ -1,4 +1,4 @@
-# pull request 
+# pull request
 
 ## pull request
 - `pull request` 는 아래와 같은 절차를 거친다.

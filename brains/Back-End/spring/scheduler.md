@@ -21,7 +21,7 @@ public class SchedulerApplication {
 }
 ```
 
-scheduler를 사용할 Class에 `@Component`, Method에 `@Scheduled`추가 
+scheduler를 사용할 Class에 `@Component`, Method에 `@Scheduled`추가
 
 - @Scheduled 규칙
   - Method는 void 타입으로

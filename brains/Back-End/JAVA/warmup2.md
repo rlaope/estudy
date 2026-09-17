@@ -1,6 +1,6 @@
 # JVM Warm UP 적용하기
 
-1. **JVM은 자주 실행되는 코드를 컴파일하고 캐시한다.** 
+1. **JVM은 자주 실행되는 코드를 컴파일하고 캐시한다.**
 2. **클래스는 필요할 때 Lazy Loading으로 메모리에 적재된다.**
 
 이 두가지가 JVM Warm UP의 핵심 아이디어다.
@@ -42,10 +42,9 @@ xx... INFO 17860 --- [nio-8080-exec-2] c.a.d.c.presentation.CategoryController: 
 xx... INFO 17860 --- [nio-8080-exec-2] c.a.d.c.presentation.CategoryController: after 소요시간 2ms
 ```
 
-before after를 비교해보면 차이가 약 12배로 극명하다. 
+before after를 비교해보면 차이가 약 12배로 극명하다.
 
 JIT Compiler Warm up도 이어서 해보겠다 하는 방법은 가능하다 핫스팟으로 지정될 메서드들을 사전에 동일하게 반복 실행해서 JIT Compiler가 최적화하기를 유도한다.  **C1 컴파일러의 기본 Threshold는 1,500회이고 C2 컴파일러의 기본 Threshold는 10,000회**이다. 이를 참고해 적절한 횟수로 웜업하면 된다.
 
 . 각 Threshold를 만족할만큼 웜업하기에 시간이 오래걸릴수도 있으므로, 웜업과 기동시간의 트레이드 오프를 잘 생각하여 웜업을 진행해주면 된다.
 
- 

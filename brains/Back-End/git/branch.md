@@ -61,5 +61,3 @@ $ git branch -d huemang
 이렇게 하면 huemang이라는 브랜치는 삭제가 되었습니다.
 
 
-
-

@@ -2,7 +2,7 @@
 
 리눅스에서 User Space, Kernel Space 기능을 사용하는 유일한 통로가 System Call Interface이다.
 
-애플리케이션이 하드웨어나 os 핵심 기능에 접근할 때 반드시 System Call을 통해야하며, 이 과정은 
+애플리케이션이 하드웨어나 os 핵심 기능에 접근할 때 반드시 System Call을 통해야하며, 이 과정은
 
 단순 함수 호출이 아니라 cpu 권한 모드 전환과 커널 내부 실행이 포함된 무거운 작업이다.
 

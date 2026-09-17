@@ -85,7 +85,6 @@ ex) redis 서버가 항상 메모리 오버플로우 상태(used_memory > maxmem
 ![](https://s-core.co.kr/wp-content/uploads/2023/03/51_6.jpg)
 
 
-
 ### Approximated LRU Algorithm
 
 redis LRU 및 LFU eviction 정책은 근사값이라는 점을 유의하라

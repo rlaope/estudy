@@ -49,11 +49,11 @@ DL1 캐시에는 데이터가 저장되고, IL1 캐시에는 명령어가 저장
 
 - **Block(or cache line)**: 캐시 메모리와 메인 메모리 사이에 주고받는 데이터의 단위(일반적으로 64byte)
 - **Hit**: CPU가 읽어오려고 하는 데이터가 캐시에 있는 경우
-	- Hit rate: cpu가 요청한 데이터 중 캐시에 저장된 비율
-	- Hit time: 캐시에서 읽어오는데 필요한 시간
+    - Hit rate: cpu가 요청한 데이터 중 캐시에 저장된 비율
+    - Hit time: 캐시에서 읽어오는데 필요한 시간
 - **Miss**: CPU가 읽어오려고 하는 데이터가 캐시에 없는 경우
-	- Miss rate: cpu가 요청한 데이터중 캐시에 저장되지 않은 비율 (= 1 - Hit rate)
-	- Miss penalty: miss가 발생해 데이터 block만큼 메인 메모리가 캐시 메모리로 가져오는데 필요한 시간
+    - Miss rate: cpu가 요청한 데이터중 캐시에 저장되지 않은 비율 (= 1 - Hit rate)
+    - Miss penalty: miss가 발생해 데이터 block만큼 메인 메모리가 캐시 메모리로 가져오는데 필요한 시간
 
 > 당연하게도 cache를 적용하면 cache hit 비율이 높아야한다. 적어도 90퍼 이상
 

@@ -10,7 +10,7 @@
 
 ## Async Flow Control
 
-Netty에서 async flow control은 이벤트루프 1개 혹은 엄청많은 채널을 처리하면서도 
+Netty에서 async flow control은 이벤트루프 1개 혹은 엄청많은 채널을 처리하면서도
 - 한 채널이 너무 많이 읽거나 write가 밀리거나
 - 핸들러가 오래 걸리거나 blokcing
 - 상대가 느려서 backpressure
@@ -66,7 +66,7 @@ Netty의 Future는 addListener로 비동기 콜백이 핵심이고 await/sync는
 - Netty Future는 EventLoop 단일 스레드 모델과 io 완료 모델에 맞게 동작한다 interrupt 의미가 상대적으로 약하고 채널 close / 실패 완료가 더 자연스러운 종료 방식이다.
 
 **실행 컨텍스트(스레드) 통제가 다름**
-- java Future는 어디서 완료될지가 Executor에 좌우되고 콜백 개념이 약하다. 
+- java Future는 어디서 완료될지가 Executor에 좌우되고 콜백 개념이 약하다.
 - Netty는 EventLoop 기반으로 완료/리스너 실행이 강하게 결합되고 이 결합이 netty의 성능 안정성을 만드는 핵심
 
 그 외에도 io작업과 밀접한 Netty Future. 성공 실패이후 pipeline(다음 단계)로 이어지는 코드를 리스너에 자연스럽게 붙일수도 있음 이런 확장기능들이 있다.
@@ -99,7 +99,7 @@ connect, write, close 같은 api가 즉시 반환하는데 그 반환값이 Chan
 
 `Promise<V>`는 Future이면서 동시에 **완료를 내가 시키는** 개겣이다.
 
-`promise.setSuccess(value)` / `promise.setFailure(cause)` 
+`promise.setSuccess(value)` / `promise.setFailure(cause)`
 
 즉, Netty 내부 사용자 코드가 어떤 비동기 작업의 완료를 표현하기 위해서 사용한다.
 

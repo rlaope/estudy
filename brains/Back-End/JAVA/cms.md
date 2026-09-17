@@ -27,7 +27,7 @@ cms gc는 주로 old generation을 관리하며, young generation은 보통 ParN
    1. 목적은 initial mark에서 생존한 객체를 따라가며 모든 참조 관계를 추적한다.
    2. 애플리케이션이 돌아가는 와중에 별도 gc 스레드가 작업을 수행한다. 프로세서 자원을 소모하지만 앱은 멈추지 않는다.
 3. **Remark (STW 있음)**
-   1. Concurrent Mark 동안 애플리케이션이 객체 참조를 변경했을 수 있다. 이 변경사항을 다시 확인한다. 
+   1. Concurrent Mark 동안 애플리케이션이 객체 참조를 변경했을 수 있다. 이 변경사항을 다시 확인한다.
    2. 두 번째 stw가 발생해 이전 단계 오차를 잡기위해 필수적이다.
 4. **Concurrent Sweep (STW 없음)**
    1. 도달 불가능한 unreachable 객체들을 메모리에서 제거한다
@@ -37,7 +37,7 @@ cms gc는 주로 old generation을 관리하며, young generation은 보통 ParN
 
 cms는 응답성을 위해 큰 비용을 지불한다.
 
-**메모리 파편화** 문제가 잇는데 기본적으로 cms는 compaction 단계를 하지 않는다. 
+**메모리 파편화** 문제가 잇는데 기본적으로 cms는 compaction 단계를 하지 않는다.
 
 즉 빈공간을 중간중간 메꾸지않고 그냥 나둬서 시간이 지나면 메모리 총량은 충분해도 큰 객체가 들어갈 공간이 없는 조각난 상태가 된다.
 

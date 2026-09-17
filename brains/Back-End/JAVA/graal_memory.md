@@ -27,7 +27,7 @@
 
 ### Serial GC
 
-`native-image --gc=serial HelloWorld` serial gc를 사용하는 예시에요 
+`native-image --gc=serial HelloWorld` serial gc를 사용하는 예시에요
 
 serial은 기본으로 제공되는 gc라서 명시하지 않으면 자동으로 serial gc로 할당됩니다.
 

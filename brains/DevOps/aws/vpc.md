@@ -85,14 +85,14 @@ Route Table에서 연결해줘야 함
 ### NACL/Security Group
 검문소
   
-NACL -> Stateless, SG -> Stateful 
+NACL -> Stateless, SG -> Stateful
   
 기본적으로 VPC 생성시에 만들어줌
   
 Deny는 NACL에서만 가능
 
 ### Route Table
-![](https://user-images.githubusercontent.com/28394879/141064479-4e31b75a-e564-40a1-8574-306f150a2def.png)
+![](https://user-images.githubusercontent.com/28394879/141064479-4e31b75a-e564-40a1-8574-306f150a2def.png)  
 트래픽이 어디로 가야 하는지 알려주는 이정표
   
 기본적으로 VPC 생성시 만들어준다.

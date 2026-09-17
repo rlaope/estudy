@@ -18,8 +18,6 @@ _데몬셋은 주로 워커 노드에 리소스 모니터링용 애플리케이�
 ![](https://velog.velcdn.com/images%2Fhyun6ik%2Fpost%2F837ef552-e18a-49c4-8195-4829d9dc245a%2Fimage.png)
 
 
-
-
 ```yaml
 apiVersion: apps/v1
 kind: DaemonSet

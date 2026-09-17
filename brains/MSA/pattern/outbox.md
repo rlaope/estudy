@@ -36,7 +36,7 @@
 
 ![](https://velog.velcdn.com/images/eastperson/post/3ff5b14d-f0bf-4dce-bcb3-e8d8c14eddfe/image.png)
 
-여기서 outbox는 보낼 편지함이라는 뜻이 있다. 전송되지 않았거나 전송에 실패한 메시지들이 모여있는 보관함이라는 뜻이다. 메시지를 보낼 데이터를 저장하는 저장소로 따로 두는 것이다. 
+여기서 outbox는 보낼 편지함이라는 뜻이 있다. 전송되지 않았거나 전송에 실패한 메시지들이 모여있는 보관함이라는 뜻이다. 메시지를 보낼 데이터를 저장하는 저장소로 따로 두는 것이다.
 
 ![](https://velog.velcdn.com/images/eastperson/post/8315f545-08a9-4aec-8739-1f95a2cf2a76/image.png)
 
@@ -46,7 +46,7 @@
 - Message Outbox - 관계형 db인 경우 메시지를 저장하는 테이블, NoSQL인 경우 데이터베이스 record의 프로퍼티
 - Message relay - outbox에 저장된 메시지를 메시지 브로커로 보내는 서비스
 
-이 패턴에서는 Message Realy 라는 별도의 프로세스가 추가도니다. outbox 테이블은 임시 메시지 큐의 역할을 하며 엔티티 업데이트와 함께 트랜잭션으로 묶인다. Message Relay는 outbox 테이블에 저장하는 데이터를 비동기적으로 읽어서 메시지를 발행하여 메시지 브로커에게 전달하는 역할을 하게 된다. 
+이 패턴에서는 Message Realy 라는 별도의 프로세스가 추가도니다. outbox 테이블은 임시 메시지 큐의 역할을 하며 엔티티 업데이트와 함께 트랜잭션으로 묶인다. Message Relay는 outbox 테이블에 저장하는 데이터를 비동기적으로 읽어서 메시지를 발행하여 메시지 브로커에게 전달하는 역할을 하게 된다.
 
 outbox pattern의 message relay를 구현하는데는 Polling publisher, Transaction log tailing 두 가지 방식이 존재한다.
 

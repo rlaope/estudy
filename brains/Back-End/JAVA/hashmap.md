@@ -86,4 +86,4 @@ HashMap<String , Integer> map8 = new HashMap<>();
 ### void forEach
 - forEach를 사용하여 HashMap의 각 key=value 쌍에 접근할 수 있다.
 - lambda식도 사용가능하므로 Iterator를 통한 순회보다 더욱 간단하게 코드를 짤 수 있다.
-- keySet()이나 entrySet(),values()를 통하여 만들어진 Set들도 forEach문으로 접근이 가능하다. 
+- keySet()이나 entrySet(),values()를 통하여 만들어진 Set들도 forEach문으로 접근이 가능하다.

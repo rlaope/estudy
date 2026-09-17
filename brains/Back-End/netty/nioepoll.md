@@ -25,7 +25,6 @@ ET는 상태 변화 순간 위주로 깨워서 불필요한 wakeup을 줄이는 
 - **단점**: 구현 실수 (EAGAIN까지 안읽음)하면 데이터가 남는데도 더 이상 read가 안와 멈춘것처럼 보이는 버그가 있을수있다.
 
 
-
 > EAGAIN: unix 계열 시스템에서 시스템 호출이 **나중에 다시 시도하라**라는 의미로 반환하는 오류코드, 주로 비동기 논블로킹 소켓 통신시 "데이터가 준비되지 않았거나 자원이부족해 당장은 작업을 완료할 수 없다" 를 나타낸다.
 
 LT는 상태에 만족한다면 주기적으로 깨워 체크한다는 방향으로 설계되어있다.
@@ -258,7 +257,7 @@ public static void epollCtlDel(int efd, int fd) throws IOException { ... }
 
 아뇨 NioEventLoop도 결국 epoll을 타는데, 그 epoll은 netty가 직접 호출하는 epoll이 아니라
 
-jdk selector 구현이 내부에서 쏘는거다. 
+jdk selector 구현이 내부에서 쏘는거다.
 
 NioEventLoop가 epoll을 호출하는 지점은
 

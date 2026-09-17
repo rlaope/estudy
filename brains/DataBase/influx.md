@@ -11,7 +11,7 @@ distributed, scale horizontally하게 설정되어 새로운 노드만 추가하
 - **Kapacitor**: Real-time streaming 데이터 전송 엔진
 - **Chronograf**: 시각화 도구
 
-InfluxDB는 Continuous Query(Task), Retention Policy(Retention Period)라는 핵심 기능을 제공하는데 
+InfluxDB는 Continuous Query(Task), Retention Policy(Retention Period)라는 핵심 기능을 제공하는데
 
 일정 주기마다 데이터를 처리하여 새롭게 저장하는기능, 일정 주기마다 데이터를 자동 삭제하는 기능으로 설명할 수 있다.
 

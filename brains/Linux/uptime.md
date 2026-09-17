@@ -17,11 +17,11 @@ cpu가 1개일 경우 프로세스가 cpu를 나눠쓰는 개념을 context swit
 부하 평균이 cpu개수보다 작다 하더라도 항상 괜찮은 것은 아니다. 프로세스의 상태를 확인하면서 상황에 맞는 적절한 조치가 필요하다. (R, D)
 
 - **R(cpu bound process)**: Running or runnable (on run queue)
-	- cpu 접근 대기중인 실행 가능한 프로세스의 수다. (현재 실행중인 프로세스의 개수)
-	- R 상태 프로세스가 많다면 cpu 사용률이 많으므로 cpu 개수를 늘리거나 스레드 조정을 해야한다.
+    - cpu 접근 대기중인 실행 가능한 프로세스의 수다. (현재 실행중인 프로세스의 개수)
+    - R 상태 프로세스가 많다면 cpu 사용률이 많으므로 cpu 개수를 늘리거나 스레드 조정을 해야한다.
 - **D(I/O bound process)**: uninterruptible sleep (usuaaly I/O)
-	- I/O 자원을 할당받지 못해 블록된 프로세스의 수다. (io를 위해 대기열에 있는 프로세스 개수)
-	- D 상태의 프로세스가 많다면 io를 많이 사용하는 상태이므로 iops가 높은 디스크로 변경하거나 io 성능을 높이거나, 처리량을 줄이고 혹은 파일쉐어/blob같은 원격 스토리지를 사용해 iops를 높여야한다.
+    - I/O 자원을 할당받지 못해 블록된 프로세스의 수다. (io를 위해 대기열에 있는 프로세스 개수)
+    - D 상태의 프로세스가 많다면 io를 많이 사용하는 상태이므로 iops가 높은 디스크로 변경하거나 io 성능을 높이거나, 처리량을 줄이고 혹은 파일쉐어/blob같은 원격 스토리지를 사용해 iops를 높여야한다.
 
 정리하면 서버 부하 체크시 `uptime`을 사용해 서버가 얼마나 많은 부하를 받고있는지 load average를 확인할 수 있으며, 이때 `load average > cpu` 일 경우 어떤 종류(R,D) 프로세스가 원인인지 확인해야한다.
 
@@ -40,7 +40,7 @@ while True:
 
 위 작업을 돌리고 uptime, vmstat을 확인해보면 다음과 같다.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*B2Y22SC8bRY8yEKAZO3umw.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*B2Y22SC8bRY8yEKAZO3umw.png)  
 r의 값이 1, 2로 cpu bound의 프로세스가 load average를 높이는 주요 원인임을 파악이 가능하다.
 
 **io bound test, uptime, vmstat 1 10**
@@ -52,6 +52,6 @@ f.write("It's IO Test")
 f.close()
 ```
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*TEo-bqWL15gRZqEyUKpuww.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*TEo-bqWL15gRZqEyUKpuww.png)  
 b에 거의 활성화 되어 있으며 io bound의 프로세스가 load average를 높이는 주요 원인임을 파악이 가능하다.
 

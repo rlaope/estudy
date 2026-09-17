@@ -60,7 +60,7 @@ console.log(float); // 3.14
 
 
 ### Math.random()
-- 랜덤한 숫자를 반환한다. 
+- 랜덤한 숫자를 반환한다.
 
 <br>
 

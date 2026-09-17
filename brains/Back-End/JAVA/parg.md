@@ -35,7 +35,7 @@ jvm은 1을 만족시키려고 노력하고 그게 되면 2, 다음은 3을 만�
 https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/parallel.html
 
 > g1gc에서의 튜닝포인트도 이걸 튜닝하지 않는가? 최대 퍼즈타임을 설정하기 위해 g1에서도 해당 값을 지정한다.
-> 
+>
 > g1gc에서는 치울 구역 즉 region을 골라내 목표 시간내에 처리 가능한 Region 개수만큼 청소하고 목표시간을 짧게 잡으면 old영역 청소를 미루다가 나중에 fullgc가 터질수있는 위험이있는, 디폴트도 200ms로 되어있는 옵션이고
 >
 > parallel gc에서 해당 옵션은 세대 크기를 조절하기위해 전체 young old 영역을 리사이징 하여 시간을 맞추고 목표 시간을 짧게 잡으면 힙이 쪽르아들어 gc가 미친듯이 자주 발생한다. 기본값은 무제한이며 제약조건은 1순위

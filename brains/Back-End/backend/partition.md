@@ -21,7 +21,7 @@
 
 ### **해시 파티셔닝**
 
-![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6a6cc6c8-d39c-49d3-ab1a-b4520f23901a_1200x628.png) 
+![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6a6cc6c8-d39c-49d3-ab1a-b4520f23901a_1200x628.png)
 
 
 1. **리스트 파티셔닝**
@@ -80,7 +80,7 @@ service discovery에 일종이다 네트워크를 통해 접속하는 소프트�
 
 ![](https://goodgid.github.io/assets/img/sd/SD-Partitioning-Request-Routing_2.png)
 
-이러한 한계를 극복하기 위해 많은 분산 데이터 시스템은 클러스터 메타데이터 추적을 위해 주키퍼와 같은 별도의 **코디네이션 서비스**를 사용한다. 
+이러한 한계를 극복하기 위해 많은 분산 데이터 시스템은 클러스터 메타데이터 추적을 위해 주키퍼와 같은 별도의 **코디네이션 서비스**를 사용한다.
 
 각 노드는 주키퍼에 자신을 등록하고 주키퍼 파티션과 노드 사이의 신뢰성 있는 정보를 관리한다.
 

@@ -10,7 +10,7 @@
  > localStorage는 데이터가 만료되지않고 session Storage의 데이터는 페이지 세션이 끝날 때. 사라지는 점이 다릅니다.
 
  ## 예제
-`Storage.setItem(Key , valuse)` : Storage에 값을 저장 
+`Storage.setItem(Key , valuse)` : Storage에 값을 저장
  ```js
  localStorage.setItem('myCat', 'Tom');
  ```
@@ -27,4 +27,3 @@
  localStorage.removeItem('myCat');
  ```
 
- 

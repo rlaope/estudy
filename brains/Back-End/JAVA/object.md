@@ -1,4 +1,4 @@
-# 자바 Object 클래스의 메소드 
+# 자바 Object 클래스의 메소드
 
 자바의 클래스를 선언할 때 extends 키워드로 다른 클래스를 상속하지 않으면 암시적으로 `java.lang.Object` 클래스를 상속하게 된다.
 
@@ -56,7 +56,6 @@ public class Member {
 Object의 hashCode() 메서드는 객체의 메모리 번지를 이용해 해시코드를 만들어서 리턴한다. 따라서 객체마다 다른 값을 갖고 있다.
 
 논리적 동등 비교시 hashCode()를 오버라이딩할 필요가 있는데, 컬렉션 프레임워크에서 HashSet, HashMap, Hashtable등은 아래와 같은 방법으로 두 객체가 동등한지 비교한다.
-
 
 
 ![](https://velog.velcdn.com/images/rg970604/post/3fc6c770-d9c3-42d0-b723-53f668d01546/image.png)

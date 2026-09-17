@@ -75,7 +75,7 @@ let promise = new Promise(function(resolve, reject)){
 
 ### Error 객체와 함께 거부하기
 
-- 무언가 잘못된 경우, executor 는 reject를 호출해야 합니다. 이때 인수는 resolve 와 마찬가지로 어떤 타입도 가능하지만 Error 객체 또는 Error를 상속받은 객체를 사용할 것을 추천합니다. 이유는 뒤에서 설명하겠습니다. 
+- 무언가 잘못된 경우, executor 는 reject를 호출해야 합니다. 이때 인수는 resolve 와 마찬가지로 어떤 타입도 가능하지만 Error 객체 또는 Error를 상속받은 객체를 사용할 것을 추천합니다. 이유는 뒤에서 설명하겠습니다.
 
 ### resolve , reject 함수 즉시 호출
 
@@ -90,7 +90,6 @@ let promise = new Promise(function(resolve, reject){
 
 어떤 일을 시작했는데 알고 보니 일이 이미 끝나 저장까지 되어있는 경우, 이렇게 resolve나 reject를 즉시 호출하는 방식을 사용할 수 있습니다.  
 이렇게 하면 promise는 즉시 이행 상태가 됩니다.  
-
 
 
 <br>

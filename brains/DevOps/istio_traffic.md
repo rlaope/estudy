@@ -1,6 +1,6 @@
 # Traffic Control & Security mTLS
 
-서비스 메시의 진정한 가치는 단순한 연결을 넘어서 
+서비스 메시의 진정한 가치는 단순한 연결을 넘어서
 
 실패를 견디는 능력 resiliency와 보이지 않는 보안 zero trust를 코드 한줄수정없이 인프라 계층에서 구현하는데있다.
 

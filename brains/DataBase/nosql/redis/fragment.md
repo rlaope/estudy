@@ -13,7 +13,6 @@ redis는 in memory data store로, 캐시로도 많이 쓰이기 때문에 메모
 redis-cli 에서 INFO command로 확인할 수 있다.
 
 
-
 ```bash
 redis> INFO 
 "# Server redis_version:7.0.5
@@ -33,23 +32,23 @@ mem_fragmentation_bytes:9757104
 ```
 
 - used_memory_rss
-	- rss(resident set size), physical memory actually used로 레디스를 띄우기 위해서 os가 할당한 메모리다.
+    - rss(resident set size), physical memory actually used로 레디스를 띄우기 위해서 os가 할당한 메모리다.
 - used_memory
-	- redis가 실제 사용하고 있는 메모리다.
+    - redis가 실제 사용하고 있는 메모리다.
 - mem_fragmentation_ratio
-	- used_memory_rss / used_memory로 이상적인 경우, 1 또는 1보다 살짝 큰 수준 (ex. 1.04)를 기대할 수 있으며 1.5를 넘어가는 경우 심각한 수준이다.
-	- 레디스는 일반적으로 별도의 설정을 하지 않으면, 메모리 할당 후 따로 release를 하지 않기 때문에 peak memory가 크고 평소보다 사용량이 적은 경우 정상일 수 있다.
-	- MEMORY DOCTOR 명령어로 redis에 메모리 상태를 진단할 수 있다.
+    - used_memory_rss / used_memory로 이상적인 경우, 1 또는 1보다 살짝 큰 수준 (ex. 1.04)를 기대할 수 있으며 1.5를 넘어가는 경우 심각한 수준이다.
+    - 레디스는 일반적으로 별도의 설정을 하지 않으면, 메모리 할당 후 따로 release를 하지 않기 때문에 peak memory가 크고 평소보다 사용량이 적은 경우 정상일 수 있다.
+    - MEMORY DOCTOR 명령어로 redis에 메모리 상태를 진단할 수 있다.
 - mem_fragmentation_bytes
-	- used_memory_rss - used_memory
-	- 단편화의 크기 뿐만 아니라 프로세스의 오버헤드(allocator_* 지표 참고)등을 포함한 크디로 이 값의 절대값이 수~수십 MB 정도로 작으면, fragmentation ratio가 1.5 이상으로 크다고 해도 별 이상은 없다.
+    - used_memory_rss - used_memory
+    - 단편화의 크기 뿐만 아니라 프로세스의 오버헤드(allocator_* 지표 참고)등을 포함한 크디로 이 값의 절대값이 수~수십 MB 정도로 작으면, fragmentation ratio가 1.5 이상으로 크다고 해도 별 이상은 없다.
 
 
 <br>
 
 ## High Fragmentation Ratio Problem Solution
 
-이제 Fragmentation Ratio가 높을 경우 해결 방법에 대해서 알아보겠다. 
+이제 Fragmentation Ratio가 높을 경우 해결 방법에 대해서 알아보겠다.
 
 레디스의 상태가 정상 상태인지 비정상 상태인지에 대해, 두 가지의 경우를 볼 수 있다.
 

@@ -28,7 +28,7 @@ public void setName(String name) {
 
 The default implementation of Kotlin property includes field and accessors(getter for `val`, and getter and setter for `var`).
 
-Thanks to that, we can always replace accessors default implementation with a custom one. 
+Thanks to that, we can always replace accessors default implementation with a custom one.
 
 For instance, if we want to accept only non-blank values, then we can define the following setter:
 
@@ -88,7 +88,7 @@ interface Person {
 Such declaration means that there must be a getter defined in classes that implement interface Person.
 
 
-As you can clearly see. Kotlin properties give developers much bigger possibilities Java fields. 
+As you can clearly see. Kotlin properties give developers much bigger possibilities Java fields.
 
 Yet, they look nearly the same and Kotlin properties can be used exactly the same as Java fields.
 

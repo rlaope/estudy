@@ -104,7 +104,7 @@ gc를 사용하는 스레드의 개수는 - XX:ParallelGCThreads=n 옵션으로 
 
 이 방식은 low-latancy collector로도 알려져 있습니다.
 
-힙 메모리 영역의 크기가 클 때 적합합니다. 
+힙 메모리 영역의 크기가 클 때 적합합니다.
 
 Young 영역에 대한 GC는 병렬 콜렉터와 동일합니다.
 

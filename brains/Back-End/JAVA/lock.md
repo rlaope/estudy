@@ -8,7 +8,7 @@
 
 synchronized 블럭은 자동으로 lock이 잠기고 풀리기 때문에 편리하지만, ReentrantLock 클래스를 이용하면 다양한 고급 기능이 사용이 가능하다.
 
-- Lock polling 
+- Lock polling
 - 코드가 단일 블록 형태를 넘어서는 경우 사용 가능
 - 타임 아웃 지정
 - Condition 적용으로 대기중인 쓰레드를 선별할 수 있다.

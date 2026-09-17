@@ -6,7 +6,7 @@ IP를 할당하는 과정은 직접 입력하는 정적 할당, 외부 시스템
 
 그리고 이러한 동적 할당을 도와주는 프로토콜이 바로 **DHCP(Dynamic Host Configuration Protocol)**이다.
 
-DHCP는 BOOTP(Bootstrap Protocol)에서 개선된 버전이며 서로 호환된다. 
+DHCP는 BOOTP(Bootstrap Protocol)에서 개선된 버전이며 서로 호환된다.
 
 DHCP는 DHCP Client(67포트) DHCP Server(68포트) 이렇게 두개가 동작한다.
 
@@ -19,7 +19,7 @@ DHCP를 통해 IP를 할당받는 과정을 설명해보겠다.
 1. `DHCP Discover`: Client가 DHCP Server를 찾기위하여 브로드캐스트 요청을 보낸다.
 2. `DHCP Offer`: 요청을 받은 서버가 IP Pool에서 해당 네트워크 구성 정보(IP, Subnet Mask, Gateway, Lease Time, DHCP ID)를 보낸다.
 3. `DHCP Request`: 제안을 받은  Client는 사용할 Host를 결정하고 응답을 한다.
-4. `DHCP Ack`: 서버는 클라이언트로 부터 응답을 받으면 해당 호스트 정보들을 기록한다. 
+4. `DHCP Ack`: 서버는 클라이언트로 부터 응답을 받으면 해당 호스트 정보들을 기록한다.
 
 이렇게 4개의 단계로 DHCP는 동작한다.
 

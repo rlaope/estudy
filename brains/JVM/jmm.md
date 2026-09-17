@@ -6,7 +6,7 @@ Java Memory Model과 실제 하드웨어 아키텍처 x86, ARM등 간의 매핑�
 
 JMM은 개발자에게 Happens-Before라는 논리적 보증을 제공하지만 하드웨어는 성능 극대화를 위해 비순차적 실행 out of order execution과 캐시 계층 구조를 사용한다.
 
-JVM의 역할은 이 논리적 명령을 각 cpu의 메모리 일관성 모델에 맞는 어셈블리 명령어로 치환하는 것이다. 
+JVM의 역할은 이 논리적 명령을 각 cpu의 메모리 일관성 모델에 맞는 어셈블리 명령어로 치환하는 것이다.
 
 - x86(Intel/AMD)는 TSO(Total Store Ordering) 하드웨어가 로드/스토어 순서를 상당히 엄격하게 유지하고 재정렬 범위는 Store-Load 재정렬만 발생한다 Store Buffer 때문 그래서 Java Barrier 삽입 비용이 상대적으로 낮다
 - ARM(AArch64, Apple Silicon)은 Weakly Ordered고 매우 유연하며 명시적 배리어 없이는 순서 보장이 거의 없다. Load-Load, Load-Store, Store-Store등 대부분 발생 가능하며 베리어 삽입시 성능 차이가 지점에  따라 극명하다.

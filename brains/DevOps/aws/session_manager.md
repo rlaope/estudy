@@ -6,7 +6,7 @@
 
 EC2의 개수가 늘어남에 따라 각각 다른 pem 파일들을 관리하기가 힘들어 진다.  
   
-Bastion Host로 관리할지라도 매번 접속할 때 Bastion Host를 거쳐야 한다는 번거로움이 있다. 
+Bastion Host로 관리할지라도 매번 접속할 때 Bastion Host를 거쳐야 한다는 번거로움이 있다.
   
 이것을 해결하기 위해서 나온 것이 Session Manager이다.
 

@@ -31,7 +31,7 @@ SATB가 Pre-Write Barrier(바뀌기 전 값을 기록)를 쓴다면, Incremental
 
 ### Incremental Update 해결책: 다시 Grey로 강등시킨다.
 
-위의 문제를 막기위해서 write-barrier가 동작하는데 
+위의 문제를 막기위해서 write-barrier가 동작하는데
 
 이미 검사가 끝난 black 객체에 새로운 참조가 연결되면, 그 객체를 다시 Grey로 바꿔서 나중에 다시 스캔하게 만든다.
 
@@ -64,6 +64,6 @@ Incremental Update 문제인데, Remark단계에 STW가 변경된 단계에서 �
 
 SATB는 Remark 단게에서 해야할 일은 SATB 버퍼에 기록된 끊어진 참조들만 후다닥 마킹하고 끝낸다.
 
-다시 깊이 우선 탐색을 할 필요가 없다. 
+다시 깊이 우선 탐색을 할 필요가 없다.
 
 Floating Garbage가 생겨서 메모리는 좀 낭비하지만 STW 시간은 확실하게 짧게 보장이 가능하다.

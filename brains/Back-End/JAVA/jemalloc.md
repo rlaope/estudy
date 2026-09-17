@@ -113,6 +113,6 @@ null bitmap과 최소한의 메타데이터로 고성능 애플리케이션 서�
 
 ### 결론
 
-native memory를 직접적으로 조작하는 애플리케이션 속에서는 (bitmap 기반 통신) memeory를 조작할일이 많을텐데 프로파일링과 좀 더 고성능을 위해서는 jemalloc을 추천한다. 이건 간단 찍먹이라 어떤 알고리즘을 쓰는지 왜 더 좋은지, 구현방식이나 다른 개념(ex arena, thread cache 등)은 다음글에서 알아보겠다. 
+native memory를 직접적으로 조작하는 애플리케이션 속에서는 (bitmap 기반 통신) memeory를 조작할일이 많을텐데 프로파일링과 좀 더 고성능을 위해서는 jemalloc을 추천한다. 이건 간단 찍먹이라 어떤 알고리즘을 쓰는지 왜 더 좋은지, 구현방식이나 다른 개념(ex arena, thread cache 등)은 다음글에서 알아보겠다.
 
 그 밖에도 tcmalloc, hoard, ptmalloc2 등이 있다.

@@ -152,6 +152,6 @@ def run_iterative_loop(model_path, prompts, iteration_id):
 
 상용 레벨에서 Iterative Self-Improvement를 설계할때는 무한 루프를 돌려서는 안되며
 
-**토큰의 다양성 지표가 80% 이하로 감소하는 시점을 (본 지표에서는 Iteration 3~4 사이)을 훈련 종료 Early Stopping 임계점으로 설정해야한다.** 
+**토큰의 다양성 지표가 80% 이하로 감소하는 시점을 (본 지표에서는 Iteration 3~4 사이)을 훈련 종료 Early Stopping 임계점으로 설정해야한다.**
 
 혹은 주기적으로 새로운 인간 지시문이나 외부 데이터소스를 가공하여 주입하는 아키텍처 방어선이 결합되어야 인프라 낭비없는 강건한 에이전트 브레인 확보가 가능하다.

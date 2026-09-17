@@ -43,13 +43,13 @@ gRPC는 Protocol Buffers를 통해 클라이언트 코드와 서버 인터페이
 ## gRPC vs HTTP API
 기능 | gRPC | HTTP API
 --|--|--
-계약 | 필수(.proto) | 선택 사항(OpenAPI)
+계약 | 필수(.proto) | 선택 사항(OpenAPI)  
 프로토콜 | HTTP/2 (빠름) | HTTP
-Payload | Protobuf(소형, 이진 메시지 형식) | JSON(대형, 사람이 읽을 수 있음)
+Payload | Protobuf(소형, 이진 메시지 형식) | JSON(대형, 사람이 읽을 수 있음)  
 규범 | 엄격한 사양 | 느슨함. 모든 HTTP가 유효함
 스트리밍 | 클라이언트, 서버, 양방향 | 클라이언트, 서버
 브라우저 지원 | 아니오(gRPC-웹 필요) | 예
-보안 | 전송(TLS) | 전송(TLS)
+보안 | 전송(TLS) | 전송(TLS)  
 클라이언트 코드 생성 | 예 | OpenAPI + 타사 도구
 
 .proto 파일: gRPC 서비스/메시지 계약 정의

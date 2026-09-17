@@ -37,7 +37,7 @@ youngGC시 youngObj는 root, oldObj 둘 다 reachable하다.
 
 해결: old 객체에서 young 객체로 연결되는 포인터를 반드시 알아야한다 이를 old -> young cross-generation refernece라고 한다.
 
-문제는 old는 너무 크다. 그래서 그걸 전부 스캔하려면 gc 비용이 폭발해 heap의 작은 단위만으로 dirty로 표시햇거 빠르게 찾는 방식을 사용한다. 
+문제는 old는 너무 크다. 그래서 그걸 전부 스캔하려면 gc 비용이 폭발해 heap의 작은 단위만으로 dirty로 표시햇거 빠르게 찾는 방식을 사용한다.
 
 이게 카드 테이블의 목적이다.
 

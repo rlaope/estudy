@@ -54,9 +54,9 @@ Source Port Number는 발신지의 주소를 의미하며 Destination Port Numbe
 - **PSH(Push)**: 수신측에서 이 데이터를 최대한 빠르게 처리하기 위하여 응용 프로그램 까지 바로 전달해달라는 플래그다. 이 플래그가 0이면 수신 측은 자신의 버퍼가 다 채워질 때 까지 기다리고 1이라면 더 이상 연결된 세그먼트가 없음을 의미하기도 한다.
 - **RST(Reset 강제 연결 초기화)**: ESTABLISHED(연결 확립된)된 회선에 강제 리셋을 요청한다.
 - **SYN(Synchronize 연결 시작, 동기화)**: TCP 연결 설정 초기화를 위한 순서 번호 동기화
-	- 연결 요청: SYN = 1, ACK = 0 (Syn 세그먼트)
-	- 연결 허락: SYN  = 1, ACK = 1 (SYN + ACK 세그먼트)
-	- 연결 설정: ACK = 1 (ACK 세그먼트)
+    - 연결 요청: SYN = 1, ACK = 0 (Syn 세그먼트)
+    - 연결 허락: SYN  = 1, ACK = 1 (SYN + ACK 세그먼트)
+    - 연결 설정: ACK = 1 (ACK 세그먼트)
 - **FIN(Finish 종료)**: 상대방과 연결을 종료하고 싶다는 요청
 
 NS, CWR, ECE 플래그는 네트워크의 명시적 혼잡 통보(Explicit Congestion Notofication, ECN)을 위한 플래그다.

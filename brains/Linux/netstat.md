@@ -11,7 +11,7 @@ LISTEN, TIME_WAIT, ESTABLISHED 상태를 제일 많이 마주하게 되며 상�
 - LISTEN: 프로세스가 소켓을 통해 요청을 듣고 있는 상태
 - ESTABLISHED: 커넥션이 맺어진 상태
 - TIME_WAIT: 커넥션이 종료되고 연결을 먼저 끊은쪽(active closer)에서 소켓을 정리하기 전 잠시 대기 하는 상태다
-	- 이는 fin 과정 4 way hand shake에서 active closer가 마지막에 ack 패킷을 보내고 나서 패킷이 유실될 경우 다시 패킷을 보내 graceful하게 연결을 끊기 위함이다. (마지막 ack가 유실되면 passive closer는 ack를 못받았으므로 앞서 보낸 Fin을 다시 보내고 active closer는 time wait 상태이므로 소켓을 정리하기전에 fin을 다시 받을 수 있다. 이후 active closer는 ack를 보내 연결을 graceful하게 종료가 가능하다.) 
+    - 이는 fin 과정 4 way hand shake에서 active closer가 마지막에 ack 패킷을 보내고 나서 패킷이 유실될 경우 다시 패킷을 보내 graceful하게 연결을 끊기 위함이다. (마지막 ack가 유실되면 passive closer는 ack를 못받았으므로 앞서 보낸 Fin을 다시 보내고 active closer는 time wait 상태이므로 소켓을 정리하기전에 fin을 다시 받을 수 있다. 이후 active closer는 ack를 보내 연결을 graceful하게 종료가 가능하다.)
 
 keepalive-timeout: nginx에 설정값중 하나로 매번 tcp 3 way handshake를 하게 되면 네트워크 성능 저하가 발생하기 때문에 연결을 유지하도록 하는 설정이다.
 

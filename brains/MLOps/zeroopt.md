@@ -89,7 +89,7 @@ DeepSpeed를 사용하여 학습을 구동할 때, 노드 메모리의 물리적
 [INFO] [memory_stats.py:51] --------------------------------------------------
 ```
 
-단일 GPU로는 140GB가 넘어 로드조차 불가능했던 70B 모델이 ZeRO Stage 3 초기화 직후 단 18.25GB의 HBM만 점유 (`Allocated per GPU`) 하고 안착했다. 
+단일 GPU로는 140GB가 넘어 로드조차 불가능했던 70B 모델이 ZeRO Stage 3 초기화 직후 단 18.25GB의 HBM만 점유 (`Allocated per GPU`) 하고 안착했다.
 
 나머지 61GB의 여유 공간은 런타임에서 All-Gather로 다른 GPU의 조각을 임시로 가져오거나 활성화 데이터를 담는 버퍼로 쓰이게 될것이다.
 

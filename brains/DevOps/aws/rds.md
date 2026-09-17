@@ -105,7 +105,6 @@ Backup을 시행할 때는 약간의 딜레이 발생 가능성
 스냅샷의 복구는 항상 새로운 DB Instance를 생성하여 수행
 
 
-
 ## RDS Multi AZ
 두 개 이상의 AZ에 걸쳐 데이터베이스를 구축하고 원본가 다른 DB(Standby)를 자동으로 동기화(Sync)  
 - SQL Server, Oracle, MySQL, PosgreSQL, MariaDB에서 지원

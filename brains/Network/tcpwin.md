@@ -12,14 +12,14 @@ Window = 64KB
 ```
 
 tcp는 다음을 동시에 만족해야 한다.
-- 송신자가 너무 빨리 보내면 수신자 버퍼 overflow 
+- 송신자가 너무 빨리 보내면 수신자 버퍼 overflow
 - 너무 천천히 보내면 대역폭 낭비
 
 그래서 수신자가 매 ack마다 말한다.
 
-window size만큼 지금 요청을 받아줄 수 있다. 
+window size만큼 지금 요청을 받아줄 수 있다.
 
-이게 window size고 핵심 포인트는 수신자 기준이며, 송신자는 이 값을 절대 초과해서 보내면 안된다. 
+이게 window size고 핵심 포인트는 수신자 기준이며, 송신자는 이 값을 절대 초과해서 보내면 안된다.
 
 ```
 실제 전송 가능량 = min(rwnd, cwnd)
@@ -27,7 +27,7 @@ window size만큼 지금 요청을 받아줄 수 있다.
 - rwnd : 수신자 Window (Window Size)
 - cwnd : 혼잡 윈도우 (송신자, congestion control)
 
-window 필드는 tcp헤더에서 16비트다. 
+window 필드는 tcp헤더에서 16비트다.
 
 ```
 최대 65,535 bytes ≈ 64KB

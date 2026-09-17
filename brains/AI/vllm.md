@@ -46,7 +46,7 @@ vLLM이 메모리를 관리하고 요청을 처리하는 내부 아키텍처다.
 
 ### Example
 
-내부 서버의 백그라운드 작업이나 네트워크 api 서버를 띄우지 않고도 py 코드 내에 직접 PagedAttention 엔진을 가동하여 일괄 처리를 수행하는 기본로직이다. 
+내부 서버의 백그라운드 작업이나 네트워크 api 서버를 띄우지 않고도 py 코드 내에 직접 PagedAttention 엔진을 가동하여 일괄 처리를 수행하는 기본로직이다.
 
 ```py
 from vllm import LLM, SamplingParams

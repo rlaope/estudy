@@ -16,7 +16,7 @@ HCL은 `block`이라는 기본 단위로 구성된다.
 
 위에서 노란 글시인 BLOCK LABEL은 옵션이며 0개 이상 있다.
 
-BLOCK TYPE은 Block이 어떤 동작을 하는지 결정한다. 
+BLOCK TYPE은 Block이 어떤 동작을 하는지 결정한다.
 
 ```tf
 resource "local_file" "demo" {
@@ -47,7 +47,7 @@ resource block은 여러 개 사용할 수 있으므로, 두 번째 label에 이
 
 루트 모듈에 있는 모든 tf 파일은 테라폼이 실행한다.
 
-그러나, 하위 모듈에 있는 tf 파일들은 실행하지 않기 때문에 하위 경로에 있는 테라폼 파일을 실행시켜주려면 
+그러나, 하위 모듈에 있는 tf 파일들은 실행하지 않기 때문에 하위 경로에 있는 테라폼 파일을 실행시켜주려면
 
 ```bash
 terraform -chdir="./submodule" init

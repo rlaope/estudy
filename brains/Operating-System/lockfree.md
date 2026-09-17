@@ -125,7 +125,7 @@ STM(Software Transactional Memory) 개념을 메모리 영역으로 가져온 �
 - **Optimistic Concurrency**: 일단 다른 스레드가 방해하지 않을것이라 가정하고 트랜잭션 내부의 연산을 자유롭게 수행한다.
 - **Rollback & Retry**: 작업을 마치고 커밋하려는 순간 내가 읽거나 쓴 메모리 주소값이 다른 스레드에 의해 바뀌었는지확인후 충돌이 발생하면 취소하고(rollback) 처음부터 다시 시도한다.
 
-작동 메커니즘은 
+작동 메커니즘은
 
 1. **Read Set / Write Set**: transaction 내에서 읽은 값과 기록하려는 값을 별도 log에 기록한다 실제 메모리는 건들지 않음
 2. **Validation**: 커밋 직전에 read set에 기록된 주소들의 현재 값이 트랜잭션 시작 시점과 동일한지 확인한다.

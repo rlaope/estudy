@@ -46,7 +46,7 @@ crw-rw-rw- 1 root root 234,   1  /dev/nvidia-uvm-tools
 
 중간에 경계 하나가 있는데 `libcuda.so`는 드라이버에 속하고 흐스트에 하나만 존재한다.
 
-`libcudart.so`와 그 위 애플리케이션은 들고 다닌다. 
+`libcudart.so`와 그 위 애플리케이션은 들고 다닌다.
 
 ### CUDA 컨텍스트
 
@@ -676,7 +676,7 @@ ERROR ValueError: To serve at least one request with 32768 tokens,
       more KV cache is needed than available.
 ```
 
-기동이 5단계 프로파일링 까지 갔다가 6단계에서 멈췄다 
+기동이 5단계 프로파일링 까지 갔다가 6단계에서 멈췄다
 
 ```
 전체            95.00 GB

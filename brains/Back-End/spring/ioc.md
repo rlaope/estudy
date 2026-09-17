@@ -18,7 +18,7 @@
 - 객체 생성 코드가 없어지므로 TDD가 용이하다.
 
 > POJO(Plain Old Java Object)란?  
-> 주로 특정 자바 모델이나 기능, 프레임워크를 따르지 않는 Java Object를 지칭한다. 
+> 주로 특정 자바 모델이나 기능, 프레임워크를 따르지 않는 Java Object를 지칭한다.
 > .Java Bean 객체가 대표적이다.간단하게 getter / setter를 생각하면 될 것 같다.
 
 

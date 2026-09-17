@@ -8,7 +8,7 @@
 #### @NotNull
 필드의 값이 null이 될 수 없음을 명시
 
-#### @Getter 
+#### @Getter
 필드의 get 메서드를 생성  
 @Getter(lazy=true) : getter 최초 호출 시 값을 한번 계산한 후 그 값을 캐시해서 사용(매번 getter를 호출하는 것이 아닌 최초 한번만 호출하여 사용하기 위해)AccessLevel 지정 가능
 

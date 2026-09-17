@@ -48,8 +48,3 @@ Tasklet과 Reader Writer(ChunkOrientedTasklet)는 따로 작동한다는 오해�
 + 스프링배치는 LocalDate를 지원하지 않는다. -> 솔루션 @Value의 특성을 이용하자, setter 메소드에 @Value를 선언 문자열로 받은 뒤 원하는 타입으로 세팅한다. -> @JobScope Bean 생성 후 생성자를 DI 받는다.
 
 
-
-
-
-
-

@@ -67,7 +67,7 @@ acceptor 노드가 요청을 저리하지 못하는 상황에 대해서 살펴�
 
 우선 한개의 acceptor만이 실패한 경우를 생각해보자, 이 경우 proposer는 1대의 acceptor로 부터 accepted 메시지를 수신하고, 자기 자신으로부터 accepted 메시지를 수신한 것으로 간주된다. (실제로는 자기 자신과 accepted 메시지를 주고받지 않는다. 하지만 자신이 제안한 값이기 때문에 해당 메시지를 accepted 한 상태로 간주할 수 있다.) 이러한 상황에서 총 3대의 노드를 소유한 클러스터에서 majority 즉 2대 이상이 accepted를 완료했기 때문에 정상적으로 합의 도출이 가능하다.
 
-그러나, 만약 majority  이상의 acceptors가 실패하게 된다면 어떻게 될까? 이 경우 최종적으로 proposer 노드 1대만 accepted 되었기 때문에 majority가 아닌 상황이 되어 합의에 실패하게 된다. 
+그러나, 만약 majority  이상의 acceptors가 실패하게 된다면 어떻게 될까? 이 경우 최종적으로 proposer 노드 1대만 accepted 되었기 때문에 majority가 아닌 상황이 되어 합의에 실패하게 된다.
 
 > 결국 majority 이상의 노드가 동작하면 합의 과정은 정상적으로 수행된다.
 

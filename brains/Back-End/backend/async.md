@@ -28,22 +28,22 @@ async의 단점으로는 순차적이지 않기때문에 실행 예측이 불가
 
 ### Non Blocking I/O
 
-Blockiing IO는 호출한 작업을 진행하는동안 다른 작업을 실행할 수 없는. 즉 제어권이 넘어간 것을 의미하고 
+Blockiing IO는 호출한 작업을 진행하는동안 다른 작업을 실행할 수 없는. 즉 제어권이 넘어간 것을 의미하고
 
 Non Blocking IO는 제어권이 호출자에게 아직 있어 다른 작업을 진행할 수 있는 특징이다.
 
 - **블로킹 I/O**
-	- `read(fd)` 호출 -> 커널이 데이터 올 때 까지 유저 스레드 멈춤 -> cpu 낭비
+    - `read(fd)` 호출 -> 커널이 데이터 올 때 까지 유저 스레드 멈춤 -> cpu 낭비
 - **논블로킹 I/O + 이벤트 기반**
-	- 유저 스레드는 `read(fd)` 호출 -> 커널에게 데이터가 오면 알려달라고 등록
-	- 커널은 데이터가 준비되면, `epoll`, `kqueue`, `IOCP`등을 통해 알림
-	- 유저 스레드는 콜백 또는 폴링 구조로 후속 작업을 진행함
+    - 유저 스레드는 `read(fd)` 호출 -> 커널에게 데이터가 오면 알려달라고 등록
+    - 커널은 데이터가 준비되면, `epoll`, `kqueue`, `IOCP`등을 통해 알림
+    - 유저 스레드는 콜백 또는 폴링 구조로 후속 작업을 진행함
 > Java NIO, Netty, Kotlin Coroutine 등에서 이 구조를 사용함
 
 
 - `epoll`은 리눅스 커널에서 제공하는 **I/O 이벤트 감시 메커니즘이다.**
-	- `select()`, `poll()`과 달리 수천개의 fd를 O(1) 성능으로 감시가 가능하다.
-	- `epoll_create()`로 epoll() 인스턴스를 생성해 `epoll_ctl()`로 관심있는 소켓(fd)를 등록한다. 그리고 `epoll_wait()`로 이벤트가 올 때까지 대기한다 (논블로킹)
+    - `select()`, `poll()`과 달리 수천개의 fd를 O(1) 성능으로 감시가 가능하다.
+    - `epoll_create()`로 epoll() 인스턴스를 생성해 `epoll_ctl()`로 관심있는 소켓(fd)를 등록한다. 그리고 `epoll_wait()`로 이벤트가 올 때까지 대기한다 (논블로킹)
 ```c
 int epfd = epoll_create(0);
 epoll_ctl(epfd, EPOLL_CTL_ADD, sockfd, &event);
@@ -53,9 +53,9 @@ epoll_wait(epfd, events, MAX_EVENTS, timeout);
 Netty, Undertow, Vert.x 같은 서버는 내부적으로 이 구조를 사용해 싱글 스레드로도 수천 연결을 유지한다.
 
 - `IOCP`는 윈도우 기반의 완전 비동기 I/O 모델로 `WSARecv` `WriteFileEx` 등은 작업으로 등록하고 완료되었을 때 콜백으로 알려준다.
-	- `CreateIoCompletionPort()`로 포트를 생성하고 fd를 바인딩한다.
-	- I/O 작업을 등록(ReadFileEx)
-	- I/O 완료시 커널이 Worker Thread에 알림을 준다
+    - `CreateIoCompletionPort()`로 포트를 생성하고 fd를 바인딩한다.
+    - I/O 작업을 등록(ReadFileEx)
+    - I/O 완료시 커널이 Worker Thread에 알림을 준다
 > Java의 Windows에서 `AsynchronouseSocketChannel`은 내부적으로 IOCP를 활용한다.
 
 <br>

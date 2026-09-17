@@ -16,7 +16,7 @@
 
 요구사항이 바뀌기 쉬운 중소형 비즈니스 시스템이나 전자 상거래 응용에 적합하다.
 
-### 애자일 방법론 종류 
+### 애자일 방법론 종류
 - 익스트림 프로그래밍 (Extreme Programming, XP)
 - 짝 프로그래밍 (Pair Programming)
 - 테스트 주도 개발 (Test Driven Development, TDD)

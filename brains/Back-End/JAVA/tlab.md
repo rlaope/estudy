@@ -119,7 +119,7 @@ JFR 이벤트로 다음을 보면 바로 감이 온다.
 - `ObjectAllocationInNewTLAB` (새 TLAB 받아서 할당)
 - `ObjectAllocationOutsideTLAB` (TLAB 밖 할당)
 
-OutsideTLAB가 비정상적으로 많으면 
+OutsideTLAB가 비정상적으로 많으면
 - 객체가 큰 편이거나
 - TLAB 크기/튜닝이 안맞거나
 - 특정 코드 경로에서 큰 배열/버퍼를 자주 만들거나를 의심 가능
@@ -136,7 +136,7 @@ JVM Flag로 `-XX:+PrintTLAB` (TLAB 통계 출력), `-XX:+PrintGCDetails` (gc 상
 - `-XX:TLABSize`/ `-XX:MinTLABSize`: 고정/최소 크기 관련이다.
 - `-XX:TLABWasteTargetPercent`: TLAB낭비 허용률이고 너무 공격적으로 바꾸면 역효과가 있을 순 있다. cpu 너무 쓴다거나
 
-정리해보면 
+정리해보면
 
 JFR Allocation Profiling으로 outside alloc 원인을 찾아볼 수 있고
 

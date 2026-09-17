@@ -66,14 +66,14 @@ ENTRYPOINT ["java","-jar","/app.jar"]
   - Docker를 올릴 때 jdk11 버전을 이용해서 올리겠다고 선언하는 커맨드다
 
 - `ARG JAR_FILE=./build/libs/DevopsTestKotlin-0.0.1-SNAPSHOT.jar`
-  - JAR 파일의 위치를 환경변수의 형태로 선언하는 것이다. 
+  - JAR 파일의 위치를 환경변수의 형태로 선언하는 것이다.
   - 프로젝트를 빌드하게 되면 build/libs/xxxx.jar 의 형태로 jar file이 생성되어있을거다. 그 파일의 위치를 변수로 저장한다.
 - `COPY ${JAR_FILE} app.jar`
   - 프로젝트의 jar 파일 위치를 참조하여 jar 파일을 가져와서 컨테이너의 루트 디렉토리에 app.jar의 이름으로 복사하는 커맨드입니다.
 - `ENTRYPOINT ["java","-jar","/app.jar"]`
   - 도커파일이 도커엔진을 통해 컨테이너로 올라갈 때, 도커 컨테이너의 **시스템 진입점이 어디인지** 선언하는 커맨드다
   - 위의 커맨드에서는 java -jar 명령어를 이용해 컨테이너의 루트에 위치한 app.jar을 실행하라는 뜻의 커멘드입니다.
-  - 위의 Dockerfile의 작성이 완료되었다면, git commit and push를 해준다음 ec2에 코드를 옮겨주면 된다. 
+  - 위의 Dockerfile의 작성이 완료되었다면, git commit and push를 해준다음 ec2에 코드를 옮겨주면 된다.
 
 <br>
 
@@ -283,4 +283,4 @@ Creating order-example-kotlin_spring_1 ... done
 Creating order-example-kotlin_web_1    ... done
 ```
 
-그 후 정상적으로 동작하고 있는지 HTTP 요청으로 테스트를 해보면된다. 
+그 후 정상적으로 동작하고 있는지 HTTP 요청으로 테스트를 해보면된다.

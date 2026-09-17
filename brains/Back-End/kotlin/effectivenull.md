@@ -56,6 +56,5 @@ private var isOk: Boolean by Delegates.notNull()
 물론 lateinit 보다는 약간 느리긴합니다.
 
 
-
 이와같이 프로퍼티 위임을 사용하면 nullability로 발생하는 다양한 문제들을 처리할 수 있습니다.
 

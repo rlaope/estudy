@@ -35,7 +35,7 @@ console.log(found); // 12
 
  ### .length
  - 배열의 길이를 알려준다
- 
+
  ```js
  const numbers = [ 1 , 2 , 3 , 4];
  const fruits = ['Apple' , 'Banana' , 'Cherry'];

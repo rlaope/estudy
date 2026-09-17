@@ -84,7 +84,7 @@ JobBuilder는 직접적으로 Job을 생성하는 것이 아니라 별도의 구
 ### JobInstance
 JobInstance는 배치처리에서 Job이 실행될 때 하나의 Job 실행 단위입니다. 만약 하루에 한 번 씩 배치의 Job이 실행된다면 어제와 오늘 실행 각각 Job을 JobInstance라고 부를 수 있습니다.
   
-각각의 JobInstance는 하나의 JobExecution을 갖는 것은 아닙니다. 오늘 Job이 실행했는데 실패했다면 다음날 동일한 JobInstance를 가지고 또 실행합니다. 
+각각의 JobInstance는 하나의 JobExecution을 갖는 것은 아닙니다. 오늘 Job이 실행했는데 실패했다면 다음날 동일한 JobInstance를 가지고 또 실행합니다.
   
 Job 실행이 실패하면 JobInstance가 끝난것으로 간주하지 않기 때문입니다. 그렇다면 JobInstance는 어제 실패한 JobExecution과 오늘의 성공한 JobExecution 두개를 가지게 됩니다 즉 **JobExecution는 여러개 가질 수 있습니다.**
 
@@ -93,7 +93,7 @@ JobInstance에 대한 한 번의 실행을 나타내는 객체다.
   
 만약 오늘 Job이 실패해 내일 다시 동일한 Job을 실행하면 오늘/내일의 실행 모두 같은 JobInstance를 사용합니다.  
   
-실제로 JobExecution 인터페이스를 보면 Job 실행에 대한 정보를 담고 있는 도메인 객체가 있습니다. 
+실제로 JobExecution 인터페이스를 보면 Job 실행에 대한 정보를 담고 있는 도메인 객체가 있습니다.
   
 JobExecution은 JobInstance, 배치 실행 상태, 시작 식ㄴ, 끝난 시간, 실패했을 때 메시지 등의 정보를 담고 있습니다. JobExecution 객체 안에 어떤 실행 정보를 포함하고 있습니다.
 

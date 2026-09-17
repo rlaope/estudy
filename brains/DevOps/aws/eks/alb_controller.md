@@ -108,7 +108,7 @@ helm repo add eks https://aws.github.io/eks-charts
 helm repo update
 ```
 
-helm install or update 명령어로 릴리즈한다. 
+helm install or update 명령어로 릴리즈한다.
 
 EKS 클러스터 이름을 helm values에 꼭 설정해야 한다.
 

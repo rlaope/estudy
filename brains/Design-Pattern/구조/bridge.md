@@ -12,7 +12,7 @@
 ### RefindAbstraction
 기능 계층에서 새로운 부분을 확장한 클래스다.
 
-### Implementor 
+### Implementor
 Abstraction의 기능을 구현하기 위한 인터페이스 정의다.
 
 ### ConcreteImplementor

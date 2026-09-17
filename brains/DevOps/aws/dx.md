@@ -11,7 +11,7 @@ s2s vpn이 인터넷 위 암호화된 터널이라면 dx는 아예 aws까지 가
 - 그 회선은 aws 네트워크로 직접 연결됨
 - 그래서 지연(latancy)가 매우 안정적이고 packet loss도 거의 없는편
 
-**VIF(Virtual Interface)로 AWS 서비스 접근** 
+**VIF(Virtual Interface)로 AWS 서비스 접근**
 
 Direct Connect는 1개의 회선을 연결하고, 그 위에 VIF(가상 인터페이스)를 여러개 붙여서 사용한다.
 

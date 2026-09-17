@@ -3,7 +3,7 @@
 ## TCP/IP Packet
 TCP 세그먼트에는 IP 패킷의 출발지 IP와 목적지 IP 정보를 보완할 수 있는 출발지 port, 목적지 port, 전송 제어, 순서, 검증 정보등을 포함한다.
 
-## TCP 
+## TCP
 전송제어 프로토콜(Transmission Control Protocol)  
 TCP는 같은 계층에 속한 UDP에 비해 상대적으로 신뢰할 수 있는 프로토콜
 

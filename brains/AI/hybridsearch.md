@@ -39,11 +39,11 @@ FAISS를 도입해 벡터 검색을 10ms로 줄였다고 칩시다. 그런데 �
 
 <br>
 
-## 상세 동작 원리 및 구조화 
+## 상세 동작 원리 및 구조화
 
 Elasticsearch 8.x 내부에서 Native Vector Search가 처리되는 Low-level 메커니즘이다.
 
-#### 1. **Mapping** 정의 구조 할당 
+#### 1. **Mapping** 정의 구조 할당
 
 `type: "dense_vector"` 필드에 `index: true` 속성을 부여하면 Lucene 백엔드에서 해당 필드용 HNSW 그래프를 저장할 디스크/메모리를 세그먼트 단위로 준비한다.
 

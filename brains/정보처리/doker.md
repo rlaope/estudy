@@ -16,7 +16,7 @@
 <br>
   
 **가상 머신과 다른 점**
-![doker](./image/doker.jpeg) 
+![doker](./image/doker.jpeg)
   
 - `가상머신` : 서버 - Hypervisior 위에 VM들 올리기
 - `컨테이너` : 서버 - Hot Os - Doker Engine - Container 들 올리기

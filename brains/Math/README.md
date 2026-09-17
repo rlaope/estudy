@@ -1,6 +1,6 @@
 # 수학
 
-### 선형대수학 
+### 선형대수학
 
 - [연립선형방정식과 행렬](http://github.com/rlaope/estudy/blob/master/brains/Math/math1.md)
 - [가우스-조르당 소고법과 여러 가지 행렬](http://github.com/rlaope/estudy/blob/master/brains/Math/math2.md)

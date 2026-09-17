@@ -77,7 +77,7 @@ kubectl scale --replicas=6 replicaset myapp
 
 추가로 위와 같은 세 가지 구성 요소를 알아보겠다.
 
-위의 구성요소중 template, replicas는 현재 deprecated된 Replication Controller에 포함되어있다.
+위의 구성요소중 template, replicas는 현재 deprecated된 Replication Controller에 포함되어있다.  
 그리고 ReplicaSet은 ReplicationController에서 Selector가 추가되어진 것이다.
 
 - `Template`: Template는 파드가 죽게 되어 다시 재생성 해야할 때 어떤 파드를 띄울 것인지 명시하는 것이다.

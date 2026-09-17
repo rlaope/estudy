@@ -7,10 +7,10 @@
 - 싱글톤 빈
 - 프로토타입 빈
 - 웹 스코프
-	- request
-	- session
-	- application
-	- websocket 
+    - request
+    - session
+    - application
+    - websocket
 
 스프링에서는 @Scope 어노테이션으로 스코프를 지정해줄 수 있다.
 
@@ -22,14 +22,12 @@ public class MyPrototypeBean {
 ```
 
 
-
 ### 싱글톤 빈
 말 그대로 싱글톤으로 관리되는 빈이다.
 
 스프링 빈의 디폴트 값이다. 스프링 컨테이너는 기본적으로 빈을 싱글톤으로 관리한다.
 
 스프링 컨테이너는 싱글톤 빈의 인스턴스를 반환할 때 항상 같은 인스턴스를 반환한다.
-
 
 
 ### 프로토타입 빈
@@ -88,7 +86,7 @@ static class SingletonBean {
 
 > ObjectFactory는 따로 ObjectFactoryBeanCreator를 configuration 파일, 클래스에 정의해줘야하는 번거러움이 있으며, getObject만 갖고있든 단순 클래스고 ObjectProvider는 ObjectFactory에서 상속, 옵션, 스트림 처리 등 편의 기능이 추가된 것이지만, 둘 다 패키지를 보면 스프링 API에 의존하고 있다.
 
-위와 같은 문제를 해결하기 위해서는 JSR-330을 사용하는 방법이 있다.
+위와 같은 문제를 해결하기 위해서는 JSR-330을 사용하는 방법이 있다.  
 `Provider<T>` 인터페이스가 이 문제를 해결할 수 있는데. javax.inject 패키지에 있는 인터페이스다. 이 메서드는 관련 FactoryBean 클래스를 스프링에서 만들어주기 때문에 단순하게 get()메서드 하나로 가져올 수 있어 스프링 프레임워크에 의존적이지 않다.
 
 
@@ -96,7 +94,7 @@ static class SingletonBean {
 
 프로토타입빈하고 싱글톤타입빈하고 같이 사용했을 때 생기는 문제랑 비슷한데 한번 알아보겠다.
 
-먼저 DL부터 볼건데 scope 타입이 웹 스코프중 request 타입의 빈을 Controller에서 사용한다고 해보자 
+먼저 DL부터 볼건데 scope 타입이 웹 스코프중 request 타입의 빈을 Controller에서 사용한다고 해보자
 
 여기서 컨트롤러는 싱글톤 타입의 빈이다. request 스코프의 빈을 생성시점에 주입받아 사용할 수 있을까? 아니다 HTTP 요청이 들어와야 request 스코프의 빈이 생성되기 때문에 DI를 받을 수 없다.
 

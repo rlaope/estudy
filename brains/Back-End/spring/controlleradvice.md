@@ -84,7 +84,7 @@ public ModelAndView resolveException(
 
 ExceptionHandler는 Controller에 구현할 수도 있고, ControllerAdvice에도 구현할 수 있다. ControllerAdvice에 구현하는 것은 전역적인 반면에 Controller에 구현하는 것은 지역적이다.  
   
-그러므로 **Controller에 있는 ExceptionHandler가 우선 순위를 갖도록** 먼저 컨트롤러의 ExceptionHandler 검사한다. 
+그러므로 **Controller에 있는 ExceptionHandler가 우선 순위를 갖도록** 먼저 컨트롤러의 ExceptionHandler 검사한다.
   
 그리고 컨트롤러에 있는 ExceptionHandler가 예외를 처리할 수 있다면 (예외를 처리할 빈, 예외를 처리할 ExceptionHandler 메서드, 애플리케이션 컨텍스트)를 담은 ServletInvocalbeHandlerMethod를 만들어 반환한다.  
   

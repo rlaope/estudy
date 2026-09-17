@@ -59,9 +59,9 @@
   
 기본처리 | SQL | 설명
 ---|---|---
-Create | Insert | 테이블 내 컬럼에 데이터를 추가한다.
-Read | Select | 테이블 내 컬럼에 저장된 데이터를 불러온다.
-Update | Update | 테이블 내 컬럼에 저장된 데이터를 수정한다.
+Create | Insert | 테이블 내 컬럼에 데이터를 추가한다.  
+Read | Select | 테이블 내 컬럼에 저장된 데이터를 불러온다.  
+Update | Update | 테이블 내 컬럼에 저장된 데이터를 수정한다.  
 Delete | Delete | 테이블 내 컬럼에 저장된 데이터를 삭제한다.
 
 1. 데이터 삽입

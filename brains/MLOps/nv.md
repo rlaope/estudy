@@ -87,7 +87,7 @@ AI 인프라 환경에서 분산 학습 라이브러리 NCCL(NVIDIA Collective C
 NCCL_DEBUG=INFO python distributed_train.py
 ```
 
-터미널에서 확인해ㅑ야할 핵심 로그 라인들은 
+터미널에서 확인해ㅑ야할 핵심 로그 라인들은
 
 ```
 ai-server:1234:1234 [0] NCCL INFO Channel 00/12 : 0 1 2 3 4 5 6 7

@@ -28,23 +28,21 @@ redis는 인메모리 데이터 구조 저장소로 아래 그림에서 해당�
 
 #### 프로세스 영역
 - Server Process: redis-server.exe or redis-sentinal.exe는 실행 코드에 의해 활성화되는 프로세스를 서버 프로세스라고 한다. Redis 인스턴스를 관리해주며 사용자가 요구한 작업을 수행하는 프로세스다. redis server 프로세스는 main thread, sub thread 1(BIO-Close-File), sub thread 2(BIO-AOF-Resync), sub thread3(BIO-Lazy-Free) 4의 멀티 스레드로 구성된다.
-	- main thread: redis 서버에서 수행되는 대부분의 명령어와 이벤트 처리
-	- sub thread 1: AOF 데이터를 rewrite할 때 기존 파일은 Close하고 새로운 AOF 파일을 write할 때 사용
-	- sub thread2: AOF 쓰기 작업 수행시 사용
-	- sub thread3: UNLINK, FLUSHALL, FLUSHDB 같은 명령어를 실행할 때 더 빠른 성능을 보장하기 위해 백그라운드에서 사용됨
+    - main thread: redis 서버에서 수행되는 대부분의 명령어와 이벤트 처리
+    - sub thread 1: AOF 데이터를 rewrite할 때 기존 파일은 Close하고 새로운 AOF 파일을 write할 때 사용
+    - sub thread2: AOF 쓰기 작업 수행시 사용
+    - sub thread3: UNLINK, FLUSHALL, FLUSHDB 같은 명령어를 실행할 때 더 빠른 성능을 보장하기 위해 백그라운드에서 사용됨
 - Client Process: redis-cli.exe 또는 사용자 애플리케이션에 의해 실행되는 명령어를 실행하기 위해 제공되는 프로세스
 
 
 <br>
 
 
-
-
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbkwHpZ%2FbtqGnH0ZFib%2F0g7cKIWv6Kti8fQCQ701Q1%2Fimg.png)
 
 redis는 인메모리 데이터 구조 저장소다 그러나 memory는 휘발성 데이터기이 때문에, 프로세스를 종료하게 되면 데이터는 모두 유실된다. 따라서 단순 캐시용도가 아닌 Persistence 저장소로 활용하기 위해서는 disk에 저장하여 유실이 발생하지 않도록 해야한다.
 
-이를 위해서 AOF(Append Only File) 기능과 RDB(Snapshot)기능을 사용한다. 
+이를 위해서 AOF(Append Only File) 기능과 RDB(Snapshot)기능을 사용한다.
 
 AOF는 전달된 명령어를 별도의 파일로 기록하는 방법으로 RDBMS의 redo 방식과 유사하다.
 

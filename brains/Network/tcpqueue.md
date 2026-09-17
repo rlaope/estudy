@@ -41,7 +41,7 @@ sync queue는 네트워크 레벨 방화벽 + tcp 상태 머신의 경계다.
 - 워커 스레드 부족
 - gc, stw, cpu starvation등과 같은 이유
 
-커널과 유저 공간의 속도 차이를 완충하기 위해서 존재하며 Back-pressure도 제공한다. 
+커널과 유저 공간의 속도 차이를 완충하기 위해서 존재하며 Back-pressure도 제공한다.
 
 accept를 못하면 새 연결을 제한하는 기능같은 백프레셔 역할
 

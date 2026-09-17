@@ -14,7 +14,6 @@ C, C++과 같은 컴파일 언어는 컴파일 과정에서 바로 기계어로 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbHFBej%2FbtsmAL1jfGz%2FwgTWSn9U10bsdsA0IeXXdk%2Fimg.png)
 
 
-
 ### Java 동작 방식
 
 자바는 이러한 플랫폼 종속 문제를 해결하기위해서 JVM을 도입하였다.

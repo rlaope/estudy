@@ -63,7 +63,6 @@ Active상태가 된 후, Network LoadBalancer DNS주소를 웹 브라우저에 �
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FQhxRv%2Fbtsb5j8cx8h%2FLFeFVmKcQ8xkgOuRvviHzk%2Fimg.png)
 
 
-
 ```yaml
 kubectl delete -f nlb.yaml
 ```

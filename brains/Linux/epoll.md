@@ -50,7 +50,7 @@ if (event.events & EPOLLIN) {
 
 epoll은 비동기 방식이므로 블로킹 소켓을 사용하면 epoll_wait() 외에 read/write가 blcoking이 걸려 성능이 저하된다.
 - socket() -> accept() -> read()에서 O_NONBLOCK 없이 사용하게 된다면
-	- `read()`가 대기 상태에서 블로킹 되어 전체 서버가 멈춤
+    - `read()`가 대기 상태에서 블로킹 되어 전체 서버가 멈춤
 
 ### epoll 내부구조 - 리눅스 커널 `/proc` 트리
 
@@ -80,7 +80,7 @@ struct eventpoll {
 - `epoll_ctl()`로 트리에 등록이 되며
 - 이벤트 발생시 rdlist에 추가가 되며
 - `epoll_wait()`호출시 rdlist에서 꺼낸다.
-	- epoll_wait에서는 내부적으로 do_epoll_wait() -> ep_poll() 순으로 호출된다.
+    - epoll_wait에서는 내부적으로 do_epoll_wait() -> ep_poll() 순으로 호출된다.
 
 ### `/proc`
 

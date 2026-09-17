@@ -1,7 +1,7 @@
 # Spring boot @ExceptionHandler를 통한 예외처리
 
-### @ExceptionHandler 
-- @ExceptionHandler는 Controller계층에서 발생하는 에러를 잡아서 메서드로 처리해주는 기능이다. 
+### @ExceptionHandler
+- @ExceptionHandler는 Controller계층에서 발생하는 에러를 잡아서 메서드로 처리해주는 기능이다.
 - Service, Repository에서 발생하는 에러는 제외한다.
 
 ```java
@@ -86,7 +86,6 @@ public class ExampleAdvice3 {}
 
 
 > 주의 : 어노테이션, 베이스패키지 등 설정자들은 runtime시 수행되기 때문에 너무 많은 설정자들을 사용하면 성능이 떨어질 수 있다!
-
 
 
 <br>

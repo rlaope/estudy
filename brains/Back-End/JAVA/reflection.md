@@ -1,4 +1,4 @@
-# 자바 리플랙션 Reflection 
+# 자바 리플랙션 Reflection
 
 ## 리플랙션
 JVM은 **클래스 정보를 클래스 로더를 통해 읽어와서 해당 정보를 JVM 메모리에 저장한다.**  
@@ -29,7 +29,7 @@ Class<? extends Member> bClass = member1.getClass(); // (2)
 Class<?> cClass = Class.forName("hudi.reflection.Member"); // (3)
 ```
 
-1. 첫번째 방법으로는 클래스의 class 프로퍼티를 통해 획득하는 방법이다. 
+1. 첫번째 방법으로는 클래스의 class 프로퍼티를 통해 획득하는 방법이다.
 2. 두번째 방법으로는 인스턴스의 `getClass() 메서드를 사용하는 것이다.  
 3. 세번째 방법으로는 Class 클래스의 forName() 정적 메소드에 FQCN(Fully Qualified Class Name)을 전달해 해당 경로와 대응하는 클래스에 대한 Class 클래스 인스턴스를 얻는 방법이다.
 

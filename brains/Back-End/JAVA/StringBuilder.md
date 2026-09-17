@@ -29,7 +29,7 @@ sb.insert(2,"ccc");
 ```
 
 ### .replace()
-첫번째와 두번째 파라미터로 받는 숫자 인덱스에 위치한 문자열을 대체한다. 
+첫번째와 두번째 파라미터로 받는 숫자 인덱스에 위치한 문자열을 대체한다.
 ```java
 .replace(3,6,"yeye");
 ```
@@ -53,7 +53,7 @@ String으로 변환한다.
 
 #### .reverse() : 해당 문자 전체를 뒤집는다.
 
-#### .setCharAt(int index , String s) 
+#### .setCharAt(int index , String s)
 index 위치의 문자를 s로 변경
 
 #### .setLength(int len)

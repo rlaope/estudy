@@ -12,13 +12,13 @@
 
 **클러스터의 각 노드에서 파드 안에 컨테이너들이 정상 구동되도록 조율**하는 에이전트다.
 
-마스터 노드의 스케줄러가 파드를 노드에 할당하면 **kubelet**이 최종적으로 해당 파드에 컨테이너를 배치하게 된다. 
+마스터 노드의 스케줄러가 파드를 노드에 할당하면 **kubelet**이 최종적으로 해당 파드에 컨테이너를 배치하게 된다.
 
 또한 **파드와 컨테이너의 상태를 주기적으로 체크하여 그 결과를 API 서버에 전송하는 역할**도 맡는다.
 
 
 > kubeadm으로 클러스터를 구축할 경우에 kubelet이 포함되어 있지 않기 때문에 별도 설치를 진행해야하며 kubeadm, kubectl와 상호 호환성 문제가 일어나지 않도록 셋의 버전을 일치시켜야한다.
-> 
+>
 > [kubernetes.io: Installing kubeadm, kubelet and kubectl](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/?ref=seongjin.me#installing-kubeadm-kubelet-and-kubectl)
 
 

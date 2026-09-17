@@ -7,9 +7,7 @@ I/O 작업을 수행할 때 블로킹되지 않으므로 다른 작업을 수행
 > NIO와 달리 CompletionHandler 인터페이스를 사용해 I/O 작업이 완료될 때 까지 알림을 받는다.
 
 
-
-
-### AIO 지원 
+### AIO 지원
 - AsynchronousChannel 클래스
 - AsynchronousSocketChannel 클래스
 - AsynchronousServerSocketChannel 클래스
@@ -37,7 +35,6 @@ I/O가 준비되었을 때, Future 혹은 callback으로 비동기적인 로직�
 <br>
 
 ## CompletionHandler
-
 
 
 Java AIO API에서 비동기 I/O 작업 완료를 처리하는 인터페이스다.

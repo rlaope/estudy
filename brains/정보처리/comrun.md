@@ -18,5 +18,5 @@
 런타임에러 | 컴파일타임 에러
 --|--
 1, 0 나누기 오류 | 1. Syntax error
-2, NULL 참조 오류 | 2. Type Check error 
+2, NULL 참조 오류 | 2. Type Check error
 3, 메모리 부족 오류 |   

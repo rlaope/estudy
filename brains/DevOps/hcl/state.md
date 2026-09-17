@@ -25,7 +25,6 @@ name(block label)로 각 리소스를 구분한다.
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fuuq5w%2FbtsppJy5lfQ%2FOlsqpj3rKRm2kRkXaJYCz0%2Fimg.png)
 
 
-
 이 파일들은 terraform state list/show 명령어로 확인할 수 있다.
 
 list를 통해 목록을 확인해볼 수 있다.
@@ -146,7 +145,7 @@ resource "aws_dynamodb_table" "terraform_state_lock" {
 
 위와 같이 설정해주고 테라폼을 적용한다.
 
-backend 설정이 달라졌으므로 terraform init을 해주어야한다. 
+backend 설정이 달라졌으므로 terraform init을 해주어야한다.
 
 ```bash
 terraform init -migrate-state
@@ -156,5 +155,5 @@ terraform init -migrate-state
 
 vpc나 관련 리소스들을 수정해보고 apply를 하고 동시에 DynamoDB를 관찰해보면 locking필드가 생겼다가 없어지는 것을 확인할 수 있다.
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMDG5U%2FbtspjWsWCC5%2F2iOjgKj0sGwhIUzKzLFy50%2Fimg.png)
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMDG5U%2FbtspjWsWCC5%2F2iOjgKj0sGwhIUzKzLFy50%2Fimg.png)  
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb5pFcI%2FbtspsUmN7hU%2FRhZCjzqgy5PkPShSktU3Yk%2Fimg.png)

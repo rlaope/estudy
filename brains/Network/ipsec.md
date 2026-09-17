@@ -63,7 +63,7 @@ IPsec 터널은 IKE -> SA 협상 -> 키 교환 -> ESP 데이터 송수신순으�
 
 NAT 환경에서 IPsec이 바로 통과하지 못하기 때문에 UDP 45000으로 ESP 캡슐화
 
-이후 NAT-D payload로 NAT 환경 여부 확인후 Keepalive(1바이트 패킷)으로 NAT 세션을 유지한다. 
+이후 NAT-D payload로 NAT 환경 여부 확인후 Keepalive(1바이트 패킷)으로 NAT 세션을 유지한다.
 
 **ESP 패킷 실제 구조**
 

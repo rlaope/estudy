@@ -18,15 +18,15 @@ humongous object는 humongouse region이라는 전용 공간에 배치된다.
 
 논리적 위치로는 humongous region은 논리적으로 **old gen에 속한다.** 객체 크기가 region 하나보다 크기면 여러개의 연속된 region을 점유힌다.
 
-> 근데 Old gen으로 뜨긴하는데 별도의 영역으로 관리되었던거같다. jcmd jvm info이걸로 보고, jdk좀 뜯어봐야할듯 
+> 근데 Old gen으로 뜨긴하는데 별도의 영역으로 관리되었던거같다. jcmd jvm info이걸로 보고, jdk좀 뜯어봐야할듯
 
-### +Humongous 
+### +Humongous
 
 humongos는 논리적으로 old gen에 속하지만 일반 객체들과 달리 humongous region이라는 별도 영역에서 특별 관리된다.
 
 openjkd 11 ~ 17 코드 기준으로
 
-`src/hotspot/share/gc/g1/heapRegion.hpp` 여기 보면 
+`src/hotspot/share/gc/g1/heapRegion.hpp` 여기 보면
 - StartsHumongous (SH): 객체의 시작부분이 들어있는 리전
 - ContinuesHumongous(CH): 객체가 커서 다음 리전까지 이어질때 사용되는 연속 리전들 정보가 있다.
 
@@ -261,9 +261,6 @@ do heap region에 위 부근 보면 후보로 등록된 humongous 리전들이 �
 원래는 full gc나 clean up 단계에서만 해제되었으나, **최신 jdk 버전에서는 주기적인 young gc 단계에서도 참조가 없다면 조기에 해제되도록 최적화되었다.** 아마 이게 아까 위에서 본 부분일듯 eagerly_reclaim_humongous_regions ㅇㅇ
 
 
-
-
-
 ## Mixed GC Trigger
 
 IHOP에 의해 시작된 concurrent marking cycle이 성공적으로 완료된 직후에 발생한다.
@@ -290,7 +287,7 @@ IHOP에 의해 시작된 concurrent marking cycle이 성공적으로 완료된 �
 
 요약하면 Humongous object는 region 절반 이상을 차지하는 거대 객체로 old 영역의 연속된 region(별도관리는 코드파보자) 할당된다.
 
-mixed gc는 IHOP으로 시작되지만 실제 실행 여부는 G1HeapWastePercent를 통해 최소 청소할 가치가 있는가를  최종 결정? 
+mixed gc는 IHOP으로 시작되지만 실제 실행 여부는 G1HeapWastePercent를 통해 최소 청소할 가치가 있는가를  최종 결정?
 
 <br>
 

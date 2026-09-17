@@ -28,7 +28,7 @@ netty는 비싼 direct buffer를 매번 만들지 않고 pool에 받아놓고 �
 gc가 관리하지 않는 영역 direct memory 이기 때문에 개발자가 수동으로 카운트 관리를 해야한다.
 
 - `refCnt`: 참조 카운트로 객체 생성시 1로 시작한다
-- `retain()`: 카운트 + 1 
+- `retain()`: 카운트 + 1
 - `release()`: 카운트 -1
 - 소멸: refCnt가 0이되면 다시 풀로 돌아간다.
 

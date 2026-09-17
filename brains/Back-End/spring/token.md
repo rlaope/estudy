@@ -3,8 +3,8 @@
 ### What is an Access Token?
 사적 리소스에 접근하는 REST API에 대한 요청에 토큰이 포함되어 있는 지 , 또 해당 토큰이 유효한지의 여부를 검증함으로써 인증 절차(로그인)을 수행할 때 사용하는 토큰을 AccessToken 이라고 합니다.  
   
-Access Token은 수명이 있다.
-수명이 끝나면 해당 토큰을 이용하여 API 서버에 데이터를 요청했을 때 API 서버는 더이상은 정보를 제공하지 않는다.
+Access Token은 수명이 있다.  
+수명이 끝나면 해당 토큰을 이용하여 API 서버에 데이터를 요청했을 때 API 서버는 더이상은 정보를 제공하지 않는다.  
 그래서 AccessToken을 재발급 받아야한다.
   
 그러나 그때마다 사용자에게 다시 로그인을 하라고 하기에는 무리가 있다. 주변을 보아도 아무리 오랜 시간 로그인을 유지하면서 지속적으로 사이트를 사용하여도 로그아웃 돼버리는 사이트는 없다.  
@@ -22,4 +22,4 @@ Access Token은 수명이 있다.
 - Client가 로그인(과정A)를 통해 권한을 획득할 때 Access Token과 함께 RT를 발급(과정B) 받는다.
 - 그러면 Client는 AccessToken과 RefreshToken을 모두 저장하고 있다가. API를 호출(과정C)할 대에는 AccessToken을 제출하여 자원을 받아오게 된다(과정D)
 - 시간이 흘러 마찬가지로 AccessToken을 이용하여 자원을 받아오려는데(과정E), Invalid Token Error가 뜨면서(과정F) `AccessToken`의 수명이 다한 것을 알게 된다.
-- 그럴 때 바로 보관하고 있었던 Refresh Token을 AuthorizationServer에 전달(과정G)하면서 새로운 AccessToken을 발급(과정H)를 받게 된다.(그림에 Optional Refresh Token이라고 적혀있는 이유는 새로운 AccessToken을 발급받을 때 RefreshToken도 새롭게 갱신할 수 있다는 의미이다.) 
+- 그럴 때 바로 보관하고 있었던 Refresh Token을 AuthorizationServer에 전달(과정G)하면서 새로운 AccessToken을 발급(과정H)를 받게 된다.(그림에 Optional Refresh Token이라고 적혀있는 이유는 새로운 AccessToken을 발급받을 때 RefreshToken도 새롭게 갱신할 수 있다는 의미이다.)

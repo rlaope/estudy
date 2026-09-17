@@ -54,7 +54,7 @@ git log
 git reset {v2 커밋 아이디} -- hard # 커밋 아이디 예) 27a00b7
 ```
 
-- result : 
+- result :
 ```
 HEAD is now at 27a00b7 v2 commit
 ```

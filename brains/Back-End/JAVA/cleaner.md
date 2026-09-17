@@ -4,7 +4,7 @@
 
 그리고 Java 12에서 Cleaner, PhantomReference를 사용한 대안이 제시되었다.
 
-### Cleaner 
+### Cleaner
 
 Cleaner 클래스는 객체에 도달할 수 없을 때, 그리고 가비지 수집되기 직전에 수행해야 하는 정리작업을 등록하는 데 사용된다. 가비지 수집기에서 개체를 회수하기 전에 실행해야 하는 리소스 정리 또는 기타 작업을 수행하는 방법을 제공한다. Cleaner의 주요 목적은 예측 불가능성과 잠재적인 성능 문제로 인해 권장되지 않는 finalize() 메서드의 사용을 대체하는 것이다.
 
@@ -47,7 +47,7 @@ public class MyClass implements AutoCloseable {
 
 ### PhantomReference
 
-PhantomReference 클래스는 SoftReference, WeakRefernce 및 FinalReference와 함께 Java에 사용할 수 있는 4가지 참조 클래스중 하나입니다. PhantomReference는 완료를 위해 대기열에 추가되었지만 아직 가비지 수집기에 의해 회수되지 않은 개체를 추적하는데 유용합니다. 
+PhantomReference 클래스는 SoftReference, WeakRefernce 및 FinalReference와 함께 Java에 사용할 수 있는 4가지 참조 클래스중 하나입니다. PhantomReference는 완료를 위해 대기열에 추가되었지만 아직 가비지 수집기에 의해 회수되지 않은 개체를 추적하는데 유용합니다.
 
 다른 참조 유형과 달리 PhantomReference는 참조된 객체가 도달할 수 없을 때 가비지 수집되는 것을 막지 않습니다. 대신 개체가 종료를 위해 대기열에 추가되고 회수되려고 할 때 알림을 받을 수 있습니다.
 

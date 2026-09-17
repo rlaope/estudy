@@ -72,7 +72,6 @@ Subscriber는 Subscription을 통해 데이터를 요청하거나 취소할 수 
 Subscription 인터페이스를 구현한 클래스는 구독을 관리한다.
 
 
-
 리액티브 스트림은 데이터 스트림의 비동기 처리를 간소화하고 대량의 데이터를 효율적으로 처리하기 위해 설계되었다,. 주요 목표 중 하나는 **백 프레셔(back-pressure**)를 통한 속도 조절과 오버플로우 방지다. 또한, 리액티브 스트림은 다양한 비동기 프로그래밍 환경에서 사용되며, Java의 CompletableFuture, Spring WebFlux, RxJava, Project Reactor 등에서 지원하고 있다.
 
 

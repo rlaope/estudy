@@ -13,7 +13,7 @@ SELECT ROUND(3.16, 1) FROM DUAL; # 3.2 두번째 인자가 있으면 그 인자�
 
 ### TRUNC()
 
-입력받은 데이터의 소숫점 자리수를 다 버림 
+입력받은 데이터의 소숫점 자리수를 다 버림
 
 ```sql
 SELECT TRUNC(3.16) FROM DUAL; # 3

@@ -84,7 +84,7 @@ Consider using operator fusion or shared memory to increase data reuse.
 
 여러개의 개별 연산 `MatMul` ->  `Scale` -> `Mask` -> `Softmax`를 별도로 싱행하면, 매 단계에 HBM에서 데이터를 읽고 쓰는 IO가 발생하여 심각한 Memory-Bound에 빠진다. FlashAttention이나 Triton 커널을 사용하여 이 단계들을 하나의 거대한 커널로 합치면 중간 결과를 HBM에 쓰지않고 SM 내부의 초고속 SRAM에 보존한채 연산을 끝낼 수 있다. 이를 통해 산술 강도의 분모를 급감시켜 병목을 해소한다.
 
-FLOPs/Byte에서 Byte가 줄어드니까 
+FLOPs/Byte에서 Byte가 줄어드니까
 
 #### Pytorch JIT 컴파일러 활용 (torch.compile)
 

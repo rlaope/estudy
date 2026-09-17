@@ -125,7 +125,7 @@ kubectl delete pod nginx
 
 멀티 컨테이너 파드 관리를 하려면 `containers`로 작성해 이 부분에 여러 컨테이너들을 정의하면 된다.
 
-yaml 파일로 파드를 생성하는 방법은 
+yaml 파일로 파드를 생성하는 방법은
 
 ```bash
 # 생성된 yaml 파일로 파드 구동(선언형 방식)

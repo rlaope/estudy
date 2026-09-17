@@ -31,7 +31,7 @@ mark word는 HotSpot JVM의 핵심 구조로, 다음 정보를 저장한다.
 
 GC Marking 단계에서 마크 워드는 다음 두 가지 방식으로 활용된다.
 
-Stop-the-World로 마킹 (Serial, Parallel GC)
+Stop-the-World로 마킹 (Serial, Parallel GC)  
 객체가 live로 표시될 때 Mark Word 내부의 특정 비트를 사용하거나, Mark Bitmap or Mark Stack에서 별도로 추적.
 
 G1GC의 SATB + Card Table

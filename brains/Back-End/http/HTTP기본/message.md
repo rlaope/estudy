@@ -21,7 +21,7 @@ absolute-path\[?query] 절대경로\[쿼리]
 
 <br>
 
-### 응답 메시지 
+### 응답 메시지
 
 - start-line = request-line / status-line
 

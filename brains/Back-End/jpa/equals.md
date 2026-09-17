@@ -2,7 +2,7 @@
 
 Hibernate에서는 identifier class, business key를 갖는 경우에는 equals and hashcode를 오버라이딩 하기를 권장한다. generated value로 id가 설정된 경우 Set 자료 구조가 요구하는 구현 스펙과 충돌하기 때문이다. HashSet, HashMap과 같은 자료구조는 객체의 hash값을 토대로 해시 버킷을 생성해 데이터를 매핑하는데 jpa에서 트랜잭션 커밋 전/후로 객체의 equals, hashcode값이 바뀌기 때문에 문제가 발생할 수 있다.
 
-그렇기에 [JPA Buddy](https://jpa-buddy.com/blog/hopefully-the-final-article-about-equals-and-hashcode-for-jpa-entities-with-db-generated-ids/)에서는 다음과 같이 작성하기를 권장한다.
+그렇기에 [JPA Buddy](https://jpa-buddy.com/blog/hopefully-the-final-article-about-equals-and-hashcode-for-jpa-entities-with-db-generated-ids/)에서는 다음과 같이 작성하기를 권장한다.  
 Hibnernate.getClasS()를 사용하도록 권장했었는데, 프록시를 초기화 시키기에 아래와 같이 우회하는 것이 필요하다고 한다.
 
 ```java

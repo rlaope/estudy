@@ -3,12 +3,12 @@
 ### 2xx (Successful)
 클라이언트의 요청을 성공적으로 처리
 
-- 200 OK : 요청 성공 
+- 200 OK : 요청 성공
   - ex) GET
 - 201 Created : 요청 성공해서 새로운 리소스가 생성됨
-  - ex) POST, 생성된 리소스는 응답의 Location 헤더 필드로 식별 
+  - ex) POST, 생성된 리소스는 응답의 Location 헤더 필드로 식별
   - Location : /members/100
-- 202 Accepted 
+- 202 Accepted
   - 배치 처리 같은 곳에서 사용
   - 예) 요청 접수 후 1시간 뒤에 배치 프로세스가 요청을 처리함
   - 요청이 접수되었으나 처리가 `완료되지 않았음`

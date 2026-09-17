@@ -2,7 +2,7 @@
 
 zgc: http://github.com/esperar/estudy/blob/master/Back-End/JAVA/zgc.md
 
-### 시나리오 
+### 시나리오
 
 목적은 g1gc, zgc 비교 테스트
 
@@ -26,7 +26,7 @@ zgc: http://github.com/esperar/estudy/blob/master/Back-End/JAVA/zgc.md
 - 시스템: CPU%, RSS, context switch, run queue
 - JVM: safepoint time(중요), heap usage, native memory
 
-### 시뮬레이션 예시 결과 
+### 시뮬레이션 예시 결과
 
 **CaseA 중간할당률 (일반적인 고트래픽 api)**
 
@@ -71,10 +71,10 @@ https://www.morling.dev/images/zgc_basic_latency_g1.png
 ![](https://www.morling.dev/images/zgc_basic_histogram.png)
 
 
-G1GC: 
+G1GC:  
 ![](https://www.morling.dev/images/zgc_basic_latency_g1.png)
 
-ZGC:
+ZGC:  
 ![](https://www.morling.dev/images/zgc_basic_latency_zgc.png)
 
 

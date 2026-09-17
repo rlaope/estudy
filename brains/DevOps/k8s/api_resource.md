@@ -2,7 +2,7 @@
 
 API 리소스는 쿠버네티스가 관리할 수 있는 오브젝트의 한 종류이다.
 
-기본적으로 pod, configmap, node 등 다양한 종류가 있다. 
+기본적으로 pod, configmap, node 등 다양한 종류가 있다.
 
 이런 리소스들을 객체화(인스턴스화) 시킨 것이 `오브젝트`라고 한다.
 
@@ -49,6 +49,5 @@ kubectl get name --all-namespaces
 
 특이점은 API리소스에 따라서 spec대신 data(ex, configmap, secret의 경우), rules(Role의 경우), subjects등등 다른 속성을 바탕으로 사용할 수 도 있다.
 
- 
 
 metadata안에서 중요한 내용으로는 Labels과 annotations가 있다. 따로 정의를 하지 않아도 모든 쿠버네티스 오브젝트는 이 정보들을 가질 수 있다. 하지만 Labels은 오브젝트를 식별하기 위한 목적이며(소유자가 누구인지, 어떤 타입인지, 어떤 app인지 등등), 내부 기능에서 Labels Selector기능을 제공하기에 식별을 위해서는 어지간하면 설정해 두는 것이 중요하다. annotations값은 조금 다른데 식별이 아닌, 오브젝트를 어떻게 처리할 것인지를(쿠버네티스 에드온이 읽고) 결정하기 위한 설정 용도로 사용을 한다.

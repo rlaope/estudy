@@ -7,7 +7,7 @@ Spring에는 사용자가 직접 커넥션을 관리할 필요없이 자동화�
 Springboot 2.0 이전에는 tomcat-jdbc를 사용하다, 2.0 이후 부터는 **Hikari CP**를 기본옵션으로 채택하고 있다.
 
 ## Hikari CP
-![](https://user-images.githubusercontent.com/81006587/230904793-ca2415c1-8dc6-425e-9fab-5e8975c7e591.png)
+![](https://user-images.githubusercontent.com/81006587/230904793-ca2415c1-8dc6-425e-9fab-5e8975c7e591.png)  
 ![HikariCP](https://github.com/brettwooldridge/HikariCP-benchmark) 벤치마킹 페이지를 보면 다른 커넥션풀 관리 프레임워크들 보다 성능이 월등히 좋음을 알 수 있다. HikariCP가 빠른 성능을 보여주는 이유는 커넥션풀의 관리 방법에 있다.  
   
 히카리는 Connection 객체를 한번에 래핑한 PoolEntry로 Connection을 관리하며, 이를 관리하는 ConcurrentBag이라는 구조체를 사용하고 있다.  

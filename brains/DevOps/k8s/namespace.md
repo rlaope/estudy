@@ -29,7 +29,7 @@ $ kubectl get namespaces
 
 namespace를 생성하는 방법은 두 가지로 yaml파일과 명령어를 사용하는 방법 이렇게 두 가지가 있다
 
-### yaml 
+### yaml
 ```yaml
 apiVersion: v1
 kind: Namespace
@@ -111,7 +111,7 @@ spec:
 위와 같이 지정할 수 있으며 `maxLimitRequestRatio`는 request와 limit의 배수 비율이며
 
 request, limit을 지정하지 않으면 default 값으로 지정된다.
- 
+
 
 > 여기서 주의해야할 점은 LimitRange를 여러개 사용해야 된다면, 예측 불가능한 동작(default 값이 다른 LimitRange에 지정된 값으로 설정되어 별개의 LimitRange에 설정된 max를 초과한다거나)이 발생할 수 있기 때문에 주의해서 사용해야한다.
 

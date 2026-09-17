@@ -12,7 +12,7 @@
 kubectl describe nodes {node_name} | grep -A9 Conditions
 ```
 
-쿠버네티스의 각 노드에는 노드의 이상 상태 정보를 포함하는 conditions라는 것이 있다 
+쿠버네티스의 각 노드에는 노드의 이상 상태 정보를 포함하는 conditions라는 것이 있다
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc4rJ7j%2Fbtrao550MVa%2FR9YC260EBREwKn5lYgBh10%2Fimg.png)
 
@@ -53,7 +53,7 @@ kubectl describe pod nginx-besteffort-pod | grep QoS
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FCyteG%2FbtrakpxxYXK%2FrupKBK5d7coTXSZGKGg2UK%2Fimg.png)
 
-위와 같이 resources항목을 사용하지 않으면 한계된 자원이 없으며 유휴 자원이 존재하지 않는다면 제한 없이 모든 자원을 사용할 수 있게 된다. 
+위와 같이 resources항목을 사용하지 않으면 한계된 자원이 없으며 유휴 자원이 존재하지 않는다면 제한 없이 모든 자원을 사용할 수 있게 된다.
 
 그리고 request를 설정하지 않았기 때문에 보장받을 수 있는 자원은 존재하지 않습니다.
 

@@ -136,7 +136,7 @@ RabbitMQ는 Ack를 통해 메시지를 받았는지 알 수 있으나 카프카�
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbgky6w%2FbtrAtbFo9vg%2FxVdyTq8Y8k2UgKIMKyZoOk%2Fimg.png)
 
-위에는 장애에서 복구된 팔로워 상태다. 
+위에는 장애에서 복구된 팔로워 상태다.
 
 1. 팔로워는 자신이 갖고 있는 메시지들 중에서 자신의 워터마크보다 높은 메시지를 신뢰할 수 없다고 판단해 삭제한다 따라서 위의 예제에서 message2가 삭제된다.
 2. 팔로워는 리더에게 1번 오프셋의 새로운 메세지에 대한 가져오기 요청을 보낸다.

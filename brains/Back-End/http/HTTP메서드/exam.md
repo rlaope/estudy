@@ -26,7 +26,7 @@
   - 회원등록 /members -> POST
   - POST /members
 - 서버가 새로 등록된 리소스 URI를 생성해준다.
-  - HTTP/1.1 201 Created 
+  - HTTP/1.1 201 Created
   - Location : /members/100
 - 컬렉션(Collection)
   - 서버가 관리하느 리소스 디렉토리

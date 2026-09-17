@@ -1,6 +1,6 @@
 # SSL(Security Socket Layer), TLS(Transfer Layer Security)
 
-## SSL 
+## SSL
 
 Security Socket Layer
 

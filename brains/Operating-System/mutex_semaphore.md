@@ -52,7 +52,7 @@ Signaling mechanism. 현재 공유자원에 접근할 수 있는 쓰레드, 프�
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcYZOiu%2FbtrjvrzaimS%2FQtooHYav5Sj1JpT9yTtb1K%2Fimg.png)
 
 ### 예시
-세마포어는 손님이 화장실을 좀 더 쉽게 이용할 수 있는 레스토랑이다. 
+세마포어는 손님이 화장실을 좀 더 쉽게 이용할 수 있는 레스토랑이다.
   
 세마포어를 이용하는 레스토랑의 화장실에는 여러개의 칸이 있다. 그리고 화장실 입구에는 현재 화장실의 빈 칸의 개수를 보여주는 전광판도 있다.
 

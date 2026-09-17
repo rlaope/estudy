@@ -1,4 +1,4 @@
-# Kafka Consumer Offset 수동 commit 
+# Kafka Consumer Offset 수동 commit
 
 ### auto.offset.commit
 
@@ -56,7 +56,7 @@ public void maybeAutoCommitOffsetsAsync(long now) {
 
 Kafka 컨슈머의 커밋을 수동으로 설정하기 위해서는 auto.offset.commit 설정뿐만 아니라 ack-mode 설정까지 이루어져야한다.
 
-먼저 kafka 컨슈머 설정에서 ENABLE_AUTO_COMMIT_CONFIG를 false로 설정해 자동 커밋을 비활성화 할 수 있다. 
+먼저 kafka 컨슈머 설정에서 ENABLE_AUTO_COMMIT_CONFIG를 false로 설정해 자동 커밋을 비활성화 할 수 있다.
 
 ```java
 private Map<String, Object> consumerConfigs() {
@@ -87,7 +87,5 @@ Ackmode default는 BATCH(poll() 메서드로 호출된 레코드가 모두 처�
 
 >  MANUAL: Acknowledgement.acknowledge() 메서드가 호출되면 다음번 poll()때 커밋한다.
 >  MANUAK_IMMEDIATE: Acknowledgement.acknowledge() 메서드가 호출되면 바로 커밋한다.
-
-
 
 

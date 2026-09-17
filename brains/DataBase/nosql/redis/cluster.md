@@ -16,7 +16,7 @@ Redis 는 기본적으로 In memory data store이며 많은 곳에서 사용된�
 
 ### Replication
 
-기본적으로 높은 가용성을 보장하는 방법은 시스템을 중복으로 배치하는 것이고, 이러한 이중화 복제는 여러 복제본들을 동기화 하는 문제가 새로 생긴다. 
+기본적으로 높은 가용성을 보장하는 방법은 시스템을 중복으로 배치하는 것이고, 이러한 이중화 복제는 여러 복제본들을 동기화 하는 문제가 새로 생긴다.
 
 redis에서 레플리카를 구성할 때 어떻게 복제를 수행하는지 살펴보면 Primary Redis에 데이터가 있고, 새로운 복제본을 추가하는 경우에 Primary Redis를 fork하고 모든 데이터를 Secondary Redis로 전달한다.
 
@@ -44,7 +44,7 @@ replica가 down된 경우에는 부하 분산을 위해 만들었다면 아쉽�
 
 분산 시스템에는 네트워크 파티션이 발생할 수 있다. primary가 아직 살아있거나 replica가 자신을 primary라고 생각할 수 있다. 만약 이런 상황에 레디스 클러스터는 잘 동작하지 않을 수 있다. (네트워크 파티션때문에 잘 살아있는 노드가 죽었다고 잘못판단하는 경우)
 
-이러한 문제를 Split Brain 문제라고 하고 해당 문제는 [redis docs]([https://redis.io/docs/reference/cluster-spec/#failure-detection](https://redis.io/docs/reference/cluster-spec/#failure-detection)) 에서 분산 합의 알고리즘을 통해 모든 노드의 동의를 받아야 승격된다고 명시되어져있다. 
+이러한 문제를 Split Brain 문제라고 하고 해당 문제는 [redis docs]([https://redis.io/docs/reference/cluster-spec/#failure-detection](https://redis.io/docs/reference/cluster-spec/#failure-detection)) 에서 분산 합의 알고리즘을 통해 모든 노드의 동의를 받아야 승격된다고 명시되어져있다.
 
 일시적으로 replica가 자신을 primary라고 인지할 수 있지만, 모든 노드의 동의를 받지 않았다면 승격 과정이 취소된다.
 

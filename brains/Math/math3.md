@@ -23,7 +23,7 @@ $$\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} \in \ma
 
 ### 벡터공간의 조건 (닫혀있음)
 
-집합 $V$가 벡터공간이 되기 위해서는 집합 임의의 벡터  $\mathbf{u}, \mathbf{v}$와 스칼라 $c$에 대해 다음 두 연산 결과가 다시 집합 $V$ 안에 존재(닫혀있음, Closure) 해야하며, 8가지 선형 공리(교현, 결합, 항등원, 역원 존재등)을 만족해야한다. 
+집합 $V$가 벡터공간이 되기 위해서는 집합 임의의 벡터  $\mathbf{u}, \mathbf{v}$와 스칼라 $c$에 대해 다음 두 연산 결과가 다시 집합 $V$ 안에 존재(닫혀있음, Closure) 해야하며, 8가지 선형 공리(교현, 결합, 항등원, 역원 존재등)을 만족해야한다.
 
 1. 덧셈에 대해 닫혀있음: $\mathbf{u} + \mathbf{v} \in V$
 2. 스칼라배에 대해 닫혀있음: $c\mathbf{u} \in V$
@@ -66,7 +66,7 @@ e₂ = [0, 1]ᵀ (Y축 방향 기본 단위)
 
 ### 대수적 정의 Algebaric Definition
 
-n차원 공간의 두 벡터 $\mathbf{u} = [u_1, u_2, \dots, u_n]^T$와 $\mathbf{v} = [v_1, v_2, \dots, v_n]^T$의 내적은 각 성분끼리 곱한 뒤 모두 더한 스칼라 값이다. 
+n차원 공간의 두 벡터 $\mathbf{u} = [u_1, u_2, \dots, u_n]^T$와 $\mathbf{v} = [v_1, v_2, \dots, v_n]^T$의 내적은 각 성분끼리 곱한 뒤 모두 더한 스칼라 값이다.
 
 $$\mathbf{u} \cdot \mathbf{v} = \mathbf{u}^T \mathbf{v} = \sum_{i=1}^{n} u_i v_i = u_1 v_1 + u_2 v_2 + \dots + u_n v_n$$
 
@@ -77,7 +77,7 @@ $$\mathbf{u} \cdot \mathbf{v} = \mathbf{u}^T \mathbf{v} = \sum_{i=1}^{n} u_i v_i
 
 $$\mathbf{u} \cdot \mathbf{v} = \Vert{}\mathbf{u}\Vert{} \Vert{}\mathbf{v}\Vert{} \cos\theta$$$$\text{단, } \Vert{}\mathbf{u}\Vert{} = \sqrt{u_1^2 + u_2^2 + \dots + u_n^2} = \sqrt{\mathbf{u} \cdot \mathbf{u}}$$
 
-### 코사인 유사도 
+### 코사인 유사도
 
 벡터의 길이에 영향을 받지 않고 오직 **방향의 유사성만 측정**하기 위해 내적 값을 두 벡터의 길이 곱으로 나누어 정규화한다. 값의 범위는 -1 ~ 1
 
@@ -133,7 +133,7 @@ $$J = \frac{\partial \mathbf{f}}{\partial \mathbf{x}} = \begin{bmatrix}  \frac{\
 
 ### AI 엔지니어링 맥락
 
-- **Gradient Descent**: 경사하강법이다 인공지능 모델의 가중치 벡터 $\mathbf{w}$를 손실함수 $L(\mathbf{w})$가 최소가 되는 방향으로 업데이트하는 핵심 규칙이다. 
+- **Gradient Descent**: 경사하강법이다 인공지능 모델의 가중치 벡터 $\mathbf{w}$를 손실함수 $L(\mathbf{w})$가 최소가 되는 방향으로 업데이트하는 핵심 규칙이다.
 
 $$\mathbf{w}_{t+1} = \mathbf{w}_t - \eta \nabla L(\mathbf{w}_t) \quad (\eta: \text{학습률, Learning Rate})$$
 

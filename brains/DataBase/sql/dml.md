@@ -49,9 +49,9 @@ UPDATE NETFLIX SET CATEGORY = "드라마", REGISTER_DATE = TO_DATE('20230101', '
 COMMIT;
 ```
 
-TO_DATE() 함수는 날짜를 입력받고 (첫번째 인자) 지정한 포멧 형식(두번째 인자)으로 변환해 DATE형으로 만든다. 
+TO_DATE() 함수는 날짜를 입력받고 (첫번째 인자) 지정한 포멧 형식(두번째 인자)으로 변환해 DATE형으로 만든다.
 
-## DELETE 
+## DELETE
 TRUNCATE와 DELETE의 차이
 
 1. TRUNCATE는 모든 데이터를 삭제하기만 하지만 DELETE는 선택해서 삭제도 가능하다.

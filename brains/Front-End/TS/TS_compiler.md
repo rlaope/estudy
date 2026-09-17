@@ -46,7 +46,7 @@ include : ["./src/shopping.ts", "./str/buy.ts"] // shopping.ts , buy.ts만 컴�
 
 
 ## 3. strict
-- 엄격하게 타입을 확인하는 옵션들을 한번에 제어 
+- 엄격하게 타입을 확인하는 옵션들을 한번에 제어
 > 반드시 true로 설정할 것
 
 ### nolmplicitAny
@@ -64,7 +64,7 @@ test(10) // 사용 불가
 
 <br>
 
-### nolmplicitThis 
+### nolmplicitThis
 - 명시적으로 `any` 타입을 사용하지 않고, this표현식을 사용시 에러발생
   
 ```ts
@@ -79,7 +79,7 @@ function test(name : string){
 > this.name : name
 > }
 > ```
- 
+
 첫번째 매개변수 자리에 `this`를 넣고 타입 지정  
 `TypeScript` 에서만 허용한 문법
 

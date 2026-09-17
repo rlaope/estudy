@@ -49,6 +49,6 @@ DBMS 회사들이 JDBC 인터페이스를 구현하여 제공한다. 이를 JDBC
 
 ### Spring Data JPA
 
-Spring Data JPA는 JPA를 쓰기 편하게 만들어 놓은 모듈이다. JPA를 한 단계 추상화 시킨 `Repository`라는 인터페이스를 제공해 이루어진다. 
+Spring Data JPA는 JPA를 쓰기 편하게 만들어 놓은 모듈이다. JPA를 한 단계 추상화 시킨 `Repository`라는 인터페이스를 제공해 이루어진다.
   
 `Repository` 인터페이스에 정해진 규칙대로 메서드를 입력하면, Spring이 알아서 해당 메소드 이름에 적합한 쿼리를 날리는 구현체를 만들어 Bean으로 등록해준다.

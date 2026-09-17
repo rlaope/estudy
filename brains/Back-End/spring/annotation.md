@@ -166,7 +166,7 @@ public class UserController {
 }
 ```
 
-### @PostMapping 
+### @PostMapping
 RequestMapping(Method=RequestMethod.POST)과 똑같은 역할을 하며, 아래와 같이 사용합니다.
 ```java
 @Controller                   // 이 Class는 Controller 역할을 합니다

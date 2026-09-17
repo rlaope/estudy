@@ -3,7 +3,7 @@
 
 MongoDB에서 CRUD 연산을 하는 방법에 대해서 알아보겠습니다.
 
-<br> 
+<br>
 ## Create - Create Operation(Insert)
 
 Create는 **새로운 Document를 Collection에 생성하거나 추가하는 동작이다.** MongoDB의 create는 insert를 통해서 이루어집니다. 만약 Collection이 존재하지 않으면 insert 명령어는 collection을 새로 생성합니다.

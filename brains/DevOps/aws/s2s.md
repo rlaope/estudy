@@ -59,7 +59,7 @@ MTU 이슈도 있는데 IPsec encapsulation 때문에 유효 MTU가 줄어들어
 
 1. 온프레미스 방화벽에 public ip가 있음
 2. AWS에서 s2s vpn 생성
-3. 자동으로 
+3. 자동으로
    1. 터널 1, 2 endpoint ip
    2. IKE 설정
    3. Pre-Shared Key

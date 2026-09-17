@@ -55,5 +55,5 @@ POST는 컴퓨터 전원이 켜지면 가장 먼저 실행되는 프로그램으
 - 운영체제는 `interrupt-driven`방식으로 사용자에게 요청이 발생하면 운영체제는 적절하게 자원을 분배하여 그 요청을 처리하는 구조이다.
 
 - interrupt는 크게 두가지로 나뉜다 `H/W interrupt`와 `S/W interrupt`가 있다.
-  - `H/W interrupt` : I/O , 메모리 , CPU와 관련된 interrupt이고 
+  - `H/W interrupt` : I/O , 메모리 , CPU와 관련된 interrupt이고
   - `S/W interrupt`는 프로그램이 실행되다가 발생될 수 있는 Errors, 운영체제 Service들에 대한 요청인 System Call이 있다.

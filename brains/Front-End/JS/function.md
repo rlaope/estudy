@@ -24,7 +24,7 @@
   ```js
   let func = (arg1, arg2, ...argN) => expression
   ```
-  >이렇게 코드를 작성하면 인자 arg1..argN를 받는 함수 func이 만들어집니다. 
+  >이렇게 코드를 작성하면 인자 arg1..argN를 받는 함수 func이 만들어집니다.
 
   >함수 func는 화살표(=>) 우측의 표현식(expression)을 평가하고, 평가 결과를 반환합니다.
 

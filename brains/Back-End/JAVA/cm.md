@@ -80,7 +80,7 @@ STW가 발생하지만 멀티 스레드로 병렬 처리해 최대한 빨리 끝
 
 1. Accounting (STW): 각 region 별로 살아있는 객체가 얼마나 되는지 비율을 계산한다. 이걸 알아야 mixed gc때 가비지 많은 것을 골라낼수있다.
 2. RSet Scrubbing (STW): Remembered Set을 갱신한다.
-3. Empty Region Reclaim(Concurrent): 살아있는 객체가 하나도 없는 100% 가비지 Region은 즉시 초기화하여 Free List에 반환한다. 
+3. Empty Region Reclaim(Concurrent): 살아있는 객체가 하나도 없는 100% 가비지 Region은 즉시 초기화하여 Free List에 반환한다.
 
 Cleanup단계가 끝나면 YoungGC 부터 Mixed GC 모드로 전환되어 아까 적어둔 Candidate Set의 Old Region들을 Young Gen과 함계 청소하기 시작한다.
 

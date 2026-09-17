@@ -2,7 +2,7 @@
 
 > 대상: hermes-agent(NousResearch) 네이티브 메모리 + oh-my-hermes(OMH)가 얹는 확장 레이어
 기준일: 2026-08-01
-> 
+>
 
 ---
 
@@ -215,15 +215,15 @@ omh memory status
 같은 생태계 안에서 L 번호가 **세 가지 다른 의미**로 쓰이고 있습니다. 문서를 읽을 때 반드시 구분해야 합니다.
 
 **(A) 상주성 계층 — 이 노트가 다루는 것**
-L0 페르소나 → L1 코어 → L2 블록 → L3 세션 원본.
+L0 페르소나 → L1 코어 → L2 블록 → L3 세션 원본.  
 번호가 커질수록 **양이 많아지고 상주성이 낮아집니다.**
 
 **(B) 해상도 계층 — OpenViking 방식**
-한 항목을 세 해상도로 저장합니다. L0은 한 문장 요약(약 50~100토큰), L1은 핵심 정보와 사용 시나리오(약 500~2k토큰), L2는 원문 전체입니다. 에이전트가 L0부터 읽고 필요할 때만 위로 올라갑니다. 공개된 벤치마크 기준 전체 컨텍스트를 매 턴 로드하는 방식 대비 80~90% 토큰 절감을 주장합니다.
+한 항목을 세 해상도로 저장합니다. L0은 한 문장 요약(약 50~100토큰), L1은 핵심 정보와 사용 시나리오(약 500~2k토큰), L2는 원문 전체입니다. 에이전트가 L0부터 읽고 필요할 때만 위로 올라갑니다. 공개된 벤치마크 기준 전체 컨텍스트를 매 턴 로드하는 방식 대비 80~90% 토큰 절감을 주장합니다.  
 번호가 커질수록 **같은 항목이 더 자세해집니다.**
 
 **(C) 추상화 사다리 — TencentDB Agent Memory 방식**
-L0 원시 대화 → (N턴마다 LLM 추출) L1 원자적 사실 → (50개마다 합성) L2 시나리오 → L3 페르소나.
+L0 원시 대화 → (N턴마다 LLM 추출) L1 원자적 사실 → (50개마다 합성) L2 시나리오 → L3 페르소나.  
 번호가 커질수록 **더 추상적입니다.** (A)와 방향이 정반대입니다.
 
 세 스킴 모두 "L0~L3"이라고 부르므로, 설계 문서를 쓸 때는 축 이름을 함께 적어두는 편이 안전합니다. 예: `L2 (residency tier)`, `L1 (resolution tier)`.
@@ -242,7 +242,7 @@ L0 원시 대화 → (N턴마다 LLM 추출) L1 원자적 사실 → (50개마�
 | L3 | SQLite FTS5 | pgvector/Postgres, Qdrant·Weaviate·LanceDB, BM25+벡터 하이브리드 + 리랭커 |
 
 **Hermes 생태계의 외부 provider들 (2026년 4월 기준 8종)**
-OpenViking(`viking://` 스킴, L0/L1/L2 티어 로딩, AGPL, 자체 호스팅), Mem0(플랫폼/셀프호스트/OSS 3모드), Hindsight(LongMemEval 94.6%, PostgreSQL 로컬), Honcho(사용자 모델링), Holographic(순수 SQLite, HRR 대수 질의), RetainDB(벡터+BM25+리랭킹), ByteRover, agentmemory 등.
+OpenViking(`viking://` 스킴, L0/L1/L2 티어 로딩, AGPL, 자체 호스팅), Mem0(플랫폼/셀프호스트/OSS 3모드), Hindsight(LongMemEval 94.6%, PostgreSQL 로컬), Honcho(사용자 모델링), Holographic(순수 SQLite, HRR 대수 질의), RetainDB(벡터+BM25+리랭킹), ByteRover, agentmemory 등.  
 동시에 활성화되는 외부 provider는 **한 개**입니다. 빌트인 L1은 그와 무관하게 계속 동작하며, 외부 provider는 더해지는 층입니다.
 
 **OMH의 현재 백엔드 입장**

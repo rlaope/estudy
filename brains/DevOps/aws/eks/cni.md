@@ -37,6 +37,4 @@ CNI 관점이 아닌 AWS의 관점으로 할당 과정을 살펴보게 된다면
 [AWS블로그](https://aws.amazon.com/ko/blogs/containers/amazon-vpc-cni-increases-pods-per-node-limits/)를 참고해서 동작 과정을 살펴보면 VPC CNI에 있는 L-PAM 데몬이 IP를 할당하게 된다.
 
 
-
-
 [[EKS]]

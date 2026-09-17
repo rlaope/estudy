@@ -12,7 +12,7 @@
 > 한계 : 하지만, 브라우저에서 벗어났기 때문에 document / window 객체는 사용불가능
 
 ### 설치
-[Node.js 설치 페이지](https://nodejs.org/ko/) 에서 `LTS` 버전을 사용했다.
+[Node.js 설치 페이지](https://nodejs.org/ko/) 에서 `LTS` 버전을 사용했다.  
 `LTS버전`은 Long Term Support의 약자로 안정적인 버전으로 3년간 유지보수 / 업데이트를 지원한다
 
 <br><br>

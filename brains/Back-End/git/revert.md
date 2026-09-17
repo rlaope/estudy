@@ -53,6 +53,6 @@ git reset --hard 커밋해시코드
 - git revert는 기록을 유지하면서 상태를 되돌릴 수 있다.
 - git reset 은 기록을 삭제한다.
 
-> 과거가 필요 없다면 reset 혹시 몰라 남겨야겠다면 revert를 사용 
+> 과거가 필요 없다면 reset 혹시 몰라 남겨야겠다면 revert를 사용
 
 > revert 사용을 더 권장한다.

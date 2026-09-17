@@ -103,7 +103,7 @@ sealed class가 `com.example.demo.controller` 안에 존재한다면 상속 받�
 
 
 > Inheritor of sealed class or interface declared in package com.example.demo.controller but it must be in package com.example.demo where base class is declared  
-> 
+>
 > **해석: Running class가 com.example.demo에 선언된 경우에만 sealed class를 상속 가능하다.  
 > **
 

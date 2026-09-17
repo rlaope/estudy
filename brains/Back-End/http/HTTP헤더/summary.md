@@ -88,7 +88,7 @@ Content-Length: 3423
 ### Content-Language
 **표현 데이터의 자연 언어**
 - 표현 데이터의 자연 언어를 표현
-- 예) 
+- 예)
   - ko
   - en
   - en-US

@@ -20,7 +20,7 @@ Pod는 생성부터 삭제까지 생명주기가 있으며, 다음과 같은 상
 
 현재 Running 중인 Pod의 상태를 확인해보도록 하겠습니다.  
 
-Status 항목을 살펴보면 현재 파드의 생명주기를 알 수 있습니다. 
+Status 항목을 살펴보면 현재 파드의 생명주기를 알 수 있습니다.
 
 ```
 [root@k8s-master ~]# kubectl describe pods nginx-deployment-69cfdf5bc7-gcpd2

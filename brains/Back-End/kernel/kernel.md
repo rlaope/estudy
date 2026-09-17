@@ -4,7 +4,7 @@
 
 kernel은 번역기로 돌리면 알맹이라는 번역 결과를 얻을 수 있는데, 왜 알맹이 인 것일까? unix 구조를 살펴보면 바로 이해가 가능하다.
 
-맨 위에 applcations, 그리고 가작 안쪽에 작은 알맹이로서 kernel이 존재한다. 
+맨 위에 applcations, 그리고 가작 안쪽에 작은 알맹이로서 kernel이 존재한다.
 
 그 외에 shell, system calls, library routines등이 applications의 요청을 받아 중요한 역할을 수행한다.
 

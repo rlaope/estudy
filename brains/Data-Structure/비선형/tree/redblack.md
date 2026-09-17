@@ -54,7 +54,7 @@ root에서 NIL 까지 가는 경로상에서 만난 black 노드의 수가 같�
 
 <br>
 
-### Red-Black Tree의 높이 
+### Red-Black Tree의 높이
 높이를 2가지로 구분해볼 수 있다.
 
 1. h(x)는 x 자신으로부터 leaf 노드 까지의 가장 긴 경로에 포함된 edge(간선)의 수다.
@@ -70,7 +70,7 @@ root에서 NIL 까지 가는 경로상에서 만난 black 노드의 수가 같�
 
 예를 들어 다음 그림과 같은 노드 x가 있다고 해보자.
 
-![](image/examplenode.png)
+![](image/examplenode.png)  
 bh(x)가 1이라는 말은 자기 자신 x는 빼고 black node의 수를 카운트하니 NIL노드 딱 하나 있다는 말이다.  
 이는 x 자기 자신을 subtree의 내부 노드로 갖고잇는 상황이다.  
   
@@ -146,7 +146,7 @@ case 456은 p[z]가 p[p[z]]의 오른쪽 자식인 경우로, 그냥 좌우만 �
 
 #### case 1 : z의 삼촌 y가 red인 경우
 
-![](image/case1.png)
+![](image/case1.png)  
 B노드가 우리가 새롭게 삽입한 z이다. 이 z는 A의 오른쪽 자식일수도 있고 왼쪽 자식일수도 있다.  
   
 위의 그림에서 A B가 red-red 충돌이 발생하고있고 z의 삼촌 y(D)가 red인 상황이다.  
@@ -163,7 +163,7 @@ B노드가 우리가 새롭게 삽입한 z이다. 이 z는 A의 오른쪽 자식
 
 #### case 2,3 : z의 삼촌 y가 Black인 경우
 
-![](image/case23.png)
+![](image/case23.png)  
 삼촌 y는 NIL node도 가능하기 때문에 검정 동그라미로 표현하지 않았다 어찌됐든 black이라고 생각하면 된다.
 
 - case 2 : z가 오른쪽 자식인 경우
@@ -212,7 +212,7 @@ y가 삭제되고 나면 그 자리를 x가 차지한다. 즉 x가 root가 된 �
 5. 원래 y(black)를 포함했던 모든 경로는 이제 black노드가 하나 부족하다.
 - 노드 x에 "extra black"을 부여해서 일단 조건 5를 억지로 라도 만족시킨다. 다음 그림을 통해 확인해보자
 
-![](image/deleteexam2.png)
+![](image/deleteexam2.png)  
 위의 그림을 보면 검정 노드가 하나 삭제되어 black height가 문제되는데, 이를 막고자 한 노드에 2개의 black node를 삽입했다고 우선 생각하자.
 
 #### RB-Delete-Fixup의 구현
@@ -234,7 +234,7 @@ Loop Invariant(함수가 도는동안의 불변의 조건)
 #### 총 4가지 case가 Delete에서 존재한다.
 
 참고로 1234는 모두 x가 부모의 왼쪽 자식인 경우들이다.  
-case5678은 x가 부모의 오른쪽 자식인 경우로, 그냥 좌우만 바꿔주면됨. 
+case5678은 x가 부모의 오른쪽 자식인 경우로, 그냥 좌우만 바꿔주면됨.
 
 - case1: w가 red인 경우
 
@@ -243,12 +243,12 @@ w의 자식들은 black이다. 이들은 NIL일 수가 없다. NIL인 경우 조
 이후 w(D)를 black으로 변경해준후, p[x]\(B)를 red로 변경한다. 이후 p[x]를 기준으로 left-rotation을 적용한다.  
 기존의 w의 자식이였던 C는 B의 자식으로 편입된다.
   
-이후 case 234로 진행된다. 
+이후 case 234로 진행된다.
 
 - case 2 : w 가 black w 자식들도 black
 
-회색 노드는 black일수도 있고, Red일 수도있다.
-![](./image/deletecase2.png)
+회색 노드는 black일수도 있고, Red일 수도있다.  
+![](./image/deletecase2.png)  
 x의 extra-black을 p[x]\(B)에게 전달하고 w를 red로 바꾼다 p[x]\(B)를 새로운 x로 지정한다.  
 만약 case1에서 이 경우에 도착했다면 p[x]는 red였고, 따라서 새로운 x는 red&black이 되었다. 그냥 black으로 변경 후 끝
 

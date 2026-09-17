@@ -37,6 +37,6 @@ class Client {
 
 스프링, 스프링부트에서 이러한 책임 연쇄 패턴을 찾아볼 수 있는데 대표적으로 Filter, SecurityConfig가 있습니다.
 
-Filter 클래스의 `chain.doFilter()`가 다음 작업으로 보내겠다는 뜻이며 
+Filter 클래스의 `chain.doFilter()`가 다음 작업으로 보내겠다는 뜻이며
 
 SecurityConfig에서 `http.어쩌구저쩌구.and().filterAfter()`와 같이 다음 필터들을 등록한다거나 그러한 로직도 책임 연쇄 패턴으로 볼 수 있습니다.

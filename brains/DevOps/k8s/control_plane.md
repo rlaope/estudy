@@ -96,7 +96,7 @@ API 서버 또한 클러스터의 `kube-system` 네임스페이스 안에 파드
 - `kubeadm`으로 구축했다면 `/etc/kubernetes/manifests/kube-apiserver.yaml` 에 존재한다.
 - 그 외의 방법으로 구축했다면 `/etc/systemd/system/kube-apiserver.service.yaml` 에 존재한다.
 
-**클러스터에서 API 서버가 동작하는 방식** 
+**클러스터에서 API 서버가 동작하는 방식**
 
 `kubectl`을 이용해 새로운 파드를 생성한다고 가정해보자, 이 경우 API 서버에는 새로운 파드 객체를 만든 뒤 etcd에 새 파드 정보를 업데이트한다.
 

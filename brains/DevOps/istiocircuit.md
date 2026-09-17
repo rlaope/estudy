@@ -52,7 +52,7 @@ Istio에서는 명시적인 Half Open이라는 상태값이 없다, 대신 잠�
 2. Ejection(Open): 특정 파드가 `consecutime5xxErrors` 조건을 충족하면, Envoy는 즉시 그 파드를 로드밸런싱 풀에서 뺀다. 이 상태가 `baseEjectionTime`동안 지속된다.
 3. Re-joining: 30초가 지나면 envoy는 별도 probe 과정없이 해당 파드를 다시 로드밸런싱 풀에 넣는다 이게 istio식의 half-open이고 들어가자마자 또 에러를내면 다시 ejection한다. 이때는 시간이 baseEjectionTime x 2로 늘어난다. (Exponential Backoff)
 
-정리하면 Istio의 서킷 브레이커는 애플리케이션 레벨 동작방식과 살짝 다르며 
+정리하면 Istio의 서킷 브레이커는 애플리케이션 레벨 동작방식과 살짝 다르며
 
 애플리케이션 라이브러리는 State Machine 기반으로 Half-Open 상태에서 테스트 요청을 보내는등 정교하게 상태를 관리하는 반면
 

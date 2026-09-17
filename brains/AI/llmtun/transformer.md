@@ -77,7 +77,7 @@ SwiGLU는 그라디언트 소실 문제를 완화하고 연산 차원의 비선�
 
 ### RMSNorm(Root Mean Square Normalization)과 Pre-LN
 
-훈련과 수리적 안정성을 확보하기 위해 LayerNorm의 평균 계산 파트를 완전히 소거하고 오직 제곱평균제곱근 RMS만을 기준으로 정규화하는 RMSNorm이 선호된다. 
+훈련과 수리적 안정성을 확보하기 위해 LayerNorm의 평균 계산 파트를 완전히 소거하고 오직 제곱평균제곱근 RMS만을 기준으로 정규화하는 RMSNorm이 선호된다.
 
 기존에는 데이터의 평균과 분산을 모두 계산하여 값의 범위를 고르게 맞춘뒤 LayerNorm, 모든 연산이 끝난 출력단에 이 정규화 Post-LM을 배치했다.
 

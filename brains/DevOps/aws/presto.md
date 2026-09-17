@@ -25,7 +25,6 @@ Optimizer 단계에서는 Predicate Pushdown, Partition Pruning, Vectorized Exec
 Parquet와 ORC 포캣의 파일을 각 컬럼별로 다양한 stats 데이터를 보관하고 있다 min, max같은? 이러한 stats 정보가 불필요한 데이터를 건너뛰고 필요한 데이터만 읽을수있도록 filter push down. 하는것이 이 기법이다.
 
 
-
 where 조건을 스캔 이전 단계로 내려서 필요없는 데이터 블록 자체를 읽지 않는 최적화다.
 
 ```

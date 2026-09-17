@@ -12,7 +12,7 @@ https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog
 여러대의 서버들은 공통된 Redis를 바라보며 자신이 임계영역에 접근할 수 있는지 확인하고 이러한 부분에서 원자성을 확보한다.
 
 > Redis도 물론 싱글스레드기반이기 때문에 단일 장애 지점이 될 수 있음을 고려하여 Failover용 추가 slave 자원을 구축해야한다.
-> 
+>
 
 ## Trade-off
 
@@ -23,7 +23,7 @@ Redis Client를 활용해서 락을 구현해 볼 것이다. Redis Client인 Red
 이는 서버 측에서 구독한 클라이언트에게 락을 사용해도 된다고 알림을 주어 락의 획득 여부를 클라이언트가 요청해서 확인하지 않아도 되게 하는 기법이다.
 
 > 스핀락? 락의 획득 여부를 계속해서 무한루프를 돌면서 시도하는 방법
-> 
+>
 
 자 그러면 Lettuce vs Redission 어떤 기능을 사용해야할까?
 
@@ -54,7 +54,7 @@ implementation 'org.redisson:redisson-spring-boot-starter:3.24.3'
 그렇기에 레디스에 부하를 덜 줄 수 있는 Redisson을 사용하겠다.
 
 > 나중에 고려해봐야할 점 -> 서비스 내에서 클라이언트 클래스를 사용하지만 AOP를 통해 어노테이션 방식으로 락을 적용하는 라이브러리를 만들어봐도 괜찮을 것 같다.
-> 
+>
 
 ### RedLock
 
@@ -114,7 +114,7 @@ public void writeData(String filename, String data) {
 [Protecting a resource with a lock](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html)
 
 > 일반적으로 GC는 매우 빠르게 수행되지만 Stop-the-World GC는 드물게 잠금이 만료될 정도로 지속될 수 있다. Martin Kleppmann의 문서를 보면 GC 말고도 네트워크 지연이나 timing 이슈에 따라 RedLock이 깨질 수 있음을 알 수 있다.
-> 
+>
 
 위와 같은 문제에 관한 해결은 위의 링크에서 Making the lock safe with fencing 파트에서 간단하게 알려주고 있는데, fencing token이라는 개념을 도입하여 간단히 잠금을 획득할 때 마다 증가하는 단순한 숫자스토리지 서버가 이 토큰의 값을 확인하고 쓰기 여부에 대해서 지정해주는 방식이다. 그러나 이러한 방식도 잠금을 획득할 때마다 일관성있는 펜싱 토큰을 생성해준다는 보장이 없다.
 

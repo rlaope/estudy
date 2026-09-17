@@ -58,13 +58,13 @@
 
 상품 주문 예제 ex.
 - commit
-	- order service가 order를 생성시키고 pending 상태로 놔둔 후 order created 이벤트를 발행한다.
-	- customer service가 order created 이벤트를 consume하고 credit을 생성한 후 credit reserved 이벤트를 생성한다.
-	- order service는 credit reserved 이벤트를 받은 후 pending 상태의 order를 approved로 변경해 트랜잭션을 커밋할 수 있도록 한다.
+    - order service가 order를 생성시키고 pending 상태로 놔둔 후 order created 이벤트를 발행한다.
+    - customer service가 order created 이벤트를 consume하고 credit을 생성한 후 credit reserved 이벤트를 생성한다.
+    - order service는 credit reserved 이벤트를 받은 후 pending 상태의 order를 approved로 변경해 트랜잭션을 커밋할 수 있도록 한다.
 - rollback
-	- order service가 order를 생성시키고 pending 상태로 놔둔 후 order created 이벤트를 생성한다.
-	- customer service가 order created 이벤트를 받았지만 credit 제한이 걸려 credit을 생성할 수 없다면 credit limit exeeded 이벤트를 생성한다.
-	- order service는 credit limit exeeded 이벤트를 받은 후 pending 상태의 order를 reject로 변경하여 트랜잭션을 롤백시킨다.
+    - order service가 order를 생성시키고 pending 상태로 놔둔 후 order created 이벤트를 생성한다.
+    - customer service가 order created 이벤트를 받았지만 credit 제한이 걸려 credit을 생성할 수 없다면 credit limit exeeded 이벤트를 생성한다.
+    - order service는 credit limit exeeded 이벤트를 받은 후 pending 상태의 order를 reject로 변경하여 트랜잭션을 롤백시킨다.
 
 이렇게 구현하게 되면 장점으로는 별도의 오케스트레이션이 없어 성능상에 이점이 있게 된다 인스턴스를 만들지 않아도 되거나 별도의 오케스트레이터 서비스가 없어도 되기 때문이고 이에 따라 구현하기 쉽고 개념에 대해서 이해하기 쉽다는 장점이 있다
 
@@ -85,7 +85,6 @@ orchestration based saga에서는 orchestrator가 한 트랜잭션의 흐름을 
 
 orchestration based saga는 트랜잭션 시나리오에 변화가 생겨도 오케스트레이터만 변경하면 되기 때ㅜㅁㄴ에 유지보수에 용이하고 모든 서비스와 통신하기 때문에 서비스간 순환 참조도 피할 수 있다.
 
-허나 구현하기 힘들다는 단점이있고 오케스트레이터에게 트랜잭션 관련된 로직들이 엄청 많이 쌓이는 비즈니스 로직이 추가된다면 유지보수에 엄청 힘들어 질 것이다. 그렇기에 orchestration based saga를 구현한다면 트랜잭션 순서에 관한 로직만 작성할 수 있도록 관리하자(only command or reply) 
-
+허나 구현하기 힘들다는 단점이있고 오케스트레이터에게 트랜잭션 관련된 로직들이 엄청 많이 쌓이는 비즈니스 로직이 추가된다면 유지보수에 엄청 힘들어 질 것이다. 그렇기에 orchestration based saga를 구현한다면 트랜잭션 순서에 관한 로직만 작성할 수 있도록 관리하자(only command or reply)
 
 

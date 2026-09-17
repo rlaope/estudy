@@ -58,7 +58,7 @@ CentOS8에서 docker-compose를 사용해 컬러스터링을 해보았다.
 이미지는 Confluent에서 제공하는 이미지를 사용한다.
 
 1. etc/hosts
-![](https://velog.velcdn.com/images%2Fkidae92%2Fpost%2Fe4d4b576-a4d3-4b17-a4ec-707d2081a3c3%2Fimage.png)
+![](https://velog.velcdn.com/images%2Fkidae92%2Fpost%2Fe4d4b576-a4d3-4b17-a4ec-707d2081a3c3%2Fimage.png)  
 kafka1 ~ 3까지 등록을 해준다
 
 2. dofker-compose -f 파일명.yml up
@@ -185,7 +185,7 @@ services:
 
 ![](https://velog.velcdn.com/images%2Fkidae92%2Fpost%2F32f79d6a-8dc2-4d07-a9b8-809dc2a87da9%2Fimage.png)
 
-다시 kafka 컨테이너를 실행해주면 정상 작동함 
+다시 kafka 컨테이너를 실행해주면 정상 작동함
 
 4. confluent 설치 - 사용할 Command를 제공해준다.
 
@@ -195,11 +195,11 @@ $ tar -zxvf confluent-7.0.1.tar.gz
 $ cd confluent-7.0.1/bin
 ```
 
-#topic 생성
+# topic 생성
 `./kafka-topics --bootstrap-server localhost:19092 --create --topic test --partitions 2 --replication-factor 3`  
-#test라는 토픽으로 producer가 메시지를 보낼 수 있는 shell이 실행됨  
+# test라는 토픽으로 producer가 메시지를 보낼 수 있는 shell이 실행됨  
 `./kafka-console-producer --bootstrap-server localhost:19092 --topic test`  
-#test라는 토픽에서 consumer가 메시지를 받을 수 있는 것을 볼 수 있음  
+# test라는 토픽에서 consumer가 메시지를 받을 수 있는 것을 볼 수 있음  
 `./kafka-console-consumer --bootstrap-server localhost:19092 --topic test`  
 
 ![](https://velog.velcdn.com/images%2Fkidae92%2Fpost%2F3a82f94e-7c7d-4f85-9db4-79ecae6b96f3%2Fimage.png)

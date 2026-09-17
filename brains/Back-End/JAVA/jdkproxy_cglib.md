@@ -62,7 +62,7 @@ service.execute(param);
 
 `enhancer.setCallback(NoOp.INSTANCE)` 코드는 Enhancer 프록시 객체가 직접 원본 객체를 접근하기 위한 옵션이다.
 
-기본적으로 프록시 객체들은 직접 원본 객체를 호출하기 보다는, 별도의 작업을 수행하는데 CGLib의 경우에는 Callback을 사용한다. 
+기본적으로 프록시 객체들은 직접 원본 객체를 호출하기 보다는, 별도의 작업을 수행하는데 CGLib의 경우에는 Callback을 사용한다.
 
 그중 CGLib에서는 `net.sf.cglib.proxy.MethodInterceptor`인데, 프록시와 원본 객체 사이에 인터셉터를 두어 메서드 호출을 조작하는 것을 도와줄 수 있게 된다.
 

@@ -42,7 +42,7 @@
 
 <br>
 
-## 동작 원리 구조화 
+## 동작 원리 구조화
 
 다중 모델 환경에서 Triton이 트래픽을 처리하는 내부 구조다.
 
@@ -173,7 +173,7 @@ class SharedMemoryTritonClient:
 # vector = client.request_embedding_zerocopy(img_tensor)
 ```
 
-https://arxiv.org/html/2602.00053v 이 링크는 Scalable and Secure AI Inference in Healthcare: A Comparative Benchmarking of FastAPI and Triton Inference Server on Kubernetes 라는 논문으로 이곳에 벤치마킹한 결과가 있는데 
+https://arxiv.org/html/2602.00053v 이 링크는 Scalable and Secure AI Inference in Healthcare: A Comparative Benchmarking of FastAPI and Triton Inference Server on Kubernetes 라는 논문으로 이곳에 벤치마킹한 결과가 있는데
 
 | Framework | Hardware | Batch Mode | Batch Size | p50 Latency (ms) | p95 Latency (ms) | Throughput (req/s) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |

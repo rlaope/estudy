@@ -17,7 +17,6 @@ Kafka의 리밸런싱 븡식은 적극적 리밸런싱과 협력적 리밸런싱
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdzHrep%2FbtsDawsTnD5%2F1HIQI79qC8TQGW95raqwx0%2Fimg.png)
 
 
-
 범위 파티션 할당 전략은 다음과 같은 프로세스를 거친다.
 
 1. 구독중인 파티션과 컨슈머를 순서대로 나열한다.
@@ -32,14 +31,13 @@ Kafka의 리밸런싱 븡식은 적극적 리밸런싱과 협력적 리밸런싱
 이렇게 되면, 한 컨슈머 내에서 로그 데이터와 그에 대한 에러 정보를 함께 처리하고 분석할 수 있어, 데이터의 일관성을 유지하면서 처리 효율성을 높일 수 있다.
 
 
-
 ### 라운드 로빈 파티션 할당 전략
 
 적극적 리밸런싱 방식의 파티션 할당 전략중 하나로, **파티션을 컨슈머 그룹의 모든 컨슈머에게 균등하게 분배하는 방식이다.**
 
 레인지와 마찬가지로 파티션과 컨슈머는 할당 전에 사전식 순서로 정렬된다.
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdnerLh%2FbtsC6UIhRJH%2FghmxyleQX0etDbMzEAht70%2Fimg.png)
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdnerLh%2FbtsC6UIhRJH%2FghmxyleQX0etDbMzEAht70%2Fimg.png)  
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdnerLh%2FbtsC6UIhRJH%2FghmxyleQX0etDbMzEAht70%2Fimg.png)
 
 장점으로는 모든 사용 가능한 컨슈머를 효과적으로 활용하고 성능을 향상시키는 데 있다.
@@ -60,7 +58,7 @@ Kafka의 리밸런싱 븡식은 적극적 리밸런싱과 협력적 리밸런싱
 
 적극적 리밸런싱 방식의 할당 전략중 하나로, 이 전략은 리밸런싱 작업이 필요할 때, 리밸런싱 작업이 일어나기 전의 **컨슈머의 파티션 정보를 우선적으로 매핑하여 리밸런싱 과정에서 발생할 수 있는 불필요한 파티션의 이동을 최소화한다.**
 
-![](https://blog.kakaocdn.net/dn/bICYBw/btsC32tyfXB/TtiaTa1YtQ2Fv7KKvJe1P0/img.png)
+![](https://blog.kakaocdn.net/dn/bICYBw/btsC32tyfXB/TtiaTa1YtQ2Fv7KKvJe1P0/img.png)  
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcnwtxF%2FbtsDdBHtMi9%2FnbopYdBoPFvLe3saacYDIk%2Fimg.png)
 
 

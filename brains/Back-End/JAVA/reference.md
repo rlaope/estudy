@@ -14,7 +14,7 @@ WeakReference 클래스를 사용해 객체에 대한 약한 참조를 만들 �
 
 ## 소프트 참조 Soft Reference
 
-SoftReference 클래스를 사용해 만듭니다. 
+SoftReference 클래스를 사용해 만듭니다.
 
 소프트 참조는 메모리가 부족할 때까지 가비지 컬렉션의 대상이 되지 않습니다.
 
@@ -22,7 +22,7 @@ SoftReference 클래스를 사용해 만듭니다.
 
 ## 팬텀 참조 Phantom Reference
 
-PhantomRefernce 클래스를 사용하여 만들 수 있습니다. 
+PhantomRefernce 클래스를 사용하여 만들 수 있습니다.
 
 팬텀 참조는 참조된 객체가 가비지 컬렉션에 의해 회수되도록 허용합니다.
 

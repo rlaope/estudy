@@ -6,7 +6,7 @@
 Dummy 객체는 전달되지만 사용되지 않고 일반적으로 매개변수 목록을 채우는 목적으로만 사용됨
 
 ### Fake
-Fake 객체는 실제로 작동하는 구현을 가지고 있지만 일반적으로 프로덕션에 적합하지 않는 몇가지 지름길을 사용 
+Fake 객체는 실제로 작동하는 구현을 가지고 있지만 일반적으로 프로덕션에 적합하지 않는 몇가지 지름길을 사용
   
 대표적 예시로는 메모리 데이터베이스가 있다.
 
@@ -127,7 +127,7 @@ public void testActiveWhenCollaboratorIsActive() throws Exception {
 }
 ```
 
-### Mock 
+### Mock
 ```java
 Collaborator collaborator = EasyMock.createMock(Collaborator.class);
 EasyMock.expect(collaborator.isActive()).andReturn(true);
@@ -143,7 +143,7 @@ EasyMock.verify(collaborator);
 
 기본적으로 적합하다고 판단될때(당연)
   
-행위 검증(Mock)의 경우 특정 메서드의 호출 등을 검증하기 때문에 구현에 의존적이다. 
+행위 검증(Mock)의 경우 특정 메서드의 호출 등을 검증하기 때문에 구현에 의존적이다.
   
 상태 검증(Stub)의 경우 상태를 노출하는 메서드가 많이 추가될 수 있다.
   

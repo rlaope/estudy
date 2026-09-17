@@ -39,7 +39,7 @@ public void bulkUpdate() {
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtJE4F%2FbtrMejSZ39d%2F0Lvlyd9coZjjRCvL7lbFuK%2Fimg.png)
   
-위 테스트 코드에서는 update 벌크연산 이후에 별도의 영속성 컨텍스트 초기화 작업을 해주지 않았다. 
+위 테스트 코드에서는 update 벌크연산 이후에 별도의 영속성 컨텍스트 초기화 작업을 해주지 않았다.
   
 이 상태에서 QueryDSL selectFrom() 함수를 실행하면 영속성 컨텍스트의 1차 캐시에서 값을 가져오기 때문에 member1은 변경된 이름이 비회원이 아닌 member1이라는 값으로 조회된다.
 
@@ -147,7 +147,7 @@ JPQL을 호출하면 아래와 같이 동작한다.
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbsyaXn%2FbtrMadUDhER%2F4IaGpUeKVCPPoSeCIXubw0%2Fimg.png)
 
-이 때 member1에 해당하는 엔티티가 영속성 컨텍스트에 존재하므로 실제 DB의 데이터 대신 영속성 컨텍스트에 존재하는 데이터를 사용하게 된다. 
+이 때 member1에 해당하는 엔티티가 영속성 컨텍스트에 존재하므로 실제 DB의 데이터 대신 영속성 컨텍스트에 존재하는 데이터를 사용하게 된다.
   
 member2, member3, member4는 실제 DB에 존재하지 않기 때문에 영속성 컨텍스트를 확인할 때 조회 대상에 포함되지 않게 된다. 따라서 selectFrom을 한 최종 결과는 member1만 반환하게 된다.
   

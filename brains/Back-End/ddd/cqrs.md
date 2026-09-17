@@ -29,7 +29,7 @@ ORM 기법은 도메인 상태 변경 기능을 구현하는 데는 적합하지
   
 단일 모델을 사용할 때 발생하는 복잡도를 해결하기 위해 사용하는 방법이 `CQRS`다.  
   
-CQRS는 Command Query Responsibility Segregation의 약자로 상태를 변경하는 명령을 위한 모델과 상태를 제공하는 조회를 위한 모델을 분리하는 패턴이다. 
+CQRS는 Command Query Responsibility Segregation의 약자로 상태를 변경하는 명령을 위한 모델과 상태를 제공하는 조회를 위한 모델을 분리하는 패턴이다.
 
 ![](https://user-images.githubusercontent.com/43809168/100109843-9b06ca00-2eaf-11eb-816d-0f017a51afd7.png)
 

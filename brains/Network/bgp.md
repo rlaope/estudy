@@ -73,9 +73,9 @@ aws vpc cidr을 자동으로 온프레미스에 광고
 > ```
 >
 > 즉 IPsec 터널에 ip 주소를 붙이고 라우팅 테이블을 넣을 수 있게 만든 인터페이스다.
-> 
+>
 > VTI가 있으면 라우터에서 `route add 10.10.0.0/16 via vti0` 이렇게 다룰 수 있음. 그래서 라우팅 제어가 쉬움
-> 
+>
 > aws, fortigate, palo alto다 vti권장.
 
 

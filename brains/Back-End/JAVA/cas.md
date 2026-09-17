@@ -47,9 +47,9 @@ Lightweight Lock이나 Atomic 패키지에서 대부분 CAS 기반으로 되어�
 
 ### ConcurrentHashMap의 성능 개선 배경
 
-기존 Hashtable / Collections.synchronizedMap 문제는 
+기존 Hashtable / Collections.synchronizedMap 문제는
 
-단순하게 락 관리가 되어있었다 
+단순하게 락 관리가 되어있었다
 
 ```java
 synchronized(
@@ -57,7 +57,7 @@ synchronized(
 )
 ```
 
-즉, 전체 맵이 하나의 락을 걸었기 때문에 여러 스레드가 동시에 접근하면 항상 대기해야 했다.
+즉, 전체 맵이 하나의 락을 걸었기 때문에 여러 스레드가 동시에 접근하면 항상 대기해야 했다.  
 -> 스레드 100개면 99개가 wating
 
 

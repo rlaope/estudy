@@ -42,5 +42,5 @@ gcc -o oome oome.c
 ./oome
 ```
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*X6JeZAQXfZ5Crdaa4vLkMg.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*X6JeZAQXfZ5Crdaa4vLkMg.png)  
 oom이 발생해 oom killer가 프로세스를 종료하는 것을 메시지에서 확인해볼 수 있다.

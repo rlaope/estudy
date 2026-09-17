@@ -44,9 +44,9 @@ exchange 규칙으로 어떻게 라우팅이 될지 결정 되었으면, binding
 ### Queue
 exchange는 producer로부터 전달 받은 메세지를 binding되는 queue들에게 동일하게 전달한다.
 
-이때, queue는 전달받은 메세지들을 consumer들에게 전달한다. 
+이때, queue는 전달받은 메세지들을 consumer들에게 전달한다.
 
-이때 공평하게 전달하기 위해 round-robin 스케줄로 메세지를 전달한다. 
+이때 공평하게 전달하기 위해 round-robin 스케줄로 메세지를 전달한다.
 
 queue는 consumer들에게 전달되기 전에 메모리나 디스크에 저장해놓는다.
 
@@ -84,7 +84,7 @@ direct는 routing key가 완전 일치해야 메세지를 전달 할 수 있는�
 
 이때, 규칙은  
 *: 단어 1개를 대체  
-#: 0개 이상의 단어를 대체(없거나 하나 이상의 단어를 의미)
+# : 0개 이상의 단어를 대체(없거나 하나 이상의 단어를 의미)
 
 어떤 queue에 routing key를 2개 지정했을 때,  
 만약 routing key가 topic 패턴에 모두 일치하게 되었다고 가정해본다.  
