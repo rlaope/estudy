@@ -48,7 +48,7 @@ jobs:
       - name: Build WASM graph module
         run: |
           wasm-pack build site/graph/crates/graph-wasm --release --target web \
-            --out-dir ../../../site/assets/pkg --out-name graph_wasm
+            --out-dir ../../../site/static/graph/pkg --out-name graph_wasm
 
       - name: Build site
         run: |
