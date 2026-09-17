@@ -62,7 +62,7 @@
 {{- range site.RegularPages -}}
   {{- $p := . -}}
   {{- with .File -}}
-    {{- if not (index $seen (lower .Path)) -}}
+    {{- if and (not (index $seen (lower .Path))) (ne (lower .Path) "readme.md") -}}
       {{- $extra = $extra | append (dict "title" (partial "title.html" $p) "url" $p.RelPermalink "depth" 0) -}}
     {{- end -}}
   {{- end -}}
