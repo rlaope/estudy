@@ -144,12 +144,25 @@ pub fn staged_path_for_note(rel: &str) -> String {
     }
 }
 
+/// Hugo 는 `README.<lang>.md` 를 README 의 번역 파일로 보고 URL 에서 언어 접미사를 떼어낸다
+/// (`README.ko.md` -> `/README.html`). 파일명과 URL 이 어긋나면 색인 링크가 404 가 되므로 맞춰 준다.
+fn hugo_stem(stem: &str) -> String {
+    if let Some(idx) = stem.rfind('.') {
+        let (head, lang) = (&stem[..idx], &stem[idx + 1..]);
+        let is_lang = (2..=3).contains(&lang.len()) && lang.chars().all(|c| c.is_ascii_lowercase());
+        if head.eq_ignore_ascii_case("readme") && is_lang {
+            return "README".to_string();
+        }
+    }
+    stem.to_string()
+}
+
 pub fn page_components_for_note(staged: &str) -> Vec<String> {
     let b = basename(staged);
     let file = if b == "_index.md" {
         "index.html".to_string()
     } else {
-        format!("{}.html", &b[..b.len() - 3])
+        format!("{}.html", hugo_stem(&b[..b.len() - 3]))
     };
     let mut v: Vec<String> = if dirname(staged).is_empty() {
         Vec::new()
@@ -607,4 +620,28 @@ pub fn count_gh_blob(text: &str) -> usize {
 /// 중복 제거된 정렬 집합 → Vec
 pub fn sorted_vec(set: BTreeSet<(u32, u32)>) -> Vec<(u32, u32)> {
     set.into_iter().collect()
+}
+
+#[cfg(test)]
+mod hugo_stem_tests {
+    use super::{hugo_stem, page_components_for_note};
+
+    #[test]
+    fn readme_language_suffix_is_dropped_like_hugo() {
+        // Hugo 는 `README.ko.md` 를 `/README.html` 로 낸다(언어 접미사 제거).
+        assert_eq!(hugo_stem("README.ko"), "README");
+        assert_eq!(hugo_stem("README.en"), "README");
+        // 그 밖의 이름은 그대로 둔다.
+        assert_eq!(hugo_stem("README"), "README");
+        assert_eq!(hugo_stem("README-guide"), "README-guide");
+        assert_eq!(hugo_stem("foo.bar"), "foo.bar");
+        assert_eq!(hugo_stem("array"), "array");
+    }
+
+    #[test]
+    fn page_components_match_hugo_output() {
+        assert_eq!(page_components_for_note("README.ko.md"), vec!["README.html"]);
+        assert_eq!(page_components_for_note("Math/README.md"), vec!["Math", "README.html"]);
+        assert_eq!(page_components_for_note("data/graph.md"), vec!["data", "graph.html"]);
+    }
 }
