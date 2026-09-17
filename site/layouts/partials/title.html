@@ -1,9 +1,23 @@
-{{- /* Title: front matter > first H1 in the file > Hugo .Title > last path segment */ -}}
+{{- /* Title: front matter > 첫 H1 > 문서 첫 헤딩(레벨 무관) > Hugo .Title > 파일명 */ -}}
 {{- $t := "" -}}
 {{- with .Params.title }}{{ $t = . }}{{ end -}}
 {{- if and (not $t) .File -}}
+  {{- /* 1) 프래그먼트 트리 (빠른 경로) */ -}}
   {{- range .Fragments.Headings -}}
     {{- if and (not $t) (eq .Level 1) }}{{ $t = .Title | plainify | htmlUnescape }}{{ end -}}
+  {{- end -}}
+  {{- if not $t -}}
+    {{- range .Fragments.Headings -}}
+      {{- if not $t }}{{ $t = .Title | plainify | htmlUnescape }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- /* 2) 프래그먼트가 비어 있으면 본문 HTML에서 첫 헤딩을 직접 읽는다 */ -}}
+  {{- if not $t -}}
+    {{- $c := printf "%s" .Content -}}
+    {{- $m := findRE `(?s)<h[1-6][^>]*>.*?</h[1-6]>` $c 1 -}}
+    {{- with $m -}}
+      {{- $t = index . 0 | replaceRE `(?s)<[^>]*>` "" | htmlUnescape | plainify | replaceRE `\s*#\s*$` "" -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 {{- if not $t }}{{ $t = .Title }}{{ end -}}

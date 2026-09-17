@@ -1,60 +1,45 @@
 {{ define "main" -}}
 {{- $title := partial "title.html" . -}}
-{{- $toc := .TableOfContents -}}
-{{- $hasToc := gt (len (findRE `<li>` $toc)) 1 -}}
-<div class="layout{{ if not $hasToc }} layout--wide{{ end }}">
-  {{ partial "sidenav.html" . }}
-  <main id="main" class="main">
-    <article lang="ko">
-      <header class="article-header">
-        <nav class="crumbs meta" aria-label="경로">
-          <a href="{{ site.Home.RelPermalink }}">estudy</a>
-          {{- range .Ancestors.Reverse }}{{ if not .IsHome }}<span class="sep">/</span><a href="{{ .RelPermalink }}">{{ partial "secname.html" . }}</a>{{ end }}{{ end -}}
-          {{- with .File }}<span class="sep">/</span><span class="cur">{{ .LogicalName }}</span>{{ end }}
-        </nav>
-        <h1 class="article-title">{{ $title }}</h1>
-        <p class="meta">
-          <span class="num">{{ .WordCount | lang.FormatNumberCustom 0 }} 단어</span><span class="sep">·</span><span class="num">{{ .ReadingTime }} 분</span>
-          {{- with .File }}<span class="sep">·</span><a href="{{ site.Params.repoURL }}/blob/{{ site.Params.repoBranch }}/{{ .Path }}" rel="noopener">원문(.md)</a>{{ end }}
-        </p>
-      </header>
-      <div class="prose">
-        {{- /* Drop the leading H1 the note already carries (it is shown as the article title) */ -}}
-        {{- $c := .Content -}}
-        {{- if $title -}}
-          {{- $c = replaceRE `(?s)\A\s*<h1[^>]*>.*?</h1>` "" $c 1 -}}
-        {{- end -}}
-        {{- $c = replaceRE `<table>` `<div class="table-wrap"><table>` $c -}}
-        {{- $c = replaceRE `</table>` `</table></div>` $c -}}
-        {{ $c | safeHTML }}
-      </div>
-      <footer class="article-footer meta">
-        <span>{{ with .File }}<code>{{ .Path }}</code>{{ end }}</span>
-        <span><a href="#main">↑ 맨 위로</a></span>
-      </footer>
-      {{- $sec := .FirstSection -}}
-      {{- $pages := $sec.RegularPagesRecursive.ByTitle -}}
-      {{- $prev := "" }}{{ $next := "" }}{{ $found := false -}}
-      {{- range $pages -}}
-        {{- if $found }}{{ if not $next }}{{ $next = . }}{{ end }}{{ end -}}
-        {{- if eq . $ }}{{ $found = true }}{{ end -}}
-        {{- if not $found }}{{ $prev = . }}{{ end -}}
-      {{- end -}}
-      {{- if or $prev $next -}}
-      <nav class="pager" aria-label="이전/다음 노트">
-        {{ with $prev }}<a class="prev" href="{{ .RelPermalink }}" rel="prev"><span class="dir">← 이전</span>{{ partial "title.html" . }}</a>{{ end }}
-        {{ with $next }}<a class="next" href="{{ .RelPermalink }}" rel="next"><span class="dir">다음 →</span>{{ partial "title.html" . }}</a>{{ end }}
+<main id="main" class="main">
+  <article lang="ko">
+    <header class="article-header">
+      <nav class="crumbs" aria-label="경로">
+        <a href="{{ site.Home.RelPermalink }}">estudy</a>
+        {{- range .Ancestors.Reverse }}{{ if not .IsHome }}<span class="sep">/</span><a href="{{ .RelPermalink }}">{{ partial "secname.html" . }}</a>{{ end }}{{ end -}}
       </nav>
+      <h1 class="article-title">{{ $title }}</h1>
+      <p class="meta">
+        <span>{{ .WordCount | lang.FormatNumberCustom 0 }} 단어</span><span class="sep">·</span><span>{{ .ReadingTime }} 분</span>
+        {{- with .File }}<span class="sep">·</span><a href="{{ site.Params.repoURL }}/blob/{{ site.Params.repoBranch }}/{{ .Path }}" rel="noopener">원문(.md)</a>{{ end }}
+      </p>
+    </header>
+    <div class="prose">
+      {{- /* 노트가 이미 가진 첫 H1 은 제목으로 보여주므로 본문에서 제거 */ -}}
+      {{- $c := .Content -}}
+      {{- if $title -}}
+        {{- $c = replaceRE `(?s)\A\s*<h1[^>]*>.*?</h1>` "" $c 1 -}}
       {{- end -}}
-    </article>
-  </main>
-  {{- if $hasToc -}}
-  <aside class="toc" aria-label="목차">
-    <details open>
-      <summary class="toc-title eyebrow">목차</summary>
-      {{ $toc }}
-    </details>
-  </aside>
-  {{- end -}}
-</div>
+      {{- $c = replaceRE `<table>` `<div class="table-wrap"><table>` $c -}}
+      {{- $c = replaceRE `</table>` `</table></div>` $c -}}
+      {{ $c | safeHTML }}
+    </div>
+    <footer class="article-footer">
+      {{- with .File }}<span><code>{{ .Path }}</code></span>{{ end }}
+    </footer>
+    {{- $sec := .FirstSection -}}
+    {{- $pages := $sec.RegularPagesRecursive.ByTitle -}}
+    {{- $prev := "" }}{{ $next := "" }}{{ $found := false -}}
+    {{- range $pages -}}
+      {{- if $found }}{{ if not $next }}{{ $next = . }}{{ end }}{{ end -}}
+      {{- if eq . $ }}{{ $found = true }}{{ end -}}
+      {{- if not $found }}{{ $prev = . }}{{ end -}}
+    {{- end -}}
+    {{- if or $prev $next -}}
+    <nav class="pager" aria-label="이전/다음 노트">
+      {{ with $prev }}<a class="prev" href="{{ .RelPermalink }}" rel="prev"><span class="dir">← 이전</span>{{ partial "title.html" . }}</a>{{ end }}
+      {{ with $next }}<a class="next" href="{{ .RelPermalink }}" rel="next"><span class="dir">다음 →</span>{{ partial "title.html" . }}</a>{{ end }}
+    </nav>
+    {{- end -}}
+  </article>
+</main>
 {{- end }}

@@ -6,11 +6,10 @@
 {{- $title := partial "title.html" . -}}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ site.Title }} — 지식의 숲{{ else }}{{ $title }} · {{ site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ $title }} · {{ site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsHome }}{{ site.Params.description }}{{ else }}{{ $title }} — {{ site.Params.description }}{{ end }}{{ end }}">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 <meta name="generator" content="Hugo {{ hugo.Version }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:title" content="{{ $title }}">

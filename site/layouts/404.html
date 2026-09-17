@@ -1,13 +1,6 @@
 {{ define "main" -}}
 <main id="main" class="main">
-  <section class="home-hero">
-    <p class="eyebrow num">404 · not found</p>
-    <h1 class="home-title">페이지를 찾을 수 없습니다<span class="dot">.</span></h1>
-    <p class="home-lead">노트가 이동했거나 파일명이 바뀌었을 수 있습니다. 색인에서 다시 찾아보세요.</p>
-    <div class="home-actions">
-      <a class="btn btn--primary" href="{{ site.Home.RelPermalink }}">색인으로 →</a>
-      <a class="btn" href="{{ site.Params.repoURL }}" rel="noopener">GitHub 저장소</a>
-    </div>
-  </section>
+  <h1 class="article-title">404</h1>
+  <p>노트가 이동했거나 파일명이 바뀌었을 수 있습니다. <a href="{{ site.Home.RelPermalink }}">색인</a>에서 다시 찾아보세요.</p>
 </main>
 {{- end }}

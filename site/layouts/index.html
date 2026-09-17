@@ -1,30 +1,22 @@
 {{ define "main" -}}
-{{- /* Home = the repo README (index of every note) rendered as the landing page. L1 stages it as content/README.md */ -}}
-{{- $readme := site.GetPage "/README" -}}
-{{- if not $readme }}{{ $readme = site.GetPage "/README.md" }}{{ end -}}
 {{- $sections := site.Sections -}}
-{{- $total := len site.RegularPages -}}
 <main id="main" class="main">
-  <section class="home-hero">
-    <p class="eyebrow">knowledge forest · {{ $total }} notes · {{ len $sections }} sections</p>
-    <h1 class="home-title">estudy<span class="dot">.</span></h1>
-    <p class="home-lead">{{ site.Params.description }}</p>
-    <div class="home-actions">
-      <a class="btn btn--primary" href="{{ site.Params.graphPath | relURL }}">지식 그래프 보기 →</a>
-      <a class="btn" href="{{ site.Params.repoURL }}" rel="noopener">GitHub 저장소</a>
-    </div>
-    <ul class="section-grid">
-      {{- range $sections -}}
-      <li><a href="{{ .RelPermalink }}">{{ partial "secname.html" . }}</a><span class="meta num">{{ len .RegularPagesRecursive }}</span></li>
-      {{- end -}}
-    </ul>
-  </section>
-  <section class="home-index" aria-label="전체 색인">
-    {{- with $readme -}}
-    <div class="prose" lang="ko">{{ .Content }}</div>
-    {{- else -}}
-    <p class="meta">README 색인을 찾을 수 없습니다 — 스테이지 트리(.cache/content/README.md)를 확인하세요.</p>
-    {{- end -}}
-  </section>
+  <div class="profile">
+    <img class="avatar" src="{{ site.Params.avatarURL | default "https://github.com/rlaope.png" }}" alt="" width="88" height="88" loading="lazy">
+    <p class="profile-name">{{ site.Params.authorName | default "rlaope" }}</p>
+  </div>
+  <h1 class="home-title">estudy<span class="dot">.</span></h1>
+  <div class="index-groups">
+    {{- range $sections }}
+    <section class="index-group">
+      <h2><a href="{{ .RelPermalink }}">{{ partial "secname.html" . }}</a></h2>
+      <ul class="index-list">
+        {{- range .RegularPagesRecursive }}
+        <li><a href="{{ .RelPermalink }}">{{ partial "title.html" . }}</a></li>
+        {{- end }}
+      </ul>
+    </section>
+    {{- end }}
+  </div>
 </main>
 {{- end }}
