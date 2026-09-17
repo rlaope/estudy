@@ -45,7 +45,7 @@
 /* 다크: html[data-theme] 로 전환. data-theme='system' 이면 OS 설정을 따른다. */
 [data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0a0a0a;
+  --bg: #000000;
   --fg: #ededed;
   --muted: #a3a3a3;
   --faint: #7a7a7a;
@@ -53,7 +53,7 @@
   --link: #5b9cff;
   --link-visited: #a99cf5;
   --code-bg: #141414;
-  --graph-bg: #0a0a0a;
+  --graph-bg: #000000;
   --graph-edge: #3a3a3a;
   --graph-node: #7a7a7a;
   --graph-node-neighbor: #ededed;
@@ -66,7 +66,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #0a0a0a;
+    --bg: #000000;
     --fg: #ededed;
     --muted: #a3a3a3;
     --faint: #7a7a7a;
@@ -74,7 +74,7 @@
     --link: #5b9cff;
     --link-visited: #a99cf5;
     --code-bg: #141414;
-    --graph-bg: #0a0a0a;
+    --graph-bg: #000000;
     --graph-edge: #3a3a3a;
     --graph-node: #7a7a7a;
     --graph-node-neighbor: #ededed;
@@ -218,9 +218,10 @@ h4, h5, h6 { font-size: 17px; }
 .index-group { margin: 0 0 var(--space-5); }
 .index-group > h2 {
   font-size: 20px;
-  margin: 0 0 var(--space-2);
-  padding: 0;
+  margin: 0 0 var(--space-3);
+  padding: 0 0 6px;
   border: 0;
+  border-bottom: 1px solid var(--line); /* 섹션 제목 아래 밑선 */
   scroll-margin-top: var(--space-4);
 }
 .index-group > h2 a { color: inherit; text-decoration: none; }
