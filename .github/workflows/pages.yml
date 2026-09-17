@@ -43,7 +43,7 @@ jobs:
       - name: Build graph artifacts and staged content tree
         run: |
           cargo run --release -p graph-build -- \
-            --root . --out site/generated --stage .cache/content
+            --root . --out site/generated --stage .cache/content --stage-en .cache/content-en
 
       - name: Build WASM graph module
         run: |
@@ -54,6 +54,18 @@ jobs:
         run: |
           hugo --config site/hugo.toml --contentDir .cache/content \
             --destination public --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Build EN site (/en/)
+        if: ${{ hashFiles('brains-en/**/*.md') != '' }}
+        run: |
+          python3 tools/i18n/make_index.py
+          hugo --config site/hugo.toml,site/hugo.en.toml --contentDir .cache/content-en \
+            --destination public/en --minify --baseURL "${{ steps.pages.outputs.base_url }}/en/"
+          # 공용 자산(CSS/JS·파비콘·그래프 데이터)은 EN 트리에도 복사한다(상대 경로로 참조됨).
+          cp -r public/assets public/en/ 2>/dev/null || true
+          cp public/favicon-*.png public/en/ 2>/dev/null || true
+          mkdir -p public/en/generated && cp site/generated/*.bin site/generated/*.json public/en/generated/
+          echo "en pages: $(find public/en -name '*.html' | wc -l)"
 
       - name: Publish graph data artifacts
         run: |

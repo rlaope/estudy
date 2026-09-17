@@ -40,6 +40,7 @@ fn main() -> ExitCode {
             "--stage" => take(a).map(|v| opts.stage = PathBuf::from(v)),
             "--base-path" => take(a).map(|v| opts.base_path = v),
             "--content-prefix" => take(a).map(|v| opts.content_prefix = v),
+            "--stage-en" => take(a).map(|v| opts.stage_en = Some(PathBuf::from(v))),
             "--layout" => take(a).map(|v| opts.layout_kind = v),
             "--seed" => take(a).and_then(|v| parse_u64(&v, "--seed").map(|n| opts.seed = n)),
             "--iterations" => take(a)

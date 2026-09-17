@@ -1,0 +1,12 @@
+# 영어판 빌드 오버레이 — `--config site/hugo.toml,site/hugo.en.toml`
+#
+# KO 판과 같은 템플릿/레이아웃을 그대로 쓰고, 베이스 URL·홈 색인 출처·언어 표시만 바꾼다.
+# 페이지 경로 구조는 KO 와 동일하며(사이트 루트가 /estudy/en/), 노트 안의 상대 링크도 그대로 맞는다.
+baseURL = 'https://rlaope.github.io/estudy/en/'
+title = 'estudy'
+
+[params]
+  lang = 'en'
+  # 홈 색인 출처. os.ReadFile 은 Hugo 작업 디렉터리(리포 루트) 기준 경로를 받으므로
+  # 스테이지 안의 영어 README를 리포 루트 기준으로 지정한다(도구가 여기에 생성한다).
+  readmeFile = '.cache/content-en/README.md'

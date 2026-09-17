@@ -35,6 +35,8 @@ pub struct Options {
     pub layout_kind: String,
     /// 노트가 사는 리포 내 접두 디렉터리(예: `brains`). 사이트 URL 에서는 벗겨진다.
     pub content_prefix: String,
+    /// 영어 번역 트리를 스테이지할 디렉터리(예: `.cache/content-en`). 없으면 건너뛴다.
+    pub stage_en: Option<PathBuf>,
     pub seed: u64,
     pub iterations: usize,
 }
@@ -48,6 +50,7 @@ impl Default for Options {
             base_path: "/estudy/".to_string(),
             layout_kind: "spiral".to_string(),
             content_prefix: "brains".to_string(),
+            stage_en: None,
             seed: layout::DEFAULT_SEED,
             iterations: layout::DEFAULT_ITERATIONS,
         }
@@ -309,6 +312,79 @@ pub fn run(opts: &Options) -> Result<Report, String> {
         println!("[L1] 미해석 링크 목록:");
         for u in stats.unresolved.iter().take(50) {
             println!("      - {}", u);
+        }
+    }
+
+    // ── 3b. EN 스테이지 트리 (brains-en → .cache/content-en) ──────────────────
+    // 번역 트리는 같은 상대 경로를 유지하므로 KO 와 동일한 링크 재작성기를 그대로 쓴다.
+    // 자산(.md 이외: 이미지 등)은 KO 트리에서 복사한다 — EN 트리에는 번역문만 둔다.
+    if let Some(en_stage_arg) = opts.stage_en.clone() {
+        let en_root = root_abs.join("brains-en");
+        if !en_root.is_dir() {
+            println!("[L1] EN 스테이지: brains-en 없음 → 건너뜀");
+        } else {
+            let en_stage_abs = if en_stage_arg.is_absolute() {
+                stage::lexical_absolute(&en_stage_arg)
+            } else {
+                stage::lexical_absolute(&root_abs.join(&en_stage_arg))
+            };
+            let mut en_sc = scan::scan(&en_root)?;
+            for f in en_sc.files.iter_mut() {
+                f.rel = links::strip_content_prefix(&f.rel, &prefix);
+            }
+            en_sc.files.sort_by(|a, b| a.rel.cmp(&b.rel));
+            en_sc.notes = (0..en_sc.files.len())
+                .filter(|i| en_sc.files[*i].rel.ends_with(".md"))
+                .collect();
+            let mut en_dirs: Vec<String> = en_sc
+                .dirs
+                .iter()
+                .map(|d| links::strip_content_prefix(d, &prefix))
+                .filter(|d| !d.is_empty())
+                .collect();
+            en_dirs.sort();
+            en_dirs.dedup();
+            let en_notes: Vec<String> = en_sc.notes.iter().map(|i| en_sc.files[*i].rel.clone()).collect();
+            // 자산(.md 이외)은 KO 트리에서 복사하므로, 리졸버 파일 목록에도 넣어야
+            // `image/foo.png` 같은 상대 링크가 미해석으로 세어지지 않는다.
+            let mut en_files: Vec<String> = en_sc.files.iter().map(|f| f.rel.clone()).collect();
+            for e in &sc.files {
+                if !e.rel.ends_with(".md") && !e.rel.is_empty() {
+                    en_files.push(e.rel.clone());
+                }
+            }
+            en_files.sort();
+            en_files.dedup();
+            let en_resolver = links::Resolver::new(&en_notes, &en_files, &en_dirs, &prefix);
+            stage::prepare_stage(&en_stage_abs, &en_root)?;
+            let mut en_stats = links::Stats::default();
+            for (i, entry_idx) in en_sc.notes.iter().enumerate() {
+                let e = &en_sc.files[*entry_idx];
+                let bytes = std::fs::read(&e.abs)
+                    .map_err(|err| format!("읽기 실패 {}: {}", e.abs.display(), err))?;
+                let content = String::from_utf8(bytes)
+                    .map_err(|err| format!("UTF-8 디코딩 실패 {}: {}", e.rel, err))?;
+                let (new_content, _) = links::rewrite_note(&content, i, &en_resolver, &mut en_stats);
+                let staged = &en_resolver.staged_notes[i];
+                let dst = stage::stage_path(&en_stage_abs, staged)?;
+                stage::write_bytes(&dst, new_content.as_bytes())?;
+            }
+            let mut en_assets = 0usize;
+            for e in &sc.files {
+                if e.rel.ends_with(".md") || e.rel.is_empty() {
+                    continue;
+                }
+                let dst = stage::stage_path(&en_stage_abs, &e.rel)?;
+                stage::copy_file(&e.abs, &dst)?;
+                en_assets += 1;
+            }
+            println!(
+                "[L1] EN 스테이지: 노트 {} 개 + 자산 {} 개 → {} (미해석 링크 {} 개)",
+                en_notes.len(),
+                en_assets,
+                en_stage_abs.display(),
+                en_stats.unresolved.len()
+            );
         }
     }
 

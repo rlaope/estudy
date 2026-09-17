@@ -18,10 +18,18 @@ pub const EXCLUDED_DIRS: &[&str] = &[
     "target",
     "node_modules",
     ".cargo",
+    // 영어 번역 트리 — KO 스캔에서 노트로 세면 안 된다(EN 스테이지에서 따로 스캔한다).
+    "brains-en",
 ];
 
 /// 리포 루트에서만 제외하는 파일 (cargo 매니페스트, Hugo 잠금 파일).
-pub const EXCLUDED_ROOT_FILES: &[&str] = &["Cargo.toml", "Cargo.lock", ".hugo_build.lock"];
+pub const EXCLUDED_ROOT_FILES: &[&str] = &[
+    "Cargo.toml",
+    "Cargo.lock",
+    ".hugo_build.lock",
+    // 영어 README — KO 사이트의 노트가 아니다(EN 스테이지에서 홈 색인 소스로만 쓴다).
+    "README.en.md",
+];
 
 #[derive(Debug, Clone)]
 pub struct Entry {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" dir="ltr">
+<html lang="{{ partial "t.html" "htmlLang" }}" dir="ltr">
 <head>
 {{- /* Render content first so render hooks can flag per-page needs (e.g. KaTeX) into .Store */ -}}
 {{- $noop := .WordCount -}}

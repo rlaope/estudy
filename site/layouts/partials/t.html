@@ -1,0 +1,41 @@
+{{- /* UI 문구 사전 — 호출: {{ partial "t.html" "toc" }}. 언어는 site.Params.lang(기본 ko). */ -}}
+{{- $lang := site.Params.lang | default "ko" -}}
+{{- $ko := dict
+  "lang" "ko"
+  "htmlLang" "ko"
+  "toc" "목차"
+  "pager" "이전/다음 노트"
+  "prev" "← 이전"
+  "next" "다음 →"
+  "notes" "노트"
+  "index" "색인"
+  "unlisted" "색인 미등록"
+  "graph" "지식 그래프"
+  "repo" "GitHub 저장소"
+  "path" "경로"
+  "notfound" "노트가 이동했거나 파일명이 바뀌었을 수 있습니다."
+  "notfoundCta" "색인에서 다시 찾아보세요."
+  "words" "단어"
+  "minutes" "분"
+  "backHome" "estudy 색인"
+-}}
+{{- $en := dict
+  "lang" "en"
+  "htmlLang" "en"
+  "toc" "Contents"
+  "pager" "Previous/next note"
+  "prev" "← Previous"
+  "next" "Next →"
+  "notes" "notes"
+  "index" "Index"
+  "unlisted" "Not in index"
+  "graph" "Knowledge graph"
+  "repo" "GitHub repository"
+  "path" "Path"
+  "notfound" "This note may have moved or been renamed."
+  "notfoundCta" "Find it again in the index."
+  "words" "words"
+  "minutes" "min read"
+  "backHome" "estudy index"
+-}}
+{{- index (dict "ko" $ko "en" $en) $lang . -}}

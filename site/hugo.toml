@@ -102,6 +102,9 @@ disableKinds = ['taxonomy', 'term', 'rss']
   repoURL = 'https://github.com/rlaope/estudy'
   repoBranch = 'master'
   graphPath = 'graph.html'   # built by L2; home links to it
+  lang = 'ko'
+  koBase = 'https://rlaope.github.io/estudy'
+  enBase = 'https://rlaope.github.io/estudy/en'
 
 [minify]
   disableXML = true

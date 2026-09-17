@@ -1,6 +1,6 @@
 {{ define "main" -}}
 {{- /* 홈 색인은 README.md 를 단일 출처로 삼는다 — 그룹·순서·제목·개수 모두 README 그대로. */ -}}
-{{- $readme := os.ReadFile "README.md" -}}
+{{- $readme := os.ReadFile (site.Params.readmeFile | default "README.md") -}}
 
 {{- /* 콘텐츠 루트 기준 소문자 경로 → 페이지 */ -}}
 {{- $notes := dict -}}
@@ -68,7 +68,7 @@
   {{- end -}}
 {{- end -}}
 {{- if $extra -}}
-  {{- $groups = $groups | append (dict "name" "색인 미등록" "links" $extra) -}}
+  {{- $groups = $groups | append (dict "name" (partial "t.html" "unlisted") "links" $extra) -}}
 {{- end -}}
 
 <main id="main" class="main">
@@ -78,7 +78,7 @@
   </div>
   <h1 class="home-title">estudy</h1>
   <div class="home-layout">
-    <nav class="cat-rail" aria-label="색인">
+    <nav class="cat-rail" aria-label="{{ partial "t.html" "index" }}">
       <ul>
         {{- range $i, $g := $groups }}
         {{- if $g.links }}

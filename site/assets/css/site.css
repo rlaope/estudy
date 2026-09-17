@@ -214,6 +214,13 @@ h4, h5, h6 { font-size: 17px; }
 .cat-rail .nm { min-width: 0; }
 .cat-rail .cnt { color: var(--faint); white-space: nowrap; }
 
+/* 헤더 언어 전환: 현재 언어는 굵게, 반대 언어는 링크 */
+.lang-switch { display: inline-flex; gap: 4px; align-items: center; font-size: 13px; color: var(--faint); }
+.lang-switch a { color: var(--muted); text-decoration: none; }
+.lang-switch a:hover { color: var(--fg); text-decoration: underline; }
+.lang-switch .on { color: var(--fg); font-weight: 700; }
+.lang-switch .sep { opacity: 0.45; }
+
 .index-groups { margin: 0; }
 .index-group { margin: 0 0 var(--space-5); }
 .index-group > h2 {

@@ -1,9 +1,9 @@
 {{ define "main" -}}
 {{- $title := partial "title.html" . -}}
 <main id="main" class="main">
-  <article lang="ko">
+  <article lang="{{ partial "t.html" "htmlLang" }}">
     <header class="article-header">
-      <nav class="crumbs" aria-label="경로">
+      <nav class="crumbs" aria-label="{{ partial "t.html" "path" }}">
         <a href="{{ site.Home.RelPermalink }}">estudy</a>
         {{- range .Ancestors.Reverse }}{{ if not .IsHome }}<span class="sep">/</span><a href="{{ .RelPermalink }}">{{ partial "secname.html" . }}</a>{{ end }}{{ end -}}
       </nav>
@@ -35,9 +35,9 @@
       {{- if not $found }}{{ $prev = . }}{{ end -}}
     {{- end -}}
     {{- if or $prev $next -}}
-    <nav class="pager" aria-label="이전/다음 노트">
-      {{ with $prev }}<a class="prev" href="{{ .RelPermalink }}" rel="prev"><span class="dir">← 이전</span>{{ partial "title.html" . }}</a>{{ end }}
-      {{ with $next }}<a class="next" href="{{ .RelPermalink }}" rel="next"><span class="dir">다음 →</span>{{ partial "title.html" . }}</a>{{ end }}
+    <nav class="pager" aria-label="{{ partial "t.html" "pager" }}">
+      {{ with $prev }}<a class="prev" href="{{ .RelPermalink }}" rel="prev"><span class="dir">{{ partial "t.html" "prev" }}</span>{{ partial "title.html" . }}</a>{{ end }}
+      {{ with $next }}<a class="next" href="{{ .RelPermalink }}" rel="next"><span class="dir">{{ partial "t.html" "next" }}</span>{{ partial "title.html" . }}</a>{{ end }}
     </nav>
     {{- end -}}
   </article>
