@@ -102,7 +102,7 @@
 - [MA, MSA, SOA(Service Oriented Architecture), ESB, SOAP](https://esperer.tistory.com/28)
 - [서비스 디스커버리를 DNS, 로드 밸런서 방식을 사용하지 않는 이유](http://github.com/rlaope/estudy/blob/master/MSA/service_discovery_dns.md)
 - [마이크로서비스 클라이언트 회복성 패턴](http://github.com/rlaope/estudy/blob/master/MSA/recover.md)
-- MSA 핵심 디자인 패턴
+- [MSA 핵심 디자인 패턴](http://github.com/rlaope/estudy/blob/master/MSA/pattern)
   - [Two Phase Commit](http://github.com/rlaope/estudy/blob/master/MSA/pattern/two_phase_commit.md)
   - [Saga Pattern](http://github.com/rlaope/estudy/blob/master/MSA/pattern/saga.md)
   - [Event Sourcing](http://github.com/rlaope/estudy/blob/master/MSA/pattern/event_sourcing.md)
