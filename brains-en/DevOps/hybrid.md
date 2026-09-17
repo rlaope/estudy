@@ -1,4 +1,4 @@
-# Hybrid Cloud Hybrid Cloud
+# Hybrid Cloud
 
 ## Hybrid Cloud
 

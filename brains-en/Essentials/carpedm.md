@@ -1,4 +1,4 @@
-# Carpe diem Carpe diem
+# Carpe diem
 
 > Content written by quoting the presentation script.
 

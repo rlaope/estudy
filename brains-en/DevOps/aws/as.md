@@ -1,4 +1,4 @@
-# Auto Scaling Auto Scaling
+# Auto Scaling
 
 ## Auto Scaling
 Monitors applications and automatically adjusts capacity to maintain stable, predictable performance at the lowest possible cost.

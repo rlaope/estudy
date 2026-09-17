@@ -1,4 +1,4 @@
-# Web Cache Web Cache
+# Web Cache
 
 ## Cache
 In computer science, a cache refers to a `temporary storage` that holds pre-copied data or values.

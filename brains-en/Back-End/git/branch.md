@@ -1,4 +1,4 @@
-# Branch Branch
+# Branch
 
 
 ### What is a Branch?

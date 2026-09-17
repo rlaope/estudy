@@ -1,4 +1,4 @@
-# Service Mesh Service Mesh
+# Service Mesh
 
 A service mesh is a way to control how different parts of an application share data with each other.
 

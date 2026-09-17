@@ -65,7 +65,6 @@
   - [Zookeeper](http://github.com/rlaope/estudy/blob/master/brains/Back-End/backend/kafka요소2.md)
   - [PUB/SUB Architecture](http://github.com/rlaope/estudy/blob/master/brains/Back-End/backend/pub_sub.md)
   - [Kafka 리밸런싱](http://github.com/rlaope/estudy/blob/master/brains/Back-End/kafka/rebalancing.md)
-  - [Kafka 파티션 할당 전략](http://github.com/rlaope/estudy/blob/master/brains/Back-End/kafka/rebalancing.md)
   - [Kafka Consumer Offset 수동 commit](http://github.com/rlaope/estudy/blob/master/brains/Back-End/kafka/autocommit.md)
   - [Kafka ISR(In Sync Replica)](http://github.com/rlaope/estudy/blob/master/brains/Back-End/kafka/isr.md)
   - [Producer 주요 Options](http://github.com/rlaope/estudy/blob/master/brains/Back-End/kafka/producer.md)
@@ -180,7 +179,6 @@
   - [쿠버네티스 대시보드 토큰 발행 및 접속](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/dashboard.md)
   - [Kubernetes Cluster](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/cluster.md)
   - [Control Plane](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/control_plane.md)
-  - [Node Components](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/component.md)
   - [Pod](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/pod.md)
   - [Pod LifeCycle(Phase, Condition)](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/pod_lifecycle.md)
   - [Pod의 생명주기, 재시작 정책](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/podstatus.md)
@@ -200,7 +198,6 @@
   - [Kubernetes Scheduler, Controller](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/scheduler.md)
   - [PV, PVC Dynamic Provisioning](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/pvpvc.md)
   - [Kubernetes Network](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/network.md)
-  - [Kubernetes 배포 전략, Probe](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/network.md)
   - [RBAC, Security Policy](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/security.md)
 - [애자일(Agile) 방법론](http://github.com/rlaope/estudy/blob/master/brains/DevOps/agile.md)
   - [K8s 배포 전략, Probe](http://github.com/rlaope/estudy/blob/master/brains/DevOps/k8s/deploy.md)
@@ -214,7 +211,6 @@
 - [AWS(Amazon Web Service)](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws.md)
   - [EC2(Elastic Compute Cloud)](http://github.com/rlaope/estudy/blob/master/brains/DevOps/ec2.md) 
   - [EC2의 가격 정책과 타입 종류](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws/EC2Price.md)
-  - [IAM(Identity and Access Management)](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws/EC2Price.md)
   - [EBS, Instance Store, AMI](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws/ebs.md)
   - [AWS 보안 그룹 Security Group](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws/securitygroup.md)
   - [AWS ELB (Elastic Load Balancer), Sticky Session](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws/elb.md)
@@ -262,11 +258,7 @@
 - [Terraform Custom Condition(precondition, postcondition)](http://github.com/rlaope/estudy/blob/master/brains/DevOps/hcl/condition.md)
   - [[Terraform] 작동 원리](http://github.com/rlaope/estudy/blob/master/brains/DevOps/hcl/terraform_work.md)
 - [Terraform dynamic block](http://github.com/rlaope/estudy/blob/master/brains/DevOps/hcl/dynamic_block.md)
-  - [[Terraform] Custom Condition(precondition, postcondition)](http://github.com/rlaope/estudy/blob/master/brains/DevOps/hcl/condition.md)
-- [Terraform 작동 원리](http://github.com/rlaope/estudy/blob/master/brains/DevOps/hcl/terraform_work.md)
-  - [[Terraform] dynamic block](http://github.com/rlaope/estudy/blob/master/brains/DevOps/hcl/dynamic_block.md)
 - [[Terraform] state, remote_state, backend](http://github.com/rlaope/estudy/blob/master/brains/DevOps/hcl/state.md)
-  - [[Terraform] state, remote_state, backend](http://github.com/rlaope/estudy/blob/master/brains/DevOps/hcl/state.md)
 - [MicroService Monitoring System (cc. Loki/Grafana)](http://github.com/rlaope/estudy/blob/master/brains/DevOps/msa_monitoring.md)
 - [Presto](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws/presto.md)
 - [MSA에서의 Service discovery 패턴](http://github.com/rlaope/estudy/blob/master/brains/DevOps/service_discovery.md)
@@ -347,10 +339,8 @@
   - [클래스와 인스턴스 개념과 차이](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/coi.md)
   - [생성자, new 객체 생성](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/생성자.md)
   - [오버라이딩과 오버로딩](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/overding.md)
-  - [추상메서드와 추상클래스](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/overding.md)
   - [다형성 (Polymorphism)](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/다형성.md)
   - [Date, SimpleDateFormat 현재 날짜, 시간 출력](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/date.md)
-  - [자바 Object 클래스의 메서드](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/date.md)
   - [컬렉션 프레임워크 종류와 사용법](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/collection.md)
   - [예외 처리 (Exception)](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/exception.md)
   - [RuntimeException & Exception](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/runtime.md)
@@ -366,9 +356,7 @@
   - [자바 리플랙션 Reflection 개념과 사용방법](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/reflection.md)
   - [자바 익스큐터 java Executors](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/executor.md)
   - [java Callable, Future](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/callable_future.md)
-  - [자바에서 finalize() 메서드의 역할은 무엇일까요?](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/callable_future.md)
   - [자바 Cleaner, PhantomReference Class](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/cleaner.md)
-  - [객체의 생명주기(생성, 사용, 소멸)](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/cleaner.md)
   - [OutOfMemoryError가 발생했을 때 해결하는 방법](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/oom.md)
   - [자바의 네 가지 참조 유형(Strong, Weak, Soft, Phantom)](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/reference.md)
   - [Java 8 Functional Interface](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/functional_interface.md)
@@ -381,7 +369,6 @@
   - [GraalVM](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/graal.md)
   - [Native Image](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/native_image.md)
   - [네이티브 이미지의 메모리 최적화](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/graal_memory.md)
-  - [Reactive Stream, Backpressure, API Components](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/reactive_stream.md)
   - [Java의 예외 생성 비용, 비용 절감 방법](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/exception_cost.md)
   - [JVM Warm Up - 배포 직후 Latancy 성능 저하 원인](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/warmup1.md)
   - [JVM Warm Up 적용하기](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/warmup2.md)
@@ -417,7 +404,6 @@
   - [Reactive Streams](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/reactive_steam.md)
   - [HotSpot JVM ZGC Barrier, NUMA 메모리 할당 및 Safepoint 동작](http://github.com/rlaope/estudy/blob/master/brains/JVM/memory_concept_hard.md)
   - [객체의 생명주기 (생성, 사용, 소멸)](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/lifecycle.md)
-  - [JIT 컴파일러, GraalVM 자바코드 기계어 번역 과정](http://github.com/rlaope/estudy/blob/master/brains/JVM/memory_concept_hard.md)
   - [자바 Object 클래스의 메소드](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/object.md)
   - [PGO(Profile-Guided Optimization)](http://github.com/rlaope/estudy/blob/master/brains/JVM/pgo.md)
   - [자바에서 Finalize 메서드의 역할은 무엇일까요?](http://github.com/rlaope/estudy/blob/master/brains/Back-End/JAVA/finalize.md)
@@ -616,9 +602,7 @@
 - [벌크 수정, 삭제 연산과 영속성 컨텍스트](http://github.com/rlaope/estudy/blob/master/brains/Back-End/jpa/bulk.md)
 - [Spring @Transactional 트랜잭션 바인딩과 Auto-Commit](http://github.com/rlaope/estudy/blob/master/brains/Back-End/spring/trx_autocommit.md)
 
-- [[Kotlin, Spring boot] copy() 깊은복사, 얕은복사 성능상의 이점? 🤔](http://github.com/rlaope/estudy/blob/master/brains/Back-End/spring/copy.md)
 
-- [[Kotlin, Spring boot] 검색 api에서 find Query vs Internal Function 데이터 처리 효율? 🤔](http://github.com/rlaope/estudy/blob/master/brains/Back-End/spring/find_query.md)
 ---
 
 
@@ -636,7 +620,6 @@
 - [동기 이벤트 처리 문제, 비동기 이벤트 처리](http://github.com/rlaope/estudy/blob/master/brains/Back-End/ddd/event3.md)
 - [CQRS (Command Query Responsibility Segregation)](http://github.com/rlaope/estudy/blob/master/brains/Back-End/ddd/cqrs.md)
 
-- [[Domain-Driven-Design] 바운디드 컨텍스트 (Bounded-Context) ✍️](http://github.com/rlaope/estudy/blob/master/brains/Back-End/ddd/bounded_context.md)
 ---
 
 
@@ -771,7 +754,6 @@
   - [모든것이 HTTP](http://github.com/rlaope/estudy/blob/master/brains/Back-End/http/HTTP기본/everyhttp.md) 
   - [클라이언트 서버 구조](http://github.com/rlaope/estudy/blob/master/brains/Back-End/http/HTTP기본/structclient.md) 
   - [Stateful, Stateless](http://github.com/rlaope/estudy/blob/master/brains/Back-End/http/HTTP기본/state.md) 
-  - [비 연결성(connectionless)](http://github.com/rlaope/estudy/blob/master/brains/Back-End/http/HTTP기본/state.md) 
   - [HTTP 메시지](http://github.com/rlaope/estudy/blob/master/brains/Back-End/http/HTTP기본/message.md) 
 - HTTP 메서드, 활용
   - [비 연결성 (connectionless)](http://github.com/rlaope/estudy/blob/master/brains/Back-End/http/HTTP%EA%B8%B0%EB%B3%B8/connectionless.md)
@@ -819,7 +801,6 @@
 - [OSI 7계층과 TCP/IP 4계층](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Internet/ositcp.md)
 - [TCP/IP Packet, TCP vs UDP](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Internet/tcppacket.md)
 - [웹 캐시 Web Cache](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Internet/cache.md)
-- [캐시 검증 헤더(Last-Modified, If-Modified-Since)](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Internet/cache.md)
 - [캐시 검증 헤더(ETag, If-None-Match)](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Internet/etag.md)
 - [L2, L3, L4 & L7 스위치](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Internet/ln.md)
 - [웹소켓(WebSocket), HTTP와의 차이](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Internet/websocket.md)
@@ -861,11 +842,8 @@
 #### Operating System
 
 - [꼭 알아야 할 기본 CS 지식](http://github.com/rlaope/estudy/blob/master/brains/정보처리/응용SW.md)
-- [OS(운영체제) 구조와 원리](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Internet/host.md)
-- [스레드와 동시성](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Internet/host.md)
 - [멀티 스레드와 멀티 프로세스](http://github.com/rlaope/estudy/blob/master/brains/정보처리/processthread.md)
 - [CPU 스케줄링이란](http://github.com/rlaope/estudy/blob/master/brains/정보처리/cpus.md)
-- [Synchronize(동기화)와 Deadlock](http://github.com/rlaope/estudy/blob/master/brains/정보처리/동기화.md)
 - [런타임과 컴파일타임](http://github.com/rlaope/estudy/blob/master/brains/정보처리/comrun.md)
 - [OS의 스와핑 Swapping](http://github.com/rlaope/estudy/blob/master/brains/Operating-System/swapping.md)
 - [HTTP 메서드](http://github.com/rlaope/estudy/blob/master/brains/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC/httpmethod.md)
@@ -991,8 +969,6 @@
 - [상태 머신 기반 Agent Pipeline](http://github.com/rlaope/estudy/blob/master/brains/AI/agent_state/)
   - [LLM Gateway 및 멀티 테넌트 환경 아키텍처 구현](http://github.com/rlaope/estudy/blob/master/brains/AI/llm_gateway/README.md)
   - [LangGraph 기반 Agent DAG](http://github.com/rlaope/estudy/blob/master/brains/AI/agent_state/st1.md)
-  - [Stateless 프로토콜에서 Agent 문맥 식별 라우터](http://github.com/rlaope/estudy/blob/master/brains/AI/agent_state/st1.md)
-  - [Checkpointing 구현](http://github.com/rlaope/estudy/blob/master/brains/AI/agent_state/st1.md)
 - [RNN에서 Attention까지 발전 과정](http://github.com/rlaope/estudy/blob/master/brains/AI/rnn.md)
   - [Checkpointing 적용](http://github.com/rlaope/estudy/blob/master/brains/AI/agent_state/st3.md)
 - [Self-Attention, Multi-Head Attention](http://github.com/rlaope/estudy/blob/master/brains/AI/attention.md)
@@ -1066,4 +1042,3 @@
   - [고윳값과 케일리-해밀턴 정리](http://github.com/rlaope/estudy/blob/master/brains/Math/math5.md)
   - [행렬 분해](http://github.com/rlaope/estudy/blob/master/brains/Math/math6.md)
   - [선형대수 실습 노트북 (LU·QR·고윳값·SVD)](http://github.com/rlaope/estudy/blob/master/brains/Math/linear_algebra_lab.ipynb)
-- [미분적분학](http://github.com/rlaope/estudy/blob/master/brains/Math/README.md)
