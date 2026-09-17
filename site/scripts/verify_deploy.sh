@@ -97,10 +97,15 @@ fi
 echo "-- README 색인 링크 재작성 --"
 home_html="$(curl -sL --max-time 30 "$BASE/" || true)"
 blob_links="$(printf '%s' "$home_html" | grep -o 'github\.com/rlaope/estudy/blob/master' | wc -l | tr -d ' ')"
-internal_links="$(printf '%s' "$home_html" | grep -o 'href="[^"]*\.html"' | wc -l | tr -d ' ')"
+# Hugo --minify 는 속성 따옴표를 제거하므로 href= 뒤 따옴표 유무를 모두 받는다
+internal_links="$(printf '%s' "$home_html" | grep -oE 'href=[^ >]+\.html' | wc -l | tr -d ' ')"
 echo "  github blob 잔존: $blob_links / 내부 .html 링크: $internal_links"
 if [ "$blob_links" != "0" ]; then
   echo "  FAIL  README 색인에 github blob 링크가 남아 있다 (전처리 미적용)"
+  FAILED=1
+fi
+if [ "$internal_links" = "0" ]; then
+  echo "  FAIL  홈에서 내부 노트 링크를 찾지 못했다 (홈이 README 색인이 아니다)"
   FAILED=1
 fi
 
@@ -119,7 +124,7 @@ else
     echo "  FAIL  노트 본문에 클라이언트 JS가 있다"
     FAILED=1
   fi
-  if printf '%s' "$note_body" | grep -q 'class="katex"'; then
+  if printf '%s' "$note_body" | grep -Eq 'katex-html|katex-display|class=katex|class="katex"'; then
     echo "  ok    수식 서버사이드 렌더(KaTeX) 확인"
   else
     echo "  FAIL  수식이 KaTeX로 렌더되지 않았다"
