@@ -441,10 +441,10 @@ kimi는 강한 교사 모델로 같은 내용을 다른 관점 문체로 다시 
 
 다음글엔 각 모델 해부학을 더 해보겠다.
 
-- [DeepSeek](http://github.com/rlaope/estudy/blob/master/AI/ow/deepseek.md)
-- [Qwen](http://github.com/rlaope/estudy/blob/master/AI/ow/qwen.md)
-- [GLM](http://github.com/rlaope/estudy/blob/master/AI/ow/glm.md)
-- [Kimi](http://github.com/rlaope/estudy/blob/master/AI/ow/kimi.md)
+- [DeepSeek](http://github.com/rlaope/estudy/blob/master/brains/AI/ow/deepseek.md)
+- [Qwen](http://github.com/rlaope/estudy/blob/master/brains/AI/ow/qwen.md)
+- [GLM](http://github.com/rlaope/estudy/blob/master/brains/AI/ow/glm.md)
+- [Kimi](http://github.com/rlaope/estudy/blob/master/brains/AI/ow/kimi.md)
 
 <br>
 

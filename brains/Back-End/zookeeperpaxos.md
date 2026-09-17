@@ -1,6 +1,6 @@
 # Zookeeper가 Paxos를 기용한 이유
 
-[이 글](https://github.com/rlaope/estudy/blob/master/Back-End/paxra.m)에서 paxos의 수학적 한계와 livelock 같은 치명적인 단점들 시스템 중단 및 가용성 포기등이 있음에도 주키퍼를 비롯한 분산 코디네이터 시스템들이 이러한 동작 방식을 채택하는 이유와 내부 구현에 대해 명확한 사실을 바탕으로 알아보겠다.
+[이 글](https://github.com/rlaope/estudy/blob/master/brains/Back-End/paxra.md)에서 paxos의 수학적 한계와 livelock 같은 치명적인 단점들 시스템 중단 및 가용성 포기등이 있음에도 주키퍼를 비롯한 분산 코디네이터 시스템들이 이러한 동작 방식을 채택하는 이유와 내부 구현에 대해 명확한 사실을 바탕으로 알아보겠다.
 
 분산시스템의 CAP(Consistency, Availability, Partition Toleration) 측면에서, 주키퍼는 철저하게 **CP(Consistency & Partitation Tolerance) 시스템**으로 설계되어 있다.
 
