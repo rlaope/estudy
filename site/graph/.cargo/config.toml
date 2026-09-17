@@ -1,0 +1,5 @@
+# L2 graph-ui 전용 cargo 설정 (site/graph 워크스페이스에서만 적용).
+# 빌드 산출물이 site/graph/target 으로 새지 않도록 리포의 .cache/ 로 격리한다.
+# (경로는 이 .cargo 디렉터리의 부모 = site/graph 기준)
+[build]
+target-dir = "../../.cache/target-wasm"

@@ -1,0 +1,17 @@
+{
+  "name": "graph-wasm",
+  "type": "module",
+  "description": "estudy knowledge-graph query-side helpers (search / ego / hit-test / label culling) for the canvas2D view",
+  "version": "0.1.0",
+  "license": "MIT",
+  "files": [
+    "graph_wasm_bg.wasm",
+    "graph_wasm.js",
+    "graph_wasm.d.ts"
+  ],
+  "main": "graph_wasm.js",
+  "types": "graph_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

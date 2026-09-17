@@ -1,0 +1,23 @@
+# L2 graph-ui — query-side WASM 크레이트 전용 워크스페이스.
+#
+# 레이아웃(fa2)은 L1 (tools/graph) 이 빌드타임에 이미 계산해 site/generated/pos.bin 으로 내보낸다.
+# 이 워크스페이스는 브라우저에서 돌아가는 작은 cdylib 하나만 가진다:
+#   crates/graph-wasm   검색 점수화 / ego 이웃 추출 / 히트테스트 / 라벨 컬링
+#
+# 빌드 (리포 루트에서):
+#   wasm-pack build site/graph/crates/graph-wasm --release --target web \
+#     --out-dir ../../../static/graph/pkg --out-name graph_wasm
+# (--out-dir 는 크레이트 디렉터리 기준 상대 경로 → site/static/graph/pkg)
+#
+# rayon / fa2 / 스레드 금지: GitHub Pages 는 COOP/COEP 를 못 걸어 SharedArrayBuffer 가 없다.
+[workspace]
+resolver = "2"
+members = ["crates/graph-wasm"]
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = "symbols"
+debug = false
