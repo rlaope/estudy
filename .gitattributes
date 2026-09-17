@@ -1,0 +1,29 @@
+# ─────────────────────────────────────────────────────────────
+# 텍스트 정규화
+# ─────────────────────────────────────────────────────────────
+* text=auto eol=lf
+
+# ─────────────────────────────────────────────────────────────
+# 바이너리 (diff/merge 비활성, 줄바꿈 변환 금지)
+# ─────────────────────────────────────────────────────────────
+*.woff2 binary
+*.wasm  binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+
+# ─────────────────────────────────────────────────────────────
+# GitHub 언어 통계: Rust(빌드 파이프라인/WASM)만 남긴다.
+# 노트 890개와 사이트 자산이 언어 비중을 덮지 않게 한다.
+#   - Rust 코드만 linguist-vendored=false 로 다시 포함
+#   - 나머지(HTML/CSS/TOML/JS/폰트)는 벤더 취급으로 통계에서 제외
+# ─────────────────────────────────────────────────────────────
+* linguist-vendored
+*.rs linguist-vendored=false
+tools/** linguist-vendored=false
+
+# 노트/노트북은 문서로 명시 (통계 제외 + 문서 성격 유지)
+*.md    linguist-documentation
+*.ipynb linguist-documentation
