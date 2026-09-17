@@ -232,7 +232,8 @@ h4, h5, h6 { font-size: 17px; }
 .index-list li.d2 { padding-left: 32px; }
 .index-list li.d3 { padding-left: 48px; }
 .index-list .dot { color: var(--faint); flex: none; }
-.index-list a { text-decoration: none; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* 제목은 한 줄 우선. 컬럼에 안 들어가는 긴 제목만 자연스럽게 다음 줄로 (말줄임 없이 전부 읽히게) */
+.index-list a { text-decoration: none; min-width: 0; overflow-wrap: anywhere; }
 .index-list a:hover { text-decoration: underline; }
 
 /* ---------- 노트 ---------- */
