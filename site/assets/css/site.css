@@ -185,12 +185,16 @@ h4, h5, h6 { font-size: 17px; }
   .cat-rail { position: sticky; top: var(--space-4); align-self: start; max-height: calc(100vh - 32px); overflow-y: auto; }
 }
 @media (min-width: 1200px) {
-  .home-layout { display: block; }
+  /* 레일을 컬럼 바깥 왼쪽에 두되, 상단은 리스트 시작선과 맞춘다(헤더/프로필과 겹치지 않게).
+     0폭 첫 칸 + 음수 margin 으로 레일을 컬럼 밖에 걸고, sticky 라 스크롤하면 위에 붙는다. */
+  .home-layout { display: grid; grid-template-columns: 0 minmax(0, 1fr); gap: 0; max-width: var(--measure); margin: 0 auto; }
   .cat-rail {
-    position: fixed;
-    top: var(--space-5);
-    left: calc(50% - var(--measure) / 2 - 48px - 216px);
+    grid-column: 1;
     width: 216px;
+    margin-left: calc(-216px - 48px);
+    position: sticky;
+    top: var(--space-5);
+    align-self: start;
     max-height: calc(100vh - 48px);
     overflow-y: auto;
   }
