@@ -72,6 +72,10 @@ const focusMeta = $('focus-meta');
 const focusOpen = $('focus-open');
 const focusEgoBtn = $('focus-ego');
 const egoDepthEl = $('ego-depth');
+const summaryEl = $('summary');
+const summaryFacts = $('summary-facts');
+const summarySecs = $('summary-secs');
+const focusExcerpt = $('focus-excerpt');
 
 // ---- 테마 (메인 셸과 같은 계약: html[data-theme]=light|dark|system, localStorage 'estudy-theme') ----
 function applyTheme(v) {
@@ -138,9 +142,10 @@ async function main() {
   initTheme();
   readTokens();
   const t0 = performance.now();
-  const [mod, posBuf, csrBuf, search, meta] = await Promise.all([
+  const [mod, posBuf, csrBuf, search, meta, relBuf, excerpts] = await Promise.all([
     import('./pkg/graph_wasm.js').then(async (m) => { await m.default({ module_or_path: new URL('./pkg/graph_wasm_bg.wasm', import.meta.url) }); return m; }),
     fetchBuf('pos.bin'), fetchBuf('graph.bin'), fetchJson('search.json'), fetchJson('meta.json'),
+    fetchBuf('related.bin'), fetchJson('excerpts.json'),
   ]);
   wasm = mod;
 
@@ -155,6 +160,9 @@ async function main() {
   if (csr[n] !== meta.edges) errs.push(`offsets[N] ${csr[n]} ≠ meta.edges ${meta.edges}`);
   if (search.length + sections.length + 1 !== n) errs.push(`search ${search.length} + 섹션 ${sections.length} + 1 ≠ N ${n}`);
   search.forEach((e, i) => { if (e.id !== i) errs.push(`search.json id 순서 어긋남 at ${i}`); });
+  const relEdges = meta.related_edges || 0;
+  if (relBuf.byteLength !== relEdges * 8) errs.push(`related.bin ${relBuf.byteLength}B ≠ related_edges*8 ${relEdges * 8}B`);
+  if (excerpts.length !== search.length) errs.push(`excerpts.json ${excerpts.length} ≠ 노트 ${search.length}`);
   if (errs.length) { fail('산출물이 CONTRACT.md 와 다릅니다:\n' + errs.join('\n')); return; }
 
   // --- 노드 테이블 (노트 + 섹션 허브 + 루트 1)
@@ -179,6 +187,17 @@ async function main() {
   S.bySection = Array.from({ length: Math.max(1, sections.length) }, () => []);
   for (let i = 0; i < n; i++) S.bySection[S.secOf[i] % S.bySection.length].push(i);
   S.allNodes = Array.from({ length: n }, (_, i) => i);
+  // 관련 엣지(명시 링크가 아닌 본문 유사도) + 사이드바용 발췌/요약 정보
+  S.meta = meta;
+  S.relPairs = new Uint32Array(relBuf);
+  S.relOf = Array.from({ length: n }, () => []);
+  for (let k = 0; k + 1 < S.relPairs.length; k += 2) {
+    const u = S.relPairs[k], v = S.relPairs[k + 1];
+    if (u < n && v < n) { S.relOf[u].push(v); S.relOf[v].push(u); }
+  }
+  S.excerpts = excerpts;
+  S.noteCount = search.length;
+  S.sectionCount = sections.length;
 
   const ok = wasm.load(pos, csr, S.nodes.map((x) => x.title).join('\n'),
     S.nodes.map((x, i) => (i < search.length ? search[i].choseong : '')).join('\n'), S.rootId);
@@ -210,9 +229,10 @@ async function main() {
   fitToVisible(false);
   draw();
   const firstPaint = Math.round(performance.now());
-  statsEl.textContent = `노트 ${search.length} · 엣지 ${st[2]}`;
+  statsEl.textContent = `노트 ${search.length} · 엣지 ${st[2]} · 관련 ${relEdges}`;
   for (const el of [qEl, sectionEl, scopeBtn, clearBtn, fitBtn]) el.disabled = false;
   updateScopeBtn();
+  renderSummary();
   renderList();
   updateFocusBox();
   if (params.has('q')) { qEl.value = params.get('q'); onSearch(); }
@@ -228,6 +248,10 @@ async function main() {
     hubs: S.hubs.map((id) => ({ id, title: S.nodes[id].title })),
     get tokens() { return TOKENS; },
     setEgo, setScope, applyTheme: (v) => { applyTheme(v); onThemeChanged(); }, state: S,
+    selectNode, renderList, renderSummary,
+    hitTest: (x, y) => wasm.hit_test_masked(x, y, S.visible),
+    relatedOf: (id) => (S.relOf[id] || []).slice(),
+    toScreen: (id) => [S.pos[2 * id] * S.view.scale + S.view.tx, S.pos[2 * id + 1] * S.view.scale + S.view.ty],
   };
   performance.mark('graph-first-paint');
 }
@@ -379,7 +403,7 @@ function drawEdges(target, hs) {
   g.setTransform(dpr, 0, 0, dpr, 0, 0);
   g.lineWidth = 1;
   g.lineCap = 'round';
-  const vis = S.visible, off = S.offsets, tg = S.targets, pos = S.pos;
+  const vis = S.visible, off = S.offsets, tg = S.targets, pos = S.pos, sec = S.secOf;
   const nSec = SEC_PALETTE.length;
   // 통계는 한 번만 훑어서 센다(선 긋기 패스는 색 묶음 단위).
   let csr = 0, lines = 0;
@@ -419,6 +443,33 @@ function drawEdges(target, hs) {
     } else {
       stroke(S.allNodes, TOKENS.neighbor, 0.85, hot);
     }
+    g.lineWidth = 1;
+  }
+  // 관련 엣지(본문 유사도): 아주 옅은 실. 선택된 노드의 관련 엣지만 밝게 그린다.
+  const rel = S.relPairs;
+  if (rel && rel.length) {
+    const sel = S.selected;
+    const relPass = (alpha, width, onlySelected) => {
+      g.globalAlpha = alpha; g.lineWidth = width;
+      for (let si = 0; si < nSec; si++) {
+        g.strokeStyle = SEC_PALETTE[si];
+        g.beginPath();
+        let any = false;
+        for (let k = 0; k + 1 < rel.length; k += 2) {
+          const u = rel[k], v = rel[k + 1];
+          if (sec[u] % nSec !== si) continue;
+          if (!vis[u] || !vis[v]) continue;
+          const hot = sel !== NONE && (u === sel || v === sel);
+          if (onlySelected ? !hot : (sel !== NONE && hot)) continue;
+          g.moveTo(pos[2 * u] * scale + tx, pos[2 * u + 1] * scale + ty);
+          g.lineTo(pos[2 * v] * scale + tx, pos[2 * v + 1] * scale + ty);
+          any = true;
+        }
+        if (any) g.stroke();
+      }
+    };
+    relPass(TOKENS.glow ? 0.05 : 0.09, 1, false);
+    if (S.selected !== NONE) relPass(0.5, 1, true);
     g.lineWidth = 1;
   }
   S.drawnLines = lines;      // 실제로 그은 선 (무방향 엣지 수)
@@ -587,8 +638,11 @@ function bindUI() {
       const id = wasm.hit_test_masked(e.offsetX, e.offsetY, S.visible);
       if (id !== NONE) {
         if (e.shiftKey || e.altKey) { setEgo(id); }
-        else { markVisited(id); location.href = S.nodes[id].url; }
-      } else if (S.selected !== NONE && S.ego === NONE) { S.selected = NONE; updateFocusBox(); requestDraw(); }
+        else { markVisited(id); selectNode(id); }
+      } else if ((S.selected !== NONE || S.focus !== NONE) && S.ego === NONE) {
+        // 빈 곳 클릭: 선택 해제 → 사이드가 요약으로 돌아간다
+        S.selected = NONE; S.focus = NONE; updateFocusBox(); renderList(); requestDraw();
+      }
     }
     if (pointers.size === 0) { drag = null; canvas.classList.remove('dragging'); }
   };
@@ -644,7 +698,8 @@ function bindUI() {
     ensureOnScreen(S.focus); updateFocusBox(); requestDraw();
   });
   listEl.addEventListener('click', (e) => {
-    const a = e.target.closest('a[data-id]'); if (a) markVisited(Number(a.dataset.id));
+    const a = e.target.closest('a[data-id]');
+    if (a) { e.preventDefault(); selectNode(Number(a.dataset.id)); return; }
     const btn = e.target.closest('button[data-more]'); if (btn) { S.listOffset += LIST_PAGE; renderList(true); }
     const eb = e.target.closest('button[data-ego]'); if (eb) { e.preventDefault(); setEgo(Number(eb.dataset.ego)); }
   });
@@ -701,8 +756,14 @@ function listIds() {
     return { ids, title: `이웃 · 깊이 ${S.egoDepth}`, meta: `${S.nodes[S.ego].title} · ${ids.length}` };
   }
   if (S.selected !== NONE) {
-    const ids = [S.selected, ...Array.from(wasm.neighbors(S.selected))];
-    return { ids, title: '이웃', meta: `${S.nodes[S.selected].title} · ${ids.length - 1}` };
+    const seen = new Set([S.selected]);
+    const links = Array.from(wasm.neighbors(S.selected)).filter((i) => S.visible[i] && !seen.has(i) && (seen.add(i), true));
+    const relIds = (S.relOf[S.selected] || []).filter((i) => S.visible[i] && !seen.has(i) && (seen.add(i), true));
+    return {
+      ids: [S.selected, ...links, ...relIds], title: '이웃',
+      meta: `${S.nodes[S.selected].title} · 링크 ${links.length} · 관련 ${relIds.length}`,
+      rel: new Set(relIds),
+    };
   }
   const ids = []; for (let i = 0; i < S.n; i++) if (S.visible[i]) ids.push(i);
   ids.sort((a, b) => (S.nodes[b].hub - S.nodes[a].hub) || (S.nodes[b].degree - S.nodes[a].degree) || a - b);
@@ -710,7 +771,7 @@ function listIds() {
   return { ids, title: `노트 · ${scope}`, meta: `${ids.length}` };
 }
 function renderList(append = false) {
-  const { ids, title, meta } = listIds();
+  const { ids, title, meta, rel } = listIds();
   listTitle.textContent = title; listMeta.textContent = meta;
   if (!append) { listEl.innerHTML = ''; S.listOffset = 0; }
   else listEl.querySelector('.gh-list-more')?.remove();
@@ -718,12 +779,14 @@ function renderList(append = false) {
   const end = Math.min(ids.length, S.listOffset + LIST_PAGE);
   for (let k = S.listOffset; k < end; k++) {
     const id = ids[k], nd = S.nodes[id];
+    const isRel = !!(rel && rel.has(id));
     const li = document.createElement('li'); li.dataset.id = id;
     if (nd.hub) li.classList.add('is-hub'); if (id === S.current) li.classList.add('is-current'); if (id === S.focus) li.classList.add('is-focus');
+    if (isRel) li.classList.add('is-rel');
     const a = document.createElement('a'); a.href = nd.url; a.dataset.id = id; a.textContent = nd.title;
     a.title = nd.hub ? nd.title : nd.path;
     if (id === S.current) a.setAttribute('aria-current', 'page');
-    const sec = document.createElement('span'); sec.className = 'sec'; sec.textContent = nd.hub ? (id === S.rootId ? 'root' : 'hub') : nd.section;
+    const sec = document.createElement('span'); sec.className = 'sec'; sec.textContent = isRel ? '관련' : (nd.hub ? (id === S.rootId ? 'root' : 'hub') : nd.section);
     const deg = document.createElement('span'); deg.className = 'deg'; deg.textContent = String(nd.degree);
     const eb = document.createElement('button'); eb.type = 'button'; eb.className = 'gh-btn'; eb.dataset.ego = id; eb.textContent = '이웃'; eb.setAttribute('aria-label', `${nd.title} 의 이웃만 보기`);
     li.append(a, sec, deg, eb); frag.append(li);
@@ -736,12 +799,68 @@ function renderList(append = false) {
   if (!ids.length) { const li = document.createElement('li'); li.className = 'gh-list-empty'; li.textContent = '0'; frag.append(li); }
   listEl.append(frag);
 }
+// 노드 선택: 오른쪽 사이드에 제목·발췌를 띄운다(열기는 사이드의 '열기').
+function selectNode(id) {
+  S.selected = id; S.focus = id;
+  updateFocusBox(); renderList(); ensureOnScreen(id); requestDraw();
+}
+
+// 사이드 요약: 수치 + 섹션(그래프 색 점 · 클릭하면 그 섹션만 보기)
+function renderSummary() {
+  if (!summaryFacts || !summarySecs || !S.meta) return;
+  if (summaryFacts.dataset.built !== '1') {
+    const edges = S.offsets ? S.offsets[S.n] / 2 : 0;
+    const facts = [
+      ['노트', S.noteCount], ['엣지', Math.round(edges)],
+      ['관련', S.relPairs ? S.relPairs.length / 2 : 0], ['섹션', S.sectionCount],
+    ];
+    for (const [k, v] of facts) {
+      const d = document.createElement('div');
+      const dt = document.createElement('dt'); dt.textContent = k;
+      const dd = document.createElement('dd'); dd.textContent = String(v);
+      d.append(dt, dd); summaryFacts.append(d);
+    }
+    S.meta.sections.forEach((s, k) => {
+      const li = document.createElement('li');
+      const sw = document.createElement('span'); sw.className = 'sw';
+      sw.style.background = SEC_PALETTE[k % SEC_PALETTE.length];
+      const b = document.createElement('button'); b.type = 'button'; b.textContent = s.name;
+      const c = document.createElement('span'); c.className = 'cnt'; c.textContent = String(s.count);
+      li.append(sw, b, c); summarySecs.append(li);
+    });
+    summarySecs.addEventListener('click', (e) => {
+      const b = e.target.closest('button'); if (!b) return;
+      const hub = S.hubIndex.get(b.textContent);
+      if (hub === undefined) return;
+      if (S.scope === 'local' && S.scopeHub === hub) { setScope('global', hub); if (sectionEl) sectionEl.value = ''; }
+      else { setScope('local', hub); if (sectionEl) sectionEl.value = b.textContent; }
+      renderSummary(); renderList(); requestDraw();
+    });
+    summaryFacts.dataset.built = '1';
+  }
+  const active = S.scope === 'local' && S.scopeHub !== NONE ? S.nodes[S.scopeHub].title : '';
+  for (const li of summarySecs.children) {
+    const b = li.querySelector('button');
+    li.classList.toggle('is-on', !!active && !!b && b.textContent === active);
+  }
+}
+
 function updateFocusBox() {
   const id = S.selected !== NONE ? S.selected : S.focus;
+  // 요약은 '아무것도 고르지 않은' 상태에서만 보여준다.
+  const showSummary = S.selected === NONE && S.ego === NONE && !S.searchHits;
+  if (summaryEl) summaryEl.hidden = !showSummary;
   if (id === NONE) { focusBox.hidden = true; return; }
   const nd = S.nodes[id];
   focusBox.hidden = false; focusTitle.textContent = nd.title;
-  focusMeta.textContent = nd.hub ? `섹션 · 노트 ${nd.degree - (id === S.rootId ? 0 : 1)}` : `${nd.section} · 링크 ${nd.degree}`;
+  const relCount = (S.relOf[id] || []).length;
+  focusMeta.textContent = nd.hub
+    ? `섹션 · 노트 ${nd.degree - (id === S.rootId ? 0 : 1)}`
+    : `${nd.section} · 링크 ${nd.degree} · 관련 ${relCount}`;
+  if (focusExcerpt) {
+    const ex = S.excerpts && S.excerpts[id] ? S.excerpts[id] : '';
+    focusExcerpt.textContent = nd.hub ? '' : (ex || '발췌 없음');
+  }
   focusOpen.href = nd.url;
   focusEgoBtn.setAttribute('aria-pressed', String(S.ego === id));
 }

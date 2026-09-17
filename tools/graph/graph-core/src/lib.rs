@@ -12,6 +12,7 @@ pub mod graph;
 pub mod json;
 pub mod layout;
 pub mod links;
+pub mod related;
 pub mod scan;
 pub mod stage;
 pub mod text;
@@ -81,6 +82,13 @@ pub struct Report {
     pub determinism_pos: bool,
     pub determinism_graph: bool,
     pub determinism_search: bool,
+    pub determinism_related: bool,
+    pub related_edges: usize,
+    pub related_top_k: usize,
+    pub related_min_score: f32,
+    pub related_bytes: usize,
+    pub excerpt_bytes: usize,
+    pub determinism_excerpts: bool,
     pub pos_bounds: (f32, f32, f32, f32),
     pub root_sha256: String,
     pub built_at: String,
@@ -227,6 +235,10 @@ pub fn run(opts: &Options) -> Result<Report, String> {
 
     let mut records: Vec<Vec<links::LinkRecord>> = Vec::with_capacity(note_paths.len());
     let mut titles: Vec<String> = Vec::with_capacity(note_paths.len());
+    // 관련 엣지용 본문 토큰(노트 순서 = id 순서)
+    let mut note_tokens: Vec<Vec<String>> = Vec::with_capacity(note_paths.len());
+    // 사이드바 미리보기용 발췌(노트 순서 = id 순서)
+    let mut excerpts: Vec<String> = Vec::with_capacity(note_paths.len());
     let mut stats = links::Stats::default();
     let mut gh_blob_left = 0usize;
     let mut titles_from_filename = 0usize;
@@ -244,6 +256,8 @@ pub fn run(opts: &Options) -> Result<Report, String> {
         titles.push(title);
 
         let (new_content, recs) = links::rewrite_note(&content, i, &resolver, &mut stats);
+        note_tokens.push(related::tokens(&content, &e.rel));
+        excerpts.push(text::excerpt(&content, 140));
         gh_blob_left += links::count_gh_blob(&new_content);
 
         let staged = &resolver.staged_notes[i];
@@ -310,6 +324,32 @@ pub fn run(opts: &Options) -> Result<Report, String> {
         g.section_hubs.len(),
         g.edges.len(),
         g.targets.len()
+    );
+
+    // ── 4b. 관련 엣지(본문 토큰 코사인 유사 · 명시 링크 제외) ───────────────────
+    let rel_pairs = related::build(
+        note_paths.len(),
+        &note_tokens,
+        &g.edges,
+        related::TOP_K,
+        related::MIN_SCORE,
+    );
+    let rel_pairs_b = related::build(
+        note_paths.len(),
+        &note_tokens,
+        &g.edges,
+        related::TOP_K,
+        related::MIN_SCORE,
+    );
+    let determinism_related = rel_pairs == rel_pairs_b;
+    let related_bytes = related::to_le_bytes(&rel_pairs);
+    let related_path = out_abs.join("related.bin");
+    stage::write_bytes(&related_path, &related_bytes)?;
+    println!(
+        "[L1] 관련 엣지: {} 개 (노트당 상위 {} · 임계 {:.2} · 명시 링크 쌍 제외)",
+        rel_pairs.len(),
+        related::TOP_K,
+        related::MIN_SCORE
     );
 
     // ── 5. 레이아웃 (고정 시드 · 고정 반복) ───────────────────────────────────
@@ -414,6 +454,20 @@ pub fn run(opts: &Options) -> Result<Report, String> {
     let search_path = out_abs.join("search.json");
     stage::write_bytes(&search_path, search_json.as_bytes())?;
 
+    // ── 4c. 발췌(그래프 사이드바 미리보기) ─────────────────────────────────────
+    let build_excerpts = || {
+        let mut arr = json::Arr::new();
+        for e in &excerpts {
+            arr.push(json::string(e));
+        }
+        arr.finish()
+    };
+    let excerpts_json = build_excerpts();
+    let excerpts_json_b = build_excerpts();
+    let determinism_excerpts = excerpts_json == excerpts_json_b;
+    let excerpts_path = out_abs.join("excerpts.json");
+    stage::write_bytes(&excerpts_path, excerpts_json.as_bytes())?;
+
     let built_at = timefmt::now_iso8601_utc();
     let mut sec_arr = json::Arr::new();
     for (name, count) in &g.sections {
@@ -424,9 +478,12 @@ pub fn run(opts: &Options) -> Result<Report, String> {
         ));
     }
     let meta_json = format!(
-        "{{\n  \"nodes\": {},\n  \"edges\": {},\n  \"sections\": {},\n  \"built_at\": {},\n  \"root_sha256\": {},\n  \"layout\": {},\n  \"seed\": {}\n}}\n",
+        "{{\n  \"nodes\": {},\n  \"edges\": {},\n  \"related_edges\": {},\n  \"related_top_k\": {},\n  \"related_min_score\": {},\n  \"sections\": {},\n  \"built_at\": {},\n  \"root_sha256\": {},\n  \"layout\": {},\n  \"seed\": {}\n}}\n",
         g.node_count,
         g.targets.len(),
+        rel_pairs.len(),
+        related::TOP_K,
+        format!("{:.2}", related::MIN_SCORE),
         sec_arr.finish_pretty("    "),
         json::string(&built_at),
         json::string(&root_sha256),
@@ -462,6 +519,13 @@ pub fn run(opts: &Options) -> Result<Report, String> {
         determinism_pos,
         determinism_graph,
         determinism_search,
+        determinism_related,
+        related_edges: rel_pairs.len(),
+        related_top_k: related::TOP_K,
+        related_min_score: related::MIN_SCORE,
+        related_bytes: related_bytes.len(),
+        excerpt_bytes: excerpts_json.len(),
+        determinism_excerpts,
         pos_bounds: (min_x, max_x, min_y, max_y),
         root_sha256: root_sha256.clone(),
         built_at: built_at.clone(),

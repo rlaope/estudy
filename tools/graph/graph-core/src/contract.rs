@@ -21,14 +21,24 @@ pub fn render(r: &Report) -> String {
     out.push_str("| 파일 | 형식 |\n| --- | --- |\n");
     out.push_str("| `pos.bin` | `f32` little-endian, `[x, y] * N` (노드 순서 = `search.json` 의 `id` 순서, 그 뒤에 허브 노드) |\n");
     out.push_str("| `graph.bin` | `u32` little-endian, `[offsets N+1][targets E]` (CSR) |\n");
+    out.push_str("| `related.bin` | `u32` little-endian, `[u, v] * R` — 명시 링크가 아닌 **관련 엣지**(무방향 1회) |\n");
     out.push_str("| `search.json` | JSON 배열 `[{\"id\",\"title\",\"path\",\"url\",\"section\",\"choseong\",\"size\",\"degree\"}]` |\n");
-    out.push_str("| `meta.json` | JSON 객체 `{\"nodes\",\"edges\",\"sections\",\"built_at\",\"root_sha256\",\"layout\",\"seed\"}` |\n");
+    out.push_str("| `excerpts.json` | JSON 배열 `[\"발췌\", ...]` — `search.json` 과 같은 순서 · 140자 (그래프 사이드바 미리보기) |\n");
+    out.push_str("| `meta.json` | JSON 객체 `{\"nodes\",\"edges\",\"related_edges\",\"related_top_k\",\"related_min_score\",\"sections\",\"built_at\",\"root_sha256\",\"layout\",\"seed\"}` |\n");
     out.push_str("| `CONTRACT.md` | 이 문서 |\n\n");
 
     out.push_str("## 2. 노드 / 엣지 모델\n\n");
     out.push_str(&format!(
         "- 노드 수 `N = {}` = 노트 `{}` + 섹션 허브 `{}` + 루트 허브 `1`.\n",
         r.nodes, r.notes_scanned, r.section_count
+    ));
+    out.push_str(&format!(
+        "- 그래프: 노드 {} / 무방향 엣지 {} / CSR 타깃 {}.\n",
+        r.nodes, r.edges_unique, r.csr_targets
+    ));
+    out.push_str(&format!(
+        "- 관련 엣지: {} 개 (노트당 상위 {} · 코사인 임계 {:.2} · 명시 링크 쌍 제외). 본문+경로 토큰의 idf 가중 코사인 유사도로 계산하고, 정렬·동점 처리를 고정해 결정론을 지킨다.\n",
+        r.related_edges, r.related_top_k, r.related_min_score
     ));
     out.push_str(&format!(
         "- node id `0..{}`: 노트. 정렬 기준은 **저장소 상대 경로(NFC) 오름차순(바이트 순)** 이며 `search.json` 의 `id` 와 완전히 같은 순서다.\n",
@@ -143,27 +153,17 @@ pub fn render(r: &Report) -> String {
         r.nodes, r.edges_unique, r.csr_targets
     ));
     out.push_str(&format!(
-        "- 레이아웃: {} 초 (2회 대조 {}). 그래프 재직렬화 대조 {}. search.json 재직렬화 대조 {}.\n",
+        "- 레이아웃: {} 초 (2회 대조 {}). 그래프 재직렬화 대조 {}. search.json 재직렬화 대조 {}. related.bin 재계산 대조 {}. excerpts.json 재직렬화 대조 {}.\n",
         format!("{:.2}", r.layout_seconds),
-        if r.determinism_pos {
-            "동일"
-        } else {
-            "불일치"
-        },
-        if r.determinism_graph {
-            "동일"
-        } else {
-            "불일치"
-        },
-        if r.determinism_search {
-            "동일"
-        } else {
-            "불일치"
-        }
+        if r.determinism_pos { "동일" } else { "불일치" },
+        if r.determinism_graph { "동일" } else { "불일치" },
+        if r.determinism_search { "동일" } else { "불일치" },
+        if r.determinism_related { "동일" } else { "불일치" },
+        if r.determinism_excerpts { "동일" } else { "불일치" }
     ));
     out.push_str(&format!(
-        "- 파일 크기: pos.bin {} B, graph.bin {} B, search.json {} B, meta.json {} B, CONTRACT.md {} B.\n",
-        r.pos_bytes, r.graph_bytes, r.search_bytes, r.meta_bytes, r.contract_bytes
+        "- 파일 크기: pos.bin {} B, graph.bin {} B, related.bin {} B, search.json {} B, excerpts.json {} B, meta.json {} B, CONTRACT.md {} B.\n",
+        r.pos_bytes, r.graph_bytes, r.related_bytes, r.search_bytes, r.excerpt_bytes, r.meta_bytes, r.contract_bytes
     ));
     out.push_str(&format!(
         "- 제목이 파일명으로 대체된 노트: {} 개 (첫 `# ` 제목이 없는 경우).\n",

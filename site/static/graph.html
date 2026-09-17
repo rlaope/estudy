@@ -71,10 +71,17 @@
     <canvas id="graph" tabindex="-1" aria-hidden="true"></canvas>
   </section>
 
-  <aside class="gh-side" id="side" hidden>
+  <aside class="gh-side" id="side">
+    <div class="gh-summary" id="summary">
+      <h2 class="gh-h2">그래프 요약</h2>
+      <dl class="gh-facts" id="summary-facts"></dl>
+      <h3 class="gh-h3">섹션</h3>
+      <ol class="gh-secs" id="summary-secs"></ol>
+    </div>
     <div class="gh-focus" id="focus" hidden>
       <h2 class="gh-h2" id="focus-title"></h2>
       <p class="gh-meta" id="focus-meta"></p>
+      <p class="gh-excerpt" id="focus-excerpt"></p>
       <div class="gh-focus-actions">
         <a id="focus-open" class="gh-btn gh-btn-primary" href="#">열기</a>
         <button type="button" id="focus-ego" class="gh-btn" aria-pressed="false">이웃</button>

@@ -145,6 +145,144 @@ pub fn components(p: &str) -> Vec<String> {
         .collect()
 }
 
+/// 사이드바 미리보기용 발췌 — front matter·코드펜스·제목·마크다운 장식을 걷어내고 공백을 하나로 접는다.
+pub fn excerpt(content: &str, max_chars: usize) -> String {
+    let body = strip_front_matter(content);
+    let mut out = String::new();
+    let mut in_fence = false;
+    for line in body.lines() {
+        let t = line.trim();
+        if t.starts_with("```") || t.starts_with("~~~") {
+            in_fence = !in_fence;
+            continue;
+        }
+        if in_fence || t.is_empty() || t.starts_with('#') {
+            continue;
+        }
+        if t.starts_with("<br") || t.starts_with("<!--") || t == "---" || t == "<br>" {
+            continue;
+        }
+        let cleaned = clean_inline(t);
+        if cleaned.is_empty() {
+            continue;
+        }
+        if !out.is_empty() {
+            out.push(' ');
+        }
+        out.push_str(&cleaned);
+        if out.chars().count() >= max_chars {
+            break;
+        }
+    }
+    truncate_chars(&out, max_chars)
+}
+
+fn strip_front_matter(s: &str) -> &str {
+    let t = s.trim_start_matches('\u{feff}');
+    if let Some(rest) = t.strip_prefix("---") {
+        if let Some(idx) = rest.find("\n---") {
+            return rest[idx + 4..].trim_start_matches(['\r', '\n']);
+        }
+    }
+    t
+}
+
+fn find_close(chars: &[char], start: usize, open: char, close: char) -> Option<usize> {
+    let mut depth = 0i32;
+    for (i, &c) in chars.iter().enumerate().skip(start) {
+        if c == open {
+            depth += 1;
+        } else if c == close {
+            depth -= 1;
+            if depth == 0 {
+                return Some(i);
+            }
+        }
+    }
+    None
+}
+
+/// `![alt](url)` 같은 이미지 링크를 건너뛴 다음 위치.
+fn skip_image(chars: &[char], i: usize) -> Option<usize> {
+    let close = find_close(chars, i, '[', ']')?;
+    if close + 1 < chars.len() && chars[close + 1] == '(' {
+        return Some(find_close(chars, close + 1, '(', ')')? + 1);
+    }
+    None
+}
+
+/// `[text](url)` / `[text][ref]` 에서 보이는 글자만.
+fn link_text(chars: &[char], i: usize) -> Option<(String, usize)> {
+    let close = find_close(chars, i, '[', ']')?;
+    let text: String = chars[i + 1..close].iter().collect();
+    if close + 1 < chars.len() && chars[close + 1] == '(' {
+        return Some((text, find_close(chars, close + 1, '(', ')')? + 1));
+    }
+    if close + 1 < chars.len() && chars[close + 1] == '[' {
+        return Some((text, find_close(chars, close + 1, '[', ']')? + 1));
+    }
+    None
+}
+
+fn clean_inline(line: &str) -> String {
+    let chars: Vec<char> = line.chars().collect();
+    let mut out = String::new();
+    let mut i = 0usize;
+    while i < chars.len() {
+        let c = chars[i];
+        if c == '!' && i + 1 < chars.len() && chars[i + 1] == '[' {
+            if let Some(next) = skip_image(&chars, i + 1) {
+                i = next;
+                continue;
+            }
+        }
+        if c == '[' {
+            if let Some((text, next)) = link_text(&chars, i) {
+                out.push_str(&text);
+                i = next;
+                continue;
+            }
+        }
+        if c == '<' {
+            if let Some(close) = chars[i..].iter().position(|&x| x == '>') {
+                i += close + 1;
+                continue;
+            }
+        }
+        if matches!(c, '*' | '_' | '`' | '~' | '>' | '|') {
+            i += 1;
+            continue;
+        }
+        out.push(c);
+        i += 1;
+    }
+    // 공백 하나로 접기
+    let mut s = String::new();
+    let mut prev_space = false;
+    for ch in out.chars() {
+        let is_ws = ch == ' ' || ch == '\t';
+        if is_ws {
+            if !prev_space && !s.is_empty() {
+                s.push(' ');
+            }
+            prev_space = true;
+        } else {
+            s.push(ch);
+            prev_space = false;
+        }
+    }
+    s.trim().trim_start_matches(['-', '•', '·']).trim().to_string()
+}
+
+fn truncate_chars(s: &str, max: usize) -> String {
+    let count = s.chars().count();
+    if count <= max {
+        return s.to_string();
+    }
+    let cut: String = s.chars().take(max).collect();
+    format!("{}…", cut.trim_end())
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -167,5 +305,22 @@ mod tests {
     fn percent() {
         assert_eq!(percent_decode("a%20b%2Fc.md"), "a b/c.md");
         assert_eq!(encode_path_component("성능 비교.png"), "성능%20비교.png");
+    }
+
+    #[test]
+    fn excerpt_strips_markdown() {
+        let src = "---\ntitle: x\n---\n\n# 제목 줄\n\n본문 **강조** [링크](http://x/y) ![그림](image/a.png) 끝.\n\n```\n코드 블록\n```\n\n- 목록 항목\n";
+        let e = excerpt(src, 60);
+        assert!(e.starts_with("본문 강조 링크 끝."), "got: {e}");
+        assert!(!e.contains("코드"), "코드펜스가 남았다: {e}");
+        assert!(!e.contains("image/"), "이미지 경로가 남았다: {e}");
+        assert!(!e.contains('#'), "제목이 남았다: {e}");
+    }
+
+    #[test]
+    fn excerpt_truncates() {
+        let e = excerpt("가나다라마바사", 4);
+        assert_eq!(e, "가나다라…");
+        assert_eq!(excerpt("짧다", 10), "짧다");
     }
 }
