@@ -1,0 +1,84 @@
+name: pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: tools/graph
+
+      - uses: peaceiris/actions-hugo@v3.2.1
+        with:
+          hugo-version: '0.166.0'
+          extended: true
+
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: wasm-pack
+
+      - uses: actions/configure-pages@v6.0.0
+        id: pages
+
+      - name: Build graph artifacts and staged content tree
+        run: |
+          cargo run --release --manifest-path tools/graph/Cargo.toml -p graph-build -- \
+            --root . --out site/generated --stage .cache/content
+
+      - name: Build WASM graph module
+        run: |
+          wasm-pack build site/graph/crates/graph-wasm --release --target web \
+            --out-dir ../../../site/assets/pkg --out-name graph_wasm
+
+      - name: Build site
+        run: |
+          hugo --config site/hugo.toml --contentDir .cache/content \
+            --destination public --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Publish graph data artifacts
+        run: |
+          mkdir -p public/generated
+          cp site/generated/pos.bin site/generated/graph.bin \
+             site/generated/search.json site/generated/meta.json public/generated/
+          ls -l public/generated
+
+      - name: Report build output
+        run: |
+          echo "pages: $(find public -name '*.html' | wc -l)"
+          echo "images: $(find public -type f \( -name '*.png' -o -name '*.webp' -o -name '*.jpeg' -o -name '*.gif' \) | wc -l)"
+          echo "wasm: $(find public -name '*.wasm' -exec ls -l {} \; | awk '{print $5, $9}')"
+          du -sh public
+
+      - uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5.0.1

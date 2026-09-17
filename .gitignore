@@ -1,2 +1,11 @@
 .DS_STORE
 .idea
+
+# 빌드 생성물 (커밋하지 않는다)
+.cache/
+site/generated/
+site/graph/target/
+site/assets/pkg/
+public/
+.hugo_build.lock
+site/.hugo_resources/
