@@ -83,8 +83,29 @@ impl Stats {
     }
 }
 
+/// 리포 안에서 노트가 사는 접두 디렉터리(예: `brains`)를 제거한다.
+///
+/// 사이트는 접두 없는 경로를 콘텐츠 루트로 본다 — 노트를 `brains/` 아래로 옮겨도
+/// 공개 URL(`/<섹션>/<노트>.html`)이 바뀌지 않게 하는 장치다.
+/// 접두가 없거나 일치하지 않으면 원본을 그대로 돌려준다(하위 호환).
+pub fn strip_content_prefix(rel: &str, prefix: &str) -> String {
+    let p = prefix.trim_matches('/');
+    if p.is_empty() {
+        return rel.to_string();
+    }
+    if rel == p {
+        return String::new();
+    }
+    match rel.strip_prefix(p) {
+        Some(rest) if rest.starts_with('/') => rest.trim_start_matches('/').to_string(),
+        _ => rel.to_string(),
+    }
+}
+
 /// 링크 해석기. 노트/파일/디렉터리 인덱스를 담고 있다.
 pub struct Resolver {
+    /// 노트가 사는 접두 디렉터리 (빈 문자열이면 없음)
+    pub content_prefix: String,
     /// 노트의 저장소 상대 경로 (정렬, NFC) — notes 인덱스와 동일 순서
     pub notes: Vec<String>,
     /// 노트의 스테이지 상대 경로 (index.md → _index.md)
@@ -140,7 +161,7 @@ pub fn page_components_for_note(staged: &str) -> Vec<String> {
 }
 
 impl Resolver {
-    pub fn new(notes: &[String], files: &[String], dirs: &[String]) -> Self {
+    pub fn new(notes: &[String], files: &[String], dirs: &[String], content_prefix: &str) -> Self {
         let staged_notes: Vec<String> = notes.iter().map(|n| staged_path_for_note(n)).collect();
         let page_notes: Vec<Vec<String>> = staged_notes
             .iter()
@@ -171,6 +192,7 @@ impl Resolver {
             .collect();
 
         Self {
+            content_prefix: content_prefix.trim_matches('/').to_string(),
             notes: notes.to_vec(),
             staged_notes,
             page_notes,
@@ -317,7 +339,8 @@ impl Resolver {
             // 저장소 루트 (Hugo 홈) 로 보낸다.
             return Kind::Anchor;
         }
-        let repo_path = nfc(&repo_path);
+        // 리포 절대 링크(`blob/master/brains/...`)도 접두를 벗겨 콘텐츠 루트 기준으로 해석한다.
+        let repo_path = nfc(&strip_content_prefix(&repo_path, &self.content_prefix));
 
         // (1) 노트 정확 일치 → (d) 대소문자 무시 폴백
         if let Some((i, case)) = self.note_of(&repo_path) {

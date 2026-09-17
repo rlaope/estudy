@@ -30,6 +30,8 @@ pub struct Options {
     pub stage: PathBuf,
     /// 사이트 루트 기준 경로(앞뒤 슬래시 포함). GitHub Pages 프로젝트 사이트는 `/estudy/`.
     pub base_path: String,
+    /// 노트가 사는 리포 내 접두 디렉터리(예: `brains`). 사이트 URL 에서는 벗겨진다.
+    pub content_prefix: String,
     pub seed: u64,
     pub iterations: usize,
 }
@@ -41,6 +43,7 @@ impl Default for Options {
             out: PathBuf::from("site/generated"),
             stage: PathBuf::from(".cache/content"),
             base_path: "/estudy/".to_string(),
+            content_prefix: "brains".to_string(),
             seed: layout::DEFAULT_SEED,
             iterations: layout::DEFAULT_ITERATIONS,
         }
@@ -143,16 +146,48 @@ pub fn run(opts: &Options) -> Result<Report, String> {
         stage::lexical_absolute(&root_abs.join(&opts.out))
     };
     let base_path = base_path_clean(&opts.base_path);
+    let prefix = opts.content_prefix.trim_matches('/').to_string();
 
     println!("[L1] root  = {}", root_abs.display());
     println!("[L1] stage = {}", stage_abs.display());
     println!("[L1] out   = {}", out_abs.display());
     println!("[L1] base  = {}", base_path);
+    println!(
+        "[L1] content prefix = {}",
+        if prefix.is_empty() {
+            "(없음)".to_string()
+        } else {
+            format!("{}/", prefix)
+        }
+    );
 
     // ── 1. 스캔 ────────────────────────────────────────────────────────────────
-    let sc = scan::scan(&root_abs)?;
+    let mut sc = scan::scan(&root_abs)?;
+    // 콘텐츠 접두(`brains/`)를 벗겨 "콘텐츠 루트 기준" 경로로 정규화한다.
+    // 리포에서 노트를 접두 아래로 옮겨도 사이트 URL·섹션·그래프 구조가 그대로 유지된다.
+    // 접두를 벗기면 정렬 순서가 흐트러지므로(루트 README.md 가 뒤로 밀린다) 반드시 다시 정렬한다 —
+    // 이분탐색으로 노트를 찾는 경로들이 전부 여기에 의존한다.
+    if !prefix.is_empty() {
+        for f in sc.files.iter_mut() {
+            f.rel = links::strip_content_prefix(&f.rel, &prefix);
+        }
+        sc.files.sort_by(|a, b| a.rel.cmp(&b.rel));
+        sc.notes = (0..sc.files.len())
+            .filter(|i| sc.files[*i].rel.ends_with(".md"))
+            .collect();
+        let mut dirs: Vec<String> = sc
+            .dirs
+            .iter()
+            .map(|d| links::strip_content_prefix(d, &prefix))
+            .filter(|d| !d.is_empty())
+            .collect();
+        dirs.sort();
+        dirs.dedup();
+        sc.dirs = dirs;
+    }
     let note_paths: Vec<String> = sc.notes.iter().map(|i| sc.files[*i].rel.clone()).collect();
     let file_paths: Vec<String> = sc.files.iter().map(|f| f.rel.clone()).collect();
+    let content_dirs: Vec<String> = sc.dirs.clone();
     println!(
         "[L1] 스캔 완료: 파일 {} 개 / 그중 노트(.md) {} 개 / 디렉터리 {} 개 / 제외 디렉터리 {} 개",
         sc.files.len(),
@@ -182,7 +217,7 @@ pub fn run(opts: &Options) -> Result<Report, String> {
         s
     };
 
-    let resolver = links::Resolver::new(&note_paths, &file_paths, &sc.dirs);
+    let resolver = links::Resolver::new(&note_paths, &file_paths, &content_dirs, &prefix);
 
     // ── 3. 스테이지 트리 ───────────────────────────────────────────────────────
     stage::prepare_stage(&stage_abs, &root_abs)?;
@@ -220,7 +255,11 @@ pub fn run(opts: &Options) -> Result<Report, String> {
         if e.rel.ends_with(".md") {
             continue; // 노트는 위에서 재작성해 이미 썼다
         }
-        let dst = stage::stage_path(&stage_abs, &e.rel)?;
+        let rel = &e.rel;
+        if rel.is_empty() {
+            continue;
+        }
+        let dst = stage::stage_path(&stage_abs, rel)?;
         stage::copy_file(&e.abs, &dst)?;
         files_copied += 1;
     }
