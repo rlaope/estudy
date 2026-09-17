@@ -172,4 +172,4 @@ Java에서 String 클래스는 불변성을 갖습니다. 그래서 변하지 �
 
 velog.io](https://velog.io/@heoseungyeon/StringBuilder%EC%99%80-StringBuffer%EB%8A%94-%EB%AC%B4%EC%8A%A8-%EC%B0%A8%EC%9D%B4%EA%B0%80-%EC%9E%88%EB%8A%94%EA%B0%80)
 
-[https://coding-factory.tistory.com/546](https://coding-factory.tistory.com/546)
+[String (Java SE) - Oracle Docs](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)

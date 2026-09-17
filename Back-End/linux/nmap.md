@@ -31,7 +31,7 @@ route -n get default | grep 'gateway' | awk '{print $2}'
 
 ###  nmap 사용 예시
 
-nmap의 다양한 옵션들은 [여기](https://hagsig.tistory.com/94)서 확인해볼 수 있다.
+nmap의 다양한 옵션들은 [nmap 공식 문서](https://nmap.org/book/man.html)에서 확인해볼 수 있다.
 
 ```bash
 nmap -sP xxx.xxx.xxx.xxx  

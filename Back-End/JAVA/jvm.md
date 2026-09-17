@@ -53,4 +53,4 @@ JVM 내로 클래스 파일을 로드하고, 링크를 통해 배치하는 작�
 
 <br>
 
-> 참고 자료 : https://steady-coding.tistory.com/305
+> 참고 자료 : [Oracle Java SE Documentation](https://docs.oracle.com/en/java/)
