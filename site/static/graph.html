@@ -1,11 +1,20 @@
 <!doctype html>
-<html lang="ko" data-theme="auto">
+<html lang="ko" data-theme="system" data-mode="system">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>지식 그래프 — estudy</title>
-<meta name="description" content="estudy 노트 890편과 섹션 19개의 링크 관계를 한 장에 그린 지식 그래프. 초성 검색, 이웃(ego) 보기, 섹션 로컬 보기.">
+<meta name="description" content="estudy 노트와 섹션의 링크 관계를 한 장에 그린 지식 그래프.">
 <meta name="color-scheme" content="light dark">
+<script>
+(function () {
+  var v = 'system';
+  try { v = localStorage.getItem('estudy-theme') || 'system'; } catch (e) {}
+  if (v !== 'light' && v !== 'dark') v = 'system';
+  document.documentElement.dataset.theme = v;
+  document.documentElement.dataset.mode = v;
+})();
+</script>
 <link rel="stylesheet" href="graph/graph.css">
 <link rel="modulepreload" href="graph/graph.js">
 <link rel="preload" href="graph/pkg/graph_wasm_bg.wasm" as="fetch" crossorigin>
@@ -14,35 +23,40 @@
 <link rel="preload" href="generated/search.json" as="fetch" crossorigin>
 </head>
 <body>
-<a class="skip" href="#list">그래프를 건너뛰고 목록으로</a>
+<a class="skip" href="#list">목록으로 건너뛰기</a>
 
 <header class="gh-top">
   <a class="gh-home" href="./">← estudy</a>
   <h1 class="gh-title">지식 그래프</h1>
   <p class="gh-stats" id="stats" aria-live="polite">불러오는 중…</p>
+  <button class="icon-btn theme-btn" id="theme" type="button" aria-label="테마: 시스템 (클릭하여 전환)" title="테마: 시스템">
+    <svg class="ic ic-light" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <circle cx="12" cy="12" r="4.2"></circle>
+      <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"></path>
+    </svg>
+    <svg class="ic ic-dark" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M20 14.4A8.4 8.4 0 0 1 9.6 4a8.4 8.4 0 1 0 10.4 10.4Z"></path>
+    </svg>
+    <svg class="ic ic-system" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <rect x="3" y="4.6" width="18" height="12.4" rx="1.4"></rect>
+      <path d="M9 20.4h6M12 17v3.4"></path>
+    </svg>
+  </button>
 </header>
 
 <main class="gh-main">
   <section class="gh-canvas-wrap" aria-label="그래프 캔버스">
     <form class="gh-toolbar" id="toolbar" role="search" autocomplete="off">
       <label class="visually-hidden" for="q">노트 제목 검색 (초성 가능)</label>
-      <input id="q" type="search" placeholder="검색 — 초성도 됩니다 (예: ㅈㄱㅎ)" spellcheck="false" enterkeyhint="search" disabled>
-      <label class="gh-select">
-        <span class="visually-hidden">섹션</span>
-        <select id="section" disabled><option value="">섹션…</option></select>
-      </label>
-      <button type="button" id="toggle-scope" class="gh-btn" aria-pressed="false" disabled>전체 보기</button>
+      <input id="q" type="search" placeholder="검색" spellcheck="false" enterkeyhint="search" disabled>
+      <label class="visually-hidden" for="section">섹션</label>
+      <select id="section" disabled><option value="">전체</option></select>
+      <button type="button" id="toggle-scope" class="gh-btn" aria-pressed="false" disabled>섹션만</button>
       <button type="button" id="clear" class="gh-btn" disabled>초기화</button>
-      <button type="button" id="fit" class="gh-btn" title="화면에 맞춤 (0)" disabled>맞춤</button>
+      <button type="button" id="fit" class="gh-btn" aria-label="화면에 맞춤 (0)" disabled>맞춤</button>
     </form>
 
     <canvas id="graph" tabindex="-1" aria-hidden="true"></canvas>
-
-    <div id="tooltip" class="gh-tooltip" role="tooltip" hidden></div>
-    <p class="gh-hint" id="hint">드래그로 이동 · 휠/핀치로 확대 · 클릭으로 노트 열기 · Esc 로 포커스 해제</p>
-    <noscript>
-      <p class="gh-noscript">이 페이지의 그래프 캔버스는 JavaScript 가 필요합니다. 아래 텍스트 목록은 그대로 쓸 수 있습니다.</p>
-    </noscript>
   </section>
 
   <aside class="gh-side" id="side">
@@ -50,18 +64,17 @@
       <h2 class="gh-h2" id="focus-title"></h2>
       <p class="gh-meta" id="focus-meta"></p>
       <div class="gh-focus-actions">
-        <a id="focus-open" class="gh-btn gh-btn-primary" href="#">노트 열기</a>
-        <button type="button" id="focus-ego" class="gh-btn" aria-pressed="false">이웃만 보기</button>
-        <label class="gh-depth"><span>깊이</span>
-          <select id="ego-depth"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option></select>
+        <a id="focus-open" class="gh-btn gh-btn-primary" href="#">열기</a>
+        <button type="button" id="focus-ego" class="gh-btn" aria-pressed="false">이웃</button>
+        <label class="gh-depth"><span class="visually-hidden">이웃 깊이</span>
+          <select id="ego-depth" aria-label="이웃 깊이"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option></select>
         </label>
       </div>
     </div>
-    <h2 class="gh-h2" id="list-title">노트 목록</h2>
+    <h2 class="gh-h2" id="list-title">노트</h2>
     <p class="gh-meta" id="list-meta"></p>
-    <!-- 텍스트 결과/백링크 목록: JS 없음·스크린리더 기본 경로. 항목은 Tab 으로 순회하며, 포커스된 항목이 캔버스에서 포커스 링을 받는다. -->
     <ol class="gh-list" id="list" aria-labelledby="list-title">
-      <li class="gh-list-empty">JavaScript 가 켜지면 890 편의 노트가 여기에 나열됩니다. <a href="./">홈 색인으로 이동</a></li>
+      <li class="gh-list-empty"><a href="./">estudy 색인</a></li>
     </ol>
   </aside>
 </main>
