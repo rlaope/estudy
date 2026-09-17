@@ -26,7 +26,7 @@ jobs:
 
       - uses: Swatinem/rust-cache@v2
         with:
-          workspaces: tools/graph
+          workspaces: .
 
       - uses: peaceiris/actions-hugo@v3.2.1
         with:
@@ -42,13 +42,13 @@ jobs:
 
       - name: Build graph artifacts and staged content tree
         run: |
-          cargo run --release --manifest-path tools/graph/Cargo.toml -p graph-build -- \
+          cargo run --release -p graph-build -- \
             --root . --out site/generated --stage .cache/content
 
       - name: Build WASM graph module
         run: |
           wasm-pack build site/graph/crates/graph-wasm --release --target web \
-            --out-dir ../../../site/static/graph/pkg --out-name graph_wasm
+            --out-dir ../../../static/graph/pkg --out-name graph_wasm
 
       - name: Build site
         run: |
