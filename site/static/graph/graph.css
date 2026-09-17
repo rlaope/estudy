@@ -46,27 +46,27 @@
 }
 [data-theme="dark"] {
   color-scheme: dark;
-  /* 우주 색감: 살짝 푸른 심연 배경 + 별빛 노드 + 성단 같은 엣지 */
-  --bg: #05070f; --fg: #dfe6f5; --muted: #8fa0c4; --faint: #6b7c9e; --line: #1b2437;
-  --link: #7aa2ff; --link-visited: #b9a6ff; --code-bg: #0b1020;
-  --graph-edge: #6b86d6; --graph-edge-alpha: 0.13;
-  --graph-node: #9fb0d8; --graph-node-neighbor: #eaf0ff;
-  --graph-node-current: #7aa2ff; --graph-node-visited: #b9a6ff;
+  /* 참조(Obsidian Advanced Graph View) 픽셀 분석 결과: 배경 #090717(딥 인디고), 노드=클러스터 색(청록~보라), 선은 아주 옅게 */
+  --bg: #090717; --fg: #dfe4f5; --muted: #8e97c4; --faint: #6b74a0; --line: #1a1b30;
+  --link: #8aa6ff; --link-visited: #b9a6ff; --code-bg: #10112a;
+  --graph-edge: #8090d0; --graph-edge-alpha: 0.16;
+  --graph-node: #9fb0d8; --graph-node-neighbor: #f2f6ff;
+  --graph-node-current: #a9c6ff; --graph-node-visited: #b9a6ff;
   --graph-star: #cfe0ff; --graph-star-warm: #ffe6c0;
-  --graph-label: #8fa0c4;           /* #8fa0c4 on #05070f ≈ 7.9:1 */
-  --graph-dim-alpha: 0.10; --graph-glow: 1; --graph-stars: 1;
+  --graph-label: #8e97c4;
+  --graph-dim-alpha: 0.12; --graph-glow: 1; --graph-stars: 1;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #05070f; --fg: #dfe6f5; --muted: #8fa0c4; --faint: #6b7c9e; --line: #1b2437;
-    --link: #7aa2ff; --link-visited: #b9a6ff; --code-bg: #0b1020;
-    --graph-edge: #6b86d6; --graph-edge-alpha: 0.13;
-    --graph-node: #9fb0d8; --graph-node-neighbor: #eaf0ff;
-    --graph-node-current: #7aa2ff; --graph-node-visited: #b9a6ff;
+    --bg: #090717; --fg: #dfe4f5; --muted: #8e97c4; --faint: #6b74a0; --line: #1a1b30;
+    --link: #8aa6ff; --link-visited: #b9a6ff; --code-bg: #10112a;
+    --graph-edge: #8090d0; --graph-edge-alpha: 0.16;
+    --graph-node: #9fb0d8; --graph-node-neighbor: #f2f6ff;
+    --graph-node-current: #a9c6ff; --graph-node-visited: #b9a6ff;
     --graph-star: #cfe0ff; --graph-star-warm: #ffe6c0;
-    --graph-label: #8fa0c4;
-    --graph-dim-alpha: 0.10; --graph-glow: 1; --graph-stars: 1;
+    --graph-label: #8e97c4;
+    --graph-dim-alpha: 0.12; --graph-glow: 1; --graph-stars: 1;
   }
 }
 

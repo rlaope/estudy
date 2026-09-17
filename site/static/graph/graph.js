@@ -172,6 +172,13 @@ async function main() {
   S.hubs.push(S.rootId);
   S.hubIndex = hubIndex;
   S.hubMask = new Uint8Array(n); for (const id of S.hubs) S.hubMask[id] = 1;
+  // 노드 → 섹션(카테고리) 색 인덱스 + 섹션별 노드 목록(선을 섹션 색으로 묶어 긋기 위해)
+  S.secOf = new Uint16Array(n);
+  const secIndex = new Map(); sections.forEach((name, k) => secIndex.set(name, k));
+  for (const nd of S.nodes) S.secOf[nd.id] = (nd.hub && secIndex.has(nd.title)) ? secIndex.get(nd.title) : (secIndex.get(nd.section) ?? 0);
+  S.bySection = Array.from({ length: Math.max(1, sections.length) }, () => []);
+  for (let i = 0; i < n; i++) S.bySection[S.secOf[i] % S.bySection.length].push(i);
+  S.allNodes = Array.from({ length: n }, (_, i) => i);
 
   const ok = wasm.load(pos, csr, S.nodes.map((x) => x.title).join('\n'),
     S.nodes.map((x, i) => (i < search.length ? search[i].choseong : '')).join('\n'), S.rootId);
@@ -334,6 +341,13 @@ function hoverSet() {
   return { centre, set };
 }
 
+// 섹션(카테고리)별 색 — 참조 그래프 팔레트(H 200~290, S 0.6~0.85, V 0.65~0.9) + 약간의 따뜻한 accent.
+const SEC_PALETTE = [
+  '#31c7d6', '#2fb0e0', '#3f97e6', '#4d83e8', '#5b72e8', '#6a63e6',
+  '#7a58e0', '#8a52d8', '#9a4fce', '#a851c4', '#b456b6', '#c05ca8',
+  '#cc649a', '#d66e8c', '#c98a6a', '#b9a05f', '#5fd0b0', '#48b7c9',
+];
+
 // 배경 별 필드: 정적 점 레이어. 리사이즈/테마 변경 때 1회만 다시 그린다 (매 프레임 비용 = drawImage 1회).
 // 다크에서만(--graph-stars: 1). 시드 고정 LCG 라 리사이즈해도 자리가 흔들리지 않는다.
 function buildStars() {
@@ -363,40 +377,47 @@ function drawEdges(target, hs) {
   g.setTransform(1, 0, 0, 1, 0, 0);
   g.clearRect(0, 0, target.width, target.height);
   g.setTransform(dpr, 0, 0, dpr, 0, 0);
-  g.lineWidth = 1; // ×dpr 은 transform 이 처리
-  g.strokeStyle = TOKENS.edge;
+  g.lineWidth = 1;
   g.lineCap = 'round';
   const vis = S.visible, off = S.offsets, tg = S.targets, pos = S.pos;
-  let lines = 0, csr = 0;
-  // 한 패스 = 보이는 CSR 타깃을 전부 훑고, 무방향 엣지는 (u<v) 한 번만 긋는다.
-  const pass = (alpha, pred, count) => {
-    g.globalAlpha = alpha; g.beginPath();
-    for (let u = 0; u < S.n; u++) {
+  const nSec = SEC_PALETTE.length;
+  // 통계는 한 번만 훑어서 센다(선 긋기 패스는 색 묶음 단위).
+  let csr = 0, lines = 0;
+  for (let u = 0; u < S.n; u++) {
+    if (!vis[u]) continue;
+    csr += off[u + 1] - off[u];
+    for (let k = off[u]; k < off[u + 1]; k++) { const v = tg[k]; if (v > u && vis[v]) lines++; }
+  }
+  const stroke = (nodes, color, alpha, pred) => {
+    g.globalAlpha = alpha; g.strokeStyle = color; g.beginPath();
+    for (let x = 0; x < nodes.length; x++) {
+      const u = nodes[x];
       if (!vis[u]) continue;
       const ux = pos[2 * u] * scale + tx, uy = pos[2 * u + 1] * scale + ty;
       for (let k = off[u]; k < off[u + 1]; k++) {
-        const v = tg[k]; if (!vis[v]) continue;
-        if (count) csr++;
-        if (v < u || !pred(u, v)) continue;
-        lines++;
+        const v = tg[k];
+        if (v < u || !vis[v]) continue;
+        if (pred && !pred(u, v)) continue;
         g.moveTo(ux, uy); g.lineTo(pos[2 * v] * scale + tx, pos[2 * v + 1] * scale + ty);
       }
     }
     g.stroke();
   };
-  if (!hs) { pass(TOKENS.edgeAlpha, () => true, true); }
-  else {
+  if (!hs) {
+    // 카테고리(=섹션) 색으로 성단처럼 — 섹션마다 한 패스.
+    for (let si = 0; si < nSec; si++) stroke(S.bySection[si], SEC_PALETTE[si], TOKENS.edgeAlpha, null);
+  } else {
     const hot = (u, v) => hs.set[u] && hs.set[v] && (u === hs.centre || v === hs.centre);
-    pass(TOKENS.edgeAlpha * TOKENS.dimAlpha * 2, (u, v) => !hot(u, v), true);
-    // 강조 경로: 라이트 = fg 1px, 다크 = 약한 additive 이중 스트로크(넓고 옅게 + 가늘고 진하게). blur/shadow 없음.
-    g.strokeStyle = TOKENS.neighbor;
+    const dim = TOKENS.edgeAlpha * TOKENS.dimAlpha * 2;
+    for (let si = 0; si < nSec; si++) stroke(S.bySection[si], SEC_PALETTE[si], dim, (u, v) => !hot(u, v));
+    // 강조 경로만 밝게 + 아주 약한 글로우(blur/shadow 없이 'lighter' 이중 스트로크)
     if (TOKENS.glow) {
       g.globalCompositeOperation = 'lighter';
-      g.lineWidth = 2.5; pass(0.18, hot, false);
-      g.lineWidth = 1; pass(0.85, hot, false);
+      g.lineWidth = 2.5; stroke(S.allNodes, TOKENS.neighbor, 0.22, hot);
+      g.lineWidth = 1; stroke(S.allNodes, TOKENS.neighbor, 0.9, hot);
       g.globalCompositeOperation = 'source-over';
     } else {
-      pass(0.8, hot, false);
+      stroke(S.allNodes, TOKENS.neighbor, 0.85, hot);
     }
     g.lineWidth = 1;
   }
@@ -440,7 +461,10 @@ function draw() {
 
   // 노드: 색 상태 기계 → 배치(색별 한 path). 허브는 fg 색(색을 추가하지 않고 밝기만 다르게).
   const ns = nodeScale();
-  const groups = { dim: [], def: [], visited: [], hub: [], neighbor: [], current: [] };
+  const nSec = SEC_PALETTE.length;
+  const dimBySec = Array.from({ length: nSec }, () => []);
+  const inkBySec = Array.from({ length: nSec }, () => []);
+  const hubArr = [], neighArr = [], curArr = [], sec = S.secOf;
   const vis = S.visible, match = S.match, hubMask = S.hubMask;
   let drawn = 0;
   for (let i = 0; i < S.n; i++) {
@@ -449,15 +473,12 @@ function draw() {
     const r = Math.max(1, S.radius[i] * ns);
     if (sx < -r || sy < -r || sx > S.w + r || sy > S.h + r) continue;
     drawn++;
-    let key;
-    if (i === S.current) key = 'current';
-    else if (hs && hs.set[i]) key = 'neighbor';
-    else if (hs && !hs.set[i]) key = 'dim';
-    else if (match && !match[i]) key = 'dim';
-    else if (hubMask[i]) key = 'hub';
-    else if (S.visited.has(S.nodes[i].path)) key = 'visited';
-    else key = 'def';
-    groups[key].push(sx, sy, r);
+    const si = sec[i] % nSec;
+    if (i === S.current) curArr.push(sx, sy, r);
+    else if (hs && hs.set[i]) neighArr.push(sx, sy, r);
+    else if ((hs && !hs.set[i]) || (match && !match[i])) dimBySec[si].push(sx, sy, r);
+    else if (hubMask[i]) hubArr.push(sx, sy, r);
+    else inkBySec[si].push(sx, sy, r);
   }
   S.drawnNodes = drawn;
   const fillGroup = (arr, color, alpha) => {
@@ -469,9 +490,9 @@ function draw() {
   // 별빛 헤일로: 노드 뒤에 아주 옅은 발광(다크 전용). blur/shadow 없이 'lighter' 원 하나만.
   if (TOKENS.glow) {
     ctx.globalCompositeOperation = 'lighter';
-    const halo = (arr, color, k) => {
+    const halo = (arr, color, k, alpha) => {
       if (!arr.length) return;
-      ctx.globalAlpha = 0.10; ctx.fillStyle = color; ctx.beginPath();
+      ctx.globalAlpha = alpha === undefined ? 0.10 : alpha; ctx.fillStyle = color; ctx.beginPath();
       for (let i = 0; i < arr.length; i += 3) {
         const rr = arr[i + 2] * k;
         ctx.moveTo(arr[i] + rr, arr[i + 1]);
@@ -479,17 +500,18 @@ function draw() {
       }
       ctx.fill();
     };
-    halo(groups.hub, TOKENS.neighbor, 3.0);
-    halo(groups.neighbor, TOKENS.neighbor, 3.2);
-    halo(groups.current, TOKENS.current, 3.6);
+    for (let si = 0; si < nSec; si++) halo(inkBySec[si], SEC_PALETTE[si], 2.8, 0.07);
+    halo(hubArr, TOKENS.neighbor, 3.2, 0.16);
+    halo(neighArr, TOKENS.neighbor, 3.4, 0.16);
+    halo(curArr, TOKENS.current, 3.8, 0.20);
     ctx.globalCompositeOperation = 'source-over';
   }
-  fillGroup(groups.dim, TOKENS.node, TOKENS.dimAlpha * 2);
-  fillGroup(groups.def, TOKENS.node, 1);
-  fillGroup(groups.visited, TOKENS.visited, 1);
-  fillGroup(groups.hub, TOKENS.neighbor, 1);
-  fillGroup(groups.neighbor, TOKENS.neighbor, 1);
-  fillGroup(groups.current, TOKENS.current, 1);
+  // 카테고리 색 노드(별), 흐린 노드는 같은 색을 낮은 알파로
+  for (let si = 0; si < nSec; si++) fillGroup(inkBySec[si], SEC_PALETTE[si], 1);
+  for (let si = 0; si < nSec; si++) fillGroup(dimBySec[si], SEC_PALETTE[si], TOKENS.dimAlpha * 1.6);
+  fillGroup(hubArr, TOKENS.neighbor, 1);
+  fillGroup(neighArr, TOKENS.neighbor, 1);
+  fillGroup(curArr, TOKENS.current, 1);
   ctx.globalAlpha = 1;
 
   // 포커스 링 (키보드 포커스 / ego 중심 / 선택) — accent 1px
