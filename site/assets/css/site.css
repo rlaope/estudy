@@ -139,6 +139,10 @@ h4, h5, h6 { font-size: 17px; }
   gap: var(--space-3);
   padding: var(--space-2) 0 var(--space-4);
 }
+/* 넓은 화면: 브랜드와 유틸 버튼 사이 거리를 약 10% 더 벌린다(본문 컬럼은 그대로). */
+@media (min-width: 760px) {
+  .site-header { margin-left: -32px; margin-right: -32px; }
+}
 .brand { font-weight: 700; }
 .brand a { color: inherit; text-decoration: none; }
 .brand a:hover { text-decoration: underline; }
@@ -222,7 +226,7 @@ h4, h5, h6 { font-size: 17px; }
 .lang-switch .sep { opacity: 0.45; }
 
 .index-groups { margin: 0; }
-.index-group { margin: 0 0 var(--space-5); }
+.index-group { margin: 0 0 calc(var(--space-5) + 4px); }
 .index-group > h2 {
   font-size: 20px;
   margin: 0 0 var(--space-3);
@@ -235,7 +239,7 @@ h4, h5, h6 { font-size: 17px; }
 .index-group > h2 a:hover { text-decoration: underline; }
 .index-group > h2 .cnt { color: var(--faint); font-weight: 400; font-size: 17px; }
 .index-list { list-style: none; margin: 0; padding: 0; }
-.index-list li { display: flex; gap: 6px; align-items: baseline; margin: 0 0 1px; }
+.index-list li { display: flex; gap: 6px; align-items: baseline; margin: 0 0 3px; }
 .index-list li.d1 { padding-left: 16px; }
 .index-list li.d2 { padding-left: 32px; }
 .index-list li.d3 { padding-left: 48px; }
