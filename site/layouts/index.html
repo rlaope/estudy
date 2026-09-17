@@ -79,7 +79,7 @@
       <ul>
         {{- range $i, $g := $groups }}
         {{- if $g.links }}
-        <li><a href="#g-{{ $i }}">{{ $g.name }} <span class="cnt">· {{ len $g.links }}</span></a></li>
+        <li><a href="#g-{{ $i }}"><span class="nm">{{ $g.name }}</span><span class="cnt">· {{ len $g.links }}</span></a></li>
         {{- end }}
         {{- end }}
       </ul>

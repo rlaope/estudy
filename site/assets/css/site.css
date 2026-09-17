@@ -178,14 +178,23 @@ h4, h5, h6 { font-size: 17px; }
 /* 홈: 카테고리 레일(넓은 화면에서 좌측 sticky) + 목록 */
 .home-layout { display: grid; grid-template-columns: 1fr; gap: var(--space-5); }
 @media (min-width: 1080px) {
-  .home-layout { grid-template-columns: 168px 1fr; gap: var(--space-6); }
+  .home-layout { grid-template-columns: 200px 1fr; gap: var(--space-6); }
   .cat-rail { position: sticky; top: var(--space-4); align-self: start; max-height: calc(100vh - 32px); overflow-y: auto; }
 }
 .cat-rail ul { list-style: none; margin: 0; padding: 0; }
 .cat-rail li { margin: 0 0 2px; }
-.cat-rail a { color: var(--muted); text-decoration: none; font-size: 15px; }
+.cat-rail a {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  justify-content: space-between;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
 .cat-rail a:hover { color: var(--fg); text-decoration: underline; }
-.cat-rail .cnt { color: var(--faint); }
+.cat-rail .nm { min-width: 0; }
+.cat-rail .cnt { color: var(--faint); white-space: nowrap; }
 
 .index-groups { margin: 0; }
 .index-group { margin: 0 0 var(--space-5); }
