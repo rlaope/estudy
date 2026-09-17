@@ -153,7 +153,25 @@ pub fn build(notes: &[String], records: &[Vec<LinkRecord>]) -> Graph {
     }
 
     // (4) README 색인 계층: 직접 링크 + 중첩 목록의 부모→자식
-    if let Ok(readme) = notes.binary_search_by(|n| n.as_str().cmp("README.md")) {
+    // README 파일명을 하드코딩하지 않는다 — 루트의 `README*.md` 중 대표 하나를 고른다
+    // (`README.md` 가 있으면 그것, 없으면 정렬상 첫 번째, 예: `README.ko.md`).
+    let readme = {
+        let root_readmes: Vec<usize> = notes
+            .iter()
+            .enumerate()
+            .filter(|(_, n)| !n.contains('/') && {
+                let lower = n.to_lowercase();
+                lower.ends_with(".md") && lower.starts_with("readme")
+            })
+            .map(|(i, _)| i)
+            .collect();
+        root_readmes
+            .iter()
+            .copied()
+            .find(|&i| notes[i].to_lowercase() == "readme.md")
+            .or_else(|| root_readmes.first().copied())
+    };
+    if let Some(readme) = readme {
         for r in &records[readme] {
             match &r.kind {
                 Kind::Note(j) => add(readme, *j, 4, &mut bd, &mut set),

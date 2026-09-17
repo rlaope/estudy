@@ -8,10 +8,10 @@
     <span class="lang-switch" role="group" aria-label="언어 / Language">
       {{- if eq (site.Params.lang | default "ko") "en" -}}
         {{- $rel := strings.TrimPrefix (strings.TrimSuffix "/" $enPath) $u.Path -}}
-        <a href="{{ $u.Scheme }}://{{ $u.Host }}{{ $koPath }}{{ strings.TrimPrefix "/" $rel }}" hreflang="ko" title="한국어로 보기">한국어</a><span class="sep">/</span><span class="on" aria-current="true">EN</span>
+        <a href="{{ $u.Scheme }}://{{ $u.Host }}{{ $koPath }}{{ strings.TrimPrefix "/" $rel }}" hreflang="ko" title="한국어로 보기">한국어</a><span class="sep">/</span><span class="on" aria-current="true">English</span>
       {{- else -}}
         {{- $rel := strings.TrimPrefix (strings.TrimSuffix "/" $koPath) $u.Path -}}
-        <span class="on" aria-current="true">한국어</span><span class="sep">/</span><a href="{{ $u.Scheme }}://{{ $u.Host }}{{ $enPath }}{{ strings.TrimPrefix "/" $rel }}" hreflang="en" title="View in English">EN</a>
+        <span class="on" aria-current="true">한국어</span><span class="sep">/</span><a href="{{ $u.Scheme }}://{{ $u.Host }}{{ $enPath }}{{ strings.TrimPrefix "/" $rel }}" hreflang="en" title="View in English">English</a>
       {{- end -}}
     </span>
     <button class="icon-btn theme-btn" id="theme" type="button" aria-label="테마 전환" title="테마">

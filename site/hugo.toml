@@ -105,6 +105,8 @@ disableKinds = ['taxonomy', 'term', 'rss']
   lang = 'ko'
   koBase = 'https://rlaope.github.io/estudy'
   enBase = 'https://rlaope.github.io/estudy/en'
+  # KO 홈 색인의 출처(한국어 README). 영어 README.md 는 도구가 생성하는 GitHub 기본 문서다.
+  readmeFile = 'README.ko.md'
   # 언어 전환에서 바꿔 끼울 사이트 경로(운영 기준). 다른 호스트로 배포하면 여기만 바꾸면 된다.
   koPath = '/estudy/'
   enPath = '/estudy/en/'
