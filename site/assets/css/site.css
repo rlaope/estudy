@@ -10,8 +10,8 @@
   --font-mono: 'Geist Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'Pretendard Variable', monospace;
   --font-sans: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif;
 
-  --size: 16px;
-  --leading: 1.4;
+  --size: 17px;
+  --leading: 1.45;
   --measure: 640px;
 
   --bg: #ffffff;
@@ -82,10 +82,10 @@ img, svg, video { max-width: 100%; height: auto; }
 hr { border: 0; border-top: 1px solid var(--line); margin: var(--space-5) 0; }
 
 h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.25; margin: var(--space-5) 0 var(--space-2); }
-h1 { font-size: 32px; }
-h2 { font-size: 20px; }
-h3 { font-size: 18px; }
-h4, h5, h6 { font-size: 16px; }
+h1 { font-size: 36px; }
+h2 { font-size: 22px; }
+h3 { font-size: 19px; }
+h4, h5, h6 { font-size: 17px; }
 
 /* ---------- 헤더: 브랜드 + 우상단 코너 아이콘 ---------- */
 .site-header {
@@ -103,35 +103,47 @@ h4, h5, h6 { font-size: 16px; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border: 1px solid var(--line);
   border-radius: 50%;
   color: var(--fg);
   text-decoration: none;
 }
 .icon-btn:hover { background: var(--code-bg); }
-.icon-btn svg { width: 16px; height: 16px; display: block; }
+.icon-btn svg { width: 17px; height: 17px; display: block; }
 
 /* ---------- 홈: 프로필 → estudy → 카테고리별 한 줄 리스트 ---------- */
 .profile { text-align: center; margin: var(--space-6) 0 0; }
 .avatar {
-  width: 88px;
-  height: 88px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   display: block;
   margin: 0 auto var(--space-3);
 }
-.profile-name { margin: 0; color: var(--muted); font-size: 14px; }
-.home-title { text-align: center; margin: var(--space-4) 0 var(--space-6); font-size: 32px; }
+.profile-name { margin: 0; color: var(--muted); font-size: 15px; }
+.home-title { text-align: center; margin: var(--space-4) 0 var(--space-6); font-size: 36px; }
+
+/* 홈: 카테고리 레일(넓은 화면에서 좌측 sticky) + 목록 */
+.home-layout { display: grid; grid-template-columns: 1fr; gap: var(--space-5); }
+@media (min-width: 1080px) {
+  .home-layout { grid-template-columns: 168px 1fr; gap: var(--space-6); }
+  .cat-rail { position: sticky; top: var(--space-4); align-self: start; max-height: calc(100vh - 32px); overflow-y: auto; }
+}
+.cat-rail ul { list-style: none; margin: 0; padding: 0; }
+.cat-rail li { margin: 0 0 2px; }
+.cat-rail a { color: var(--muted); text-decoration: none; font-size: 15px; }
+.cat-rail a:hover { color: var(--fg); text-decoration: underline; }
 
 .index-groups { margin: 0; }
 .index-group { margin: 0 0 var(--space-5); }
 .index-group > h2 {
-  font-size: 18px;
+  font-size: 20px;
   margin: 0 0 var(--space-2);
   padding: 0;
   border: 0;
+  scroll-margin-top: var(--space-4);
 }
 .index-group > h2 a { color: inherit; text-decoration: none; }
 .index-group > h2 a:hover { text-decoration: underline; }
@@ -143,12 +155,12 @@ h4, h5, h6 { font-size: 16px; }
 /* ---------- 노트 ---------- */
 .main { min-width: 0; }
 .article-header { margin-bottom: var(--space-5); }
-.crumbs { font-size: 14px; color: var(--muted); margin: 0 0 var(--space-2); }
+.crumbs { font-size: 15px; color: var(--muted); margin: 0 0 var(--space-2); }
 .crumbs a { color: var(--muted); }
 .crumbs .sep { padding: 0 4px; color: var(--faint); }
 .crumbs .cur { color: var(--faint); }
-.article-title { margin: var(--space-2) 0 var(--space-2); font-size: 32px; }
-.meta { font-size: 14px; color: var(--muted); margin: 0; }
+.article-title { margin: var(--space-2) 0 var(--space-2); font-size: 36px; }
+.meta { font-size: 15px; color: var(--muted); margin: 0; }
 .meta .sep { padding: 0 6px; color: var(--faint); }
 
 .prose { max-width: 100%; }
@@ -167,7 +179,7 @@ h4, h5, h6 { font-size: 16px; }
 .prose code {
   background: var(--code-bg);
   padding: 1px 4px;
-  font-size: 14px;
+  font-size: 15px;
   font-family: var(--font-mono);
 }
 .prose pre {
@@ -175,7 +187,7 @@ h4, h5, h6 { font-size: 16px; }
   border: 1px solid var(--line);
   padding: var(--space-3) var(--space-4);
   overflow-x: auto;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.45;
   word-break: normal;
   overflow-wrap: normal;
@@ -193,7 +205,7 @@ h4, h5, h6 { font-size: 16px; }
 .prose .math-error { color: #b00020; }
 
 .article-footer { margin-top: var(--space-6); font-size: 14px; color: var(--muted); }
-.pager { display: flex; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-5); font-size: 14px; }
+.pager { display: flex; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-5); font-size: 15px; }
 .pager a { max-width: 48%; text-decoration: none; }
 .pager a:hover { text-decoration: underline; }
 .pager .dir { display: block; color: var(--faint); }
@@ -206,7 +218,7 @@ h4, h5, h6 { font-size: 16px; }
 .site-footer {
   margin-top: var(--space-6);
   padding-top: var(--space-3);
-  font-size: 14px;
+  font-size: 15px;
   color: var(--muted);
   display: flex;
   justify-content: space-between;

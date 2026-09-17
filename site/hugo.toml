@@ -98,7 +98,7 @@ disableKinds = ['taxonomy', 'term', 'rss']
   page = ['html']
 
 [params]
-  description = 'rlaope의 지식의 숲 — 소프트웨어를 공부하고 연구하며 남긴 기록들의 집합'
+  description = ''
   repoURL = 'https://github.com/rlaope/estudy'
   repoBranch = 'master'
   graphPath = 'graph.html'   # built by L2; home links to it

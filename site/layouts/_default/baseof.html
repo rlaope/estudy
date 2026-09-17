@@ -7,7 +7,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ $title }} · {{ site.Title }}{{ end }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsHome }}{{ site.Params.description }}{{ else }}{{ $title }} — {{ site.Params.description }}{{ end }}{{ end }}">
+{{- $desc := "" -}}
+{{- with .Description }}{{ $desc = . }}{{ else }}{{ if not .IsHome }}{{ $desc = printf "%s — %s" $title site.Title }}{{ else }}{{ $desc = site.Params.description }}{{ end }}{{ end -}}
+{{- with $desc }}<meta name="description" content="{{ . }}">
+{{ end -}}
 <meta name="color-scheme" content="light">
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 <meta name="generator" content="Hugo {{ hugo.Version }}">

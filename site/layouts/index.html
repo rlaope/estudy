@@ -6,17 +6,26 @@
     <p class="profile-name">{{ site.Params.authorName | default "rlaope" }}</p>
   </div>
   <h1 class="home-title">estudy<span class="dot">.</span></h1>
-  <div class="index-groups">
-    {{- range $sections }}
-    <section class="index-group">
-      <h2><a href="{{ .RelPermalink }}">{{ partial "secname.html" . }}</a></h2>
-      <ul class="index-list">
-        {{- range .RegularPagesRecursive }}
-        <li><a href="{{ .RelPermalink }}">{{ partial "title.html" . }}</a></li>
+  <div class="home-layout">
+    <nav class="cat-rail" aria-label="카테고리">
+      <ul>
+        {{- range $sections }}
+        <li><a href="#{{ .Section }}">{{ partial "secname.html" . }}</a></li>
         {{- end }}
       </ul>
-    </section>
-    {{- end }}
+    </nav>
+    <div class="index-groups">
+      {{- range $sections }}
+      <section class="index-group" id="{{ .Section }}">
+        <h2><a href="{{ .RelPermalink }}">{{ partial "secname.html" . }}</a></h2>
+        <ul class="index-list">
+          {{- range .RegularPagesRecursive }}
+          <li><a href="{{ .RelPermalink }}">{{ partial "title.html" . }}</a></li>
+          {{- end }}
+        </ul>
+      </section>
+      {{- end }}
+    </div>
   </div>
 </main>
 {{- end }}
