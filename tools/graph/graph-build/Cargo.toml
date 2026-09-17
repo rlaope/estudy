@@ -1,0 +1,10 @@
+[package]
+name = "graph-build"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "estudy build-time pipeline CLI: staged Hugo content tree + site/generated artifacts"
+publish = false
+
+[dependencies]
+graph-core = { path = "../graph-core" }

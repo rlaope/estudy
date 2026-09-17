@@ -1,0 +1,18 @@
+[package]
+name = "graph-core"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "estudy content pipeline core: staged content tree, link normalization, frozen graph/search artifacts"
+publish = false
+
+[features]
+default = ["native-layout"]
+# fa2(ForceAtlas2 구현, MIT)는 rayon 에 의존한다 → WASM 타깃 금지.
+# WASM 쪽에서 이 크레이트를 참조할 때는 default-features = false 로 끌 것.
+native-layout = ["dep:fa2"]
+
+[dependencies]
+fa2 = { version = "0.3.0", optional = true }
+sha2 = "0.10"
+unicode-normalization = "0.1"

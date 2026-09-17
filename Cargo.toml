@@ -1,0 +1,12 @@
+# L1 content-pipeline (Rust) — cargo 워크스페이스 루트 매니페스트.
+#
+# 파이프라인 실체는 tools/graph 아래에 있다:
+#   tools/graph/graph-core   라이브러리 (스캔/링크 정규화/그래프/fa2 레이아웃/산출물)
+#   tools/graph/graph-build  바이너리   (CLI: --root --out --stage)
+#
+# 리포 루트에서 `cargo run -p graph-build --release -- --root . --out site/generated --stage .cache/content`
+# 가 그대로 동작하도록 워크스페이스 선언만 루트에 둔다.
+# 빌드 산출물은 .cargo/config.toml 의 target-dir 설정으로 .cache/target 에 격리된다.
+[workspace]
+resolver = "2"
+members = ["tools/graph/graph-core", "tools/graph/graph-build"]

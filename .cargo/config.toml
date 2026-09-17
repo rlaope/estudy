@@ -1,0 +1,5 @@
+# L1 content-pipeline 전용 cargo 설정.
+# 목적: `cargo run -p graph-build ...` 를 리포 루트에서 실행해도 빌드 산출물이
+# 리포 트리(target/)로 새지 않도록 .cache/ 안으로 격리한다. (.cache 는 L1 write scope)
+[build]
+target-dir = ".cache/target"
