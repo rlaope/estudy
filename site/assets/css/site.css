@@ -189,7 +189,7 @@ h4, h5, h6 { font-size: 17px; }
   .cat-rail {
     position: fixed;
     top: var(--space-5);
-    left: calc(50% - var(--measure) / 2 - 38px - 216px);
+    left: calc(50% - var(--measure) / 2 - 48px - 216px);
     width: 216px;
     max-height: calc(100vh - 48px);
     overflow-y: auto;
@@ -228,7 +228,7 @@ h4, h5, h6 { font-size: 17px; }
 .index-list li.d2 { padding-left: 32px; }
 .index-list li.d3 { padding-left: 48px; }
 .index-list .dot { color: var(--faint); flex: none; }
-.index-list a { text-decoration: none; min-width: 0; }
+.index-list a { text-decoration: none; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .index-list a:hover { text-decoration: underline; }
 
 /* ---------- 노트 ---------- */
