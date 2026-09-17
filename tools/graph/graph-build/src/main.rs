@@ -40,13 +40,14 @@ fn main() -> ExitCode {
             "--stage" => take(a).map(|v| opts.stage = PathBuf::from(v)),
             "--base-path" => take(a).map(|v| opts.base_path = v),
             "--content-prefix" => take(a).map(|v| opts.content_prefix = v),
+            "--layout" => take(a).map(|v| opts.layout_kind = v),
             "--seed" => take(a).and_then(|v| parse_u64(&v, "--seed").map(|n| opts.seed = n)),
             "--iterations" => take(a)
                 .and_then(|v| parse_u64(&v, "--iterations").map(|n| opts.iterations = n as usize)),
             "-h" | "--help" => {
                 println!(
                     "graph-build --root <dir> --out <dir> --stage <dir>\n\
-                     \x20 [--content-prefix brains] [--base-path /estudy/] [--seed 20260917] [--iterations 300]"
+                     \x20 [--content-prefix brains] [--layout spiral|fa2] [--base-path /estudy/] [--seed 20260917] [--iterations 300]"
                 );
                 return ExitCode::SUCCESS;
             }

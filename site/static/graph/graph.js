@@ -42,6 +42,8 @@ function readTokens() {
     accent: cssVar('--link', '#0000ee'),
     glow: cssVar('--graph-glow', '0') === '1',
     stars: cssVar('--graph-stars', '0') === '1',
+    star: cssVar('--graph-star', '#cfe0ff'),
+    starWarm: cssVar('--graph-star-warm', '#ffe6c0'),
     mono: cssVar('--font-mono', 'ui-monospace, monospace'),
   };
 }
@@ -116,7 +118,7 @@ const S = {
   visited: new Set(),
   edgeLayer: null, edgeDirty: true, starLayer: null, frame: 0,
   drawnNodes: 0, drawnTargets: 0, drawnLines: 0, drawnLabels: 0,
-  listOffset: 0,
+  listOffset: 0, fitScale: 0, autoFit: true,
 };
 let wasm;
 
@@ -211,6 +213,7 @@ async function main() {
 
   // 헤드리스 검증용 훅 (UI 동작에는 쓰이지 않는다)
   window.__graph = {
+    build: 'estudy-graph-v2',
     firstPaintMs: firstPaint, stats: Array.from(st), meta,
     get drawn() { return { nodes: S.drawnNodes, csrTargets: S.drawnTargets, lines: S.drawnLines, labels: S.drawnLabels }; },
     search: (q) => Array.from(wasm.search(q)).map((i) => ({ id: i, title: S.nodes[i].title })),
@@ -279,6 +282,8 @@ function resize() {
   canvas.style.width = S.w + 'px'; canvas.style.height = S.h + 'px';
   S.edgeLayer = new OffscreenCanvasOrFallback(canvas.width, canvas.height);
   S.edgeDirty = true; S.starLayer = null;
+  // 캔버스 높이는 첫 프레임 뒤에 확정된다. 사용자가 아직 조작하지 않았다면 크기 변화 때 다시 맞춘다.
+  if (S.autoFit && S.pos && S.visible) fitToVisible(false);
 }
 function OffscreenCanvasOrFallback(w, h) {
   if (typeof OffscreenCanvas === 'function') return new OffscreenCanvas(w, h);
@@ -297,7 +302,8 @@ function fitToVisible(animate) {
   if (!cnt) return;
   const pad = 56;
   const spanX = Math.max(1, maxX - minX), spanY = Math.max(1, maxY - minY);
-  const scale = Math.min((S.w - 2 * pad) / spanX, (S.h - 2 * pad) / spanY, 6);
+  const scale = Math.min((S.w - 2 * pad) / spanX, (S.h - 2 * pad) / spanY, 512);
+  S.fitScale = scale;
   const target = { scale, tx: S.w / 2 - (minX + maxX) / 2 * scale, ty: S.h / 2 - (minY + maxY) / 2 * scale };
   if (!animate || reducedMotion) { S.view = target; S.edgeDirty = true; return; }
   animateView(target);
@@ -337,11 +343,14 @@ function buildStars() {
   g.setTransform(S.dpr, 0, 0, S.dpr, 0, 0);
   let seed = 0x9e3779b9;
   const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
-  const count = Math.round((S.w * S.h) / 9000);
-  g.fillStyle = TOKENS.neighbor;
+  // 별밭: 대부분 아주 옅은 점, 드물게 밝은 별. 살짝 푸른 톤 + 드물게 따뜻한 별.
+  const count = Math.round((S.w * S.h) / 5200);
   for (let k = 0; k < count; k++) {
-    const x = rnd() * S.w, y = rnd() * S.h, r = 0.4 + rnd() * 0.7;
-    g.globalAlpha = 0.08 + rnd() * 0.22;
+    const x = rnd() * S.w, y = rnd() * S.h, t = rnd();
+    const bright = t > 0.94;
+    const r = bright ? 1.0 + rnd() * 0.7 : 0.35 + rnd() * 0.5;
+    g.globalAlpha = bright ? 0.5 + rnd() * 0.4 : 0.08 + rnd() * 0.26;
+    g.fillStyle = rnd() > 0.96 ? TOKENS.starWarm : TOKENS.star;
     g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill();
   }
   g.globalAlpha = 1;
@@ -404,10 +413,12 @@ function drawEdges(target, hs) {
 // 겹침은 wasm(label_visible_masked) 이 차수 내림차순 그리디 AABB 로 걸러낸다.
 // wasm 은 zoom < 1.2 에서 후보를 차수 상위 24 로 자르므로, 마스크로 이미 좁힌 경우엔 zoom 을 LABEL_ZOOM 으로 넘겨 마스크 전체를 후보로 삼는다.
 function labelMask(vis, hs, match, scale) {
-  if (hs) { const m = orMask(hs.set, S.hubMask); return { mask: andMask(vis, m), zoom: LABEL_ZOOM }; }
-  if (match) return { mask: andMask(vis, match), zoom: LABEL_ZOOM };
-  if (scale >= LABEL_ZOOM) return { mask: vis, zoom: scale };
-  return { mask: andMask(vis, S.hubMask), zoom: LABEL_ZOOM };
+  const fit = S.fitScale || scale;
+  if (hs) { const m = orMask(hs.set, S.hubMask); return { mask: andMask(vis, m), zoom: scale }; }
+  if (match) return { mask: andMask(vis, match), zoom: scale };
+  // 줌은 fit 배율 기준으로 판단한다(레이아웃 좌표계가 바뀌어도 규칙이 유지되도록).
+  if (scale >= fit * 2.5) return { mask: vis, zoom: scale };
+  return { mask: andMask(vis, S.hubMask), zoom: scale };
 }
 
 function draw() {
@@ -455,6 +466,24 @@ function draw() {
     for (let k = 0; k < arr.length; k += 3) { ctx.moveTo(arr[k] + arr[k + 2], arr[k + 1]); ctx.arc(arr[k], arr[k + 1], arr[k + 2], 0, Math.PI * 2); }
     ctx.fill();
   };
+  // 별빛 헤일로: 노드 뒤에 아주 옅은 발광(다크 전용). blur/shadow 없이 'lighter' 원 하나만.
+  if (TOKENS.glow) {
+    ctx.globalCompositeOperation = 'lighter';
+    const halo = (arr, color, k) => {
+      if (!arr.length) return;
+      ctx.globalAlpha = 0.10; ctx.fillStyle = color; ctx.beginPath();
+      for (let i = 0; i < arr.length; i += 3) {
+        const rr = arr[i + 2] * k;
+        ctx.moveTo(arr[i] + rr, arr[i + 1]);
+        ctx.arc(arr[i], arr[i + 1], rr, 0, Math.PI * 2);
+      }
+      ctx.fill();
+    };
+    halo(groups.hub, TOKENS.neighbor, 3.0);
+    halo(groups.neighbor, TOKENS.neighbor, 3.2);
+    halo(groups.current, TOKENS.current, 3.6);
+    ctx.globalCompositeOperation = 'source-over';
+  }
   fillGroup(groups.dim, TOKENS.node, TOKENS.dimAlpha * 2);
   fillGroup(groups.def, TOKENS.node, 1);
   fillGroup(groups.visited, TOKENS.visited, 1);
@@ -504,6 +533,7 @@ function bindUI() {
   const pointers = new Map();
   let drag = null, pinch = null, moved = false;
   canvas.addEventListener('pointerdown', (e) => {
+    S.autoFit = false;
     canvas.setPointerCapture(e.pointerId);
     pointers.set(e.pointerId, { x: e.offsetX, y: e.offsetY });
     if (pointers.size === 1) { drag = { x: e.offsetX, y: e.offsetY, tx: S.view.tx, ty: S.view.ty }; moved = false; canvas.classList.add('dragging'); }
@@ -543,6 +573,7 @@ function bindUI() {
   canvas.addEventListener('pointerup', up); canvas.addEventListener('pointercancel', up);
   canvas.addEventListener('pointerleave', () => { if (!drag) { S.hover = NONE; canvas.classList.remove('over'); requestDraw(); } });
   canvas.addEventListener('wheel', (e) => {
+    S.autoFit = false;
     e.preventDefault();
     const k = Math.exp(-e.deltaY * (e.deltaMode === 1 ? 0.05 : 0.0015));
     zoomAt(e.offsetX, e.offsetY, k);
@@ -596,7 +627,11 @@ function bindUI() {
     const eb = e.target.closest('button[data-ego]'); if (eb) { e.preventDefault(); setEgo(Number(eb.dataset.ego)); }
   });
 }
-function clampScale(s) { return Math.min(12, Math.max(0.05, s)); }
+function clampScale(s) {
+  // 배율 한계는 fit 배율 기준(레이아웃 좌표계가 정규화돼 있어도 8배 확대 / 4배 축소로 유지).
+  const fit = S.fitScale || 6;
+  return Math.min(fit * 8, Math.max(fit * 0.25, s));
+}
 function zoomAt(x, y, k) {
   const s0 = S.view.scale, s1 = clampScale(s0 * k), kk = s1 / s0;
   S.view.scale = s1; S.view.tx = x - (x - S.view.tx) * kk; S.view.ty = y - (y - S.view.ty) * kk;

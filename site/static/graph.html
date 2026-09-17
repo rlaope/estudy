@@ -29,6 +29,17 @@
   <a class="gh-home" href="./">← estudy</a>
   <h1 class="gh-title">지식 그래프</h1>
   <p class="gh-stats" id="stats" aria-live="polite">불러오는 중…</p>
+  <button class="icon-btn" id="clear" type="button" aria-label="초기화" title="초기화" disabled>
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M4 12a8 8 0 1 0 2.6-5.9"></path>
+      <path d="M4 4.6V9h4.4"></path>
+    </svg>
+  </button>
+  <button class="icon-btn" id="fit" type="button" aria-label="화면에 맞춤" title="화면에 맞춤" disabled>
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5"></path>
+    </svg>
+  </button>
   <button class="icon-btn theme-btn" id="theme" type="button" aria-label="테마: 시스템 (클릭하여 전환)" title="테마: 시스템">
     <svg class="ic ic-light" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
       <circle cx="12" cy="12" r="4.2"></circle>
@@ -44,22 +55,21 @@
   </button>
 </header>
 
+<!-- 검색·섹션·전체보기 같은 기능은 화면에서 뺐다(요청). URL 파라미터(?q=, ?section=)로만 쓴다. -->
+<div hidden>
+  <label for="q">노트 제목 검색 (초성 가능)</label>
+  <input id="q" type="search" spellcheck="false" disabled>
+  <label for="section">섹션</label>
+  <select id="section" disabled><option value="">전체</option></select>
+  <button type="button" id="toggle-scope" aria-pressed="false" disabled></button>
+</div>
+
 <main class="gh-main">
   <section class="gh-canvas-wrap" aria-label="그래프 캔버스">
-    <form class="gh-toolbar" id="toolbar" role="search" autocomplete="off">
-      <label class="visually-hidden" for="q">노트 제목 검색 (초성 가능)</label>
-      <input id="q" type="search" placeholder="검색" spellcheck="false" enterkeyhint="search" disabled>
-      <label class="visually-hidden" for="section">섹션</label>
-      <select id="section" disabled><option value="">전체</option></select>
-      <button type="button" id="toggle-scope" class="gh-btn" aria-pressed="false" disabled>섹션만</button>
-      <button type="button" id="clear" class="gh-btn" disabled>초기화</button>
-      <button type="button" id="fit" class="gh-btn" aria-label="화면에 맞춤 (0)" disabled>맞춤</button>
-    </form>
-
     <canvas id="graph" tabindex="-1" aria-hidden="true"></canvas>
   </section>
 
-  <aside class="gh-side" id="side">
+  <aside class="gh-side" id="side" hidden>
     <div class="gh-focus" id="focus" hidden>
       <h2 class="gh-h2" id="focus-title"></h2>
       <p class="gh-meta" id="focus-meta"></p>

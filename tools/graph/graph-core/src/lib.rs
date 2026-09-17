@@ -30,6 +30,8 @@ pub struct Options {
     pub stage: PathBuf,
     /// 사이트 루트 기준 경로(앞뒤 슬래시 포함). GitHub Pages 프로젝트 사이트는 `/estudy/`.
     pub base_path: String,
+    /// 레이아웃 방식: `spiral`(섹션 순서 나선, 기본) 또는 `fa2`(ForceAtlas2).
+    pub layout_kind: String,
     /// 노트가 사는 리포 내 접두 디렉터리(예: `brains`). 사이트 URL 에서는 벗겨진다.
     pub content_prefix: String,
     pub seed: u64,
@@ -43,6 +45,7 @@ impl Default for Options {
             out: PathBuf::from("site/generated"),
             stage: PathBuf::from(".cache/content"),
             base_path: "/estudy/".to_string(),
+            layout_kind: "spiral".to_string(),
             content_prefix: "brains".to_string(),
             seed: layout::DEFAULT_SEED,
             iterations: layout::DEFAULT_ITERATIONS,
@@ -309,11 +312,37 @@ pub fn run(opts: &Options) -> Result<Report, String> {
         g.targets.len()
     );
 
-    // ── 5. 레이아웃 (fa2, 고정 시드 · 고정 반복) ───────────────────────────────
+    // ── 5. 레이아웃 (고정 시드 · 고정 반복) ───────────────────────────────────
+    // 나선 배치는 섹션 순서를 쓰므로 노트별 섹션 서수를 미리 계산한다.
+    let section_of: Vec<u32> = {
+        let mut names: Vec<&str> = note_paths.iter().map(|p| graph::top_section(p)).collect();
+        names.sort_unstable();
+        names.dedup();
+        let mut v: Vec<u32> = note_paths
+            .iter()
+            .map(|p| names.binary_search(&graph::top_section(p)).unwrap_or(0) as u32)
+            .collect();
+        // 섹션 허브는 자기 섹션 블록 안에 놓는다(허브가 중앙에 몰리지 않게). 루트 허브는 0.
+        for (name, _) in g.sections.iter() {
+            let ord = names.binary_search(&name.as_str()).unwrap_or(0) as u32;
+            v.push(ord);
+        }
+        while v.len() < g.node_count {
+            v.push(0);
+        }
+        v.truncate(g.node_count);
+        v
+    };
+    let compute = |seed: u64| -> Vec<(f32, f32)> {
+        match opts.layout_kind.as_str() {
+            "fa2" => layout::force_atlas2(g.node_count, &g.edges, seed, opts.iterations),
+            _ => layout::spiral_by_section(g.node_count, &section_of, seed),
+        }
+    };
     let t0 = Instant::now();
-    let pos_a = layout::force_atlas2(g.node_count, &g.edges, opts.seed, opts.iterations);
+    let pos_a = compute(opts.seed);
     let layout_seconds = t0.elapsed().as_secs_f64();
-    let pos_b = layout::force_atlas2(g.node_count, &g.edges, opts.seed, opts.iterations);
+    let pos_b = compute(opts.seed);
     let pos_bytes = layout::positions_to_le_bytes(&pos_a);
     let pos_bytes_b = layout::positions_to_le_bytes(&pos_b);
     let determinism_pos = pos_bytes == pos_bytes_b;
@@ -395,12 +424,13 @@ pub fn run(opts: &Options) -> Result<Report, String> {
         ));
     }
     let meta_json = format!(
-        "{{\n  \"nodes\": {},\n  \"edges\": {},\n  \"sections\": {},\n  \"built_at\": {},\n  \"root_sha256\": {},\n  \"layout\": \"fa2\",\n  \"seed\": {}\n}}\n",
+        "{{\n  \"nodes\": {},\n  \"edges\": {},\n  \"sections\": {},\n  \"built_at\": {},\n  \"root_sha256\": {},\n  \"layout\": {},\n  \"seed\": {}\n}}\n",
         g.node_count,
         g.targets.len(),
         sec_arr.finish_pretty("    "),
         json::string(&built_at),
         json::string(&root_sha256),
+        json::string(&opts.layout_kind),
         opts.seed
     );
     let meta_path = out_abs.join("meta.json");
