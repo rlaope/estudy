@@ -1,29 +1,101 @@
 {{ define "main" -}}
-{{- $sections := site.Sections -}}
+{{- /* 홈 색인은 README.md 를 단일 출처로 삼는다 — 그룹·순서·제목·개수 모두 README 그대로. */ -}}
+{{- $readme := os.ReadFile "README.md" -}}
+
+{{- /* 콘텐츠 루트 기준 소문자 경로 → 페이지 */ -}}
+{{- $notes := dict -}}
+{{- range site.RegularPages -}}
+  {{- $p := . -}}
+  {{- with .File -}}
+    {{- $notes = merge $notes (dict (lower .Path) $p) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $groups := slice -}}
+{{- $seen := dict -}}
+{{- $cur := -1 -}}
+{{- range $line := split $readme "\n" -}}
+  {{- $head := findRE `^####\s+\S.*$` $line -}}
+  {{- if $head -}}
+    {{- $groups = $groups | append (dict "name" (strings.TrimSpace (replaceRE `^####\s+` "" (index $head 0))) "links" (slice)) -}}
+    {{- $cur = len $groups | add -1 -}}
+  {{- else if ge $cur 0 -}}
+    {{- /* 라벨에 괄호/대괄호가 섞여도 안전하도록 URL 원문을 직접 순회한다. */ -}}
+    {{- range $u := findRE `https?://github\.com/rlaope/estudy/blob/master/[^)\s]+` $line -}}
+      {{- $p := index (split $u "blob/master/") 1 -}}
+      {{- $p = replaceRE `[#?].*$` "" $p -}}
+      {{- $p = (urls.Parse (printf "https://x/%s" $p)).Path | replaceRE `^/` "" | replaceRE `^brains/` "" -}}
+      {{- $key := lower $p -}}
+      {{- if and $key (not (index $seen $key)) -}}
+        {{- $page := index $notes $key -}}
+        {{- if not $page -}}
+          {{- $dir := replaceRE `/?index\.md$` "" $key -}}
+          {{- with site.GetPage (printf "/%s" $dir) -}}
+            {{- $page = . -}}
+          {{- end -}}
+        {{- end -}}
+        {{- with $page -}}
+          {{- /* 링크 라벨 = README 표기. 없으면 노트 제목. */ -}}
+          {{- $label := "" -}}
+          {{- with index (split $line (printf "](%s)" $u)) 0 -}}
+            {{- $seg := split . "[" -}}
+            {{- $label = index $seg (sub (len $seg) 1) | replaceRE `^\[` "" | plainify -}}
+          {{- end -}}
+          {{- if not $label -}}
+            {{- $label = partial "title.html" . -}}
+          {{- end -}}
+          {{- $g := index $groups $cur -}}
+          {{- $links := $g.links | append (dict "title" $label "url" .RelPermalink) -}}
+          {{- $groups = first $cur $groups | append (dict "name" $g.name "links" $links) -}}
+          {{- $seen = merge $seen (dict $key true) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* README 에 없는 노트는 마지막 그룹으로 모아 둔다(사이트에서 사라지지 않게). */ -}}
+{{- $extra := slice -}}
+{{- range site.RegularPages -}}
+  {{- $p := . -}}
+  {{- with .File -}}
+    {{- if not (index $seen (lower .Path)) -}}
+      {{- $extra = $extra | append (dict "title" (partial "title.html" $p) "url" $p.RelPermalink) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if $extra -}}
+  {{- $groups = $groups | append (dict "name" "색인 미등록" "links" $extra) -}}
+{{- end -}}
+
 <main id="main" class="main">
   <div class="profile">
-    <img class="avatar" src="{{ site.Params.avatarURL | default "https://github.com/rlaope.png" }}" alt="" width="88" height="88" loading="lazy">
+    <img class="avatar" src="{{ site.Params.avatarURL | default "https://github.com/rlaope.png" }}" alt="" width="96" height="96" loading="lazy">
     <p class="profile-name">{{ site.Params.authorName | default "rlaope" }}</p>
   </div>
   <h1 class="home-title">estudy<span class="dot">.</span></h1>
   <div class="home-layout">
-    <nav class="cat-rail" aria-label="카테고리">
+    <nav class="cat-rail" aria-label="색인">
       <ul>
-        {{- range $sections }}
-        <li><a href="#{{ .Section }}">{{ partial "secname.html" . }}</a></li>
+        {{- range $i, $g := $groups }}
+        {{- if $g.links }}
+        <li><a href="#g-{{ $i }}">{{ $g.name }} <span class="cnt">· {{ len $g.links }}</span></a></li>
+        {{- end }}
         {{- end }}
       </ul>
     </nav>
     <div class="index-groups">
-      {{- range $sections }}
-      <section class="index-group" id="{{ .Section }}">
-        <h2><a href="{{ .RelPermalink }}">{{ partial "secname.html" . }}</a></h2>
+      {{- range $i, $g := $groups }}
+      {{- if $g.links }}
+      <section class="index-group" id="g-{{ $i }}">
+        <h2>{{ $g.name }} <span class="cnt">· {{ len $g.links }}</span></h2>
         <ul class="index-list">
-          {{- range .RegularPagesRecursive }}
-          <li><a href="{{ .RelPermalink }}">{{ partial "title.html" . }}</a></li>
+          {{- range $g.links }}
+          <li><span class="dot" aria-hidden="true">·</span><a href="{{ .url }}">{{ .title | plainify | htmlUnescape }}</a></li>
           {{- end }}
         </ul>
       </section>
+      {{- end }}
       {{- end }}
     </div>
   </div>

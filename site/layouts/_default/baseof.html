@@ -11,8 +11,20 @@
 {{- with .Description }}{{ $desc = . }}{{ else }}{{ if not .IsHome }}{{ $desc = printf "%s — %s" $title site.Title }}{{ else }}{{ $desc = site.Params.description }}{{ end }}{{ end -}}
 {{- with $desc }}<meta name="description" content="{{ . }}">
 {{ end -}}
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<script>
+(function () {
+  try {
+    var v = localStorage.getItem('estudy-theme') || 'system';
+    document.documentElement.dataset.theme = v;
+    document.documentElement.dataset.mode = v;
+  } catch (e) {
+    document.documentElement.dataset.theme = 'system';
+    document.documentElement.dataset.mode = 'system';
+  }
+})();
+</script>
 <meta name="generator" content="Hugo {{ hugo.Version }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:title" content="{{ $title }}">

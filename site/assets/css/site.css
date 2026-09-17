@@ -42,6 +42,50 @@
   --space-6: 32px;
 }
 
+/* 다크: html[data-theme] 로 전환. data-theme='system' 이면 OS 설정을 따른다. */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0a0a0a;
+  --fg: #ededed;
+  --muted: #a3a3a3;
+  --faint: #7a7a7a;
+  --line: #262626;
+  --link: #5b9cff;
+  --link-visited: #a99cf5;
+  --code-bg: #141414;
+  --graph-bg: #0a0a0a;
+  --graph-edge: #3a3a3a;
+  --graph-node: #7a7a7a;
+  --graph-node-neighbor: #ededed;
+  --graph-node-current: #5b9cff;
+  --graph-node-visited: #a99cf5;
+  --graph-label: #a3a3a3;
+  --graph-edge-alpha: 0.35;
+  --graph-dim-alpha: 0.12;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0a0a0a;
+    --fg: #ededed;
+    --muted: #a3a3a3;
+    --faint: #7a7a7a;
+    --line: #262626;
+    --link: #5b9cff;
+    --link-visited: #a99cf5;
+    --code-bg: #141414;
+    --graph-bg: #0a0a0a;
+    --graph-edge: #3a3a3a;
+    --graph-node: #7a7a7a;
+    --graph-node-neighbor: #ededed;
+    --graph-node-current: #5b9cff;
+    --graph-node-visited: #a99cf5;
+    --graph-label: #a3a3a3;
+    --graph-edge-alpha: 0.35;
+    --graph-dim-alpha: 0.12;
+  }
+}
+
 @font-face {
   font-family: 'Geist Mono';
   font-style: normal;
@@ -112,6 +156,12 @@ h4, h5, h6 { font-size: 17px; }
 }
 .icon-btn:hover { background: var(--code-bg); }
 .icon-btn svg { width: 17px; height: 17px; display: block; }
+/* 테마 버튼: html[data-mode] 에 맞는 아이콘 하나만 보인다 */
+.theme-btn { padding: 0; }
+.theme-btn .ic { display: none; }
+:root[data-mode="light"] .theme-btn .ic-light,
+:root[data-mode="dark"] .theme-btn .ic-dark,
+:root[data-mode="system"] .theme-btn .ic-system { display: block; }
 
 /* ---------- 홈: 프로필 → estudy → 카테고리별 한 줄 리스트 ---------- */
 .profile { text-align: center; margin: var(--space-6) 0 0; }
@@ -135,6 +185,7 @@ h4, h5, h6 { font-size: 17px; }
 .cat-rail li { margin: 0 0 2px; }
 .cat-rail a { color: var(--muted); text-decoration: none; font-size: 15px; }
 .cat-rail a:hover { color: var(--fg); text-decoration: underline; }
+.cat-rail .cnt { color: var(--faint); }
 
 .index-groups { margin: 0; }
 .index-group { margin: 0 0 var(--space-5); }
@@ -147,9 +198,11 @@ h4, h5, h6 { font-size: 17px; }
 }
 .index-group > h2 a { color: inherit; text-decoration: none; }
 .index-group > h2 a:hover { text-decoration: underline; }
+.index-group > h2 .cnt { color: var(--faint); font-weight: 400; font-size: 17px; }
 .index-list { list-style: none; margin: 0; padding: 0; }
-.index-list li { margin: 0 0 1px; }
-.index-list a { text-decoration: none; }
+.index-list li { display: flex; gap: 6px; align-items: baseline; margin: 0 0 1px; }
+.index-list .dot { color: var(--faint); flex: none; }
+.index-list a { text-decoration: none; min-width: 0; }
 .index-list a:hover { text-decoration: underline; }
 
 /* ---------- 노트 ---------- */
