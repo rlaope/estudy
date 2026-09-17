@@ -13,6 +13,7 @@
 
 {{- $groups := slice -}}
 {{- $seen := dict -}}
+{{- $seenPages := dict -}}
 {{- $cur := -1 -}}
 {{- range $line := split $readme "\n" -}}
   {{- $head := findRE `^####\s+\S.*$` $line -}}
@@ -37,21 +38,25 @@
             {{- $page = . -}}
           {{- end -}}
         {{- end -}}
-        {{- with $page -}}
-          {{- /* 링크 라벨 = README 표기. 없으면 노트 제목. */ -}}
-          {{- $label := "" -}}
-          {{- with index (split $line (printf "](%s)" $u)) 0 -}}
-            {{- $seg := split . "[" -}}
-            {{- $label = index $seg (sub (len $seg) 1) | replaceRE `^\[` "" | plainify -}}
+          {{- with $page -}}
+            {{- if not (index $seenPages .RelPermalink) -}}
+            {{- /* 링크 라벨 = README 표기. 없으면 노트 제목. */ -}}
+            {{- $label := "" -}}
+            {{- with index (split $line (printf "](%s)" $u)) 0 -}}
+              {{- $seg := split . "[" -}}
+              {{- $label = index $seg (sub (len $seg) 1) | replaceRE `^\[` "" | plainify -}}
+            {{- end -}}
+            {{- if not $label -}}
+              {{- $label = partial "title.html" . -}}
+            {{- end -}}
+            {{- $g := index $groups $cur -}}
+            {{- $links := $g.links | append (dict "title" $label "url" .RelPermalink "depth" $depth) -}}
+            {{- $groups = first $cur $groups | append (dict "name" $g.name "links" $links) -}}
+            {{- $seen = merge $seen (dict $key true) -}}
+            {{- /* 같은 페이지로 렌더되는 항목(예: note.md 와 note/ 폴더)은 한 번만 넣는다. */ -}}
+            {{- $seenPages = merge $seenPages (dict .RelPermalink true) -}}
+            {{- end -}}
           {{- end -}}
-          {{- if not $label -}}
-            {{- $label = partial "title.html" . -}}
-          {{- end -}}
-          {{- $g := index $groups $cur -}}
-          {{- $links := $g.links | append (dict "title" $label "url" .RelPermalink "depth" $depth) -}}
-          {{- $groups = first $cur $groups | append (dict "name" $g.name "links" $links) -}}
-          {{- $seen = merge $seen (dict $key true) -}}
-        {{- end -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
