@@ -56,10 +56,13 @@ jobs:
             --destination public --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Sync English notes (auto-translate new/changed)
-        if: ${{ secrets.OG_API_KEY != '' }}
         env:
           OG_API_KEY: ${{ secrets.OG_API_KEY }}
         run: |
+          if [ -z "${OG_API_KEY}" ]; then
+            echo "OG_API_KEY 시크릿이 없어 영어 자동 동기화를 건너뜁니다"
+            exit 0
+          fi
           python3 tools/i18n/translate.py --all --workers 6 2>&1 | tail -6 || true
 
       - name: Commit synced English notes
