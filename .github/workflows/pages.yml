@@ -64,10 +64,10 @@ jobs:
 
       - name: Commit synced English notes
         run: |
-          if [ -n "$(git status --porcelain brains-en)" ]; then
+          git add -f brains-en .cache/i18n
+          if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add brains-en
             git commit -m "chore(i18n): 영어 노트 자동 동기화 [skip ci]"
             git push
             echo "영어 노트 커밋/푸시 완료"

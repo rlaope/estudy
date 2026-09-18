@@ -1,0 +1,7267 @@
+{
+ "AI/agent_state/README.md": {
+  "at": "2026-09-17T10:06:14Z",
+  "bad": [],
+  "dst": "0184fe4c3e4e9969",
+  "model": "google/gemini-2.5-flash",
+  "src": "6044a95c68d0bd7e",
+  "usage": 458
+ },
+ "AI/agent_state/st1.md": {
+  "at": "2026-09-17T10:06:41Z",
+  "bad": [],
+  "dst": "f99741da2c032f4c",
+  "model": "google/gemini-2.5-flash",
+  "src": "3a119fbb212268e8",
+  "usage": 9810
+ },
+ "AI/agent_state/st2.md": {
+  "at": "2026-09-17T10:07:18Z",
+  "bad": [],
+  "dst": "174c5442f9afac13",
+  "model": "google/gemini-2.5-flash",
+  "src": "6c4d79a98dd64ef0",
+  "usage": 10579
+ },
+ "AI/agent_state/st3.md": {
+  "at": "2026-09-17T10:07:04Z",
+  "bad": [],
+  "dst": "567c77ce282aca98",
+  "model": "google/gemini-2.5-flash",
+  "src": "3a849aec38a1141c",
+  "usage": 5802
+ },
+ "AI/attention.md": {
+  "at": "2026-09-17T10:07:02Z",
+  "bad": [],
+  "dst": "7578251ab451bfc3",
+  "model": "google/gemini-2.5-flash",
+  "src": "6e18b70ce777fac5",
+  "usage": 4557
+ },
+ "AI/bert.md": {
+  "at": "2026-09-17T10:07:10Z",
+  "bad": [],
+  "dst": "505a493281c2751e",
+  "model": "google/gemini-2.5-flash",
+  "src": "f9e207a0ec9324fd",
+  "usage": 6524
+ },
+ "AI/clip.md": {
+  "at": "2026-09-17T10:32:29Z",
+  "bad": [
+   "제목 64→65"
+  ],
+  "dst": "dd1cfc180d647296",
+  "model": "google/gemini-2.5-flash",
+  "src": "3fc33063ea9c5572",
+  "usage": 12746
+ },
+ "AI/cnn.md": {
+  "at": "2026-09-17T10:07:12Z",
+  "bad": [],
+  "dst": "6d006fffe957a0bb",
+  "model": "google/gemini-2.5-flash",
+  "src": "7df744e2494e219a",
+  "usage": 7415
+ },
+ "AI/cuda.md": {
+  "at": "2026-09-17T10:07:03Z",
+  "bad": [],
+  "dst": "62d0f7de01c52c7c",
+  "model": "google/gemini-2.5-flash",
+  "src": "1f1fa01ba4a15f0c",
+  "usage": 4540
+ },
+ "AI/deepseek41.md": {
+  "at": "2026-09-17T10:08:35Z",
+  "bad": [],
+  "dst": "9b688e7e322ff087",
+  "model": "google/gemini-2.5-flash",
+  "src": "be7980bc0fce0c1a",
+  "usage": 33809
+ },
+ "AI/dpo.md": {
+  "at": "2026-09-17T10:07:21Z",
+  "bad": [],
+  "dst": "870690d991114965",
+  "model": "google/gemini-2.5-flash",
+  "src": "e456215a95c3ee7f",
+  "usage": 9982
+ },
+ "AI/ende.md": {
+  "at": "2026-09-17T10:07:06Z",
+  "bad": [],
+  "dst": "e9e5e429be77f42b",
+  "model": "google/gemini-2.5-flash",
+  "src": "c2a69703bd35131c",
+  "usage": 5693
+ },
+ "AI/esiv.md": {
+  "at": "2026-09-17T10:07:36Z",
+  "bad": [],
+  "dst": "4b1717789fe64b45",
+  "model": "google/gemini-2.5-flash",
+  "src": "b25a1d2b2c121b68",
+  "usage": 11283
+ },
+ "AI/feature_extraction.md": {
+  "at": "2026-09-17T10:07:24Z",
+  "bad": [],
+  "dst": "d35348407459e5dc",
+  "model": "google/gemini-2.5-flash",
+  "src": "4600d5d61c72c434",
+  "usage": 7368
+ },
+ "AI/gpu.md": {
+  "at": "2026-09-17T10:07:18Z",
+  "bad": [],
+  "dst": "2e741cb612a7ddd3",
+  "model": "google/gemini-2.5-flash",
+  "src": "63823d483c0ad676",
+  "usage": 3221
+ },
+ "AI/hermes_memory.md": {
+  "at": "2026-09-17T10:08:52Z",
+  "bad": [],
+  "dst": "11d08af4e2bd89d0",
+  "model": "google/gemini-2.5-flash",
+  "src": "fa4c5073c728789a",
+  "usage": 32511
+ },
+ "AI/hnsw.md": {
+  "at": "2026-09-17T10:07:28Z",
+  "bad": [],
+  "dst": "995fe9674d21e56c",
+  "model": "google/gemini-2.5-flash",
+  "src": "e3e9cdc2eb3f3d8c",
+  "usage": 6623
+ },
+ "AI/hparam.md": {
+  "at": "2026-09-17T10:07:30Z",
+  "bad": [],
+  "dst": "9af245e0b7c5ede6",
+  "model": "google/gemini-2.5-flash",
+  "src": "afab7a9512f1deb8",
+  "usage": 3980
+ },
+ "AI/hybridsearch.md": {
+  "at": "2026-09-17T10:07:53Z",
+  "bad": [],
+  "dst": "349108073e24d5f1",
+  "model": "google/gemini-2.5-flash",
+  "src": "6aec7ebeefb31415",
+  "usage": 11345
+ },
+ "AI/irmetric.md": {
+  "at": "2026-09-17T10:08:19Z",
+  "bad": [],
+  "dst": "53031155919aa67b",
+  "model": "google/gemini-2.5-flash",
+  "src": "4093d14a7367d921",
+  "usage": 21125
+ },
+ "AI/llm.md": {
+  "at": "2026-09-17T10:07:34Z",
+  "bad": [],
+  "dst": "4ddc4ffe3aae25ff",
+  "model": "google/gemini-2.5-flash",
+  "src": "0cbe96803cb6873f",
+  "usage": 4555
+ },
+ "AI/llm_gateway/README.md": {
+  "at": "2026-09-17T10:07:26Z",
+  "bad": [],
+  "dst": "4581f65316489f28",
+  "model": "google/gemini-2.5-flash",
+  "src": "cf1eb4e6951bfe6f",
+  "usage": 1382
+ },
+ "AI/llm_gateway/lg1.md": {
+  "at": "2026-09-17T10:07:54Z",
+  "bad": [],
+  "dst": "9c9b0f9bf3af4d83",
+  "model": "google/gemini-2.5-flash",
+  "src": "29e9064277907f88",
+  "usage": 9502
+ },
+ "AI/llm_gateway/lg2.md": {
+  "at": "2026-09-17T10:07:45Z",
+  "bad": [],
+  "dst": "009e32040843ecb1",
+  "model": "google/gemini-2.5-flash",
+  "src": "cd28d418a4c7799c",
+  "usage": 7376
+ },
+ "AI/llm_gateway/lg3.md": {
+  "at": "2026-09-17T10:07:51Z",
+  "bad": [],
+  "dst": "e6e424915b7fa8e4",
+  "model": "google/gemini-2.5-flash",
+  "src": "4d48b128764924a3",
+  "usage": 8124
+ },
+ "AI/llm_gateway/lg4.md": {
+  "at": "2026-09-17T10:07:45Z",
+  "bad": [],
+  "dst": "921d3cc8b927f345",
+  "model": "google/gemini-2.5-flash",
+  "src": "1597b1c22bb57360",
+  "usage": 5835
+ },
+ "AI/llm_gateway/lg5.md": {
+  "at": "2026-09-17T10:08:05Z",
+  "bad": [],
+  "dst": "4350fbe2f14ba6ce",
+  "model": "google/gemini-2.5-flash",
+  "src": "b0095ff7e3889cd8",
+  "usage": 11787
+ },
+ "AI/llm_gateway/lg6.md": {
+  "at": "2026-09-17T10:08:04Z",
+  "bad": [],
+  "dst": "d20f28b98127ca4c",
+  "model": "google/gemini-2.5-flash",
+  "src": "8d25ddada8911c11",
+  "usage": 9445
+ },
+ "AI/llm_serving_opt.md": {
+  "at": "2026-09-17T10:38:49Z",
+  "bad": [],
+  "dst": "f3eebab95ea7dcac",
+  "model": "google/gemini-2.5-flash",
+  "src": "993aafdcf690d607",
+  "usage": 161771
+ },
+ "AI/llmagent.md": {
+  "at": "2026-09-17T10:08:29Z",
+  "bad": [],
+  "dst": "ea2f8275ddd42d68",
+  "model": "google/gemini-2.5-flash",
+  "src": "875117bfbd2d0d2f",
+  "usage": 5054
+ },
+ "AI/llmagent/README.md": {
+  "at": "2026-09-17T10:07:51Z",
+  "bad": [],
+  "dst": "f7a2445ef352aefa",
+  "model": "google/gemini-2.5-flash",
+  "src": "181ea02cab56733d",
+  "usage": 1256
+ },
+ "AI/llmagent/agent_serving.md": {
+  "at": "2026-09-17T10:08:14Z",
+  "bad": [],
+  "dst": "8b47a8e3e725228f",
+  "model": "google/gemini-2.5-flash",
+  "src": "6d222f6248a8e285",
+  "usage": 8212
+ },
+ "AI/llmagent/ai_tooling.md": {
+  "at": "2026-09-17T10:08:19Z",
+  "bad": [],
+  "dst": "390171f98ac240d9",
+  "model": "google/gemini-2.5-flash",
+  "src": "f1af32ddfbd44194",
+  "usage": 9391
+ },
+ "AI/llmagent/evaluation.md": {
+  "at": "2026-09-17T10:08:18Z",
+  "bad": [],
+  "dst": "bef04225e85413af",
+  "model": "google/gemini-2.5-flash",
+  "src": "11d38c444587247d",
+  "usage": 8123
+ },
+ "AI/llmagent/multitenant.md": {
+  "at": "2026-09-17T10:08:12Z",
+  "bad": [],
+  "dst": "54fc8789d65c2525",
+  "model": "google/gemini-2.5-flash",
+  "src": "c0e8730b235006e8",
+  "usage": 7174
+ },
+ "AI/llmagent/rag_pipeline.md": {
+  "at": "2026-09-17T10:08:31Z",
+  "bad": [],
+  "dst": "c61d69df2b3662ce",
+  "model": "google/gemini-2.5-flash",
+  "src": "81cbe7c41195c9ec",
+  "usage": 9155
+ },
+ "AI/llmagent/routing.md": {
+  "at": "2026-09-17T10:08:24Z",
+  "bad": [],
+  "dst": "24d5b17c27978642",
+  "model": "google/gemini-2.5-flash",
+  "src": "186b1e951249009e",
+  "usage": 6315
+ },
+ "AI/llmtun/README.md": {
+  "at": "2026-09-17T10:08:16Z",
+  "bad": [],
+  "dst": "8f7b62c550e9191e",
+  "model": "google/gemini-2.5-flash",
+  "src": "8f7b62c550e9191e",
+  "usage": 756
+ },
+ "AI/llmtun/data.md": {
+  "at": "2026-09-17T10:08:45Z",
+  "bad": [],
+  "dst": "8e51d381650389d2",
+  "model": "google/gemini-2.5-flash",
+  "src": "56c1ad9e06bd8621",
+  "usage": 11023
+ },
+ "AI/llmtun/loss.md": {
+  "at": "2026-09-17T10:08:36Z",
+  "bad": [],
+  "dst": "8928a8ccbb2b19e8",
+  "model": "google/gemini-2.5-flash",
+  "src": "8ebca573f8a5a4eb",
+  "usage": 6550
+ },
+ "AI/llmtun/model.md": {
+  "at": "2026-09-17T10:08:57Z",
+  "bad": [],
+  "dst": "89fe80100bc5050e",
+  "model": "google/gemini-2.5-flash",
+  "src": "91cd15775508daa4",
+  "usage": 13497
+ },
+ "AI/llmtun/token.md": {
+  "at": "2026-09-17T10:08:39Z",
+  "bad": [],
+  "dst": "f8e91dfa60bb1624",
+  "model": "google/gemini-2.5-flash",
+  "src": "cf5f722be996eac7",
+  "usage": 7361
+ },
+ "AI/llmtun/transformer.md": {
+  "at": "2026-09-17T10:32:42Z",
+  "bad": [],
+  "dst": "5b9a536d5f5046fb",
+  "model": "google/gemini-2.5-flash",
+  "src": "1b973f7ef84dbead",
+  "usage": 17228
+ },
+ "AI/llmtun/tuning.md": {
+  "at": "2026-09-17T10:09:08Z",
+  "bad": [],
+  "dst": "c9e3141d31bd7d08",
+  "model": "google/gemini-2.5-flash",
+  "src": "853a22c24bdd5ef2",
+  "usage": 12675
+ },
+ "AI/longterm.md": {
+  "at": "2026-09-17T10:09:31Z",
+  "bad": [],
+  "dst": "99ea10a931657c11",
+  "model": "google/gemini-2.5-flash",
+  "src": "eae6a9239a62fbbe",
+  "usage": 13635
+ },
+ "AI/lr.md": {
+  "at": "2026-09-17T10:08:52Z",
+  "bad": [],
+  "dst": "c977163a01071fb3",
+  "model": "google/gemini-2.5-flash",
+  "src": "7b57c63d6d198df4",
+  "usage": 5525
+ },
+ "AI/lsh.md": {
+  "at": "2026-09-17T10:08:53Z",
+  "bad": [],
+  "dst": "58e6310d8325d3e7",
+  "model": "google/gemini-2.5-flash",
+  "src": "e259c69436369b3e",
+  "usage": 6522
+ },
+ "AI/mae.md": {
+  "at": "2026-09-17T10:08:52Z",
+  "bad": [],
+  "dst": "cb223d919dde05cb",
+  "model": "google/gemini-2.5-flash",
+  "src": "6b23aefbdb6f74a0",
+  "usage": 4244
+ },
+ "AI/modelx.md": {
+  "at": "2026-09-17T10:32:14Z",
+  "bad": [],
+  "dst": "68d6608a5cc7109a",
+  "model": "google/gemini-2.5-flash",
+  "src": "872ac8ba2c965847",
+  "usage": 6494
+ },
+ "AI/object_detection.md": {
+  "at": "2026-09-17T10:09:08Z",
+  "bad": [],
+  "dst": "f2f4242d10a450a8",
+  "model": "google/gemini-2.5-flash",
+  "src": "2c99c46a04cbd650",
+  "usage": 5750
+ },
+ "AI/of.md": {
+  "at": "2026-09-17T10:09:02Z",
+  "bad": [],
+  "dst": "845913e7ae1a5c0d",
+  "model": "google/gemini-2.5-flash",
+  "src": "71c94177fdc7e91b",
+  "usage": 3215
+ },
+ "AI/onehot.md": {
+  "at": "2026-09-17T10:09:05Z",
+  "bad": [],
+  "dst": "c47bb0bf31c3f6fe",
+  "model": "google/gemini-2.5-flash",
+  "src": "7c6ca9a5d36ecaee",
+  "usage": 3892
+ },
+ "AI/onsft.md": {
+  "at": "2026-09-17T10:09:11Z",
+  "bad": [],
+  "dst": "8a77fb34c6245045",
+  "model": "google/gemini-2.5-flash",
+  "src": "5074bb2a3971622d",
+  "usage": 5935
+ },
+ "AI/opd.md": {
+  "at": "2026-09-17T10:09:21Z",
+  "bad": [],
+  "dst": "356a16b2a48fd9fc",
+  "model": "google/gemini-2.5-flash",
+  "src": "44c9d93225449617",
+  "usage": 8680
+ },
+ "AI/openweight.md": {
+  "at": "2026-09-17T10:11:08Z",
+  "bad": [],
+  "dst": "1979f3461229f8e5",
+  "model": "google/gemini-2.5-flash",
+  "src": "b81412d1d66518a9",
+  "usage": 47057
+ },
+ "AI/optimize_runtime/README.md": {
+  "at": "2026-09-17T10:09:22Z",
+  "bad": [],
+  "dst": "e6771b7629746806",
+  "model": "google/gemini-2.5-flash",
+  "src": "d1fcfb0f15012c31",
+  "usage": 3391
+ },
+ "AI/optimize_runtime/opti1.md": {
+  "at": "2026-09-17T10:09:33Z",
+  "bad": [],
+  "dst": "65916060c8bd93ad",
+  "model": "google/gemini-2.5-flash",
+  "src": "0057c0ad98f7873d",
+  "usage": 7865
+ },
+ "AI/optimize_runtime/opti2.md": {
+  "at": "2026-09-17T10:09:33Z",
+  "bad": [],
+  "dst": "4e0ca7d30858526a",
+  "model": "google/gemini-2.5-flash",
+  "src": "e23cf916c89247e2",
+  "usage": 7952
+ },
+ "AI/optimize_runtime/opti3.md": {
+  "at": "2026-09-17T10:09:28Z",
+  "bad": [],
+  "dst": "3720b0ce74f29a6f",
+  "model": "google/gemini-2.5-flash",
+  "src": "825383d3cbadc329",
+  "usage": 6743
+ },
+ "AI/optimize_runtime/opti4.md": {
+  "at": "2026-09-17T10:09:47Z",
+  "bad": [],
+  "dst": "f9de4158f30b4b0a",
+  "model": "google/gemini-2.5-flash",
+  "src": "51f0c08f5b59da5f",
+  "usage": 9432
+ },
+ "AI/optimize_runtime/opti5.md": {
+  "at": "2026-09-17T10:09:46Z",
+  "bad": [],
+  "dst": "2b7f4d7307c67712",
+  "model": "google/gemini-2.5-flash",
+  "src": "7a2caa3752675ac1",
+  "usage": 8502
+ },
+ "AI/optimize_runtime/opti6.md": {
+  "at": "2026-09-17T10:10:05Z",
+  "bad": [],
+  "dst": "aeabdb3abd28e5ac",
+  "model": "google/gemini-2.5-flash",
+  "src": "e3dbdd5598acdfe2",
+  "usage": 14063
+ },
+ "AI/orb.md": {
+  "at": "2026-09-17T10:09:51Z",
+  "bad": [],
+  "dst": "c52713370ebad2bb",
+  "model": "google/gemini-2.5-flash",
+  "src": "50f52a8cb4b7d8c8",
+  "usage": 8085
+ },
+ "AI/overfit.md": {
+  "at": "2026-09-17T10:09:46Z",
+  "bad": [],
+  "dst": "2d77f9adfb7fc32f",
+  "model": "google/gemini-2.5-flash",
+  "src": "fce4d295d761438d",
+  "usage": 4647
+ },
+ "AI/ow/deepseek.md": {
+  "at": "2026-09-17T10:09:52Z",
+  "bad": [],
+  "dst": "7e336805aff39d58",
+  "model": "google/gemini-2.5-flash",
+  "src": "63472162e3c1145d",
+  "usage": 6564
+ },
+ "AI/ow/glm.md": {
+  "at": "2026-09-17T10:09:52Z",
+  "bad": [],
+  "dst": "cb938bcb60a75a23",
+  "model": "google/gemini-2.5-flash",
+  "src": "dabde3104adbd2c1",
+  "usage": 6459
+ },
+ "AI/ow/kimi.md": {
+  "at": "2026-09-17T10:10:14Z",
+  "bad": [],
+  "dst": "c48f486ca7d6a445",
+  "model": "google/gemini-2.5-flash",
+  "src": "54d2673d4a997e0a",
+  "usage": 9024
+ },
+ "AI/ow/kimi_deepdive.md": {
+  "at": "2026-09-17T10:37:10Z",
+  "bad": [],
+  "dst": "be2b093ce534d8df",
+  "model": "google/gemini-2.5-flash",
+  "src": "026da8b9cdc7bc0e",
+  "usage": 109281
+ },
+ "AI/ow/qwen.md": {
+  "at": "2026-09-17T10:10:15Z",
+  "bad": [],
+  "dst": "08ee4f7acc619aee",
+  "model": "google/gemini-2.5-flash",
+  "src": "eb7cda716a54980a",
+  "usage": 7543
+ },
+ "AI/ow/qwen_deepdive.md": {
+  "at": "2026-09-17T10:51:09Z",
+  "bad": [],
+  "dst": "7f2182ced51478a6",
+  "model": "google/gemini-2.5-flash",
+  "src": "5deb08034f3c57a1",
+  "usage": 103617
+ },
+ "AI/perception.md": {
+  "at": "2026-09-17T10:10:02Z",
+  "bad": [],
+  "dst": "31597d8a1491c191",
+  "model": "google/gemini-2.5-flash",
+  "src": "a192d810d854320f",
+  "usage": 3084
+ },
+ "AI/policydis.md": {
+  "at": "2026-09-17T10:10:27Z",
+  "bad": [],
+  "dst": "9132e18be82f4188",
+  "model": "google/gemini-2.5-flash",
+  "src": "5742a8f4fb2ef897",
+  "usage": 10932
+ },
+ "AI/rag.md": {
+  "at": "2026-09-17T10:10:13Z",
+  "bad": [],
+  "dst": "c9893fca118adf10",
+  "model": "google/gemini-2.5-flash",
+  "src": "dd44dcb9f687afc0",
+  "usage": 3721
+ },
+ "AI/rl.md": {
+  "at": "2026-09-17T10:10:40Z",
+  "bad": [],
+  "dst": "141ddd24224f5dcf",
+  "model": "google/gemini-2.5-flash",
+  "src": "d545e5ec0d2c171c",
+  "usage": 13064
+ },
+ "AI/rnn.md": {
+  "at": "2026-09-17T10:10:21Z",
+  "bad": [],
+  "dst": "ec7f0f73b6b4ce72",
+  "model": "google/gemini-2.5-flash",
+  "src": "13b0188efd79915a",
+  "usage": 2865
+ },
+ "AI/scale.md": {
+  "at": "2026-09-17T10:10:28Z",
+  "bad": [],
+  "dst": "0653c6897034c24e",
+  "model": "google/gemini-2.5-flash",
+  "src": "4ea03d8db7d29ab3",
+  "usage": 4687
+ },
+ "AI/sd.md": {
+  "at": "2026-09-17T10:10:48Z",
+  "bad": [],
+  "dst": "e05e3f85f00198f7",
+  "model": "google/gemini-2.5-flash",
+  "src": "60c89f132453259a",
+  "usage": 11210
+ },
+ "AI/serving.md": {
+  "at": "2026-09-17T10:10:51Z",
+  "bad": [],
+  "dst": "f72da861236b576a",
+  "model": "google/gemini-2.5-flash",
+  "src": "a62922f138267c17",
+  "usage": 9620
+ },
+ "AI/sft.md": {
+  "at": "2026-09-17T10:10:54Z",
+  "bad": [],
+  "dst": "ce8eb9d64a68cb69",
+  "model": "google/gemini-2.5-flash",
+  "src": "8a32d45a48aeefb6",
+  "usage": 8636
+ },
+ "AI/sift.md": {
+  "at": "2026-09-17T10:10:49Z",
+  "bad": [],
+  "dst": "d7b2ae817af49b15",
+  "model": "google/gemini-2.5-flash",
+  "src": "e15dc887082b6fc7",
+  "usage": 8826
+ },
+ "AI/sklearn.md": {
+  "at": "2026-09-17T10:10:49Z",
+  "bad": [],
+  "dst": "36a8a8a97f998aab",
+  "model": "google/gemini-2.5-flash",
+  "src": "1e7a7eb5e08d762b",
+  "usage": 3051
+ },
+ "AI/svm.md": {
+  "at": "2026-09-17T10:11:06Z",
+  "bad": [],
+  "dst": "f8b9252498496fa0",
+  "model": "google/gemini-2.5-flash",
+  "src": "f2d5eb3988212c60",
+  "usage": 5920
+ },
+ "AI/tensor.md": {
+  "at": "2026-09-17T10:10:59Z",
+  "bad": [],
+  "dst": "e5b18472b9ec171e",
+  "model": "google/gemini-2.5-flash",
+  "src": "6fd3ca12fc5eac91",
+  "usage": 3129
+ },
+ "AI/tensorrt.md": {
+  "at": "2026-09-17T10:11:10Z",
+  "bad": [],
+  "dst": "5563714e2972d67a",
+  "model": "google/gemini-2.5-flash",
+  "src": "c2df2286b7af1fd3",
+  "usage": 8803
+ },
+ "AI/triton.md": {
+  "at": "2026-09-17T10:11:18Z",
+  "bad": [],
+  "dst": "c65a5b2b453892ea",
+  "model": "google/gemini-2.5-flash",
+  "src": "fec7cab46318cb8f",
+  "usage": 10411
+ },
+ "AI/vllm.md": {
+  "at": "2026-09-17T10:11:29Z",
+  "bad": [],
+  "dst": "a1eb738422396759",
+  "model": "google/gemini-2.5-flash",
+  "src": "71421aab78deb9b5",
+  "usage": 11399
+ },
+ "AI/wb.md": {
+  "at": "2026-09-17T10:11:10Z",
+  "bad": [],
+  "dst": "5bec2bf3930fb615",
+  "model": "google/gemini-2.5-flash",
+  "src": "a2b30a9b769768d1",
+  "usage": 3108
+ },
+ "Algorithm/bellman_ford.md": {
+  "at": "2026-09-17T10:11:25Z",
+  "bad": [],
+  "dst": "34601eee4c258331",
+  "model": "google/gemini-2.5-flash",
+  "src": "bcc2e30ce124ecee",
+  "usage": 4760
+ },
+ "Algorithm/bfs.md": {
+  "at": "2026-09-17T10:11:28Z",
+  "bad": [],
+  "dst": "a255c30bd62f5c62",
+  "model": "google/gemini-2.5-flash",
+  "src": "4f9a181e21364ba4",
+  "usage": 5069
+ },
+ "Algorithm/dfs.md": {
+  "at": "2026-09-17T10:11:20Z",
+  "bad": [],
+  "dst": "f105cc6a8469049e",
+  "model": "google/gemini-2.5-flash",
+  "src": "56a216bafd4f72d9",
+  "usage": 3250
+ },
+ "Algorithm/dijkstra.md": {
+  "at": "2026-09-17T10:11:14Z",
+  "bad": [],
+  "dst": "ece6db0652b8fa5e",
+  "model": "google/gemini-2.5-flash",
+  "src": "6c45a30f84f0e915",
+  "usage": 1217
+ },
+ "Algorithm/floyd_warshall.md": {
+  "at": "2026-09-17T10:11:20Z",
+  "bad": [],
+  "dst": "250d3f76854503b9",
+  "model": "google/gemini-2.5-flash",
+  "src": "9536d49bf64ebdbe",
+  "usage": 1719
+ },
+ "Algorithm/greedy.md": {
+  "at": "2026-09-17T10:11:37Z",
+  "bad": [],
+  "dst": "033395c880f13f0e",
+  "model": "google/gemini-2.5-flash",
+  "src": "c42044b915826344",
+  "usage": 5254
+ },
+ "Algorithm/prim.md": {
+  "at": "2026-09-17T10:11:31Z",
+  "bad": [],
+  "dst": "f30e24c567571260",
+  "model": "google/gemini-2.5-flash",
+  "src": "4ade6325b49304c6",
+  "usage": 4264
+ },
+ "Back-End/Internet/3handshake.md": {
+  "at": "2026-09-17T10:11:33Z",
+  "bad": [],
+  "dst": "c41884997b131490",
+  "model": "google/gemini-2.5-flash",
+  "src": "a8d3e3fd19a38ffd",
+  "usage": 4115
+ },
+ "Back-End/Internet/cache.md": {
+  "at": "2026-09-17T10:11:34Z",
+  "bad": [],
+  "dst": "4935d18d8d7f057c",
+  "model": "google/gemini-2.5-flash",
+  "src": "f76e70ad35d121a2",
+  "usage": 3685
+ },
+ "Back-End/Internet/cache_header.md": {
+  "at": "2026-09-17T10:11:38Z",
+  "bad": [],
+  "dst": "5ea93fd45fdca3c7",
+  "model": "google/gemini-2.5-flash",
+  "src": "fcd3486e6f4e5290",
+  "usage": 3685
+ },
+ "Back-End/Internet/cdn.md": {
+  "at": "2026-09-17T10:11:31Z",
+  "bad": [],
+  "dst": "fd636a858149b6d1",
+  "model": "google/gemini-2.5-flash",
+  "src": "f3e609cb72f0a317",
+  "usage": 891
+ },
+ "Back-End/Internet/dns.md": {
+  "at": "2026-09-17T10:11:38Z",
+  "bad": [],
+  "dst": "ae01c4fac632608e",
+  "model": "google/gemini-2.5-flash",
+  "src": "2741f70910a55370",
+  "usage": 2625
+ },
+ "Back-End/Internet/domain.md": {
+  "at": "2026-09-17T10:11:35Z",
+  "bad": [],
+  "dst": "9f47fdee4d87be7e",
+  "model": "google/gemini-2.5-flash",
+  "src": "37e487f74ab812bb",
+  "usage": 1300
+ },
+ "Back-End/Internet/etag.md": {
+  "at": "2026-09-17T10:11:39Z",
+  "bad": [],
+  "dst": "ba46f7f48c703fa1",
+  "model": "google/gemini-2.5-flash",
+  "src": "6c5cd9f2c038738b",
+  "usage": 2380
+ },
+ "Back-End/Internet/host.md": {
+  "at": "2026-09-17T10:11:42Z",
+  "bad": [],
+  "dst": "258af2770921c56a",
+  "model": "google/gemini-2.5-flash",
+  "src": "d46368486d7b65fc",
+  "usage": 2794
+ },
+ "Back-End/Internet/http.md": {
+  "at": "2026-09-17T10:11:46Z",
+  "bad": [],
+  "dst": "fe8be83d17942b70",
+  "model": "google/gemini-2.5-flash",
+  "src": "459522e7a51c6f1f",
+  "usage": 3861
+ },
+ "Back-End/Internet/inoutbound.md": {
+  "at": "2026-09-17T10:11:40Z",
+  "bad": [],
+  "dst": "04940e891319bcea",
+  "model": "google/gemini-2.5-flash",
+  "src": "fd18938618e079c9",
+  "usage": 1316
+ },
+ "Back-End/Internet/internet.md": {
+  "at": "2026-09-17T10:11:49Z",
+  "bad": [],
+  "dst": "4ac0351a49069d91",
+  "model": "google/gemini-2.5-flash",
+  "src": "27c28feb86716e11",
+  "usage": 3505
+ },
+ "Back-End/Internet/ip.md": {
+  "at": "2026-09-17T10:11:48Z",
+  "bad": [],
+  "dst": "b8fba90f80cd3dd9",
+  "model": "google/gemini-2.5-flash",
+  "src": "babef821c1763f6b",
+  "usage": 3182
+ },
+ "Back-End/Internet/ln.md": {
+  "at": "2026-09-17T10:11:53Z",
+  "bad": [],
+  "dst": "e9f437f847a7a073",
+  "model": "google/gemini-2.5-flash",
+  "src": "6a75ef7c798f5a57",
+  "usage": 5018
+ },
+ "Back-End/Internet/mq.md": {
+  "at": "2026-09-17T10:11:50Z",
+  "bad": [],
+  "dst": "70aca7817dc9d022",
+  "model": "google/gemini-2.5-flash",
+  "src": "6ae752fd7476d458",
+  "usage": 3257
+ },
+ "Back-End/Internet/ositcp.md": {
+  "at": "2026-09-17T10:11:46Z",
+  "bad": [],
+  "dst": "64e3b589ae7f262d",
+  "model": "google/gemini-2.5-flash",
+  "src": "6a851a34be0fce15",
+  "usage": 1973
+ },
+ "Back-End/Internet/p2p.md": {
+  "at": "2026-09-17T10:11:47Z",
+  "bad": [],
+  "dst": "fdd6d3259d070757",
+  "model": "google/gemini-2.5-flash",
+  "src": "432db2c92d5ef50d",
+  "usage": 1540
+ },
+ "Back-End/Internet/router_switch.md": {
+  "at": "2026-09-17T10:11:57Z",
+  "bad": [],
+  "dst": "d50fa5c555f3d029",
+  "model": "google/gemini-2.5-flash",
+  "src": "b45a1d0f1cfc3ee2",
+  "usage": 3613
+ },
+ "Back-End/Internet/ssl_tls.md": {
+  "at": "2026-09-17T10:11:56Z",
+  "bad": [],
+  "dst": "47858648a0adf6c7",
+  "model": "google/gemini-2.5-flash",
+  "src": "07f870cf00bfcdf1",
+  "usage": 3293
+ },
+ "Back-End/Internet/subnetsupernet.md": {
+  "at": "2026-09-17T10:11:57Z",
+  "bad": [],
+  "dst": "4c299bd0166ccada",
+  "model": "google/gemini-2.5-flash",
+  "src": "dd216cd7e2174ea7",
+  "usage": 3806
+ },
+ "Back-End/Internet/tcppacket.md": {
+  "at": "2026-09-17T10:11:59Z",
+  "bad": [],
+  "dst": "503b4d74d3f94cb5",
+  "model": "google/gemini-2.5-flash",
+  "src": "02512b1fd3572567",
+  "usage": 3721
+ },
+ "Back-End/Internet/tomcat.md": {
+  "at": "2026-09-17T10:11:58Z",
+  "bad": [],
+  "dst": "3dc4f5fe7389e0b8",
+  "model": "google/gemini-2.5-flash",
+  "src": "a70ca960ff79f6f5",
+  "usage": 2794
+ },
+ "Back-End/Internet/trace.md": {
+  "at": "2026-09-17T10:11:55Z",
+  "bad": [],
+  "dst": "ab51d95959e4a4a9",
+  "model": "google/gemini-2.5-flash",
+  "src": "3d3598928f590294",
+  "usage": 1450
+ },
+ "Back-End/Internet/webactive.md": {
+  "at": "2026-09-17T10:12:05Z",
+  "bad": [],
+  "dst": "9761eff2e0158a5f",
+  "model": "google/gemini-2.5-flash",
+  "src": "cff744683f74558e",
+  "usage": 3845
+ },
+ "Back-End/Internet/webcache.md": {
+  "at": "2026-09-17T10:11:58Z",
+  "bad": [],
+  "dst": "c2381e9633ac7325",
+  "model": "google/gemini-2.5-flash",
+  "src": "a29ab17ab7c252fe",
+  "usage": 1030
+ },
+ "Back-End/Internet/webflow.md": {
+  "at": "2026-09-17T10:32:08Z",
+  "bad": [
+   "제목 8→9"
+  ],
+  "dst": "c10a6b6d6635d794",
+  "model": "google/gemini-2.5-flash",
+  "src": "050096b9b329357e",
+  "usage": 3428
+ },
+ "Back-End/Internet/websocket.md": {
+  "at": "2026-09-17T10:12:05Z",
+  "bad": [],
+  "dst": "4ec30fa78893c351",
+  "model": "google/gemini-2.5-flash",
+  "src": "1c7512a654dde8d5",
+  "usage": 2973
+ },
+ "Back-End/JAVA/4특징.md": {
+  "at": "2026-09-17T10:12:04Z",
+  "bad": [],
+  "dst": "97e5cc50d7ab9e46",
+  "model": "google/gemini-2.5-flash",
+  "src": "dfce9b1858d0caca",
+  "usage": 1984
+ },
+ "Back-End/JAVA/5원칙.md": {
+  "at": "2026-09-17T10:12:05Z",
+  "bad": [],
+  "dst": "6555d52dd50794f6",
+  "model": "google/gemini-2.5-flash",
+  "src": "25fc31277b303292",
+  "usage": 3032
+ },
+ "Back-End/JAVA/8g1gc.md": {
+  "at": "2026-09-17T10:12:27Z",
+  "bad": [],
+  "dst": "fe78c89aa4075e41",
+  "model": "google/gemini-2.5-flash",
+  "src": "eea2c6f9ea6bc8f2",
+  "usage": 8849
+ },
+ "Back-End/JAVA/JAVA.md": {
+  "at": "2026-09-17T10:12:10Z",
+  "bad": [],
+  "dst": "463e841d85b04fb0",
+  "model": "google/gemini-2.5-flash",
+  "src": "2f85557053cba8f9",
+  "usage": 3066
+ },
+ "Back-End/JAVA/StringBuilder.md": {
+  "at": "2026-09-17T10:12:13Z",
+  "bad": [],
+  "dst": "828181f3b6ef7973",
+  "model": "google/gemini-2.5-flash",
+  "src": "995f6a2fd62baf9f",
+  "usage": 4156
+ },
+ "Back-End/JAVA/abstract.md": {
+  "at": "2026-09-17T10:12:10Z",
+  "bad": [],
+  "dst": "3088a4f3520eeda7",
+  "model": "google/gemini-2.5-flash",
+  "src": "84bc885298ee4bdf",
+  "usage": 2399
+ },
+ "Back-End/JAVA/aio.md": {
+  "at": "2026-09-17T10:12:12Z",
+  "bad": [],
+  "dst": "833f34995471cf1b",
+  "model": "google/gemini-2.5-flash",
+  "src": "03d3c79ac7c32806",
+  "usage": 2096
+ },
+ "Back-End/JAVA/biaslock.md": {
+  "at": "2026-09-17T10:12:17Z",
+  "bad": [],
+  "dst": "145375ccd4f15b92",
+  "model": "google/gemini-2.5-flash",
+  "src": "5d4f382965e89899",
+  "usage": 3622
+ },
+ "Back-End/JAVA/callable_future.md": {
+  "at": "2026-09-17T10:12:14Z",
+  "bad": [],
+  "dst": "04de0a7ec5c72a36",
+  "model": "google/gemini-2.5-flash",
+  "src": "b63f691c4dd9bd0d",
+  "usage": 2909
+ },
+ "Back-End/JAVA/cardtable.md": {
+  "at": "2026-09-17T10:12:21Z",
+  "bad": [],
+  "dst": "fc08bd176d79e6b0",
+  "model": "google/gemini-2.5-flash",
+  "src": "f1383f39f1e8d4b6",
+  "usage": 4498
+ },
+ "Back-End/JAVA/cas.md": {
+  "at": "2026-09-17T10:12:24Z",
+  "bad": [],
+  "dst": "3d41840999cc5083",
+  "model": "google/gemini-2.5-flash",
+  "src": "5e5fcd442b162be6",
+  "usage": 4141
+ },
+ "Back-End/JAVA/cleaner.md": {
+  "at": "2026-09-17T10:12:19Z",
+  "bad": [],
+  "dst": "f1a116b5714fa595",
+  "model": "google/gemini-2.5-flash",
+  "src": "669792c85da92501",
+  "usage": 3137
+ },
+ "Back-End/JAVA/cm.md": {
+  "at": "2026-09-17T10:12:26Z",
+  "bad": [],
+  "dst": "a611ecd39cbbe997",
+  "model": "google/gemini-2.5-flash",
+  "src": "3b967a9f88d23095",
+  "usage": 5303
+ },
+ "Back-End/JAVA/cms.md": {
+  "at": "2026-09-17T10:12:30Z",
+  "bad": [],
+  "dst": "ebf8a281c7e8cbe9",
+  "model": "google/gemini-2.5-flash",
+  "src": "bec786d1a799ccce",
+  "usage": 5829
+ },
+ "Back-End/JAVA/coi.md": {
+  "at": "2026-09-17T10:12:21Z",
+  "bad": [],
+  "dst": "a89816d4f0ddb0a9",
+  "model": "google/gemini-2.5-flash",
+  "src": "6f3e65e42918e511",
+  "usage": 2555
+ },
+ "Back-End/JAVA/collection.md": {
+  "at": "2026-09-17T10:12:26Z",
+  "bad": [],
+  "dst": "cf931881757c9f96",
+  "model": "google/gemini-2.5-flash",
+  "src": "c9e1653c10a98730",
+  "usage": 2902
+ },
+ "Back-End/JAVA/date.md": {
+  "at": "2026-09-17T10:12:25Z",
+  "bad": [],
+  "dst": "0af2472d4da23bdb",
+  "model": "google/gemini-2.5-flash",
+  "src": "f29bd0497bdfcf70",
+  "usage": 1755
+ },
+ "Back-End/JAVA/evfailed.md": {
+  "at": "2026-09-17T10:12:36Z",
+  "bad": [],
+  "dst": "1a87e36436a60e3a",
+  "model": "google/gemini-2.5-flash",
+  "src": "dd7f456f3830ef6a",
+  "usage": 4865
+ },
+ "Back-End/JAVA/exception.md": {
+  "at": "2026-09-17T10:12:38Z",
+  "bad": [],
+  "dst": "b0c9f040528105aa",
+  "model": "google/gemini-2.5-flash",
+  "src": "e8bec59f1c536afc",
+  "usage": 4628
+ },
+ "Back-End/JAVA/exception_cost.md": {
+  "at": "2026-09-17T10:12:48Z",
+  "bad": [],
+  "dst": "ef2dc52ca6311660",
+  "model": "google/gemini-2.5-flash",
+  "src": "fffa73259dd94df6",
+  "usage": 7786
+ },
+ "Back-End/JAVA/executor.md": {
+  "at": "2026-09-17T10:12:30Z",
+  "bad": [],
+  "dst": "7a1134352f9a2c78",
+  "model": "google/gemini-2.5-flash",
+  "src": "c286125042c57225",
+  "usage": 1518
+ },
+ "Back-End/JAVA/finalize.md": {
+  "at": "2026-09-17T10:12:34Z",
+  "bad": [],
+  "dst": "e7c03407c906cf73",
+  "model": "google/gemini-2.5-flash",
+  "src": "cf6241dcc183953d",
+  "usage": 1977
+ },
+ "Back-End/JAVA/functional_interface.md": {
+  "at": "2026-09-17T10:12:34Z",
+  "bad": [],
+  "dst": "23a17be3c79f720b",
+  "model": "google/gemini-2.5-flash",
+  "src": "1ad8cbe76f82d81d",
+  "usage": 2298
+ },
+ "Back-End/JAVA/functional_interface2.md": {
+  "at": "2026-09-17T10:12:36Z",
+  "bad": [],
+  "dst": "f79724f4392747ca",
+  "model": "google/gemini-2.5-flash",
+  "src": "db970b121dd2a278",
+  "usage": 3097
+ },
+ "Back-End/JAVA/g1.md": {
+  "at": "2026-09-17T10:12:47Z",
+  "bad": [],
+  "dst": "faf41dca1a1f4729",
+  "model": "google/gemini-2.5-flash",
+  "src": "21a47da85da5ba18",
+  "usage": 5523
+ },
+ "Back-End/JAVA/g1gc.md": {
+  "at": "2026-09-17T10:12:50Z",
+  "bad": [],
+  "dst": "69ec80cb67545503",
+  "model": "google/gemini-2.5-flash",
+  "src": "f420b85e44812347",
+  "usage": 6058
+ },
+ "Back-End/JAVA/g1pagc.md": {
+  "at": "2026-09-17T10:13:06Z",
+  "bad": [],
+  "dst": "cf598e11f1d30833",
+  "model": "google/gemini-2.5-flash",
+  "src": "7613ca65690aa666",
+  "usage": 10275
+ },
+ "Back-End/JAVA/gc.md": {
+  "at": "2026-09-17T10:12:52Z",
+  "bad": [],
+  "dst": "67d745e922915b7b",
+  "model": "google/gemini-2.5-flash",
+  "src": "cf91b69134afb7c6",
+  "usage": 5717
+ },
+ "Back-End/JAVA/gc_4.md": {
+  "at": "2026-09-17T10:12:59Z",
+  "bad": [],
+  "dst": "c0f2184cd46b7e31",
+  "model": "google/gemini-2.5-flash",
+  "src": "2f40a720f8cf250b",
+  "usage": 7464
+ },
+ "Back-End/JAVA/gc_kind.md": {
+  "at": "2026-09-17T10:12:42Z",
+  "bad": [],
+  "dst": "528d86a1af305446",
+  "model": "google/gemini-2.5-flash",
+  "src": "43e45115b829f723",
+  "usage": 1862
+ },
+ "Back-End/JAVA/gctest.md": {
+  "at": "2026-09-17T10:12:55Z",
+  "bad": [],
+  "dst": "10dfb1c050115f8d",
+  "model": "google/gemini-2.5-flash",
+  "src": "64ec4c5470f73a5f",
+  "usage": 5688
+ },
+ "Back-End/JAVA/generic.md": {
+  "at": "2026-09-17T10:12:55Z",
+  "bad": [],
+  "dst": "17ff1c2f1970694b",
+  "model": "google/gemini-2.5-flash",
+  "src": "5775cb2c01e26bfe",
+  "usage": 4275
+ },
+ "Back-End/JAVA/graal.md": {
+  "at": "2026-09-17T10:13:02Z",
+  "bad": [],
+  "dst": "d4e994d8ef5ee14b",
+  "model": "google/gemini-2.5-flash",
+  "src": "bf89a7857e22cb74",
+  "usage": 4486
+ },
+ "Back-End/JAVA/graal_memory.md": {
+  "at": "2026-09-17T10:13:01Z",
+  "bad": [],
+  "dst": "32497db73623085c",
+  "model": "google/gemini-2.5-flash",
+  "src": "f40eb26b331f746b",
+  "usage": 4356
+ },
+ "Back-End/JAVA/hang.md": {
+  "at": "2026-09-17T10:13:18Z",
+  "bad": [],
+  "dst": "aff67dc0889f23a3",
+  "model": "google/gemini-2.5-flash",
+  "src": "2354794db8ddd60a",
+  "usage": 8908
+ },
+ "Back-End/JAVA/hashmap.md": {
+  "at": "2026-09-17T10:13:05Z",
+  "bad": [],
+  "dst": "e2c777bc12770a22",
+  "model": "google/gemini-2.5-flash",
+  "src": "3a10806c804177d4",
+  "usage": 3796
+ },
+ "Back-End/JAVA/hot_cold_publisher.md": {
+  "at": "2026-09-17T10:13:02Z",
+  "bad": [],
+  "dst": "15745913c9ddadfb",
+  "model": "google/gemini-2.5-flash",
+  "src": "9877b611e5ed7541",
+  "usage": 1973
+ },
+ "Back-End/JAVA/hotspotvm.md": {
+  "at": "2026-09-17T10:13:04Z",
+  "bad": [],
+  "dst": "aca513989cba7445",
+  "model": "google/gemini-2.5-flash",
+  "src": "c3916194a8c04f3f",
+  "usage": 3202
+ },
+ "Back-End/JAVA/humong.md": {
+  "at": "2026-09-17T10:13:35Z",
+  "bad": [],
+  "dst": "ca6bf354cc1885f9",
+  "model": "google/gemini-2.5-flash",
+  "src": "5e53c240c4a0b637",
+  "usage": 12858
+ },
+ "Back-End/JAVA/incru.md": {
+  "at": "2026-09-17T10:13:17Z",
+  "bad": [],
+  "dst": "ffdc447986461bfe",
+  "model": "google/gemini-2.5-flash",
+  "src": "90d027d4438fec6b",
+  "usage": 4444
+ },
+ "Back-End/JAVA/javanet.md": {
+  "at": "2026-09-17T10:13:17Z",
+  "bad": [],
+  "dst": "0bf778aba9835382",
+  "model": "google/gemini-2.5-flash",
+  "src": "0b4069eaf5765873",
+  "usage": 5223
+ },
+ "Back-End/JAVA/jdkproxy_cglib.md": {
+  "at": "2026-09-17T10:13:11Z",
+  "bad": [],
+  "dst": "b59a7c93eb98630b",
+  "model": "google/gemini-2.5-flash",
+  "src": "9290d9c742382a8f",
+  "usage": 2913
+ },
+ "Back-End/JAVA/jemalloc.md": {
+  "at": "2026-09-17T10:13:17Z",
+  "bad": [],
+  "dst": "41932a2f9caad311",
+  "model": "google/gemini-2.5-flash",
+  "src": "d1c2dbf5ccd37e38",
+  "usage": 4349
+ },
+ "Back-End/JAVA/jemalloc2.md": {
+  "at": "2026-09-17T10:13:32Z",
+  "bad": [],
+  "dst": "69c88a3c89818fd4",
+  "model": "google/gemini-2.5-flash",
+  "src": "21b291ac2c117db5",
+  "usage": 8413
+ },
+ "Back-End/JAVA/jit.md": {
+  "at": "2026-09-17T10:13:20Z",
+  "bad": [],
+  "dst": "7acf684cdc11ae43",
+  "model": "google/gemini-2.5-flash",
+  "src": "a80029386df60402",
+  "usage": 4947
+ },
+ "Back-End/JAVA/jmm.md": {
+  "at": "2026-09-17T10:13:20Z",
+  "bad": [],
+  "dst": "ba6880e888e79de0",
+  "model": "google/gemini-2.5-flash",
+  "src": "57b380742e987fa1",
+  "usage": 1894
+ },
+ "Back-End/JAVA/jvm.md": {
+  "at": "2026-09-17T10:13:33Z",
+  "bad": [],
+  "dst": "c3c98c051b2c51de",
+  "model": "google/gemini-2.5-flash",
+  "src": "5f97f62743929eb3",
+  "usage": 4534
+ },
+ "Back-End/JAVA/jvm_heap_header.md": {
+  "at": "2026-09-17T10:13:38Z",
+  "bad": [],
+  "dst": "1d7e1c6ed5049487",
+  "model": "google/gemini-2.5-flash",
+  "src": "b37c9a49cede45ed",
+  "usage": 6978
+ },
+ "Back-End/JAVA/jvmm.md": {
+  "at": "2026-09-17T10:13:23Z",
+  "bad": [],
+  "dst": "b370a26df80f7506",
+  "model": "google/gemini-2.5-flash",
+  "src": "00d39a2a59155cae",
+  "usage": 1981
+ },
+ "Back-End/JAVA/lifecycle.md": {
+  "at": "2026-09-17T10:13:23Z",
+  "bad": [],
+  "dst": "4700f81707b9d0a0",
+  "model": "google/gemini-2.5-flash",
+  "src": "b360ff847914f1e2",
+  "usage": 1696
+ },
+ "Back-End/JAVA/lock.md": {
+  "at": "2026-09-17T10:13:29Z",
+  "bad": [],
+  "dst": "4e198181acbeef10",
+  "model": "google/gemini-2.5-flash",
+  "src": "a29f01581b1b58ae",
+  "usage": 3115
+ },
+ "Back-End/JAVA/markword.md": {
+  "at": "2026-09-17T10:13:36Z",
+  "bad": [],
+  "dst": "6dc3f070d0817653",
+  "model": "google/gemini-2.5-flash",
+  "src": "76cdd5f00e473cfd",
+  "usage": 4327
+ },
+ "Back-End/JAVA/mixedgc.md": {
+  "at": "2026-09-17T10:13:45Z",
+  "bad": [],
+  "dst": "f65defc3ae894b52",
+  "model": "google/gemini-2.5-flash",
+  "src": "34041dad97334c2e",
+  "usage": 6999
+ },
+ "Back-End/JAVA/native_image.md": {
+  "at": "2026-09-17T10:13:46Z",
+  "bad": [],
+  "dst": "8c33b0ab33f4575b",
+  "model": "google/gemini-2.5-flash",
+  "src": "47b2d83b428d1eb4",
+  "usage": 7380
+ },
+ "Back-End/JAVA/native_memory.md": {
+  "at": "2026-09-17T10:13:35Z",
+  "bad": [],
+  "dst": "bb1d354c5ea34e95",
+  "model": "google/gemini-2.5-flash",
+  "src": "86053f58ad6a046f",
+  "usage": 3880
+ },
+ "Back-End/JAVA/object.md": {
+  "at": "2026-09-17T10:13:37Z",
+  "bad": [],
+  "dst": "3406dd419881359f",
+  "model": "google/gemini-2.5-flash",
+  "src": "7f357ea98449acfd",
+  "usage": 3442
+ },
+ "Back-End/JAVA/oom.md": {
+  "at": "2026-09-17T10:13:39Z",
+  "bad": [],
+  "dst": "cf5cf843fcc8da1a",
+  "model": "google/gemini-2.5-flash",
+  "src": "4bbe4c29bad5f9db",
+  "usage": 2495
+ },
+ "Back-End/JAVA/optional.md": {
+  "at": "2026-09-17T10:13:42Z",
+  "bad": [],
+  "dst": "d03e1351f00ab019",
+  "model": "google/gemini-2.5-flash",
+  "src": "41ad70789b7498e9",
+  "usage": 2954
+ },
+ "Back-End/JAVA/overding.md": {
+  "at": "2026-09-17T10:13:41Z",
+  "bad": [],
+  "dst": "4e8b00bf00a32efb",
+  "model": "google/gemini-2.5-flash",
+  "src": "d04aabb01bded2cd",
+  "usage": 2574
+ },
+ "Back-End/JAVA/parg.md": {
+  "at": "2026-09-17T10:13:54Z",
+  "bad": [],
+  "dst": "ccb579bf08ef95c3",
+  "model": "google/gemini-2.5-flash",
+  "src": "a5eb1fc74dd385e3",
+  "usage": 5578
+ },
+ "Back-End/JAVA/pojo.md": {
+  "at": "2026-09-17T10:13:46Z",
+  "bad": [],
+  "dst": "4b47a6c673ffef4c",
+  "model": "google/gemini-2.5-flash",
+  "src": "74713d562f741b32",
+  "usage": 3633
+ },
+ "Back-End/JAVA/reactive_steam.md": {
+  "at": "2026-09-17T10:13:45Z",
+  "bad": [],
+  "dst": "dfb23e71e805090a",
+  "model": "google/gemini-2.5-flash",
+  "src": "b24bb25b8747a45c",
+  "usage": 3116
+ },
+ "Back-End/JAVA/reactive_stream.md": {
+  "at": "2026-09-17T10:13:55Z",
+  "bad": [],
+  "dst": "2a8329f576a72f89",
+  "model": "google/gemini-2.5-flash",
+  "src": "ee4423bd8239b823",
+  "usage": 5447
+ },
+ "Back-End/JAVA/reference.md": {
+  "at": "2026-09-17T10:13:43Z",
+  "bad": [],
+  "dst": "2afa6b3b7c9f9c22",
+  "model": "google/gemini-2.5-flash",
+  "src": "eb4eb6d0a66c02f5",
+  "usage": 1543
+ },
+ "Back-End/JAVA/reflection.md": {
+  "at": "2026-09-17T10:14:01Z",
+  "bad": [],
+  "dst": "2f2ca974be8ae92f",
+  "model": "google/gemini-2.5-flash",
+  "src": "ce72a8265f97bb22",
+  "usage": 6809
+ },
+ "Back-End/JAVA/runtime.md": {
+  "at": "2026-09-17T10:13:57Z",
+  "bad": [],
+  "dst": "bd1475d3d5b9538c",
+  "model": "google/gemini-2.5-flash",
+  "src": "a47e535e202eff56",
+  "usage": 5398
+ },
+ "Back-End/JAVA/safepoint.md": {
+  "at": "2026-09-17T10:13:52Z",
+  "bad": [],
+  "dst": "8a147a27a70117ad",
+  "model": "google/gemini-2.5-flash",
+  "src": "5ac474ca51902230",
+  "usage": 3183
+ },
+ "Back-End/JAVA/servlet.md": {
+  "at": "2026-09-17T10:13:53Z",
+  "bad": [],
+  "dst": "18a8d1f3c5d57f94",
+  "model": "google/gemini-2.5-flash",
+  "src": "33610e9ef5a44501",
+  "usage": 3712
+ },
+ "Back-End/JAVA/stringB.md": {
+  "at": "2026-09-17T10:14:06Z",
+  "bad": [],
+  "dst": "ca848d2f22c3e782",
+  "model": "google/gemini-2.5-flash",
+  "src": "c6bbdb03dc91a59d",
+  "usage": 6810
+ },
+ "Back-End/JAVA/string_pool.md": {
+  "at": "2026-09-17T10:13:52Z",
+  "bad": [],
+  "dst": "3afc5ebf8ae18e17",
+  "model": "google/gemini-2.5-flash",
+  "src": "5e8470e21130c3ba",
+  "usage": 1931
+ },
+ "Back-End/JAVA/tlab.md": {
+  "at": "2026-09-17T10:14:26Z",
+  "bad": [],
+  "dst": "e06e285f00af854f",
+  "model": "google/gemini-2.5-flash",
+  "src": "5f90e66ff8ec5913",
+  "usage": 10918
+ },
+ "Back-End/JAVA/vdso.md": {
+  "at": "2026-09-17T10:13:58Z",
+  "bad": [],
+  "dst": "d954a06eddc4457c",
+  "model": "google/gemini-2.5-flash",
+  "src": "cfa294f6478ce6b1",
+  "usage": 3699
+ },
+ "Back-End/JAVA/warmup1.md": {
+  "at": "2026-09-17T10:14:20Z",
+  "bad": [],
+  "dst": "1fee241628eeceee",
+  "model": "google/gemini-2.5-flash",
+  "src": "15a0683b62653864",
+  "usage": 8421
+ },
+ "Back-End/JAVA/warmup2.md": {
+  "at": "2026-09-17T10:14:01Z",
+  "bad": [],
+  "dst": "ab1999ddad4d4cb3",
+  "model": "google/gemini-2.5-flash",
+  "src": "4034326ebf1c029d",
+  "usage": 2733
+ },
+ "Back-End/JAVA/whysatb.md": {
+  "at": "2026-09-17T10:14:01Z",
+  "bad": [],
+  "dst": "cc72f857189c533e",
+  "model": "google/gemini-2.5-flash",
+  "src": "d49f833bc2e921da",
+  "usage": 2462
+ },
+ "Back-End/JAVA/wrapper.md": {
+  "at": "2026-09-17T10:14:13Z",
+  "bad": [],
+  "dst": "8e39ed178246a156",
+  "model": "google/gemini-2.5-flash",
+  "src": "86371aacd120e407",
+  "usage": 6767
+ },
+ "Back-End/JAVA/writebarrier.md": {
+  "at": "2026-09-17T10:14:04Z",
+  "bad": [],
+  "dst": "b6a1e640fc1479f8",
+  "model": "google/gemini-2.5-flash",
+  "src": "1b9752d5325f3e93",
+  "usage": 2852
+ },
+ "Back-End/JAVA/zgc.md": {
+  "at": "2026-09-17T10:14:08Z",
+  "bad": [],
+  "dst": "04833c1e34716125",
+  "model": "google/gemini-2.5-flash",
+  "src": "9a7e5c1c641398ee",
+  "usage": 3347
+ },
+ "Back-End/JAVA/다형성.md": {
+  "at": "2026-09-17T10:14:10Z",
+  "bad": [],
+  "dst": "4469293dc1db497c",
+  "model": "google/gemini-2.5-flash",
+  "src": "6d016a31d8bcc2c8",
+  "usage": 4031
+ },
+ "Back-End/JAVA/생성자.md": {
+  "at": "2026-09-17T10:14:12Z",
+  "bad": [],
+  "dst": "2182801c51fe1e4e",
+  "model": "google/gemini-2.5-flash",
+  "src": "b382dbcca4865027",
+  "usage": 4176
+ },
+ "Back-End/Node/node.md": {
+  "at": "2026-09-17T10:14:11Z",
+  "bad": [],
+  "dst": "5af6ac48f8bb4c43",
+  "model": "google/gemini-2.5-flash",
+  "src": "b24c495a29becbe8",
+  "usage": 2931
+ },
+ "Back-End/Node/npm.md": {
+  "at": "2026-09-17T10:14:05Z",
+  "bad": [],
+  "dst": "e143b244bfcd8b69",
+  "model": "google/gemini-2.5-flash",
+  "src": "03ba8817b70cae4b",
+  "usage": 1181
+ },
+ "Back-End/Node/npm1.md": {
+  "at": "2026-09-17T10:14:25Z",
+  "bad": [],
+  "dst": "7370db9c610e2b3a",
+  "model": "google/gemini-2.5-flash",
+  "src": "9725e5692f5a2a4d",
+  "usage": 5084
+ },
+ "Back-End/Node/npm2.md": {
+  "at": "2026-09-17T10:14:11Z",
+  "bad": [],
+  "dst": "95e9352bdaac58da",
+  "model": "google/gemini-2.5-flash",
+  "src": "c0295855795d1ab8",
+  "usage": 1750
+ },
+ "Back-End/Node/npmjson.md": {
+  "at": "2026-09-17T10:14:12Z",
+  "bad": [],
+  "dst": "b840e2c549dd99af",
+  "model": "google/gemini-2.5-flash",
+  "src": "841639faba798d0f",
+  "usage": 1704
+ },
+ "Back-End/Node/server.md": {
+  "at": "2026-09-17T10:14:15Z",
+  "bad": [],
+  "dst": "984bec8a8f9c05e3",
+  "model": "google/gemini-2.5-flash",
+  "src": "2d9d109fc290161d",
+  "usage": 2414
+ },
+ "Back-End/backend/api.md": {
+  "at": "2026-09-17T10:14:29Z",
+  "bad": [],
+  "dst": "78009d83ca57f1ee",
+  "model": "google/gemini-2.5-flash",
+  "src": "d17eec9e616ccfce",
+  "usage": 5084
+ },
+ "Back-End/backend/async.md": {
+  "at": "2026-09-17T10:14:25Z",
+  "bad": [],
+  "dst": "3889429746519e71",
+  "model": "google/gemini-2.5-flash",
+  "src": "44cbb33de0a041a1",
+  "usage": 4799
+ },
+ "Back-End/backend/auth.md": {
+  "at": "2026-09-17T10:14:23Z",
+  "bad": [],
+  "dst": "63891000bc13f98d",
+  "model": "google/gemini-2.5-flash",
+  "src": "89db36254d6a9079",
+  "usage": 3977
+ },
+ "Back-End/backend/cleanspring.md": {
+  "at": "2026-09-17T10:14:22Z",
+  "bad": [],
+  "dst": "f952219708e847ea",
+  "model": "google/gemini-2.5-flash",
+  "src": "3803fb35f7b264bc",
+  "usage": 4200
+ },
+ "Back-End/backend/dr.md": {
+  "at": "2026-09-17T10:14:21Z",
+  "bad": [],
+  "dst": "94f8c85d9397468d",
+  "model": "google/gemini-2.5-flash",
+  "src": "6287ea6c9f53df9a",
+  "usage": 2679
+ },
+ "Back-End/backend/eviction.md": {
+  "at": "2026-09-17T10:14:20Z",
+  "bad": [],
+  "dst": "06d9e602ff4b25d0",
+  "model": "google/gemini-2.5-flash",
+  "src": "c7cb22c9db6369fe",
+  "usage": 1762
+ },
+ "Back-End/backend/failcon.md": {
+  "at": "2026-09-17T10:14:38Z",
+  "bad": [],
+  "dst": "9aa0fd1389f34895",
+  "model": "google/gemini-2.5-flash",
+  "src": "6d9616bf6e7162e4",
+  "usage": 7195
+ },
+ "Back-End/backend/history.md": {
+  "at": "2026-09-17T10:14:27Z",
+  "bad": [],
+  "dst": "a9ca2cb8019222a2",
+  "model": "google/gemini-2.5-flash",
+  "src": "8890df3b61471852",
+  "usage": 2415
+ },
+ "Back-End/backend/kafka요소.md": {
+  "at": "2026-09-17T10:14:30Z",
+  "bad": [],
+  "dst": "74acf5d63c5c4472",
+  "model": "google/gemini-2.5-flash",
+  "src": "2169d966833cb90f",
+  "usage": 3511
+ },
+ "Back-End/backend/kafka요소2.md": {
+  "at": "2026-09-17T10:14:46Z",
+  "bad": [],
+  "dst": "f3382033cb649cc9",
+  "model": "google/gemini-2.5-flash",
+  "src": "592453ddd529853e",
+  "usage": 8138
+ },
+ "Back-End/backend/logger.md": {
+  "at": "2026-09-17T10:14:38Z",
+  "bad": [],
+  "dst": "877995e64157c213",
+  "model": "google/gemini-2.5-flash",
+  "src": "77eb2b98494b8f2f",
+  "usage": 4910
+ },
+ "Back-End/backend/logicaltime.md": {
+  "at": "2026-09-17T10:14:46Z",
+  "bad": [],
+  "dst": "ffd807c5d1402816",
+  "model": "google/gemini-2.5-flash",
+  "src": "a2ee4e6c21d0f26c",
+  "usage": 6836
+ },
+ "Back-End/backend/mono.md": {
+  "at": "2026-09-17T10:14:30Z",
+  "bad": [],
+  "dst": "4b5341a4e7c2b940",
+  "model": "google/gemini-2.5-flash",
+  "src": "06c8edce1f067978",
+  "usage": 1541
+ },
+ "Back-End/backend/msa.md": {
+  "at": "2026-09-17T10:14:36Z",
+  "bad": [],
+  "dst": "2b0f5f54bdb1b914",
+  "model": "google/gemini-2.5-flash",
+  "src": "a4c24859acc8b5fa",
+  "usage": 3240
+ },
+ "Back-End/backend/multi_session.md": {
+  "at": "2026-09-17T10:14:46Z",
+  "bad": [],
+  "dst": "739baa9ea8c9cfc3",
+  "model": "google/gemini-2.5-flash",
+  "src": "9a06db9f278d93b2",
+  "usage": 7150
+ },
+ "Back-End/backend/netty.md": {
+  "at": "2026-09-17T10:14:32Z",
+  "bad": [],
+  "dst": "23569071a00f403c",
+  "model": "google/gemini-2.5-flash",
+  "src": "e37773b28db91efc",
+  "usage": 1899
+ },
+ "Back-End/backend/oauth2.md": {
+  "at": "2026-09-17T10:14:38Z",
+  "bad": [],
+  "dst": "c7cc2dcbad0c1893",
+  "model": "google/gemini-2.5-flash",
+  "src": "01574046fd9c2736",
+  "usage": 3049
+ },
+ "Back-End/backend/partition.md": {
+  "at": "2026-09-17T10:14:49Z",
+  "bad": [],
+  "dst": "21d54de84445828a",
+  "model": "google/gemini-2.5-flash",
+  "src": "12a5858a85253a78",
+  "usage": 6302
+ },
+ "Back-End/backend/paxos.md": {
+  "at": "2026-09-17T10:14:57Z",
+  "bad": [],
+  "dst": "6d282fb629ca4555",
+  "model": "google/gemini-2.5-flash",
+  "src": "583411098c8855e7",
+  "usage": 8474
+ },
+ "Back-End/backend/protobuf.md": {
+  "at": "2026-09-17T10:14:52Z",
+  "bad": [],
+  "dst": "ceda5cbca657484d",
+  "model": "google/gemini-2.5-flash",
+  "src": "f8892de3796ebf58",
+  "usage": 4281
+ },
+ "Back-End/backend/pub_sub.md": {
+  "at": "2026-09-17T10:14:43Z",
+  "bad": [],
+  "dst": "1a0bf93e2ae63c8f",
+  "model": "google/gemini-2.5-flash",
+  "src": "53c57046df70187e",
+  "usage": 2267
+ },
+ "Back-End/backend/reactive_programming.md": {
+  "at": "2026-09-17T10:14:52Z",
+  "bad": [],
+  "dst": "cf516246b60176d9",
+  "model": "google/gemini-2.5-flash",
+  "src": "f1b953780ca09a86",
+  "usage": 4193
+ },
+ "Back-End/backend/solid.md": {
+  "at": "2026-09-17T10:14:51Z",
+  "bad": [],
+  "dst": "2aa8c8befcecbdd7",
+  "model": "google/gemini-2.5-flash",
+  "src": "ab6c1a96cdddc27c",
+  "usage": 4501
+ },
+ "Back-End/backend/test_cov.md": {
+  "at": "2026-09-17T10:14:43Z",
+  "bad": [],
+  "dst": "e77c395c1a8e3eb0",
+  "model": "google/gemini-2.5-flash",
+  "src": "6f38ff2669c3db97",
+  "usage": 1516
+ },
+ "Back-End/backend/think.md": {
+  "at": "2026-09-17T10:14:59Z",
+  "bad": [],
+  "dst": "4c8e772c331cc747",
+  "model": "google/gemini-2.5-flash",
+  "src": "f451e6072b1eca65",
+  "usage": 5386
+ },
+ "Back-End/backend/timesync.md": {
+  "at": "2026-09-17T10:14:59Z",
+  "bad": [],
+  "dst": "62eee1e55fb633a5",
+  "model": "google/gemini-2.5-flash",
+  "src": "25679ab987a3678d",
+  "usage": 5299
+ },
+ "Back-End/backend/당근밋업.md": {
+  "at": "2026-09-17T10:15:17Z",
+  "bad": [],
+  "dst": "56581ec15ff0883f",
+  "model": "google/gemini-2.5-flash",
+  "src": "63b66d5f524ab2eb",
+  "usage": 12382
+ },
+ "Back-End/baemin_batch.md": {
+  "at": "2026-09-17T10:14:55Z",
+  "bad": [],
+  "dst": "3921aa7f1574722c",
+  "model": "google/gemini-2.5-flash",
+  "src": "04b5861744c1b62c",
+  "usage": 2887
+ },
+ "Back-End/cache.md": {
+  "at": "2026-09-17T10:15:59Z",
+  "bad": [],
+  "dst": "f530b7117259a630",
+  "model": "google/gemini-2.5-flash",
+  "src": "9c3499b8ce6b0a29",
+  "usage": 27407
+ },
+ "Back-End/cache2.md": {
+  "at": "2026-09-17T10:15:16Z",
+  "bad": [],
+  "dst": "0da3fe3a52263a9e",
+  "model": "google/gemini-2.5-flash",
+  "src": "54756e82f600aafd",
+  "usage": 9884
+ },
+ "Back-End/cachemigrate.md": {
+  "at": "2026-09-17T10:15:17Z",
+  "bad": [],
+  "dst": "7474fc0c527592ef",
+  "model": "google/gemini-2.5-flash",
+  "src": "0d047c259df00bb0",
+  "usage": 8827
+ },
+ "Back-End/dbmigrate.md": {
+  "at": "2026-09-17T10:15:19Z",
+  "bad": [],
+  "dst": "b088827cb709ba11",
+  "model": "google/gemini-2.5-flash",
+  "src": "7806a564790dc546",
+  "usage": 10227
+ },
+ "Back-End/ddd/aggregate.md": {
+  "at": "2026-09-17T10:32:11Z",
+  "bad": [],
+  "dst": "a57227b26e72cb72",
+  "model": "google/gemini-2.5-flash",
+  "src": "103030a24ecd0951",
+  "usage": 4867
+ },
+ "Back-End/ddd/boundcontext.md": {
+  "at": "2026-09-17T10:15:21Z",
+  "bad": [],
+  "dst": "13402b9793c5f7fa",
+  "model": "google/gemini-2.5-flash",
+  "src": "5a06007e1316a2f8",
+  "usage": 9532
+ },
+ "Back-End/ddd/bounded_context.md": {
+  "at": "2026-09-17T10:15:06Z",
+  "bad": [],
+  "dst": "0ffc2cdfd64fd956",
+  "model": "google/gemini-2.5-flash",
+  "src": "1b589bc9a0dacdb2",
+  "usage": 3474
+ },
+ "Back-End/ddd/cqrs.md": {
+  "at": "2026-09-17T10:15:15Z",
+  "bad": [],
+  "dst": "f18df40dfaa4592d",
+  "model": "google/gemini-2.5-flash",
+  "src": "acaa197479225df4",
+  "usage": 4930
+ },
+ "Back-End/ddd/ddd.md": {
+  "at": "2026-09-17T10:15:12Z",
+  "bad": [],
+  "dst": "9154bbe67a105bf1",
+  "model": "google/gemini-2.5-flash",
+  "src": "a4c902fefd1b1ec7",
+  "usage": 4238
+ },
+ "Back-End/ddd/domainservice.md": {
+  "at": "2026-09-17T10:15:24Z",
+  "bad": [],
+  "dst": "208366847dd84b56",
+  "model": "google/gemini-2.5-flash",
+  "src": "8abcfd60ea2dff9c",
+  "usage": 5991
+ },
+ "Back-End/ddd/event.md": {
+  "at": "2026-09-17T10:15:16Z",
+  "bad": [],
+  "dst": "580182b0b32cc07e",
+  "model": "google/gemini-2.5-flash",
+  "src": "fd4c60f092782738",
+  "usage": 2958
+ },
+ "Back-End/ddd/event2.md": {
+  "at": "2026-09-17T10:15:25Z",
+  "bad": [],
+  "dst": "3b68a12a8f0feb93",
+  "model": "google/gemini-2.5-flash",
+  "src": "84bf3d74d9ce63bc",
+  "usage": 4471
+ },
+ "Back-End/ddd/event3.md": {
+  "at": "2026-09-17T10:15:36Z",
+  "bad": [],
+  "dst": "4f39a47e94ef4dd0",
+  "model": "google/gemini-2.5-flash",
+  "src": "7099413f25dbf74f",
+  "usage": 6686
+ },
+ "Back-End/ddd/presentation.md": {
+  "at": "2026-09-17T10:15:46Z",
+  "bad": [],
+  "dst": "71ab0bace9bdebb4",
+  "model": "google/gemini-2.5-flash",
+  "src": "a619e75b973e6f9d",
+  "usage": 10457
+ },
+ "Back-End/ddd/transaction.md": {
+  "at": "2026-09-17T10:16:21Z",
+  "bad": [],
+  "dst": "030758093cc11f92",
+  "model": "google/gemini-2.5-flash",
+  "src": "0cc7fcb6c6d22923",
+  "usage": 15802
+ },
+ "Back-End/dirbuff.md": {
+  "at": "2026-09-17T10:15:34Z",
+  "bad": [],
+  "dst": "3d386538e64b97aa",
+  "model": "google/gemini-2.5-flash",
+  "src": "5dbda376ca9bd20f",
+  "usage": 5276
+ },
+ "Back-End/dist.md": {
+  "at": "2026-09-17T10:15:43Z",
+  "bad": [],
+  "dst": "a7078c9f94c19116",
+  "model": "google/gemini-2.5-flash",
+  "src": "4c79159d76c70524",
+  "usage": 8064
+ },
+ "Back-End/dist_consist.md": {
+  "at": "2026-09-17T10:15:57Z",
+  "bad": [],
+  "dst": "c69f5f919e2b8f85",
+  "model": "google/gemini-2.5-flash",
+  "src": "6c8fe6af1160b46f",
+  "usage": 12982
+ },
+ "Back-End/distlock.md": {
+  "at": "2026-09-17T10:15:42Z",
+  "bad": [],
+  "dst": "9b5905902ba777d4",
+  "model": "google/gemini-2.5-flash",
+  "src": "f031bb75683bf082",
+  "usage": 6864
+ },
+ "Back-End/encrypt.md": {
+  "at": "2026-09-17T10:15:46Z",
+  "bad": [],
+  "dst": "5e4f8801fb61b37e",
+  "model": "google/gemini-2.5-flash",
+  "src": "91036763e84b9f7c",
+  "usage": 7118
+ },
+ "Back-End/eventloopnetty.md": {
+  "at": "2026-09-17T10:15:42Z",
+  "bad": [],
+  "dst": "28a0250e90cf9129",
+  "model": "google/gemini-2.5-flash",
+  "src": "cad86ead2463b4a8",
+  "usage": 6157
+ },
+ "Back-End/ftest.md": {
+  "at": "2026-09-17T10:54:10Z",
+  "bad": [],
+  "dst": "01ba4719c80b6fe9",
+  "model": "(skip: 빈 노트)",
+  "src": "01ba4719c80b6fe9",
+  "usage": 0
+ },
+ "Back-End/git/basic.md": {
+  "at": "2026-09-17T10:15:43Z",
+  "bad": [],
+  "dst": "8fd19ce4baa2f4b1",
+  "model": "google/gemini-2.5-flash",
+  "src": "206f7608b8e985bf",
+  "usage": 2110
+ },
+ "Back-End/git/basic2.md": {
+  "at": "2026-09-17T10:15:51Z",
+  "bad": [],
+  "dst": "934fc85cc41f49da",
+  "model": "google/gemini-2.5-flash",
+  "src": "7a1fe01ae5802876",
+  "usage": 2129
+ },
+ "Back-End/git/branch.md": {
+  "at": "2026-09-17T10:15:49Z",
+  "bad": [],
+  "dst": "7092611d9992fd34",
+  "model": "google/gemini-2.5-flash",
+  "src": "52506e5c750a6f5b",
+  "usage": 2490
+ },
+ "Back-End/git/conflict.md": {
+  "at": "2026-09-17T10:15:54Z",
+  "bad": [],
+  "dst": "b282571060ea536c",
+  "model": "google/gemini-2.5-flash",
+  "src": "7da89f67bc83d44f",
+  "usage": 2818
+ },
+ "Back-End/git/issue.md": {
+  "at": "2026-09-17T10:15:50Z",
+  "bad": [],
+  "dst": "2dece32c4b059c5b",
+  "model": "google/gemini-2.5-flash",
+  "src": "196c7f77af012ed4",
+  "usage": 2205
+ },
+ "Back-End/git/log.md": {
+  "at": "2026-09-17T10:15:50Z",
+  "bad": [],
+  "dst": "97321c87c467d17d",
+  "model": "google/gemini-2.5-flash",
+  "src": "f561d9bf3ba032a2",
+  "usage": 1324
+ },
+ "Back-End/git/pull.md": {
+  "at": "2026-09-17T10:16:03Z",
+  "bad": [],
+  "dst": "1d1a5c11ae8f3205",
+  "model": "google/gemini-2.5-flash",
+  "src": "3ee3648ee8d91e81",
+  "usage": 3349
+ },
+ "Back-End/git/pushR.md": {
+  "at": "2026-09-17T10:15:54Z",
+  "bad": [],
+  "dst": "13605c8e57c97819",
+  "model": "google/gemini-2.5-flash",
+  "src": "2a6776a55b88267b",
+  "usage": 1448
+ },
+ "Back-End/git/request.md": {
+  "at": "2026-09-17T10:15:58Z",
+  "bad": [],
+  "dst": "f9eb4d202a0677f8",
+  "model": "google/gemini-2.5-flash",
+  "src": "b38826a463b246a7",
+  "usage": 3057
+ },
+ "Back-End/git/revert.md": {
+  "at": "2026-09-17T10:16:00Z",
+  "bad": [],
+  "dst": "722d64b843fb6d34",
+  "model": "google/gemini-2.5-flash",
+  "src": "67baee4b24743ec5",
+  "usage": 2743
+ },
+ "Back-End/git/version.md": {
+  "at": "2026-09-17T10:15:54Z",
+  "bad": [],
+  "dst": "73afca284a8076fe",
+  "model": "google/gemini-2.5-flash",
+  "src": "bb46b4bf9f17da5c",
+  "usage": 1095
+ },
+ "Back-End/git/용어.md": {
+  "at": "2026-09-17T10:15:58Z",
+  "bad": [],
+  "dst": "ba49199c927eb05f",
+  "model": "google/gemini-2.5-flash",
+  "src": "dc61b98a19f48032",
+  "usage": 2202
+ },
+ "Back-End/go/http_handler.md": {
+  "at": "2026-09-17T10:16:05Z",
+  "bad": [],
+  "dst": "3eff7fad840ecacb",
+  "model": "google/gemini-2.5-flash",
+  "src": "edbc29c8004600ec",
+  "usage": 4073
+ },
+ "Back-End/go/mux.md": {
+  "at": "2026-09-17T10:16:01Z",
+  "bad": [],
+  "dst": "738a137edc237d9c",
+  "model": "google/gemini-2.5-flash",
+  "src": "332c575eeadcaa75",
+  "usage": 2217
+ },
+ "Back-End/go/pointer.md": {
+  "at": "2026-09-17T10:16:05Z",
+  "bad": [],
+  "dst": "33c24d820ecd7bf1",
+  "model": "google/gemini-2.5-flash",
+  "src": "ec5e6e2468dbf5ed",
+  "usage": 3949
+ },
+ "Back-End/go/sqlite.md": {
+  "at": "2026-09-17T10:16:04Z",
+  "bad": [],
+  "dst": "407d80bd19e1a830",
+  "model": "google/gemini-2.5-flash",
+  "src": "193d1a213360293b",
+  "usage": 2664
+ },
+ "Back-End/http/HTTP기본/connectionless.md": {
+  "at": "2026-09-17T10:16:03Z",
+  "bad": [],
+  "dst": "6e0c98139dcc6c29",
+  "model": "google/gemini-2.5-flash",
+  "src": "25963298bb2b6467",
+  "usage": 1538
+ },
+ "Back-End/http/HTTP기본/everyhttp.md": {
+  "at": "2026-09-17T10:16:03Z",
+  "bad": [],
+  "dst": "ec669633b658c3ec",
+  "model": "google/gemini-2.5-flash",
+  "src": "6778437d4ec4b884",
+  "usage": 1773
+ },
+ "Back-End/http/HTTP기본/message.md": {
+  "at": "2026-09-17T10:16:09Z",
+  "bad": [],
+  "dst": "6f50d3ca7ad110d1",
+  "model": "google/gemini-2.5-flash",
+  "src": "5721b1a580583628",
+  "usage": 3117
+ },
+ "Back-End/http/HTTP기본/state.md": {
+  "at": "2026-09-17T10:16:07Z",
+  "bad": [],
+  "dst": "00bbf510f01c2875",
+  "model": "google/gemini-2.5-flash",
+  "src": "b74d3250c73b0e71",
+  "usage": 2210
+ },
+ "Back-End/http/HTTP기본/structclient.md": {
+  "at": "2026-09-17T10:16:06Z",
+  "bad": [],
+  "dst": "ab0c9cf4891a2fa4",
+  "model": "google/gemini-2.5-flash",
+  "src": "aec4404e7666531b",
+  "usage": 1654
+ },
+ "Back-End/http/HTTP메서드/attrib.md": {
+  "at": "2026-09-17T10:16:11Z",
+  "bad": [],
+  "dst": "4e2aae8fe3f3e7d7",
+  "model": "google/gemini-2.5-flash",
+  "src": "1192138082b2921d",
+  "usage": 2588
+ },
+ "Back-End/http/HTTP메서드/exam.md": {
+  "at": "2026-09-17T10:16:15Z",
+  "bad": [],
+  "dst": "8877a5022198c548",
+  "model": "google/gemini-2.5-flash",
+  "src": "1dcfec4dd04afd9b",
+  "usage": 4092
+ },
+ "Back-End/http/HTTP메서드/getpost.md": {
+  "at": "2026-09-17T10:16:09Z",
+  "bad": [],
+  "dst": "c076de68077e2671",
+  "model": "google/gemini-2.5-flash",
+  "src": "8213c14296a75edb",
+  "usage": 1910
+ },
+ "Back-End/http/HTTP메서드/httpapi.md": {
+  "at": "2026-09-17T10:16:10Z",
+  "bad": [],
+  "dst": "41098c98683a1e45",
+  "model": "google/gemini-2.5-flash",
+  "src": "28ad2375d3dd16bd",
+  "usage": 1782
+ },
+ "Back-End/http/HTTP메서드/putpadel.md": {
+  "at": "2026-09-17T10:16:09Z",
+  "bad": [],
+  "dst": "15267ab669bac9cb",
+  "model": "google/gemini-2.5-flash",
+  "src": "f46e94d926329f86",
+  "usage": 1918
+ },
+ "Back-End/http/HTTP메서드/submit.md": {
+  "at": "2026-09-17T10:16:31Z",
+  "bad": [],
+  "dst": "9213bc4011183699",
+  "model": "google/gemini-2.5-flash",
+  "src": "99e70501b1ddf82c",
+  "usage": 6751
+ },
+ "Back-End/http/HTTP상태코드/2xx.md": {
+  "at": "2026-09-17T10:16:12Z",
+  "bad": [],
+  "dst": "c4061c555217b4b9",
+  "model": "google/gemini-2.5-flash",
+  "src": "f3bd0708d23d98d2",
+  "usage": 1539
+ },
+ "Back-End/http/HTTP상태코드/3xx.md": {
+  "at": "2026-09-17T10:16:27Z",
+  "bad": [],
+  "dst": "ec08ea0bd5ccf936",
+  "model": "google/gemini-2.5-flash",
+  "src": "decae0e5f21249c0",
+  "usage": 7261
+ },
+ "Back-End/http/HTTP상태코드/4xx5xx.md": {
+  "at": "2026-09-17T10:16:17Z",
+  "bad": [],
+  "dst": "658757db0e49da1f",
+  "model": "google/gemini-2.5-flash",
+  "src": "a8a2a38082d6039e",
+  "usage": 2817
+ },
+ "Back-End/http/HTTP상태코드/status.md": {
+  "at": "2026-09-17T10:16:14Z",
+  "bad": [],
+  "dst": "f15ac150d41d52b9",
+  "model": "google/gemini-2.5-flash",
+  "src": "8b2b727d9b6736df",
+  "usage": 1491
+ },
+ "Back-End/http/HTTP헤더/cookie.md": {
+  "at": "2026-09-17T10:16:23Z",
+  "bad": [],
+  "dst": "e8845b1e07686c4d",
+  "model": "google/gemini-2.5-flash",
+  "src": "189dd9409dde699d",
+  "usage": 4392
+ },
+ "Back-End/http/HTTP헤더/info.md": {
+  "at": "2026-09-17T10:16:19Z",
+  "bad": [],
+  "dst": "0ca0a6d4902b5eef",
+  "model": "google/gemini-2.5-flash",
+  "src": "b89863c5607fe03d",
+  "usage": 3270
+ },
+ "Back-End/http/HTTP헤더/nego.md": {
+  "at": "2026-09-17T10:16:21Z",
+  "bad": [],
+  "dst": "c3352f156204fea0",
+  "model": "google/gemini-2.5-flash",
+  "src": "4d81f6176e14dff9",
+  "usage": 3308
+ },
+ "Back-End/http/HTTP헤더/summary.md": {
+  "at": "2026-09-17T10:16:24Z",
+  "bad": [],
+  "dst": "e0991609b856c256",
+  "model": "google/gemini-2.5-flash",
+  "src": "0e9f9b761da25ccd",
+  "usage": 4020
+ },
+ "Back-End/http/HTTP헤더2/cache.md": {
+  "at": "2026-09-17T10:16:18Z",
+  "bad": [],
+  "dst": "0acb66504746aa59",
+  "model": "google/gemini-2.5-flash",
+  "src": "ec7578763de2eeef",
+  "usage": 1398
+ },
+ "Back-End/http/HTTP헤더2/cachehead.md": {
+  "at": "2026-09-17T10:16:21Z",
+  "bad": [],
+  "dst": "21665b05e596c1d3",
+  "model": "google/gemini-2.5-flash",
+  "src": "abdc31672bb6d0ca",
+  "usage": 1583
+ },
+ "Back-End/http/HTTP헤더2/proxy.md": {
+  "at": "2026-09-17T10:16:24Z",
+  "bad": [],
+  "dst": "52f5516134fcf415",
+  "model": "google/gemini-2.5-flash",
+  "src": "6f5968f012a2d2b0",
+  "usage": 2106
+ },
+ "Back-End/http/HTTP헤더2/verify.md": {
+  "at": "2026-09-17T10:16:31Z",
+  "bad": [],
+  "dst": "c0979a556c3baa14",
+  "model": "google/gemini-2.5-flash",
+  "src": "05b17d9d6f4e1126",
+  "usage": 4177
+ },
+ "Back-End/http/URI/uri.md": {
+  "at": "2026-09-17T10:16:29Z",
+  "bad": [],
+  "dst": "8ce9e09f1ee3bf0c",
+  "model": "google/gemini-2.5-flash",
+  "src": "165d5dfe546884d7",
+  "usage": 3315
+ },
+ "Back-End/http/URI/web.md": {
+  "at": "2026-09-17T10:16:24Z",
+  "bad": [],
+  "dst": "da4ee3927f7e4131",
+  "model": "google/gemini-2.5-flash",
+  "src": "1e80a43019ab9fd5",
+  "usage": 1261
+ },
+ "Back-End/http/network/ip.md": {
+  "at": "2026-09-17T10:16:26Z",
+  "bad": [],
+  "dst": "e4506ca29460b9f8",
+  "model": "google/gemini-2.5-flash",
+  "src": "6959baad104ff7a0",
+  "usage": 1751
+ },
+ "Back-End/http/network/port.md": {
+  "at": "2026-09-17T10:16:29Z",
+  "bad": [],
+  "dst": "7689e2617b2b6407",
+  "model": "google/gemini-2.5-flash",
+  "src": "bae0f1ea3e82e00b",
+  "usage": 2358
+ },
+ "Back-End/http/network/tcpudp.md": {
+  "at": "2026-09-17T10:16:30Z",
+  "bad": [],
+  "dst": "f527ada91799ea4b",
+  "model": "google/gemini-2.5-flash",
+  "src": "743267a53e69c1f4",
+  "usage": 2153
+ },
+ "Back-End/idem.md": {
+  "at": "2026-09-17T10:16:39Z",
+  "bad": [],
+  "dst": "3e0f67f7b5e6b3c8",
+  "model": "google/gemini-2.5-flash",
+  "src": "5793a5260fb29fdc",
+  "usage": 5854
+ },
+ "Back-End/jpa/bulk.md": {
+  "at": "2026-09-17T10:16:49Z",
+  "bad": [],
+  "dst": "c08497c6f0d8ea4a",
+  "model": "google/gemini-2.5-flash",
+  "src": "647f4c147dad8c57",
+  "usage": 8713
+ },
+ "Back-End/jpa/embedded.md": {
+  "at": "2026-09-17T10:16:38Z",
+  "bad": [],
+  "dst": "aff89f1db0faef39",
+  "model": "google/gemini-2.5-flash",
+  "src": "b49b3602f1152f05",
+  "usage": 5050
+ },
+ "Back-End/jpa/equals.md": {
+  "at": "2026-09-17T10:16:34Z",
+  "bad": [],
+  "dst": "2ceafc910279a52f",
+  "model": "google/gemini-2.5-flash",
+  "src": "7bbc2f4e7b25578b",
+  "usage": 2383
+ },
+ "Back-End/jpa/fetchjoin.md": {
+  "at": "2026-09-17T10:16:45Z",
+  "bad": [],
+  "dst": "998b9fc57ed2f639",
+  "model": "google/gemini-2.5-flash",
+  "src": "68b2c55329d0ee0f",
+  "usage": 6344
+ },
+ "Back-End/jpa/hibernate.md": {
+  "at": "2026-09-17T10:16:39Z",
+  "bad": [],
+  "dst": "0475dbd4260f2fc3",
+  "model": "google/gemini-2.5-flash",
+  "src": "e4fcd264e9267d8d",
+  "usage": 3464
+ },
+ "Back-End/jpa/n+1.md": {
+  "at": "2026-09-17T10:16:51Z",
+  "bad": [],
+  "dst": "c7480b058bfd220c",
+  "model": "google/gemini-2.5-flash",
+  "src": "410751bd6d3266a7",
+  "usage": 8537
+ },
+ "Back-End/jpa/osiv.md": {
+  "at": "2026-09-17T10:16:38Z",
+  "bad": [],
+  "dst": "2c9198ed042b5f4d",
+  "model": "google/gemini-2.5-flash",
+  "src": "c64f214fd0a44d03",
+  "usage": 2575
+ },
+ "Back-End/jpa/persistence/flush.md": {
+  "at": "2026-09-17T10:16:38Z",
+  "bad": [],
+  "dst": "efa0dc4f5ad96e4d",
+  "model": "google/gemini-2.5-flash",
+  "src": "0120351935f0f1ed",
+  "usage": 2421
+ },
+ "Back-End/jpa/persistence/persistcontext.md": {
+  "at": "2026-09-17T10:16:45Z",
+  "bad": [],
+  "dst": "f9a13ef7f520295e",
+  "model": "google/gemini-2.5-flash",
+  "src": "67659456f6dec6f1",
+  "usage": 4838
+ },
+ "Back-End/jpa/propagration.md": {
+  "at": "2026-09-17T10:16:39Z",
+  "bad": [],
+  "dst": "4132d0f4d7906798",
+  "model": "google/gemini-2.5-flash",
+  "src": "6dcb3f297d1528bf",
+  "usage": 1533
+ },
+ "Back-End/jpa/proxy.md": {
+  "at": "2026-09-17T10:16:57Z",
+  "bad": [],
+  "dst": "5abd369ac8b1bc2e",
+  "model": "google/gemini-2.5-flash",
+  "src": "49832b95f392ac02",
+  "usage": 6486
+ },
+ "Back-End/jpa/queryfk.md": {
+  "at": "2026-09-17T10:16:42Z",
+  "bad": [],
+  "dst": "2e92e9b478e93455",
+  "model": "google/gemini-2.5-flash",
+  "src": "99ebf6abe7059822",
+  "usage": 1214
+ },
+ "Back-End/jpa/table/entity.md": {
+  "at": "2026-09-17T10:16:46Z",
+  "bad": [],
+  "dst": "25093d512e8c4b54",
+  "model": "google/gemini-2.5-flash",
+  "src": "161d2cc86ba98cd0",
+  "usage": 1854
+ },
+ "Back-End/jpa/table/util.md": {
+  "at": "2026-09-17T10:16:44Z",
+  "bad": [],
+  "dst": "de9920a888d6ab91",
+  "model": "google/gemini-2.5-flash",
+  "src": "8b299b8d636029c8",
+  "usage": 1633
+ },
+ "Back-End/jpa/일반Join은언제.md": {
+  "at": "2026-09-17T10:16:49Z",
+  "bad": [],
+  "dst": "9d249fbf3651f8b4",
+  "model": "google/gemini-2.5-flash",
+  "src": "a8c51cb1a748217b",
+  "usage": 3318
+ },
+ "Back-End/kafka/autocommit.md": {
+  "at": "2026-09-17T10:16:54Z",
+  "bad": [],
+  "dst": "8018dd16295aed34",
+  "model": "google/gemini-2.5-flash",
+  "src": "99512a67f4e8c4c2",
+  "usage": 5024
+ },
+ "Back-End/kafka/disk.md": {
+  "at": "2026-09-17T10:16:52Z",
+  "bad": [],
+  "dst": "b1a2658793788d7a",
+  "model": "google/gemini-2.5-flash",
+  "src": "8395d4e47b3e66ff",
+  "usage": 3288
+ },
+ "Back-End/kafka/isr.md": {
+  "at": "2026-09-17T10:16:55Z",
+  "bad": [],
+  "dst": "ffe808aa5ed527ef",
+  "model": "google/gemini-2.5-flash",
+  "src": "b695ec8ecb719528",
+  "usage": 3695
+ },
+ "Back-End/kafka/partition.md": {
+  "at": "2026-09-17T10:17:17Z",
+  "bad": [],
+  "dst": "3bc1c58a43ffc423",
+  "model": "google/gemini-2.5-flash",
+  "src": "4628a5bfb1a997d8",
+  "usage": 9716
+ },
+ "Back-End/kafka/partition2.md": {
+  "at": "2026-09-17T10:17:15Z",
+  "bad": [],
+  "dst": "468691cd27f22e90",
+  "model": "google/gemini-2.5-flash",
+  "src": "398541f2e3d60e6f",
+  "usage": 10717
+ },
+ "Back-End/kafka/producer.md": {
+  "at": "2026-09-17T10:16:57Z",
+  "bad": [],
+  "dst": "051ea0f2532246a1",
+  "model": "google/gemini-2.5-flash",
+  "src": "d3837b166200cfcd",
+  "usage": 3820
+ },
+ "Back-End/kafka/rebalancing.md": {
+  "at": "2026-09-17T10:17:05Z",
+  "bad": [],
+  "dst": "b413fc97658b8921",
+  "model": "google/gemini-2.5-flash",
+  "src": "3299ff686e87f475",
+  "usage": 5540
+ },
+ "Back-End/kafka/replica.md": {
+  "at": "2026-09-17T10:17:29Z",
+  "bad": [],
+  "dst": "6da76c5a8ef269f7",
+  "model": "google/gemini-2.5-flash",
+  "src": "16a4af959399e2b9",
+  "usage": 14253
+ },
+ "Back-End/kernel/blockio.md": {
+  "at": "2026-09-17T10:17:15Z",
+  "bad": [],
+  "dst": "840f3e477d48532d",
+  "model": "google/gemini-2.5-flash",
+  "src": "39af6a8239a6683a",
+  "usage": 9353
+ },
+ "Back-End/kernel/kernel.md": {
+  "at": "2026-09-17T10:17:12Z",
+  "bad": [],
+  "dst": "a552a84c14a42752",
+  "model": "google/gemini-2.5-flash",
+  "src": "0e7744214211fc62",
+  "usage": 4368
+ },
+ "Back-End/kotlin/collection.md": {
+  "at": "2026-09-17T10:16:57Z",
+  "bad": [],
+  "dst": "84ff52805d6c04fd",
+  "model": "google/gemini-2.5-flash",
+  "src": "b07d778d28d4dcab",
+  "usage": 1219
+ },
+ "Back-End/kotlin/companion.md": {
+  "at": "2026-09-17T10:17:01Z",
+  "bad": [],
+  "dst": "8a161fe01357af98",
+  "model": "google/gemini-2.5-flash",
+  "src": "233b119953bd3191",
+  "usage": 2256
+ },
+ "Back-End/kotlin/companion_and_object.md": {
+  "at": "2026-09-17T10:17:01Z",
+  "bad": [],
+  "dst": "a09ed6908c6c7481",
+  "model": "google/gemini-2.5-flash",
+  "src": "ef3ac5809277651a",
+  "usage": 1682
+ },
+ "Back-End/kotlin/coroutine.md": {
+  "at": "2026-09-17T10:17:30Z",
+  "bad": [],
+  "dst": "483b94753d368f85",
+  "model": "google/gemini-2.5-flash",
+  "src": "49474360ce31da9a",
+  "usage": 6583
+ },
+ "Back-End/kotlin/coroutine/coroutine.md": {
+  "at": "2026-09-17T10:17:20Z",
+  "bad": [],
+  "dst": "323c73e92d732812",
+  "model": "google/gemini-2.5-flash",
+  "src": "f45e10574a212f1b",
+  "usage": 8172
+ },
+ "Back-End/kotlin/coroutine/coroutine_context.md": {
+  "at": "2026-09-17T10:17:22Z",
+  "bad": [],
+  "dst": "30814cf6f99f2e02",
+  "model": "google/gemini-2.5-flash",
+  "src": "a89f25ef399508be",
+  "usage": 7905
+ },
+ "Back-End/kotlin/coroutine/coroutinedispatcher.md": {
+  "at": "2026-09-17T10:17:13Z",
+  "bad": [],
+  "dst": "7898b10d9ebd1ac9",
+  "model": "google/gemini-2.5-flash",
+  "src": "61ed230ce7d4de0c",
+  "usage": 3968
+ },
+ "Back-End/kotlin/coroutine/launch.md": {
+  "at": "2026-09-17T10:17:11Z",
+  "bad": [],
+  "dst": "2db5a7c78c874bbf",
+  "model": "google/gemini-2.5-flash",
+  "src": "51e3c32720fe6cea",
+  "usage": 3233
+ },
+ "Back-End/kotlin/coroutine/lazy.md": {
+  "at": "2026-09-17T10:17:13Z",
+  "bad": [],
+  "dst": "0b6f9c90b349e1e8",
+  "model": "google/gemini-2.5-flash",
+  "src": "f1a6ab41f5832ad6",
+  "usage": 2327
+ },
+ "Back-End/kotlin/coroutine/state.md": {
+  "at": "2026-09-17T10:17:25Z",
+  "bad": [],
+  "dst": "826e9d0aa29dd21d",
+  "model": "google/gemini-2.5-flash",
+  "src": "5b9c1d26af715c76",
+  "usage": 4719
+ },
+ "Back-End/kotlin/coroutine/state_variable.md": {
+  "at": "2026-09-17T10:17:23Z",
+  "bad": [],
+  "dst": "4c4e26640166509a",
+  "model": "google/gemini-2.5-flash",
+  "src": "8f875a6a23e2246a",
+  "usage": 3191
+ },
+ "Back-End/kotlin/coroutine/suspend.md": {
+  "at": "2026-09-17T10:17:24Z",
+  "bad": [],
+  "dst": "10c2dde35b3e218e",
+  "model": "google/gemini-2.5-flash",
+  "src": "c3bd41b616d9ca6b",
+  "usage": 4047
+ },
+ "Back-End/kotlin/datapersist.md": {
+  "at": "2026-09-17T10:17:23Z",
+  "bad": [],
+  "dst": "3e785356a4a09f60",
+  "model": "google/gemini-2.5-flash",
+  "src": "e837af7e3991fe2e",
+  "usage": 2519
+ },
+ "Back-End/kotlin/delegate.md": {
+  "at": "2026-09-17T10:17:23Z",
+  "bad": [],
+  "dst": "62f16de3955f0bc9",
+  "model": "google/gemini-2.5-flash",
+  "src": "6836961fe99c4336",
+  "usage": 2862
+ },
+ "Back-End/kotlin/delegate2.md": {
+  "at": "2026-09-17T10:17:29Z",
+  "bad": [],
+  "dst": "0d5d13494a9b6887",
+  "model": "google/gemini-2.5-flash",
+  "src": "ae50e2e03ac460e3",
+  "usage": 3534
+ },
+ "Back-End/kotlin/dsl.md": {
+  "at": "2026-09-17T10:17:28Z",
+  "bad": [],
+  "dst": "a45798c4db372b19",
+  "model": "google/gemini-2.5-flash",
+  "src": "82cf80524acd836a",
+  "usage": 2851
+ },
+ "Back-End/kotlin/effectivenull.md": {
+  "at": "2026-09-17T10:17:31Z",
+  "bad": [],
+  "dst": "7833ed70d2e0ca42",
+  "model": "google/gemini-2.5-flash",
+  "src": "1b4cc0d08e7feee5",
+  "usage": 2634
+ },
+ "Back-End/kotlin/field_property.md": {
+  "at": "2026-09-17T10:17:28Z",
+  "bad": [],
+  "dst": "c84ea2a1b34db53e",
+  "model": "google/gemini-2.5-flash",
+  "src": "eecf2cd0e9a665e1",
+  "usage": 2121
+ },
+ "Back-End/kotlin/fun.md": {
+  "at": "2026-09-17T10:17:30Z",
+  "bad": [],
+  "dst": "5f766a41b2eb7a7c",
+  "model": "google/gemini-2.5-flash",
+  "src": "ff128e37225cfbdc",
+  "usage": 2191
+ },
+ "Back-End/kotlin/inline.md": {
+  "at": "2026-09-17T10:17:31Z",
+  "bad": [],
+  "dst": "40ebc834d58e6335",
+  "model": "google/gemini-2.5-flash",
+  "src": "dba47ae7b3e734ce",
+  "usage": 2861
+ },
+ "Back-End/kotlin/inline2.md": {
+  "at": "2026-09-17T10:17:34Z",
+  "bad": [],
+  "dst": "39bb90276f1b7935",
+  "model": "google/gemini-2.5-flash",
+  "src": "3855259a763e2a96",
+  "usage": 3857
+ },
+ "Back-End/kotlin/jvmannotation.md": {
+  "at": "2026-09-17T10:17:32Z",
+  "bad": [],
+  "dst": "434705c925be2200",
+  "model": "google/gemini-2.5-flash",
+  "src": "8f0e7b0e81cc79b7",
+  "usage": 2684
+ },
+ "Back-End/kotlin/kapt.md": {
+  "at": "2026-09-17T10:17:41Z",
+  "bad": [],
+  "dst": "2b7a66f17079da02",
+  "model": "google/gemini-2.5-flash",
+  "src": "3d68865d481bdeac",
+  "usage": 3321
+ },
+ "Back-End/kotlin/kopring.md": {
+  "at": "2026-09-17T10:17:37Z",
+  "bad": [],
+  "dst": "e7643a9cfde0ea9d",
+  "model": "google/gemini-2.5-flash",
+  "src": "61a1ccd83239d77e",
+  "usage": 2843
+ },
+ "Back-End/kotlin/kotest.md": {
+  "at": "2026-09-17T10:17:39Z",
+  "bad": [],
+  "dst": "37dd84cd7147f5c6",
+  "model": "google/gemini-2.5-flash",
+  "src": "e9aaeda108664e2a",
+  "usage": 4400
+ },
+ "Back-End/kotlin/kotlin.md": {
+  "at": "2026-09-17T10:17:39Z",
+  "bad": [],
+  "dst": "c12942a7b746012f",
+  "model": "google/gemini-2.5-flash",
+  "src": "0f6cdf5117406309",
+  "usage": 2986
+ },
+ "Back-End/kotlin/kotlin_jpa.md": {
+  "at": "2026-09-17T10:17:34Z",
+  "bad": [],
+  "dst": "b0d4169c8647febd",
+  "model": "google/gemini-2.5-flash",
+  "src": "d4d443c52afc4ca0",
+  "usage": 1267
+ },
+ "Back-End/kotlin/kotlinoop.md": {
+  "at": "2026-09-17T10:17:47Z",
+  "bad": [],
+  "dst": "8f9e86e22dd4ce32",
+  "model": "google/gemini-2.5-flash",
+  "src": "72dc99403befc273",
+  "usage": 6244
+ },
+ "Back-End/kotlin/lombokcant.md": {
+  "at": "2026-09-17T10:17:38Z",
+  "bad": [],
+  "dst": "becab47cbdd8704e",
+  "model": "google/gemini-2.5-flash",
+  "src": "3d3f7e60265a7113",
+  "usage": 1881
+ },
+ "Back-End/kotlin/runcatching.md": {
+  "at": "2026-09-17T10:17:43Z",
+  "bad": [],
+  "dst": "947c3bd4c2ff9ce8",
+  "model": "google/gemini-2.5-flash",
+  "src": "8fb264a8315f7bba",
+  "usage": 4393
+ },
+ "Back-End/kotlin/sam.md": {
+  "at": "2026-09-17T10:17:47Z",
+  "bad": [],
+  "dst": "db6da059c7d52367",
+  "model": "google/gemini-2.5-flash",
+  "src": "a09262e0dfbbac65",
+  "usage": 4841
+ },
+ "Back-End/kotlin/scope_function.md": {
+  "at": "2026-09-17T10:17:45Z",
+  "bad": [],
+  "dst": "7f84149336f9a6b7",
+  "model": "google/gemini-2.5-flash",
+  "src": "08f6ce398d3f55e6",
+  "usage": 3715
+ },
+ "Back-End/kotlin/sealed.md": {
+  "at": "2026-09-17T10:17:52Z",
+  "bad": [],
+  "dst": "52f8d2092be08805",
+  "model": "google/gemini-2.5-flash",
+  "src": "3fccdb03f3f9df27",
+  "usage": 6542
+ },
+ "Back-End/kotlin/sequence.md": {
+  "at": "2026-09-17T10:17:44Z",
+  "bad": [],
+  "dst": "a92baa738043531d",
+  "model": "google/gemini-2.5-flash",
+  "src": "f078c262b13e3044",
+  "usage": 2838
+ },
+ "Back-End/kotlin/singleton.md": {
+  "at": "2026-09-17T10:17:44Z",
+  "bad": [],
+  "dst": "f4f74b17efc16642",
+  "model": "google/gemini-2.5-flash",
+  "src": "03868b8e211d9421",
+  "usage": 1837
+ },
+ "Back-End/kotlin/sortedWith.md": {
+  "at": "2026-09-17T10:17:44Z",
+  "bad": [],
+  "dst": "de25f94a37eff12c",
+  "model": "google/gemini-2.5-flash",
+  "src": "9971b3bb23e8ebd9",
+  "usage": 2084
+ },
+ "Back-End/kotlin/starpro.md": {
+  "at": "2026-09-17T10:17:47Z",
+  "bad": [],
+  "dst": "6fb2cc47af250a00",
+  "model": "google/gemini-2.5-flash",
+  "src": "a5a217ce2fe072bf",
+  "usage": 2452
+ },
+ "Back-End/kotlin/toPair.md": {
+  "at": "2026-09-17T10:17:45Z",
+  "bad": [],
+  "dst": "0920d22d1d51b2e1",
+  "model": "google/gemini-2.5-flash",
+  "src": "79a97ca06e230c89",
+  "usage": 1490
+ },
+ "Back-End/kotlin/top_level.md": {
+  "at": "2026-09-17T10:17:49Z",
+  "bad": [],
+  "dst": "9aa1ab336faafb80",
+  "model": "google/gemini-2.5-flash",
+  "src": "8164ebc4089ff81c",
+  "usage": 2001
+ },
+ "Back-End/kotlin/unit_nothing.md": {
+  "at": "2026-09-17T10:17:50Z",
+  "bad": [],
+  "dst": "560eb8cb0e699add",
+  "model": "google/gemini-2.5-flash",
+  "src": "9d376199be6d871d",
+  "usage": 2232
+ },
+ "Back-End/kotlin/use.md": {
+  "at": "2026-09-17T10:17:51Z",
+  "bad": [],
+  "dst": "686555dad1ad599c",
+  "model": "google/gemini-2.5-flash",
+  "src": "02e994f79164a059",
+  "usage": 2236
+ },
+ "Back-End/kotlin/공변성.md": {
+  "at": "2026-09-17T10:17:58Z",
+  "bad": [],
+  "dst": "b3137039b8fc66d0",
+  "model": "google/gemini-2.5-flash",
+  "src": "e7514e3aebecdd98",
+  "usage": 4584
+ },
+ "Back-End/kyd.md": {
+  "at": "2026-09-17T10:17:55Z",
+  "bad": [],
+  "dst": "f111643e78477b5e",
+  "model": "google/gemini-2.5-flash",
+  "src": "fc7cd31e11540956",
+  "usage": 2868
+ },
+ "Back-End/linux/lxc.md": {
+  "at": "2026-09-17T10:18:05Z",
+  "bad": [],
+  "dst": "656df6dddc1362a9",
+  "model": "google/gemini-2.5-flash",
+  "src": "f0fb3b03ee5a8b5f",
+  "usage": 6242
+ },
+ "Back-End/linux/nmap.md": {
+  "at": "2026-09-17T10:17:57Z",
+  "bad": [],
+  "dst": "4e0dea6a9abc4cb3",
+  "model": "google/gemini-2.5-flash",
+  "src": "7304aff7d45414a3",
+  "usage": 3738
+ },
+ "Back-End/netty/elg.md": {
+  "at": "2026-09-17T10:18:15Z",
+  "bad": [],
+  "dst": "2ce6b643adbe1a32",
+  "model": "google/gemini-2.5-flash",
+  "src": "ca21913ac4602295",
+  "usage": 9287
+ },
+ "Back-End/netty/native.md": {
+  "at": "2026-09-17T10:18:20Z",
+  "bad": [],
+  "dst": "15758991ced09ecc",
+  "model": "google/gemini-2.5-flash",
+  "src": "8ca6b3ebe3aa951d",
+  "usage": 10387
+ },
+ "Back-End/netty/nioepoll.md": {
+  "at": "2026-09-17T10:18:27Z",
+  "bad": [],
+  "dst": "38b713855a064e2d",
+  "model": "google/gemini-2.5-flash",
+  "src": "2fa59ca20fe3795b",
+  "usage": 12397
+ },
+ "Back-End/netty_async.md": {
+  "at": "2026-09-17T10:18:23Z",
+  "bad": [],
+  "dst": "60860117938fffbf",
+  "model": "google/gemini-2.5-flash",
+  "src": "4a5ce6ad8bca7f9d",
+  "usage": 11029
+ },
+ "Back-End/netty_flow.md": {
+  "at": "2026-09-17T10:18:01Z",
+  "bad": [],
+  "dst": "490f5d4feb6b4093",
+  "model": "google/gemini-2.5-flash",
+  "src": "98f0f8545286ef33",
+  "usage": 3379
+ },
+ "Back-End/netty_thread.md": {
+  "at": "2026-09-17T10:18:26Z",
+  "bad": [],
+  "dst": "4cef44fa316e2f74",
+  "model": "google/gemini-2.5-flash",
+  "src": "670b1465a053f198",
+  "usage": 7784
+ },
+ "Back-End/nettyiden.md": {
+  "at": "2026-09-17T10:18:05Z",
+  "bad": [],
+  "dst": "1aa41123b7ff9823",
+  "model": "google/gemini-2.5-flash",
+  "src": "d89ea4588b5f0b7b",
+  "usage": 3172
+ },
+ "Back-End/nettyproxy.md": {
+  "at": "2026-09-17T10:18:10Z",
+  "bad": [],
+  "dst": "e58b78b37cd14c2f",
+  "model": "google/gemini-2.5-flash",
+  "src": "7ae678f247ac9ea9",
+  "usage": 3717
+ },
+ "Back-End/nice.md": {
+  "at": "2026-09-17T10:19:10Z",
+  "bad": [],
+  "dst": "fd303d613063dbd9",
+  "model": "google/gemini-2.5-flash",
+  "src": "f198d0fdedc95c2c",
+  "usage": 25616
+ },
+ "Back-End/paxra.md": {
+  "at": "2026-09-17T10:18:21Z",
+  "bad": [],
+  "dst": "fb92ac75beb6fef1",
+  "model": "google/gemini-2.5-flash",
+  "src": "1988511fbc92f52f",
+  "usage": 6492
+ },
+ "Back-End/socketp.md": {
+  "at": "2026-09-17T10:18:24Z",
+  "bad": [],
+  "dst": "27e11f5f8d0aa39d",
+  "model": "google/gemini-2.5-flash",
+  "src": "c5e4b6c1d42de226",
+  "usage": 6315
+ },
+ "Back-End/spring/actuator.md": {
+  "at": "2026-09-17T10:18:20Z",
+  "bad": [],
+  "dst": "038e3eae6bce27fe",
+  "model": "google/gemini-2.5-flash",
+  "src": "fe623c0da016c839",
+  "usage": 5028
+ },
+ "Back-End/spring/advice_control.md": {
+  "at": "2026-09-17T10:18:17Z",
+  "bad": [],
+  "dst": "f69e97eff3e5cf34",
+  "model": "google/gemini-2.5-flash",
+  "src": "d0c7532a17a6f4f9",
+  "usage": 2733
+ },
+ "Back-End/spring/annotation.md": {
+  "at": "2026-09-17T10:18:30Z",
+  "bad": [],
+  "dst": "2313a97bea0c021b",
+  "model": "google/gemini-2.5-flash",
+  "src": "bfe24d962580d3f1",
+  "usage": 5533
+ },
+ "Back-End/spring/aop.md": {
+  "at": "2026-09-17T10:18:30Z",
+  "bad": [],
+  "dst": "aaa6549230f4b12b",
+  "model": "google/gemini-2.5-flash",
+  "src": "4e1be1986b7e07b9",
+  "usage": 5140
+ },
+ "Back-End/spring/aop_basic.md": {
+  "at": "2026-09-17T10:32:20Z",
+  "bad": [],
+  "dst": "91f4a629f3b8d16e",
+  "model": "google/gemini-2.5-flash",
+  "src": "b4f1b8df8682631b",
+  "usage": 3644
+ },
+ "Back-End/spring/aop_transaction.md": {
+  "at": "2026-09-17T10:18:44Z",
+  "bad": [],
+  "dst": "9e26c281af90487b",
+  "model": "google/gemini-2.5-flash",
+  "src": "e925fa8bd662be06",
+  "usage": 5799
+ },
+ "Back-End/spring/args_resolver.md": {
+  "at": "2026-09-17T10:18:38Z",
+  "bad": [],
+  "dst": "cc7f8d6ce9c0e428",
+  "model": "google/gemini-2.5-flash",
+  "src": "8444eb7cb05126fc",
+  "usage": 4684
+ },
+ "Back-End/spring/aspectj.md": {
+  "at": "2026-09-17T10:18:34Z",
+  "bad": [],
+  "dst": "5d21f4d70054e0ab",
+  "model": "google/gemini-2.5-flash",
+  "src": "11def949d7a6b331",
+  "usage": 3289
+ },
+ "Back-End/spring/batch.md": {
+  "at": "2026-09-17T10:18:37Z",
+  "bad": [],
+  "dst": "7ea23b8b41d66209",
+  "model": "google/gemini-2.5-flash",
+  "src": "954a32877ac71f96",
+  "usage": 4840
+ },
+ "Back-End/spring/batch_concurrency.md": {
+  "at": "2026-09-17T10:18:34Z",
+  "bad": [],
+  "dst": "9c7f20e83da2960c",
+  "model": "google/gemini-2.5-flash",
+  "src": "d8068b87029f9dc9",
+  "usage": 2440
+ },
+ "Back-End/spring/batch_tradeoff.md": {
+  "at": "2026-09-17T10:18:39Z",
+  "bad": [],
+  "dst": "12b69ff203c9555e",
+  "model": "google/gemini-2.5-flash",
+  "src": "437ace6dd78dd9fe",
+  "usage": 3389
+ },
+ "Back-End/spring/bean.md": {
+  "at": "2026-09-17T10:18:43Z",
+  "bad": [],
+  "dst": "da7200a776d02f2f",
+  "model": "google/gemini-2.5-flash",
+  "src": "0f46de907229c865",
+  "usage": 4250
+ },
+ "Back-End/spring/bean_scope.md": {
+  "at": "2026-09-17T10:18:44Z",
+  "bad": [],
+  "dst": "ce443b927f40a2b4",
+  "model": "google/gemini-2.5-flash",
+  "src": "9921260ca2e9d791",
+  "usage": 4862
+ },
+ "Back-End/spring/beans.md": {
+  "at": "2026-09-17T10:18:40Z",
+  "bad": [],
+  "dst": "f88769d504eb56ba",
+  "model": "google/gemini-2.5-flash",
+  "src": "1910c34e0b00fd3d",
+  "usage": 2054
+ },
+ "Back-End/spring/beanscope.md": {
+  "at": "2026-09-17T10:19:12Z",
+  "bad": [],
+  "dst": "e5b620ddbabd7464",
+  "model": "google/gemini-2.5-flash",
+  "src": "9cf020f7b06b151e",
+  "usage": 12888
+ },
+ "Back-End/spring/builder.md": {
+  "at": "2026-09-17T10:18:43Z",
+  "bad": [],
+  "dst": "558227238d3013f4",
+  "model": "google/gemini-2.5-flash",
+  "src": "c233f9a0f729a2d0",
+  "usage": 2016
+ },
+ "Back-End/spring/controlleradvice.md": {
+  "at": "2026-09-17T10:18:54Z",
+  "bad": [],
+  "dst": "c1aa9f400ba97745",
+  "model": "google/gemini-2.5-flash",
+  "src": "e9b264a33930168b",
+  "usage": 5985
+ },
+ "Back-End/spring/copy.md": {
+  "at": "2026-09-17T10:19:07Z",
+  "bad": [],
+  "dst": "9c2dac81adaaa6dc",
+  "model": "google/gemini-2.5-flash",
+  "src": "e7ceb1c4cc41ad40",
+  "usage": 9464
+ },
+ "Back-End/spring/cre.md": {
+  "at": "2026-09-17T10:19:00Z",
+  "bad": [],
+  "dst": "326d32598c0381cb",
+  "model": "google/gemini-2.5-flash",
+  "src": "e240ee32eef99de7",
+  "usage": 5757
+ },
+ "Back-End/spring/data_binding.md": {
+  "at": "2026-09-17T10:18:51Z",
+  "bad": [],
+  "dst": "290f7eff8bf3e5ee",
+  "model": "google/gemini-2.5-flash",
+  "src": "f625021f953ed9ba",
+  "usage": 2771
+ },
+ "Back-End/spring/datajpa.md": {
+  "at": "2026-09-17T10:18:50Z",
+  "bad": [],
+  "dst": "56999db5c669bd3d",
+  "model": "google/gemini-2.5-flash",
+  "src": "f00ec9a6c518fc88",
+  "usage": 2262
+ },
+ "Back-End/spring/dispatcher_servlet.md": {
+  "at": "2026-09-17T10:18:57Z",
+  "bad": [],
+  "dst": "2a8322720bf88682",
+  "model": "google/gemini-2.5-flash",
+  "src": "779c32d22bf2fb8f",
+  "usage": 4972
+ },
+ "Back-End/spring/exception.md": {
+  "at": "2026-09-17T10:18:52Z",
+  "bad": [],
+  "dst": "8de7fa91865e0ccc",
+  "model": "google/gemini-2.5-flash",
+  "src": "f278873c5f8999fb",
+  "usage": 2818
+ },
+ "Back-End/spring/filter_interceptor.md": {
+  "at": "2026-09-17T10:19:30Z",
+  "bad": [],
+  "dst": "6a9e23373407d21d",
+  "model": "google/gemini-2.5-flash",
+  "src": "94fa59b295b56c52",
+  "usage": 15003
+ },
+ "Back-End/spring/find_query.md": {
+  "at": "2026-09-17T10:19:00Z",
+  "bad": [],
+  "dst": "a43912a6cfc0081c",
+  "model": "google/gemini-2.5-flash",
+  "src": "ec24a01615712883",
+  "usage": 3334
+ },
+ "Back-End/spring/indexing.md": {
+  "at": "2026-09-17T10:18:58Z",
+  "bad": [],
+  "dst": "261b4a12bb32b917",
+  "model": "google/gemini-2.5-flash",
+  "src": "10ccb0525aeae7ee",
+  "usage": 1451
+ },
+ "Back-End/spring/ioc.md": {
+  "at": "2026-09-17T10:19:06Z",
+  "bad": [],
+  "dst": "8b7e06113a5a7ef2",
+  "model": "google/gemini-2.5-flash",
+  "src": "b94549acce365c62",
+  "usage": 4038
+ },
+ "Back-End/spring/iocdi.md": {
+  "at": "2026-09-17T10:19:10Z",
+  "bad": [],
+  "dst": "c1652fc172720aeb",
+  "model": "google/gemini-2.5-flash",
+  "src": "35ad97559c31b429",
+  "usage": 5303
+ },
+ "Back-End/spring/jdbc.md": {
+  "at": "2026-09-17T10:19:07Z",
+  "bad": [],
+  "dst": "9221bcd114f256d1",
+  "model": "google/gemini-2.5-flash",
+  "src": "91a83b1bf33443ca",
+  "usage": 3111
+ },
+ "Back-End/spring/jwt.md": {
+  "at": "2026-09-17T10:19:06Z",
+  "bad": [],
+  "dst": "7f50c6db3a5cbef7",
+  "model": "google/gemini-2.5-flash",
+  "src": "f7c0f74d06de54be",
+  "usage": 3021
+ },
+ "Back-End/spring/lombok.md": {
+  "at": "2026-09-17T10:19:08Z",
+  "bad": [],
+  "dst": "78ffa4b1390d0120",
+  "model": "google/gemini-2.5-flash",
+  "src": "ceb21cd5ca055ca9",
+  "usage": 2695
+ },
+ "Back-End/spring/mapping.md": {
+  "at": "2026-09-17T10:19:07Z",
+  "bad": [],
+  "dst": "36b210371230081d",
+  "model": "google/gemini-2.5-flash",
+  "src": "2462d08fd9e6ee1e",
+  "usage": 2192
+ },
+ "Back-End/spring/mock_stub.md": {
+  "at": "2026-09-17T10:19:16Z",
+  "bad": [],
+  "dst": "b62b0263b4ccca1e",
+  "model": "google/gemini-2.5-flash",
+  "src": "44756633a652c168",
+  "usage": 3685
+ },
+ "Back-End/spring/mockk.md": {
+  "at": "2026-09-17T10:19:14Z",
+  "bad": [],
+  "dst": "5be7f23f1fed1d47",
+  "model": "google/gemini-2.5-flash",
+  "src": "cbc730775729412f",
+  "usage": 3008
+ },
+ "Back-End/spring/modifying.md": {
+  "at": "2026-09-17T10:19:16Z",
+  "bad": [],
+  "dst": "b8e59b80537f2add",
+  "model": "google/gemini-2.5-flash",
+  "src": "6956daa6b6229a7c",
+  "usage": 2687
+ },
+ "Back-End/spring/mvc.md": {
+  "at": "2026-09-17T10:19:12Z",
+  "bad": [],
+  "dst": "f33b6492f0b41b1f",
+  "model": "google/gemini-2.5-flash",
+  "src": "30a2e6b8fd4957d5",
+  "usage": 1621
+ },
+ "Back-End/spring/naturalid.md": {
+  "at": "2026-09-17T10:19:25Z",
+  "bad": [],
+  "dst": "dd83e05a0732d2e8",
+  "model": "google/gemini-2.5-flash",
+  "src": "8a9268c5e667f6a7",
+  "usage": 5294
+ },
+ "Back-End/spring/objmapper.md": {
+  "at": "2026-09-17T10:32:39Z",
+  "bad": [],
+  "dst": "dbb94068d3c842e4",
+  "model": "google/gemini-2.5-flash",
+  "src": "5286ad167ac6a7c9",
+  "usage": 8555
+ },
+ "Back-End/spring/package.md": {
+  "at": "2026-09-17T10:19:19Z",
+  "bad": [],
+  "dst": "be8a1954c1befa48",
+  "model": "google/gemini-2.5-flash",
+  "src": "0171126fa1942b3e",
+  "usage": 2784
+ },
+ "Back-End/spring/plugko.md": {
+  "at": "2026-09-17T10:19:22Z",
+  "bad": [],
+  "dst": "9c33c1a002f1cf56",
+  "model": "google/gemini-2.5-flash",
+  "src": "2181a1ad5505b5f2",
+  "usage": 3968
+ },
+ "Back-End/spring/profile.md": {
+  "at": "2026-09-17T10:19:20Z",
+  "bad": [],
+  "dst": "9a37f7a02ae968b3",
+  "model": "google/gemini-2.5-flash",
+  "src": "02de31f0268a4f8d",
+  "usage": 2594
+ },
+ "Back-End/spring/resource.md": {
+  "at": "2026-09-17T10:19:19Z",
+  "bad": [],
+  "dst": "980db35d6bd15a32",
+  "model": "google/gemini-2.5-flash",
+  "src": "cb64670cead956b4",
+  "usage": 1869
+ },
+ "Back-End/spring/resource2.md": {
+  "at": "2026-09-17T10:19:20Z",
+  "bad": [],
+  "dst": "33ca50207cc6c4c7",
+  "model": "google/gemini-2.5-flash",
+  "src": "01f97ab28b27f225",
+  "usage": 1780
+ },
+ "Back-End/spring/scheduler.md": {
+  "at": "2026-09-17T10:19:23Z",
+  "bad": [],
+  "dst": "238cc44244cb8f03",
+  "model": "google/gemini-2.5-flash",
+  "src": "7ab43259cb16bc0b",
+  "usage": 2474
+ },
+ "Back-End/spring/scuconfig.md": {
+  "at": "2026-09-17T10:19:27Z",
+  "bad": [],
+  "dst": "07dcd3b8d11bd682",
+  "model": "google/gemini-2.5-flash",
+  "src": "930b165ffe7fdb36",
+  "usage": 3817
+ },
+ "Back-End/spring/security_filter.md": {
+  "at": "2026-09-17T10:19:40Z",
+  "bad": [],
+  "dst": "1d4f74b4c3293d7d",
+  "model": "google/gemini-2.5-flash",
+  "src": "3d958e2e7faeb7fb",
+  "usage": 6276
+ },
+ "Back-End/spring/security_strategy.md": {
+  "at": "2026-09-17T10:19:24Z",
+  "bad": [],
+  "dst": "d1ed3840bd4d2131",
+  "model": "google/gemini-2.5-flash",
+  "src": "2a485cb9a3c0af26",
+  "usage": 1251
+ },
+ "Back-End/spring/springcp.md": {
+  "at": "2026-09-17T10:19:30Z",
+  "bad": [],
+  "dst": "a0cc6cfad1e2ffc6",
+  "model": "google/gemini-2.5-flash",
+  "src": "53a551323f5be720",
+  "usage": 3068
+ },
+ "Back-End/spring/swagger.md": {
+  "at": "2026-09-17T10:19:34Z",
+  "bad": [],
+  "dst": "4caf7173db6372b1",
+  "model": "google/gemini-2.5-flash",
+  "src": "bcfc8d7dd54d8671",
+  "usage": 4601
+ },
+ "Back-End/spring/testsecurity.md": {
+  "at": "2026-09-17T10:19:26Z",
+  "bad": [],
+  "dst": "eb17ab3c0dda3141",
+  "model": "google/gemini-2.5-flash",
+  "src": "19ed5ee4aec7402a",
+  "usage": 1091
+ },
+ "Back-End/spring/token.md": {
+  "at": "2026-09-17T10:19:32Z",
+  "bad": [],
+  "dst": "7b660e78473db731",
+  "model": "google/gemini-2.5-flash",
+  "src": "da09e12328e9dd4c",
+  "usage": 2858
+ },
+ "Back-End/spring/tomcat.md": {
+  "at": "2026-09-17T10:19:35Z",
+  "bad": [],
+  "dst": "b63fc4562d211945",
+  "model": "google/gemini-2.5-flash",
+  "src": "30ad9993bf29fe60",
+  "usage": 4356
+ },
+ "Back-End/spring/transactionaljpa.md": {
+  "at": "2026-09-17T10:19:49Z",
+  "bad": [],
+  "dst": "432147a68149b906",
+  "model": "google/gemini-2.5-flash",
+  "src": "85fcf7202a4610b3",
+  "usage": 8233
+ },
+ "Back-End/spring/trx_autocommit.md": {
+  "at": "2026-09-17T10:19:45Z",
+  "bad": [],
+  "dst": "9487f61fb6c5717e",
+  "model": "google/gemini-2.5-flash",
+  "src": "ecbe85dbba407b42",
+  "usage": 6109
+ },
+ "Back-End/spring/valid.md": {
+  "at": "2026-09-17T10:19:33Z",
+  "bad": [],
+  "dst": "8f2c692d381b7b61",
+  "model": "google/gemini-2.5-flash",
+  "src": "172f16dbf25a0d0b",
+  "usage": 1919
+ },
+ "Back-End/spring/webflux/webflux.md": {
+  "at": "2026-09-17T10:19:47Z",
+  "bad": [],
+  "dst": "77b2098146a8071c",
+  "model": "google/gemini-2.5-flash",
+  "src": "776e8c57658b56ee",
+  "usage": 5774
+ },
+ "Back-End/spring/webflux_reactive.md": {
+  "at": "2026-09-17T10:19:50Z",
+  "bad": [],
+  "dst": "90832d811be912bd",
+  "model": "google/gemini-2.5-flash",
+  "src": "1286ff56a68ca072",
+  "usage": 5923
+ },
+ "Back-End/stampede.md": {
+  "at": "2026-09-17T10:19:56Z",
+  "bad": [],
+  "dst": "5af60469e23c41b7",
+  "model": "google/gemini-2.5-flash",
+  "src": "5a4e875744fff33c",
+  "usage": 11215
+ },
+ "Back-End/state_machine.md": {
+  "at": "2026-09-17T10:19:48Z",
+  "bad": [],
+  "dst": "462f532f8a8f0143",
+  "model": "google/gemini-2.5-flash",
+  "src": "a543a2ba3039588e",
+  "usage": 4980
+ },
+ "Back-End/state_machine2.md": {
+  "at": "2026-09-17T10:19:46Z",
+  "bad": [],
+  "dst": "901621c88460929c",
+  "model": "google/gemini-2.5-flash",
+  "src": "26c5b9c3ec5bacbb",
+  "usage": 4071
+ },
+ "Back-End/test/tdd.md": {
+  "at": "2026-09-17T10:19:55Z",
+  "bad": [],
+  "dst": "21d59d45eabe566f",
+  "model": "google/gemini-2.5-flash",
+  "src": "abf578584e20121f",
+  "usage": 6595
+ },
+ "Back-End/trafficportdns.md": {
+  "at": "2026-09-17T10:19:47Z",
+  "bad": [],
+  "dst": "37616d78290c2955",
+  "model": "google/gemini-2.5-flash",
+  "src": "5921241a5a4999f0",
+  "usage": 4710
+ },
+ "Back-End/zookeeperpaxos.md": {
+  "at": "2026-09-17T10:32:34Z",
+  "bad": [
+   "링크 1→0"
+  ],
+  "dst": "5fafcaa8d458c967",
+  "model": "google/gemini-2.5-flash",
+  "src": "79126402d68ea2e9",
+  "usage": 6713
+ },
+ "Data-Structure/ast.md": {
+  "at": "2026-09-17T10:19:54Z",
+  "bad": [],
+  "dst": "2d429dfef0a2419f",
+  "model": "google/gemini-2.5-flash",
+  "src": "ba32e2ae43e3b016",
+  "usage": 2770
+ },
+ "Data-Structure/parsetree.md": {
+  "at": "2026-09-17T10:20:02Z",
+  "bad": [],
+  "dst": "2278e34a30c2741e",
+  "model": "google/gemini-2.5-flash",
+  "src": "1ffd05e0a999be36",
+  "usage": 5258
+ },
+ "Data-Structure/비선형/graph/graph.md": {
+  "at": "2026-09-17T10:20:00Z",
+  "bad": [],
+  "dst": "bfc886d1e64d07f2",
+  "model": "google/gemini-2.5-flash",
+  "src": "b9bd4a8800d83bf2",
+  "usage": 4141
+ },
+ "Data-Structure/비선형/graph/search/bfs.md": {
+  "at": "2026-09-17T10:19:58Z",
+  "bad": [],
+  "dst": "23d2f65439ef1591",
+  "model": "google/gemini-2.5-flash",
+  "src": "a1b116ae0e64f039",
+  "usage": 4054
+ },
+ "Data-Structure/비선형/graph/search/dfs.md": {
+  "at": "2026-09-17T10:20:01Z",
+  "bad": [],
+  "dst": "44bc319bf4a71ec4",
+  "model": "google/gemini-2.5-flash",
+  "src": "7ad1f44226ca8fbe",
+  "usage": 4651
+ },
+ "Data-Structure/비선형/tree/avl.md": {
+  "at": "2026-09-17T10:20:02Z",
+  "bad": [],
+  "dst": "94e6d7d51cb3e49b",
+  "model": "google/gemini-2.5-flash",
+  "src": "3ba488a8f83c31d0",
+  "usage": 4984
+ },
+ "Data-Structure/비선형/tree/bst.md": {
+  "at": "2026-09-17T10:20:23Z",
+  "bad": [],
+  "dst": "9e47fe6c98ee71d9",
+  "model": "google/gemini-2.5-flash",
+  "src": "1d4807a01facd819",
+  "usage": 7140
+ },
+ "Data-Structure/비선형/tree/btree.md": {
+  "at": "2026-09-17T10:20:08Z",
+  "bad": [],
+  "dst": "047bb566b6fe79ca",
+  "model": "google/gemini-2.5-flash",
+  "src": "deef90febbded8b9",
+  "usage": 4388
+ },
+ "Data-Structure/비선형/tree/btree_delete.md": {
+  "at": "2026-09-17T10:20:08Z",
+  "bad": [],
+  "dst": "b112e82f8e021206",
+  "model": "google/gemini-2.5-flash",
+  "src": "f7cff9af64ce63d5",
+  "usage": 4501
+ },
+ "Data-Structure/비선형/tree/redblack.md": {
+  "at": "2026-09-17T10:20:38Z",
+  "bad": [],
+  "dst": "ac343708474c2ed1",
+  "model": "google/gemini-2.5-flash",
+  "src": "77842849af743358",
+  "usage": 14258
+ },
+ "Data-Structure/비선형/tree/tree.md": {
+  "at": "2026-09-17T10:32:45Z",
+  "bad": [],
+  "dst": "c1c46efe8acdf916",
+  "model": "google/gemini-2.5-flash",
+  "src": "ec706ee4a474f09a",
+  "usage": 8594
+ },
+ "Data-Structure/선형/linearlist/linearlist.md": {
+  "at": "2026-09-17T10:20:07Z",
+  "bad": [],
+  "dst": "c7c6ca0301ef3174",
+  "model": "google/gemini-2.5-flash",
+  "src": "598eab04706b2302",
+  "usage": 2525
+ },
+ "Data-Structure/선형/linkedlist/linkedlist.md": {
+  "at": "2026-09-17T10:20:12Z",
+  "bad": [],
+  "dst": "869730a0c2999980",
+  "model": "google/gemini-2.5-flash",
+  "src": "d21269b75b7c318b",
+  "usage": 4185
+ },
+ "Data-Structure/선형/queue/queue.md": {
+  "at": "2026-09-17T10:20:12Z",
+  "bad": [],
+  "dst": "616bb8778498db1e",
+  "model": "google/gemini-2.5-flash",
+  "src": "8737e399b8c46d57",
+  "usage": 3569
+ },
+ "Data-Structure/선형/stack/stack.md": {
+  "at": "2026-09-17T10:20:13Z",
+  "bad": [],
+  "dst": "cce2399187e5fe28",
+  "model": "google/gemini-2.5-flash",
+  "src": "d0d4845dd7d25e3c",
+  "usage": 3882
+ },
+ "DataBase/ACID.md": {
+  "at": "2026-09-17T10:20:08Z",
+  "bad": [],
+  "dst": "59b45d424a01acb7",
+  "model": "google/gemini-2.5-flash",
+  "src": "dad7fe9c73c81e41",
+  "usage": 1713
+ },
+ "DataBase/ORMs.md": {
+  "at": "2026-09-17T10:20:16Z",
+  "bad": [],
+  "dst": "623ae7c3171acb6c",
+  "model": "google/gemini-2.5-flash",
+  "src": "c1b7382460e8aa97",
+  "usage": 2690
+ },
+ "DataBase/analytic_function.md": {
+  "at": "2026-09-17T10:20:17Z",
+  "bad": [],
+  "dst": "4f87afea87231c74",
+  "model": "google/gemini-2.5-flash",
+  "src": "3c41265f0cb95d8e",
+  "usage": 3269
+ },
+ "DataBase/b+tree.md": {
+  "at": "2026-09-17T10:20:20Z",
+  "bad": [],
+  "dst": "300e4ab2f614393e",
+  "model": "google/gemini-2.5-flash",
+  "src": "9c0249861029158c",
+  "usage": 3515
+ },
+ "DataBase/cap.md": {
+  "at": "2026-09-17T10:20:20Z",
+  "bad": [],
+  "dst": "d05ab82fef7800a9",
+  "model": "google/gemini-2.5-flash",
+  "src": "028f01e15475ba20",
+  "usage": 3658
+ },
+ "DataBase/cluster.md": {
+  "at": "2026-09-17T10:20:22Z",
+  "bad": [],
+  "dst": "0e19a7510b582f71",
+  "model": "google/gemini-2.5-flash",
+  "src": "ef7d786535cc4fe5",
+  "usage": 3180
+ },
+ "DataBase/clustering.md": {
+  "at": "2026-09-17T10:20:18Z",
+  "bad": [],
+  "dst": "3b93f5862212e663",
+  "model": "google/gemini-2.5-flash",
+  "src": "801d9dd37f9fa86a",
+  "usage": 1933
+ },
+ "DataBase/connectionp.md": {
+  "at": "2026-09-17T10:20:19Z",
+  "bad": [],
+  "dst": "adc352fb87fde26f",
+  "model": "google/gemini-2.5-flash",
+  "src": "85629baee5e1e9fc",
+  "usage": 1721
+ },
+ "DataBase/coverindex.md": {
+  "at": "2026-09-17T10:32:43Z",
+  "bad": [],
+  "dst": "38aae79183d39dfc",
+  "model": "google/gemini-2.5-flash",
+  "src": "e02d2965d3cd2590",
+  "usage": 5211
+ },
+ "DataBase/dbload.md": {
+  "at": "2026-09-17T10:20:23Z",
+  "bad": [],
+  "dst": "88cba1725c53eb21",
+  "model": "google/gemini-2.5-flash",
+  "src": "f9ce233deaaa8cf2",
+  "usage": 1579
+ },
+ "DataBase/dlock.md": {
+  "at": "2026-09-17T10:32:46Z",
+  "bad": [
+   "코드펜스 0→2"
+  ],
+  "dst": "d5bcce8417fa9a07",
+  "model": "google/gemini-2.5-flash",
+  "src": "436975bcbb6e1456",
+  "usage": 4477
+ },
+ "DataBase/ear.md": {
+  "at": "2026-09-17T10:20:34Z",
+  "bad": [],
+  "dst": "2b534ce4dec7edc8",
+  "model": "google/gemini-2.5-flash",
+  "src": "c11b081889d66c37",
+  "usage": 4754
+ },
+ "DataBase/index.md": {
+  "at": "2026-09-17T10:20:37Z",
+  "bad": [],
+  "dst": "cfb2b9370787c319",
+  "model": "google/gemini-2.5-flash",
+  "src": "e17b823be9a362c9",
+  "usage": 5047
+ },
+ "DataBase/influx.md": {
+  "at": "2026-09-17T10:20:49Z",
+  "bad": [],
+  "dst": "0a8e4aa99ff83845",
+  "model": "google/gemini-2.5-flash",
+  "src": "98812583ad052405",
+  "usage": 9481
+ },
+ "DataBase/join.md": {
+  "at": "2026-09-17T10:20:30Z",
+  "bad": [],
+  "dst": "04d24f2f77ddcc19",
+  "model": "google/gemini-2.5-flash",
+  "src": "352ff854f80ea9ca",
+  "usage": 2761
+ },
+ "DataBase/key.md": {
+  "at": "2026-09-17T10:20:35Z",
+  "bad": [],
+  "dst": "b681f6c890a3ebf5",
+  "model": "google/gemini-2.5-flash",
+  "src": "617ab17b080132c8",
+  "usage": 3702
+ },
+ "DataBase/load/partitioning.md": {
+  "at": "2026-09-17T10:20:33Z",
+  "bad": [],
+  "dst": "aaf49bbcf3000ffc",
+  "model": "google/gemini-2.5-flash",
+  "src": "37a01c13d8a00be8",
+  "usage": 3259
+ },
+ "DataBase/load/partitioning2.md": {
+  "at": "2026-09-17T10:20:40Z",
+  "bad": [],
+  "dst": "1e870c1f5c5abaa3",
+  "model": "google/gemini-2.5-flash",
+  "src": "4ce1b8295b2b88ba",
+  "usage": 4209
+ },
+ "DataBase/lock.md": {
+  "at": "2026-09-17T10:20:42Z",
+  "bad": [],
+  "dst": "349629522788678b",
+  "model": "google/gemini-2.5-flash",
+  "src": "91b2e31eb363eb4d",
+  "usage": 4078
+ },
+ "DataBase/lsmtree.md": {
+  "at": "2026-09-17T10:20:51Z",
+  "bad": [],
+  "dst": "3997bbb24ef73f3f",
+  "model": "google/gemini-2.5-flash",
+  "src": "84744027326f2227",
+  "usage": 5423
+ },
+ "DataBase/mmr.md": {
+  "at": "2026-09-17T10:20:40Z",
+  "bad": [],
+  "dst": "edc6695d495bea43",
+  "model": "google/gemini-2.5-flash",
+  "src": "f7dd4cb29adf39f4",
+  "usage": 2216
+ },
+ "DataBase/modeling.md": {
+  "at": "2026-09-17T10:20:41Z",
+  "bad": [],
+  "dst": "4dcfa3aaf2d029f7",
+  "model": "google/gemini-2.5-flash",
+  "src": "b643c29b939a733a",
+  "usage": 1893
+ },
+ "DataBase/mysql_lock.md": {
+  "at": "2026-09-17T10:21:03Z",
+  "bad": [],
+  "dst": "dde5988e821f59a9",
+  "model": "google/gemini-2.5-flash",
+  "src": "1eed821a17fd10b3",
+  "usage": 8570
+ },
+ "DataBase/normal.md": {
+  "at": "2026-09-17T10:20:51Z",
+  "bad": [],
+  "dst": "5cc5321805800088",
+  "model": "google/gemini-2.5-flash",
+  "src": "a368be3b7e9e10bb",
+  "usage": 4398
+ },
+ "DataBase/nosql/mongodb/crud.md": {
+  "at": "2026-09-17T10:20:52Z",
+  "bad": [],
+  "dst": "f9fd60e23e3d1b7b",
+  "model": "google/gemini-2.5-flash",
+  "src": "f6ca8a1e1584b6b2",
+  "usage": 4756
+ },
+ "DataBase/nosql/mongodb/document.md": {
+  "at": "2026-09-17T10:20:47Z",
+  "bad": [],
+  "dst": "8f564db237c53f8b",
+  "model": "google/gemini-2.5-flash",
+  "src": "ffd65912532f5829",
+  "usage": 2078
+ },
+ "DataBase/nosql/mongodb/mongodb.md": {
+  "at": "2026-09-17T10:20:50Z",
+  "bad": [],
+  "dst": "48bbdca542d6fb4a",
+  "model": "google/gemini-2.5-flash",
+  "src": "a3ab6736c943437e",
+  "usage": 2922
+ },
+ "DataBase/nosql/mongodb/shard.md": {
+  "at": "2026-09-17T10:20:52Z",
+  "bad": [],
+  "dst": "396f1fd628f8ca60",
+  "model": "google/gemini-2.5-flash",
+  "src": "6c5dcbd0023337a0",
+  "usage": 3464
+ },
+ "DataBase/nosql/mongodb/tradeoff1.md": {
+  "at": "2026-09-17T10:20:53Z",
+  "bad": [],
+  "dst": "398add37a24666c7",
+  "model": "google/gemini-2.5-flash",
+  "src": "3b489a6d175bef11",
+  "usage": 3567
+ },
+ "DataBase/nosql/mongodb/undo_redo.md": {
+  "at": "2026-09-17T10:21:02Z",
+  "bad": [],
+  "dst": "8f19346e1255fdcf",
+  "model": "google/gemini-2.5-flash",
+  "src": "4f941c8bfc55e7e7",
+  "usage": 5888
+ },
+ "DataBase/nosql/redis/architecture.md": {
+  "at": "2026-09-17T10:21:12Z",
+  "bad": [],
+  "dst": "5b41ed09519fb5a1",
+  "model": "google/gemini-2.5-flash",
+  "src": "128c5a45984d439d",
+  "usage": 8029
+ },
+ "DataBase/nosql/redis/atomic.md": {
+  "at": "2026-09-17T10:21:16Z",
+  "bad": [],
+  "dst": "9865196f17751095",
+  "model": "google/gemini-2.5-flash",
+  "src": "04da8d3a7fabb610",
+  "usage": 8533
+ },
+ "DataBase/nosql/redis/cluster.md": {
+  "at": "2026-09-17T10:33:15Z",
+  "bad": [
+   "링크 3→2"
+  ],
+  "dst": "7f4902ee2f9ff2ce",
+  "model": "google/gemini-2.5-flash",
+  "src": "7618e327d1c9b446",
+  "usage": 11535
+ },
+ "DataBase/nosql/redis/config.md": {
+  "at": "2026-09-17T10:21:04Z",
+  "bad": [],
+  "dst": "c871e40b716734cd",
+  "model": "google/gemini-2.5-flash",
+  "src": "4e2aee0a6c6a2774",
+  "usage": 4159
+ },
+ "DataBase/nosql/redis/distributed.md": {
+  "at": "2026-09-17T10:21:15Z",
+  "bad": [],
+  "dst": "92211285bd4e847e",
+  "model": "google/gemini-2.5-flash",
+  "src": "487e18a400025b13",
+  "usage": 7822
+ },
+ "DataBase/nosql/redis/distributed2.md": {
+  "at": "2026-09-17T10:21:21Z",
+  "bad": [],
+  "dst": "d54e00d2a89a1998",
+  "model": "google/gemini-2.5-flash",
+  "src": "ba167d276ba2ac18",
+  "usage": 10454
+ },
+ "DataBase/nosql/redis/fragment.md": {
+  "at": "2026-09-17T10:21:11Z",
+  "bad": [],
+  "dst": "ec0d281c054610c4",
+  "model": "google/gemini-2.5-flash",
+  "src": "a7f36bf84b5875b2",
+  "usage": 6310
+ },
+ "DataBase/nosql/redis/incr.md": {
+  "at": "2026-09-17T10:21:06Z",
+  "bad": [],
+  "dst": "5f1d61aca89c0fbe",
+  "model": "google/gemini-2.5-flash",
+  "src": "c7e249b88ce69043",
+  "usage": 4521
+ },
+ "DataBase/nosql/redis/locksync.md": {
+  "at": "2026-09-17T10:21:08Z",
+  "bad": [],
+  "dst": "f3a47b3e8891b038",
+  "model": "google/gemini-2.5-flash",
+  "src": "d94ec5b5c0396596",
+  "usage": 1981
+ },
+ "DataBase/nosql/redis/memory.md": {
+  "at": "2026-09-17T10:21:15Z",
+  "bad": [],
+  "dst": "989d038f0eb570d3",
+  "model": "google/gemini-2.5-flash",
+  "src": "2c8f62816b464f5a",
+  "usage": 4271
+ },
+ "DataBase/nosql/redis/redis.md": {
+  "at": "2026-09-17T10:21:14Z",
+  "bad": [],
+  "dst": "286fa7d4a9a0a3bd",
+  "model": "google/gemini-2.5-flash",
+  "src": "1d759840ada60808",
+  "usage": 3262
+ },
+ "DataBase/nosql/redis/replica.md": {
+  "at": "2026-09-17T10:21:23Z",
+  "bad": [],
+  "dst": "7f475b00d0eaea62",
+  "model": "google/gemini-2.5-flash",
+  "src": "45d8282a658e0aa0",
+  "usage": 5068
+ },
+ "DataBase/nosql/redis/replication.md": {
+  "at": "2026-09-17T10:21:29Z",
+  "bad": [],
+  "dst": "aad86d37b7dcd3d5",
+  "model": "google/gemini-2.5-flash",
+  "src": "b4d78bb77a7d5268",
+  "usage": 6677
+ },
+ "DataBase/nosql/redis/serial.md": {
+  "at": "2026-09-17T10:21:26Z",
+  "bad": [],
+  "dst": "a82fc7b7321c10c9",
+  "model": "google/gemini-2.5-flash",
+  "src": "4383fce33505f120",
+  "usage": 4286
+ },
+ "DataBase/nosql/sql_nosql.md": {
+  "at": "2026-09-17T10:21:17Z",
+  "bad": [],
+  "dst": "fdc1011cbf531f9e",
+  "model": "google/gemini-2.5-flash",
+  "src": "508f31ca669a23ad",
+  "usage": 1626
+ },
+ "DataBase/optimizer.md": {
+  "at": "2026-09-17T10:21:20Z",
+  "bad": [],
+  "dst": "e96aad79b11fcd7f",
+  "model": "google/gemini-2.5-flash",
+  "src": "375d34b3fbe0a194",
+  "usage": 2270
+ },
+ "DataBase/optimizer2.md": {
+  "at": "2026-09-17T10:21:28Z",
+  "bad": [],
+  "dst": "cdd68277b9820621",
+  "model": "google/gemini-2.5-flash",
+  "src": "20f191c8944a110b",
+  "usage": 4128
+ },
+ "DataBase/pk.md": {
+  "at": "2026-09-17T10:21:33Z",
+  "bad": [],
+  "dst": "51db7ca78dacebc4",
+  "model": "google/gemini-2.5-flash",
+  "src": "cf9ceb220a24e238",
+  "usage": 4844
+ },
+ "DataBase/recoverability.md": {
+  "at": "2026-09-17T10:21:30Z",
+  "bad": [],
+  "dst": "728ed013263d9b00",
+  "model": "google/gemini-2.5-flash",
+  "src": "8666c8b0b8ef15a8",
+  "usage": 3982
+ },
+ "DataBase/rep_clu.md": {
+  "at": "2026-09-17T10:21:30Z",
+  "bad": [],
+  "dst": "2956a92030fbb6be",
+  "model": "google/gemini-2.5-flash",
+  "src": "1e7d2bc5fa32bb33",
+  "usage": 3429
+ },
+ "DataBase/se.md": {
+  "at": "2026-09-17T10:21:30Z",
+  "bad": [],
+  "dst": "7cec7e82a6c8d5be",
+  "model": "google/gemini-2.5-flash",
+  "src": "cdc00202c2d96d10",
+  "usage": 3216
+ },
+ "DataBase/serializability.md": {
+  "at": "2026-09-17T10:21:30Z",
+  "bad": [],
+  "dst": "0c2eeed9edf12724",
+  "model": "google/gemini-2.5-flash",
+  "src": "1d0c00bbeff6b104",
+  "usage": 2887
+ },
+ "DataBase/sharding.md": {
+  "at": "2026-09-17T10:21:35Z",
+  "bad": [],
+  "dst": "7ea47ee3785ed7c2",
+  "model": "google/gemini-2.5-flash",
+  "src": "8a45e7172dc30cde",
+  "usage": 3804
+ },
+ "DataBase/sql/date.md": {
+  "at": "2026-09-17T10:21:29Z",
+  "bad": [],
+  "dst": "073186e1b4a4166d",
+  "model": "google/gemini-2.5-flash",
+  "src": "72be8182545e29a2",
+  "usage": 1353
+ },
+ "DataBase/sql/dcl.md": {
+  "at": "2026-09-17T10:21:33Z",
+  "bad": [],
+  "dst": "aaafbb5f56040db0",
+  "model": "google/gemini-2.5-flash",
+  "src": "29d49854ffcb849c",
+  "usage": 2086
+ },
+ "DataBase/sql/ddl.md": {
+  "at": "2026-09-17T10:21:35Z",
+  "bad": [],
+  "dst": "cd82df0f58172acc",
+  "model": "google/gemini-2.5-flash",
+  "src": "a3742ef9d6c4a6eb",
+  "usage": 2147
+ },
+ "DataBase/sql/dml.md": {
+  "at": "2026-09-17T10:21:42Z",
+  "bad": [],
+  "dst": "319deb08a2dc19a5",
+  "model": "google/gemini-2.5-flash",
+  "src": "c50ad9a1f2b93abc",
+  "usage": 4590
+ },
+ "DataBase/sql/full_text.md": {
+  "at": "2026-09-17T10:21:49Z",
+  "bad": [],
+  "dst": "387cf5bfb6ec3b65",
+  "model": "google/gemini-2.5-flash",
+  "src": "9e12e838dead2954",
+  "usage": 6678
+ },
+ "DataBase/sql/groupby.md": {
+  "at": "2026-09-17T10:21:35Z",
+  "bad": [],
+  "dst": "619eb619aef2078a",
+  "model": "google/gemini-2.5-flash",
+  "src": "9b328f444b0a2eae",
+  "usage": 1773
+ },
+ "DataBase/sql/innerjoin.md": {
+  "at": "2026-09-17T10:21:38Z",
+  "bad": [],
+  "dst": "794769c88828bc8a",
+  "model": "google/gemini-2.5-flash",
+  "src": "4b26becd287b3e65",
+  "usage": 2438
+ },
+ "DataBase/sql/level.md": {
+  "at": "2026-09-17T10:21:42Z",
+  "bad": [],
+  "dst": "72edd408170f0096",
+  "model": "google/gemini-2.5-flash",
+  "src": "16ebe0d80d453937",
+  "usage": 4051
+ },
+ "DataBase/sql/null.md": {
+  "at": "2026-09-17T10:21:33Z",
+  "bad": [],
+  "dst": "4798c541bfb39492",
+  "model": "google/gemini-2.5-flash",
+  "src": "f3a29e7bfd47800a",
+  "usage": 910
+ },
+ "DataBase/sql/numberfun.md": {
+  "at": "2026-09-17T10:21:37Z",
+  "bad": [],
+  "dst": "8d805e6d1944fa28",
+  "model": "google/gemini-2.5-flash",
+  "src": "9dac7e2e2ea85614",
+  "usage": 1432
+ },
+ "DataBase/sql/orderby.md": {
+  "at": "2026-09-17T10:21:36Z",
+  "bad": [],
+  "dst": "2e748621c96d42f1",
+  "model": "google/gemini-2.5-flash",
+  "src": "e4c1d20cc80f0f51",
+  "usage": 1182
+ },
+ "DataBase/sql/replace.md": {
+  "at": "2026-09-17T10:21:37Z",
+  "bad": [],
+  "dst": "9a315d5e1048d1b2",
+  "model": "google/gemini-2.5-flash",
+  "src": "0f931b95f96550cb",
+  "usage": 1316
+ },
+ "DataBase/sql/substr.md": {
+  "at": "2026-09-17T10:21:39Z",
+  "bad": [],
+  "dst": "1ca5269a63ba4fcd",
+  "model": "google/gemini-2.5-flash",
+  "src": "7d80979757f1b02b",
+  "usage": 1412
+ },
+ "DataBase/sql/upperlower.md": {
+  "at": "2026-09-17T10:21:38Z",
+  "bad": [],
+  "dst": "5460ca8d710a21b1",
+  "model": "google/gemini-2.5-flash",
+  "src": "74136579ab9c5015",
+  "usage": 1042
+ },
+ "DataBase/sql/where.md": {
+  "at": "2026-09-17T10:21:43Z",
+  "bad": [],
+  "dst": "bc7346cb2a36960b",
+  "model": "google/gemini-2.5-flash",
+  "src": "308435b781c82094",
+  "usage": 2531
+ },
+ "DataBase/sql/windowfun.md": {
+  "at": "2026-09-17T10:22:39Z",
+  "bad": [],
+  "dst": "8370566ea9d744d2",
+  "model": "google/gemini-2.5-flash",
+  "src": "a77b9a6e298b9cf5",
+  "usage": 16292
+ },
+ "DataBase/sql/프로시저_트리거.md": {
+  "at": "2026-09-17T10:21:42Z",
+  "bad": [],
+  "dst": "c5dac842d573a0fe",
+  "model": "google/gemini-2.5-flash",
+  "src": "6fe8ae465227fc89",
+  "usage": 1392
+ },
+ "DataBase/varchar_text.md": {
+  "at": "2026-09-17T10:21:51Z",
+  "bad": [],
+  "dst": "cc8b2d1c49f66ccb",
+  "model": "google/gemini-2.5-flash",
+  "src": "6101b20fec76e532",
+  "usage": 5840
+ },
+ "DataBase/wal.md": {
+  "at": "2026-09-17T10:21:54Z",
+  "bad": [],
+  "dst": "a6a37a9517e95aa1",
+  "model": "google/gemini-2.5-flash",
+  "src": "71f8902c42899383",
+  "usage": 4866
+ },
+ "DataBase/반정규화.md": {
+  "at": "2026-09-17T10:21:43Z",
+  "bad": [],
+  "dst": "34fd91c16d60e66d",
+  "model": "google/gemini-2.5-flash",
+  "src": "1ed6d4fb2445d95b",
+  "usage": 1687
+ },
+ "DataBase/전문검색인덱스.md": {
+  "at": "2026-09-17T10:21:58Z",
+  "bad": [],
+  "dst": "e0c653c6ad208e3d",
+  "model": "google/gemini-2.5-flash",
+  "src": "c2b387df7c2b93b0",
+  "usage": 5789
+ },
+ "DataBase/정규화.md": {
+  "at": "2026-09-17T10:21:55Z",
+  "bad": [],
+  "dst": "8b4fd2dabf9998a1",
+  "model": "google/gemini-2.5-flash",
+  "src": "52e7c2cd930a9e09",
+  "usage": 4283
+ },
+ "Design-Pattern/designp.md": {
+  "at": "2026-09-17T10:21:53Z",
+  "bad": [],
+  "dst": "d6e49652f9d778ab",
+  "model": "google/gemini-2.5-flash",
+  "src": "46240e1931cefb5d",
+  "usage": 3163
+ },
+ "Design-Pattern/구조/adapter.md": {
+  "at": "2026-09-17T10:21:51Z",
+  "bad": [],
+  "dst": "e23e071e741582a4",
+  "model": "google/gemini-2.5-flash",
+  "src": "5380fe23a6398bb0",
+  "usage": 3246
+ },
+ "Design-Pattern/구조/bridge.md": {
+  "at": "2026-09-17T10:21:54Z",
+  "bad": [],
+  "dst": "6ddc00f533df5f73",
+  "model": "google/gemini-2.5-flash",
+  "src": "028eeb6fb0653861",
+  "usage": 3641
+ },
+ "Design-Pattern/구조/composite.md": {
+  "at": "2026-09-17T10:21:53Z",
+  "bad": [],
+  "dst": "2b2e9a35bd334e12",
+  "model": "google/gemini-2.5-flash",
+  "src": "34031e2de06ac8d4",
+  "usage": 3202
+ },
+ "Design-Pattern/구조/decorator.md": {
+  "at": "2026-09-17T10:21:55Z",
+  "bad": [],
+  "dst": "7efe977d38061d0c",
+  "model": "google/gemini-2.5-flash",
+  "src": "e2a262bed63eb073",
+  "usage": 1883
+ },
+ "Design-Pattern/구조/facade.md": {
+  "at": "2026-09-17T10:22:04Z",
+  "bad": [],
+  "dst": "6a7d2822f36437a3",
+  "model": "google/gemini-2.5-flash",
+  "src": "4cbf5e28957be42a",
+  "usage": 4208
+ },
+ "Design-Pattern/구조/proxyp.md": {
+  "at": "2026-09-17T10:22:05Z",
+  "bad": [],
+  "dst": "994e3611b77ef8ae",
+  "model": "google/gemini-2.5-flash",
+  "src": "c54d7a0e41878f19",
+  "usage": 4501
+ },
+ "Design-Pattern/생성/abstract_factory.md": {
+  "at": "2026-09-17T10:22:06Z",
+  "bad": [],
+  "dst": "7cb9ac8742408102",
+  "model": "google/gemini-2.5-flash",
+  "src": "501ee3fc5c499e4a",
+  "usage": 4061
+ },
+ "Design-Pattern/생성/builder.md": {
+  "at": "2026-09-17T10:22:12Z",
+  "bad": [],
+  "dst": "fa1af827b1ccc4ac",
+  "model": "google/gemini-2.5-flash",
+  "src": "8f40ed7f5f6c3527",
+  "usage": 6161
+ },
+ "Design-Pattern/생성/factory_method.md": {
+  "at": "2026-09-17T10:22:03Z",
+  "bad": [],
+  "dst": "12f53b5e1d8c4aaa",
+  "model": "google/gemini-2.5-flash",
+  "src": "ed7a689e2e8573ab",
+  "usage": 2952
+ },
+ "Design-Pattern/생성/prototype.md": {
+  "at": "2026-09-17T10:22:07Z",
+  "bad": [],
+  "dst": "738f5d11b6a50171",
+  "model": "google/gemini-2.5-flash",
+  "src": "1903666f25c3d221",
+  "usage": 4481
+ },
+ "Design-Pattern/생성/singleton.md": {
+  "at": "2026-09-17T10:22:04Z",
+  "bad": [],
+  "dst": "4a44e1451709e3aa",
+  "model": "google/gemini-2.5-flash",
+  "src": "de08654ca7596bac",
+  "usage": 3303
+ },
+ "Design-Pattern/행동/Interpreter.md": {
+  "at": "2026-09-17T10:22:02Z",
+  "bad": [],
+  "dst": "418f283cbf9bdf87",
+  "model": "google/gemini-2.5-flash",
+  "src": "53b7485726266474",
+  "usage": 2180
+ },
+ "Design-Pattern/행동/chain_of_resp.md": {
+  "at": "2026-09-17T10:22:05Z",
+  "bad": [],
+  "dst": "e4b987930c836376",
+  "model": "google/gemini-2.5-flash",
+  "src": "f7e82a0f53c78a9f",
+  "usage": 2277
+ },
+ "Design-Pattern/행동/command.md": {
+  "at": "2026-09-17T10:22:11Z",
+  "bad": [],
+  "dst": "6c1c9f4d899e512d",
+  "model": "google/gemini-2.5-flash",
+  "src": "93c97f1caa81cc92",
+  "usage": 2521
+ },
+ "Design-Pattern/행동/iterator.md": {
+  "at": "2026-09-17T10:22:11Z",
+  "bad": [],
+  "dst": "0b0ec2ec383c2d35",
+  "model": "google/gemini-2.5-flash",
+  "src": "9e519e790b18930e",
+  "usage": 2543
+ },
+ "Design-Pattern/행동/mediator.md": {
+  "at": "2026-09-17T10:22:11Z",
+  "bad": [],
+  "dst": "80d4386f018ff89b",
+  "model": "google/gemini-2.5-flash",
+  "src": "863d835a0703fa0a",
+  "usage": 2321
+ },
+ "Design-Pattern/행동/observer.md": {
+  "at": "2026-09-17T10:22:10Z",
+  "bad": [],
+  "dst": "3effb080ac56c188",
+  "model": "google/gemini-2.5-flash",
+  "src": "30852f8ede54eee3",
+  "usage": 1825
+ },
+ "Design-Pattern/행동/singleton.md": {
+  "at": "2026-09-17T10:22:12Z",
+  "bad": [],
+  "dst": "109a0a8de7ba8ed6",
+  "model": "google/gemini-2.5-flash",
+  "src": "86838e29f0af1dee",
+  "usage": 2256
+ },
+ "Design-Pattern/행동/state.md": {
+  "at": "2026-09-17T10:22:21Z",
+  "bad": [],
+  "dst": "a531ff5d0213fd5f",
+  "model": "google/gemini-2.5-flash",
+  "src": "56f24017e2b0b16a",
+  "usage": 5591
+ },
+ "Design-Pattern/행동/strategy.md": {
+  "at": "2026-09-17T10:22:26Z",
+  "bad": [],
+  "dst": "4849e7dc07dbe3e0",
+  "model": "google/gemini-2.5-flash",
+  "src": "9cf085637a48d6d2",
+  "usage": 6150
+ },
+ "Design-Pattern/행동/template.md": {
+  "at": "2026-09-17T10:22:18Z",
+  "bad": [],
+  "dst": "cf2c4a68a36f3f57",
+  "model": "google/gemini-2.5-flash",
+  "src": "8bfa8d306217d40c",
+  "usage": 3934
+ },
+ "DevOps/Docker/container.md": {
+  "at": "2026-09-17T10:22:23Z",
+  "bad": [],
+  "dst": "878d4dd587e1f59f",
+  "model": "google/gemini-2.5-flash",
+  "src": "6ce88be6bdfebdc7",
+  "usage": 4124
+ },
+ "DevOps/Docker/denied.md": {
+  "at": "2026-09-17T10:22:17Z",
+  "bad": [],
+  "dst": "cabbd7edf86070a7",
+  "model": "google/gemini-2.5-flash",
+  "src": "7bf918ffb264e77e",
+  "usage": 1532
+ },
+ "DevOps/Docker/docker.md": {
+  "at": "2026-09-17T10:22:27Z",
+  "bad": [],
+  "dst": "f80a648f7e194d40",
+  "model": "google/gemini-2.5-flash",
+  "src": "7103823d29476915",
+  "usage": 3850
+ },
+ "DevOps/Docker/docker_image.md": {
+  "at": "2026-09-17T10:22:28Z",
+  "bad": [],
+  "dst": "0408bd0ac5e4bcf2",
+  "model": "google/gemini-2.5-flash",
+  "src": "d7ce18ba38888245",
+  "usage": 6226
+ },
+ "DevOps/Docker/network.md": {
+  "at": "2026-09-17T10:22:29Z",
+  "bad": [],
+  "dst": "96bdc58ed6e45fb4",
+  "model": "google/gemini-2.5-flash",
+  "src": "4e85b8be751a09a7",
+  "usage": 6135
+ },
+ "DevOps/Docker/ns.md": {
+  "at": "2026-09-17T10:22:33Z",
+  "bad": [],
+  "dst": "b799b8bcd1ca4433",
+  "model": "google/gemini-2.5-flash",
+  "src": "7c3c7dd029ff50a8",
+  "usage": 6549
+ },
+ "DevOps/Docker/spring_docker.md": {
+  "at": "2026-09-17T10:22:59Z",
+  "bad": [],
+  "dst": "388a5c10303e87cb",
+  "model": "google/gemini-2.5-flash",
+  "src": "2cae2b82ee6f91ab",
+  "usage": 11455
+ },
+ "DevOps/Docker/swarm.md": {
+  "at": "2026-09-17T10:22:28Z",
+  "bad": [],
+  "dst": "f2600678006391b6",
+  "model": "google/gemini-2.5-flash",
+  "src": "e5ae7e74d5594192",
+  "usage": 3180
+ },
+ "DevOps/Docker/도커볼륨.md": {
+  "at": "2026-09-17T10:22:33Z",
+  "bad": [],
+  "dst": "2ce12aaeed4e7dfe",
+  "model": "google/gemini-2.5-flash",
+  "src": "0de751b1fc8a3a61",
+  "usage": 4028
+ },
+ "DevOps/Docker/도커엔진.md": {
+  "at": "2026-09-17T10:22:34Z",
+  "bad": [],
+  "dst": "3faa9160e8cfcc2c",
+  "model": "google/gemini-2.5-flash",
+  "src": "e1b9fce4afc0286a",
+  "usage": 4181
+ },
+ "DevOps/Docker/이미지관련명령어.md": {
+  "at": "2026-09-17T10:32:46Z",
+  "bad": [
+   "제목 9→10"
+  ],
+  "dst": "247a2cef3b451dac",
+  "model": "google/gemini-2.5-flash",
+  "src": "1fdfe58d899dbee6",
+  "usage": 1217
+ },
+ "DevOps/Docker/컨테이너관리명령어.md": {
+  "at": "2026-09-17T10:22:34Z",
+  "bad": [],
+  "dst": "754293a710d83d4e",
+  "model": "google/gemini-2.5-flash",
+  "src": "c85ad8ff12165b5a",
+  "usage": 2266
+ },
+ "DevOps/Docker/컨테이너애플리케이션구축.md": {
+  "at": "2026-09-17T10:22:36Z",
+  "bad": [],
+  "dst": "01fca79930f0c42a",
+  "model": "google/gemini-2.5-flash",
+  "src": "db7b485c8c05b528",
+  "usage": 2903
+ },
+ "DevOps/Docker/컨테이너외부노출.md": {
+  "at": "2026-09-17T10:22:38Z",
+  "bad": [],
+  "dst": "25fc43818726aa52",
+  "model": "google/gemini-2.5-flash",
+  "src": "abf1281aecb48e2a",
+  "usage": 3319
+ },
+ "DevOps/Docker/컨테이너제어명령어.md": {
+  "at": "2026-09-17T10:22:38Z",
+  "bad": [],
+  "dst": "54513c01a7dd5a39",
+  "model": "google/gemini-2.5-flash",
+  "src": "b46e6e14413cbdc2",
+  "usage": 2648
+ },
+ "DevOps/ELK.md": {
+  "at": "2026-09-17T10:22:39Z",
+  "bad": [],
+  "dst": "b66cfd3cefd7e705",
+  "model": "google/gemini-2.5-flash",
+  "src": "62b501821affd2bb",
+  "usage": 2656
+ },
+ "DevOps/XaaS.md": {
+  "at": "2026-09-17T10:22:38Z",
+  "bad": [],
+  "dst": "3658c8b36333a418",
+  "model": "google/gemini-2.5-flash",
+  "src": "3f328c060833ae77",
+  "usage": 1651
+ },
+ "DevOps/agile.md": {
+  "at": "2026-09-17T10:22:42Z",
+  "bad": [],
+  "dst": "5088b8c44590aa3b",
+  "model": "google/gemini-2.5-flash",
+  "src": "bf0c2c9df1130a42",
+  "usage": 3024
+ },
+ "DevOps/apm.md": {
+  "at": "2026-09-17T10:22:39Z",
+  "bad": [],
+  "dst": "9fa3bbc563e4713f",
+  "model": "google/gemini-2.5-flash",
+  "src": "598bfcd5a987785b",
+  "usage": 1680
+ },
+ "DevOps/aws.md": {
+  "at": "2026-09-17T10:23:25Z",
+  "bad": [],
+  "dst": "c39aedde68cb53d6",
+  "model": "google/gemini-2.5-flash",
+  "src": "dd78e7490535d97e",
+  "usage": 3678
+ },
+ "DevOps/aws/EC2Price.md": {
+  "at": "2026-09-17T10:22:43Z",
+  "bad": [],
+  "dst": "af59905b013be93a",
+  "model": "google/gemini-2.5-flash",
+  "src": "4fc26bc1a57d7fb4",
+  "usage": 2035
+ },
+ "DevOps/aws/ELK.md": {
+  "at": "2026-09-17T10:22:40Z",
+  "bad": [],
+  "dst": "7f2f0a835ba7f050",
+  "model": "google/gemini-2.5-flash",
+  "src": "e10c256b23fad5fe",
+  "usage": 997
+ },
+ "DevOps/aws/SES.md": {
+  "at": "2026-09-17T10:22:43Z",
+  "bad": [],
+  "dst": "fbe8741c33420648",
+  "model": "google/gemini-2.5-flash",
+  "src": "b0430568bc4873bf",
+  "usage": 1348
+ },
+ "DevOps/aws/SNS.md": {
+  "at": "2026-09-17T10:22:45Z",
+  "bad": [],
+  "dst": "8b294321caf8bb31",
+  "model": "google/gemini-2.5-flash",
+  "src": "95fdbe1a524171e0",
+  "usage": 1653
+ },
+ "DevOps/aws/SQS.md": {
+  "at": "2026-09-17T10:22:44Z",
+  "bad": [],
+  "dst": "3788eb2e7ad79866",
+  "model": "google/gemini-2.5-flash",
+  "src": "0987d64dca18c7ae",
+  "usage": 1929
+ },
+ "DevOps/aws/as.md": {
+  "at": "2026-09-17T10:22:46Z",
+  "bad": [],
+  "dst": "bf76ed1fb54cf513",
+  "model": "google/gemini-2.5-flash",
+  "src": "4e96189ef3f8decd",
+  "usage": 2370
+ },
+ "DevOps/aws/aurora.md": {
+  "at": "2026-09-17T10:22:56Z",
+  "bad": [],
+  "dst": "a48489034c99225f",
+  "model": "google/gemini-2.5-flash",
+  "src": "d5e39c73ed52e624",
+  "usage": 5571
+ },
+ "DevOps/aws/aurora2.md": {
+  "at": "2026-09-17T10:23:00Z",
+  "bad": [],
+  "dst": "b9ebd0bd736e6629",
+  "model": "google/gemini-2.5-flash",
+  "src": "e8ae28f83b41cce0",
+  "usage": 6388
+ },
+ "DevOps/aws/bastion.md": {
+  "at": "2026-09-17T10:22:51Z",
+  "bad": [],
+  "dst": "da0aa45de0f496c0",
+  "model": "google/gemini-2.5-flash",
+  "src": "4d5783363b7ad0ea",
+  "usage": 3763
+ },
+ "DevOps/aws/cloudfront.md": {
+  "at": "2026-09-17T10:22:46Z",
+  "bad": [],
+  "dst": "6267fbb4d4edcb68",
+  "model": "google/gemini-2.5-flash",
+  "src": "e7d0f49df6a18363",
+  "usage": 1155
+ },
+ "DevOps/aws/cloudwatch.md": {
+  "at": "2026-09-17T10:22:54Z",
+  "bad": [],
+  "dst": "3d67cb2ce56f85b8",
+  "model": "google/gemini-2.5-flash",
+  "src": "60f2847687f5ad74",
+  "usage": 3469
+ },
+ "DevOps/aws/cloudwatch2.md": {
+  "at": "2026-09-17T10:23:10Z",
+  "bad": [],
+  "dst": "173284164630221a",
+  "model": "google/gemini-2.5-flash",
+  "src": "76eebea2d4af2952",
+  "usage": 9637
+ },
+ "DevOps/aws/dx.md": {
+  "at": "2026-09-17T10:22:54Z",
+  "bad": [],
+  "dst": "c3151433a7a8b0f5",
+  "model": "google/gemini-2.5-flash",
+  "src": "cc6e6cdfb6fc787a",
+  "usage": 2965
+ },
+ "DevOps/aws/ebs.md": {
+  "at": "2026-09-17T10:22:51Z",
+  "bad": [],
+  "dst": "b1078904776227e8",
+  "model": "google/gemini-2.5-flash",
+  "src": "8922d5afb4e0c875",
+  "usage": 1941
+ },
+ "DevOps/aws/ecr.md": {
+  "at": "2026-09-17T10:22:57Z",
+  "bad": [],
+  "dst": "025562a37598f2ed",
+  "model": "google/gemini-2.5-flash",
+  "src": "3df1adc7a089bfdd",
+  "usage": 3140
+ },
+ "DevOps/aws/eks/alb_controller.md": {
+  "at": "2026-09-17T10:23:07Z",
+  "bad": [],
+  "dst": "ec019fbdd36d85d0",
+  "model": "google/gemini-2.5-flash",
+  "src": "dc6c5095fd482499",
+  "usage": 5716
+ },
+ "DevOps/aws/eks/cni.md": {
+  "at": "2026-09-17T10:23:03Z",
+  "bad": [],
+  "dst": "24e8e703af10efb3",
+  "model": "google/gemini-2.5-flash",
+  "src": "e9750ab5bd95530b",
+  "usage": 4015
+ },
+ "DevOps/aws/eks/communicate.md": {
+  "at": "2026-09-17T10:23:15Z",
+  "bad": [],
+  "dst": "9537e40c44885af4",
+  "model": "google/gemini-2.5-flash",
+  "src": "742c4aab19cc5664",
+  "usage": 8239
+ },
+ "DevOps/aws/eks/eks.md": {
+  "at": "2026-09-17T10:23:03Z",
+  "bad": [],
+  "dst": "f0a07401492db6b8",
+  "model": "google/gemini-2.5-flash",
+  "src": "c7bd1b9c936377c3",
+  "usage": 2754
+ },
+ "DevOps/aws/eks/nlb_alb.md": {
+  "at": "2026-09-17T10:23:07Z",
+  "bad": [],
+  "dst": "c4142121cf2f39c5",
+  "model": "google/gemini-2.5-flash",
+  "src": "2498946d4debba02",
+  "usage": 4642
+ },
+ "DevOps/aws/elastic_ip.md": {
+  "at": "2026-09-17T10:23:02Z",
+  "bad": [],
+  "dst": "4568d192b11448fc",
+  "model": "google/gemini-2.5-flash",
+  "src": "291852613f81ddd3",
+  "usage": 1918
+ },
+ "DevOps/aws/elb.md": {
+  "at": "2026-09-17T10:23:05Z",
+  "bad": [],
+  "dst": "0efb696c13150a6c",
+  "model": "google/gemini-2.5-flash",
+  "src": "acf3b882a32101a4",
+  "usage": 2926
+ },
+ "DevOps/aws/iam.md": {
+  "at": "2026-09-17T10:23:08Z",
+  "bad": [],
+  "dst": "b5034f9647e987f5",
+  "model": "google/gemini-2.5-flash",
+  "src": "c5401e227ca07f71",
+  "usage": 2378
+ },
+ "DevOps/aws/natgateway.md": {
+  "at": "2026-09-17T10:23:08Z",
+  "bad": [],
+  "dst": "e16494c30c9f8ff3",
+  "model": "google/gemini-2.5-flash",
+  "src": "04596e065b0bce95",
+  "usage": 2383
+ },
+ "DevOps/aws/presto.md": {
+  "at": "2026-09-17T10:23:17Z",
+  "bad": [],
+  "dst": "bcf3c863e8fc30e1",
+  "model": "google/gemini-2.5-flash",
+  "src": "7253da6e3c21a0af",
+  "usage": 4423
+ },
+ "DevOps/aws/rds.md": {
+  "at": "2026-09-17T10:23:15Z",
+  "bad": [],
+  "dst": "666225e1dfc0a3e8",
+  "model": "google/gemini-2.5-flash",
+  "src": "d9f12c8ae14e67a7",
+  "usage": 4573
+ },
+ "DevOps/aws/s2s.md": {
+  "at": "2026-09-17T10:23:14Z",
+  "bad": [],
+  "dst": "69e5d812a1b4edc4",
+  "model": "google/gemini-2.5-flash",
+  "src": "3bc6b2667043c85f",
+  "usage": 3483
+ },
+ "DevOps/aws/securitygroup.md": {
+  "at": "2026-09-17T10:23:16Z",
+  "bad": [],
+  "dst": "74f360efa7ba1bc0",
+  "model": "google/gemini-2.5-flash",
+  "src": "e016f9bfee09a145",
+  "usage": 3179
+ },
+ "DevOps/aws/session_manager.md": {
+  "at": "2026-09-17T10:23:18Z",
+  "bad": [],
+  "dst": "8ac308e2b5bb551d",
+  "model": "google/gemini-2.5-flash",
+  "src": "eee0d92cac0653c9",
+  "usage": 3131
+ },
+ "DevOps/aws/sqs_optimize.md": {
+  "at": "2026-09-17T10:23:19Z",
+  "bad": [],
+  "dst": "9e6ca26d7624df0c",
+  "model": "google/gemini-2.5-flash",
+  "src": "891b685487110841",
+  "usage": 3414
+ },
+ "DevOps/aws/vpc.md": {
+  "at": "2026-09-17T10:23:24Z",
+  "bad": [],
+  "dst": "473877f77bf5213b",
+  "model": "google/gemini-2.5-flash",
+  "src": "dc18fafb03d5c80e",
+  "usage": 5230
+ },
+ "DevOps/aws/고가용성_장애내구성.md": {
+  "at": "2026-09-17T10:23:13Z",
+  "bad": [],
+  "dst": "83f75a62f97959a2",
+  "model": "google/gemini-2.5-flash",
+  "src": "f6e6fddbac381cd1",
+  "usage": 1782
+ },
+ "DevOps/aws/라우팅테이블.md": {
+  "at": "2026-09-17T10:23:17Z",
+  "bad": [],
+  "dst": "7e45c1b6dd9aca55",
+  "model": "google/gemini-2.5-flash",
+  "src": "6d9e9d825d31dc9e",
+  "usage": 2166
+ },
+ "DevOps/bg.md": {
+  "at": "2026-09-17T10:23:40Z",
+  "bad": [],
+  "dst": "ead1277578fe9284",
+  "model": "google/gemini-2.5-flash",
+  "src": "dd40eb5ae7ef0d34",
+  "usage": 3945
+ },
+ "DevOps/blue_green.md": {
+  "at": "2026-09-17T10:23:21Z",
+  "bad": [],
+  "dst": "b9f6f8ea8e731862",
+  "model": "google/gemini-2.5-flash",
+  "src": "b88712650f8056eb",
+  "usage": 2125
+ },
+ "DevOps/cicd.md": {
+  "at": "2026-09-17T10:23:24Z",
+  "bad": [],
+  "dst": "e4d6ae3848f6efc0",
+  "model": "google/gemini-2.5-flash",
+  "src": "e9835e29a1d3dd7e",
+  "usage": 3123
+ },
+ "DevOps/cloud_architecture.md": {
+  "at": "2026-09-17T10:23:26Z",
+  "bad": [],
+  "dst": "3dc032309318ad91",
+  "model": "google/gemini-2.5-flash",
+  "src": "41a22ebdd92cce9e",
+  "usage": 3941
+ },
+ "DevOps/deploy.md": {
+  "at": "2026-09-17T10:23:24Z",
+  "bad": [],
+  "dst": "906ba20b9ba902b5",
+  "model": "google/gemini-2.5-flash",
+  "src": "b642afb6c70ea33f",
+  "usage": 2227
+ },
+ "DevOps/devops.md": {
+  "at": "2026-09-17T10:23:31Z",
+  "bad": [],
+  "dst": "d0ca837382858794",
+  "model": "google/gemini-2.5-flash",
+  "src": "3933485926cdb82a",
+  "usage": 4731
+ },
+ "DevOps/ec2.md": {
+  "at": "2026-09-17T10:23:37Z",
+  "bad": [],
+  "dst": "023aa4e8c49d4f1b",
+  "model": "google/gemini-2.5-flash",
+  "src": "952e9a3f5c77cded",
+  "usage": 5655
+ },
+ "DevOps/envoy.md": {
+  "at": "2026-09-17T10:23:32Z",
+  "bad": [],
+  "dst": "3850a1ece29f5348",
+  "model": "google/gemini-2.5-flash",
+  "src": "473007c9c4c9181e",
+  "usage": 3553
+ },
+ "DevOps/exporter.md": {
+  "at": "2026-09-17T10:23:26Z",
+  "bad": [],
+  "dst": "3a402634824e02b6",
+  "model": "google/gemini-2.5-flash",
+  "src": "b14342139244bf8c",
+  "usage": 1534
+ },
+ "DevOps/gitaction.md": {
+  "at": "2026-09-17T10:23:35Z",
+  "bad": [],
+  "dst": "2508da3d5216523d",
+  "model": "google/gemini-2.5-flash",
+  "src": "c887672cbe5e9c32",
+  "usage": 3444
+ },
+ "DevOps/gitops.md": {
+  "at": "2026-09-17T10:23:33Z",
+  "bad": [],
+  "dst": "fdcfff950d3fddc2",
+  "model": "google/gemini-2.5-flash",
+  "src": "2d42877541e6c804",
+  "usage": 3062
+ },
+ "DevOps/grpc.md": {
+  "at": "2026-09-17T10:23:37Z",
+  "bad": [],
+  "dst": "9324c09b42e8aadf",
+  "model": "google/gemini-2.5-flash",
+  "src": "be2f2f1694dcfbf9",
+  "usage": 3739
+ },
+ "DevOps/hcl/condition.md": {
+  "at": "2026-09-17T10:23:35Z",
+  "bad": [],
+  "dst": "4b077fe4ecb4b2b1",
+  "model": "google/gemini-2.5-flash",
+  "src": "9ef43f69939b8a6c",
+  "usage": 3609
+ },
+ "DevOps/hcl/dynamic_block.md": {
+  "at": "2026-09-17T10:23:38Z",
+  "bad": [],
+  "dst": "2ceea3a21738d254",
+  "model": "google/gemini-2.5-flash",
+  "src": "275675b70ab53f05",
+  "usage": 4286
+ },
+ "DevOps/hcl/hcl.md": {
+  "at": "2026-09-17T10:23:34Z",
+  "bad": [],
+  "dst": "d4900bb731703f3d",
+  "model": "google/gemini-2.5-flash",
+  "src": "4fd0835d89541294",
+  "usage": 2568
+ },
+ "DevOps/hcl/state.md": {
+  "at": "2026-09-17T10:23:47Z",
+  "bad": [],
+  "dst": "92b11f1c172a537a",
+  "model": "google/gemini-2.5-flash",
+  "src": "c09a1f4efd607d08",
+  "usage": 6294
+ },
+ "DevOps/hcl/terraform_work.md": {
+  "at": "2026-09-17T10:23:37Z",
+  "bad": [],
+  "dst": "5441916e010e8d53",
+  "model": "google/gemini-2.5-flash",
+  "src": "73bd4692602deeb2",
+  "usage": 1987
+ },
+ "DevOps/hybrid.md": {
+  "at": "2026-09-17T10:23:50Z",
+  "bad": [],
+  "dst": "7b8d095108cc209e",
+  "model": "google/gemini-2.5-flash",
+  "src": "cc054835f29badcd",
+  "usage": 4154
+ },
+ "DevOps/istio.md": {
+  "at": "2026-09-17T10:23:51Z",
+  "bad": [],
+  "dst": "e1ce9c9880dc3bab",
+  "model": "google/gemini-2.5-flash",
+  "src": "a218c3c246fc799c",
+  "usage": 5536
+ },
+ "DevOps/istio_traffic.md": {
+  "at": "2026-09-17T10:23:51Z",
+  "bad": [],
+  "dst": "19c090b910c27ea4",
+  "model": "google/gemini-2.5-flash",
+  "src": "fbf859b5e4b9c9eb",
+  "usage": 5593
+ },
+ "DevOps/istiocircuit.md": {
+  "at": "2026-09-17T10:23:45Z",
+  "bad": [],
+  "dst": "f729a5badea9ecec",
+  "model": "google/gemini-2.5-flash",
+  "src": "1c358fae74e490e3",
+  "usage": 3518
+ },
+ "DevOps/k8s/api_resource.md": {
+  "at": "2026-09-17T10:23:47Z",
+  "bad": [],
+  "dst": "cc4aec2b9b950a57",
+  "model": "google/gemini-2.5-flash",
+  "src": "f138e077c980ed41",
+  "usage": 3629
+ },
+ "DevOps/k8s/cluster.md": {
+  "at": "2026-09-17T10:23:48Z",
+  "bad": [],
+  "dst": "152fcf1feae19b9a",
+  "model": "google/gemini-2.5-flash",
+  "src": "fe1ac98c40fe60fc",
+  "usage": 3657
+ },
+ "DevOps/k8s/component.md": {
+  "at": "2026-09-17T10:23:45Z",
+  "bad": [],
+  "dst": "ccce2d928423c682",
+  "model": "google/gemini-2.5-flash",
+  "src": "3ecaaae5c3396902",
+  "usage": 2644
+ },
+ "DevOps/k8s/config_map.md": {
+  "at": "2026-09-17T10:23:49Z",
+  "bad": [],
+  "dst": "12a803f0d0a8154d",
+  "model": "google/gemini-2.5-flash",
+  "src": "0d7fe3890dd6a1b2",
+  "usage": 3638
+ },
+ "DevOps/k8s/control_plane.md": {
+  "at": "2026-09-17T10:24:04Z",
+  "bad": [],
+  "dst": "d6a0e9d3eed09364",
+  "model": "google/gemini-2.5-flash",
+  "src": "353310d13d07b327",
+  "usage": 8539
+ },
+ "DevOps/k8s/daemonset.md": {
+  "at": "2026-09-17T10:23:56Z",
+  "bad": [],
+  "dst": "edfa764746d370f0",
+  "model": "google/gemini-2.5-flash",
+  "src": "de2761fdc8c325a2",
+  "usage": 4258
+ },
+ "DevOps/k8s/dashboard.md": {
+  "at": "2026-09-17T10:23:50Z",
+  "bad": [],
+  "dst": "ce19db16da6d9165",
+  "model": "google/gemini-2.5-flash",
+  "src": "c72f639e06f9b16b",
+  "usage": 1824
+ },
+ "DevOps/k8s/deploy.md": {
+  "at": "2026-09-17T10:24:08Z",
+  "bad": [],
+  "dst": "a4339b36ed0f07c9",
+  "model": "google/gemini-2.5-flash",
+  "src": "ca922c0fcb1d79ff",
+  "usage": 7952
+ },
+ "DevOps/k8s/deployment.md": {
+  "at": "2026-09-17T10:24:00Z",
+  "bad": [],
+  "dst": "04a3552d32f40c88",
+  "model": "google/gemini-2.5-flash",
+  "src": "b3582f9eddc1ad14",
+  "usage": 4491
+ },
+ "DevOps/k8s/desired_state.md": {
+  "at": "2026-09-17T10:23:55Z",
+  "bad": [],
+  "dst": "ed7902b9d24e07e9",
+  "model": "google/gemini-2.5-flash",
+  "src": "c24bc9f416a90314",
+  "usage": 2802
+ },
+ "DevOps/k8s/k8s.md": {
+  "at": "2026-09-17T10:23:57Z",
+  "bad": [],
+  "dst": "7fffbce575cbd1c9",
+  "model": "google/gemini-2.5-flash",
+  "src": "100c21368e7d966a",
+  "usage": 2891
+ },
+ "DevOps/k8s/karpenter.md": {
+  "at": "2026-09-17T10:24:04Z",
+  "bad": [],
+  "dst": "4cc6bf43977ec090",
+  "model": "google/gemini-2.5-flash",
+  "src": "f0eca12f2d873a4d",
+  "usage": 5023
+ },
+ "DevOps/k8s/multipod.md": {
+  "at": "2026-09-17T10:24:05Z",
+  "bad": [],
+  "dst": "77b346e4c84f85de",
+  "model": "google/gemini-2.5-flash",
+  "src": "0e1e0e193cc6b90a",
+  "usage": 6421
+ },
+ "DevOps/k8s/namespace.md": {
+  "at": "2026-09-17T10:24:03Z",
+  "bad": [],
+  "dst": "c4bc94435ebb90c7",
+  "model": "google/gemini-2.5-flash",
+  "src": "e04a52cc47ee6f94",
+  "usage": 4444
+ },
+ "DevOps/k8s/network.md": {
+  "at": "2026-09-17T10:24:05Z",
+  "bad": [],
+  "dst": "4bf18e1e08c8bb04",
+  "model": "google/gemini-2.5-flash",
+  "src": "2bdd443c939d1b4c",
+  "usage": 4583
+ },
+ "DevOps/k8s/node.md": {
+  "at": "2026-09-17T10:24:25Z",
+  "bad": [],
+  "dst": "c474fbf99611351c",
+  "model": "google/gemini-2.5-flash",
+  "src": "cf8bdbc144ecb318",
+  "usage": 8920
+ },
+ "DevOps/k8s/node_scheduling.md": {
+  "at": "2026-09-17T10:24:09Z",
+  "bad": [],
+  "dst": "ad525caad50ebee3",
+  "model": "google/gemini-2.5-flash",
+  "src": "da1c3573aab511a9",
+  "usage": 4741
+ },
+ "DevOps/k8s/pod.md": {
+  "at": "2026-09-17T10:24:13Z",
+  "bad": [],
+  "dst": "fd79d0503f65c0c3",
+  "model": "google/gemini-2.5-flash",
+  "src": "a6d9464ec94c5c50",
+  "usage": 5413
+ },
+ "DevOps/k8s/pod_lifecycle.md": {
+  "at": "2026-09-17T10:24:09Z",
+  "bad": [],
+  "dst": "f01d3d862bee47f1",
+  "model": "google/gemini-2.5-flash",
+  "src": "9290d35b02ea3a85",
+  "usage": 3435
+ },
+ "DevOps/k8s/podstatus.md": {
+  "at": "2026-09-17T10:24:12Z",
+  "bad": [],
+  "dst": "aa9a67439efb7b1c",
+  "model": "google/gemini-2.5-flash",
+  "src": "22554e58d153c4f0",
+  "usage": 2701
+ },
+ "DevOps/k8s/probe.md": {
+  "at": "2026-09-17T10:24:18Z",
+  "bad": [],
+  "dst": "4ee0644ae7fee7f6",
+  "model": "google/gemini-2.5-flash",
+  "src": "d9acbbfa5139bed1",
+  "usage": 5052
+ },
+ "DevOps/k8s/process.md": {
+  "at": "2026-09-17T10:24:12Z",
+  "bad": [],
+  "dst": "496cc3bec97917f7",
+  "model": "google/gemini-2.5-flash",
+  "src": "d97a15e9ae41b814",
+  "usage": 2499
+ },
+ "DevOps/k8s/pvpvc.md": {
+  "at": "2026-09-17T10:24:15Z",
+  "bad": [],
+  "dst": "d4b0e76c16dd7857",
+  "model": "google/gemini-2.5-flash",
+  "src": "3f8d75a793265ecc",
+  "usage": 3631
+ },
+ "DevOps/k8s/qos.md": {
+  "at": "2026-09-17T10:24:14Z",
+  "bad": [],
+  "dst": "1630ebfbd105b759",
+  "model": "google/gemini-2.5-flash",
+  "src": "a5081ee220a22a4d",
+  "usage": 3642
+ },
+ "DevOps/k8s/replicaset.md": {
+  "at": "2026-09-17T10:24:17Z",
+  "bad": [],
+  "dst": "645f6e7bd95333a6",
+  "model": "google/gemini-2.5-flash",
+  "src": "3bca5fc0f784c229",
+  "usage": 3460
+ },
+ "DevOps/k8s/scheduler.md": {
+  "at": "2026-09-17T10:24:20Z",
+  "bad": [],
+  "dst": "0d326817c2623881",
+  "model": "google/gemini-2.5-flash",
+  "src": "4855f1ff122be0c5",
+  "usage": 3701
+ },
+ "DevOps/k8s/security.md": {
+  "at": "2026-09-17T10:24:22Z",
+  "bad": [],
+  "dst": "d5203762c92ea091",
+  "model": "google/gemini-2.5-flash",
+  "src": "7be17fc671d329b6",
+  "usage": 4241
+ },
+ "DevOps/k8s/service.md": {
+  "at": "2026-09-17T10:24:20Z",
+  "bad": [],
+  "dst": "cb6d80f86e66b339",
+  "model": "google/gemini-2.5-flash",
+  "src": "fe17dafc1868cee5",
+  "usage": 2793
+ },
+ "DevOps/k8s/service2.md": {
+  "at": "2026-09-17T10:24:27Z",
+  "bad": [],
+  "dst": "5575ef22e81768c3",
+  "model": "google/gemini-2.5-flash",
+  "src": "7b0cd50a6b4dc753",
+  "usage": 5215
+ },
+ "DevOps/k8s/volume.md": {
+  "at": "2026-09-17T10:24:28Z",
+  "bad": [],
+  "dst": "b2aed5b67a51e359",
+  "model": "google/gemini-2.5-flash",
+  "src": "11a7375f068c6fb4",
+  "usage": 5231
+ },
+ "DevOps/msa_monitoring.md": {
+  "at": "2026-09-17T10:24:36Z",
+  "bad": [],
+  "dst": "c4a8bd24995fd1f7",
+  "model": "google/gemini-2.5-flash",
+  "src": "3e4c598a96cc06c0",
+  "usage": 9506
+ },
+ "DevOps/nginx.md": {
+  "at": "2026-09-17T10:24:29Z",
+  "bad": [],
+  "dst": "a084d538e27bd36c",
+  "model": "google/gemini-2.5-flash",
+  "src": "50af188b7b31434a",
+  "usage": 5189
+ },
+ "DevOps/prometheus_grafana.md": {
+  "at": "2026-09-17T10:24:26Z",
+  "bad": [],
+  "dst": "d39bcbc5727e6af3",
+  "model": "google/gemini-2.5-flash",
+  "src": "8705d9ab94a28dd8",
+  "usage": 2910
+ },
+ "DevOps/rabbitmq.md": {
+  "at": "2026-09-17T10:33:03Z",
+  "bad": [
+   "제목 10→9"
+  ],
+  "dst": "f209e89d72286a1c",
+  "model": "google/gemini-2.5-flash",
+  "src": "aa71ab8703fd3f8d",
+  "usage": 6763
+ },
+ "DevOps/service_discovery.md": {
+  "at": "2026-09-17T10:24:30Z",
+  "bad": [],
+  "dst": "6aeb9f1f40ac0de9",
+  "model": "google/gemini-2.5-flash",
+  "src": "334e006c1c5fe961",
+  "usage": 3366
+ },
+ "DevOps/service_mesh.md": {
+  "at": "2026-09-17T10:24:38Z",
+  "bad": [],
+  "dst": "79bc7255dbc94fc3",
+  "model": "google/gemini-2.5-flash",
+  "src": "e39d94c384c692ba",
+  "usage": 5725
+ },
+ "DevOps/vircon.md": {
+  "at": "2026-09-17T10:24:30Z",
+  "bad": [],
+  "dst": "7b8b81e2b0232277",
+  "model": "google/gemini-2.5-flash",
+  "src": "495af2c58d6eea6b",
+  "usage": 2884
+ },
+ "DevOps/xds.md": {
+  "at": "2026-09-17T10:24:39Z",
+  "bad": [],
+  "dst": "34b6d022d0859431",
+  "model": "google/gemini-2.5-flash",
+  "src": "e69e578a62f3ceca",
+  "usage": 4283
+ },
+ "DevOps/데몬프로세스.md": {
+  "at": "2026-09-17T10:24:37Z",
+  "bad": [],
+  "dst": "b1a25e96125a9a77",
+  "model": "google/gemini-2.5-flash",
+  "src": "5a99c039ca6079e2",
+  "usage": 3369
+ },
+ "DevOps/이중화.md": {
+  "at": "2026-09-17T10:24:34Z",
+  "bad": [],
+  "dst": "2a33217cd7e57091",
+  "model": "google/gemini-2.5-flash",
+  "src": "765f4cb8ce0dd625",
+  "usage": 2312
+ },
+ "DevOps/컨테이너로깅.md": {
+  "at": "2026-09-17T10:24:46Z",
+  "bad": [],
+  "dst": "54622921244131c0",
+  "model": "google/gemini-2.5-flash",
+  "src": "9c38b443ce4e6030",
+  "usage": 5197
+ },
+ "DevOps/컨테이너자원제한.md": {
+  "at": "2026-09-17T10:24:38Z",
+  "bad": [],
+  "dst": "7c21328c1f855d91",
+  "model": "google/gemini-2.5-flash",
+  "src": "745fd56325e03cb6",
+  "usage": 3501
+ },
+ "Essentials/agilesw.md": {
+  "at": "2026-09-17T10:24:43Z",
+  "bad": [],
+  "dst": "4d192cf35e977f55",
+  "model": "google/gemini-2.5-flash",
+  "src": "8923313d93160d1c",
+  "usage": 4417
+ },
+ "Essentials/ai_ithink.md": {
+  "at": "2026-09-17T10:24:57Z",
+  "bad": [],
+  "dst": "cd523f825be403a2",
+  "model": "google/gemini-2.5-flash",
+  "src": "9bbb156a737f5f2f",
+  "usage": 8539
+ },
+ "Essentials/carpedm.md": {
+  "at": "2026-09-17T10:25:59Z",
+  "bad": [],
+  "dst": "8bee5efbb40fb529",
+  "model": "google/gemini-2.5-flash",
+  "src": "793b8617e27f74a5",
+  "usage": 27240
+ },
+ "Essentials/growth.md": {
+  "at": "2026-09-17T10:24:58Z",
+  "bad": [],
+  "dst": "c415c3e0445e4f15",
+  "model": "google/gemini-2.5-flash",
+  "src": "fbe0a0d49f33d5a1",
+  "usage": 7743
+ },
+ "Essentials/helloworld.md": {
+  "at": "2026-09-17T10:24:53Z",
+  "bad": [],
+  "dst": "e564fd1888f6a741",
+  "model": "google/gemini-2.5-flash",
+  "src": "aa6e891db72df26e",
+  "usage": 5204
+ },
+ "Essentials/steady.md": {
+  "at": "2026-09-17T10:25:03Z",
+  "bad": [],
+  "dst": "4fdb64dd088319ef",
+  "model": "google/gemini-2.5-flash",
+  "src": "df18fb8678be595c",
+  "usage": 9075
+ },
+ "Essentials/works.md": {
+  "at": "2026-09-17T10:24:55Z",
+  "bad": [],
+  "dst": "c6d5fe53c2b45b3a",
+  "model": "google/gemini-2.5-flash",
+  "src": "afa93f6bf299375b",
+  "usage": 5924
+ },
+ "Essentials/yagni.md": {
+  "at": "2026-09-17T10:24:54Z",
+  "bad": [],
+  "dst": "f70380fabd133db7",
+  "model": "google/gemini-2.5-flash",
+  "src": "54a1b0aa5b91a914",
+  "usage": 5420
+ },
+ "Front-End/JS/DOM.md": {
+  "at": "2026-09-17T10:24:48Z",
+  "bad": [],
+  "dst": "9ec2e557b489b6b9",
+  "model": "google/gemini-2.5-flash",
+  "src": "98bede4de3fbeaff",
+  "usage": 3467
+ },
+ "Front-End/JS/DOM2.md": {
+  "at": "2026-09-17T10:24:57Z",
+  "bad": [],
+  "dst": "d4da2aec54eba481",
+  "model": "google/gemini-2.5-flash",
+  "src": "e97fca9fc6905284",
+  "usage": 5221
+ },
+ "Front-End/JS/Immutability.md": {
+  "at": "2026-09-17T10:24:53Z",
+  "bad": [],
+  "dst": "b54a9f9a672c3add",
+  "model": "google/gemini-2.5-flash",
+  "src": "c17a4ba7ac11310a",
+  "usage": 2245
+ },
+ "Front-End/JS/JSON.md": {
+  "at": "2026-09-17T10:24:53Z",
+  "bad": [],
+  "dst": "974f76b06a0c852c",
+  "model": "google/gemini-2.5-flash",
+  "src": "f0e5e6434058080b",
+  "usage": 1318
+ },
+ "Front-End/JS/Lodash.md": {
+  "at": "2026-09-17T10:25:01Z",
+  "bad": [],
+  "dst": "aa64952963fcc935",
+  "model": "google/gemini-2.5-flash",
+  "src": "1d5c697039c9a3a3",
+  "usage": 2663
+ },
+ "Front-End/JS/Number.md": {
+  "at": "2026-09-17T10:25:00Z",
+  "bad": [],
+  "dst": "eec538a7bfef9f7d",
+  "model": "google/gemini-2.5-flash",
+  "src": "a625ff3f8c1d1172",
+  "usage": 2675
+ },
+ "Front-End/JS/Object.md": {
+  "at": "2026-09-17T10:24:57Z",
+  "bad": [],
+  "dst": "a3b1fcac7f834c60",
+  "model": "google/gemini-2.5-flash",
+  "src": "1bfd13072b180ff0",
+  "usage": 1436
+ },
+ "Front-End/JS/Object2.md": {
+  "at": "2026-09-17T10:25:05Z",
+  "bad": [],
+  "dst": "dca357025c6f23b7",
+  "model": "google/gemini-2.5-flash",
+  "src": "92283f3777226c1e",
+  "usage": 3435
+ },
+ "Front-End/JS/Object3.md": {
+  "at": "2026-09-17T10:25:04Z",
+  "bad": [],
+  "dst": "58ed324ff7df51df",
+  "model": "google/gemini-2.5-flash",
+  "src": "fd61c7ad4468ed47",
+  "usage": 2266
+ },
+ "Front-End/JS/Storage.md": {
+  "at": "2026-09-17T10:25:01Z",
+  "bad": [],
+  "dst": "4bca0150c1359423",
+  "model": "google/gemini-2.5-flash",
+  "src": "859da53fcfef61c5",
+  "usage": 1303
+ },
+ "Front-End/JS/TS_class.md": {
+  "at": "2026-09-17T10:25:11Z",
+  "bad": [],
+  "dst": "ca12d808ec1da915",
+  "model": "google/gemini-2.5-flash",
+  "src": "2f6b56f0cdfef4e0",
+  "usage": 5778
+ },
+ "Front-End/JS/ajax.md": {
+  "at": "2026-09-17T10:25:09Z",
+  "bad": [],
+  "dst": "66cd67ad8835fcad",
+  "model": "google/gemini-2.5-flash",
+  "src": "c432e109e7d154a6",
+  "usage": 3017
+ },
+ "Front-End/JS/array.md": {
+  "at": "2026-09-17T10:54:10Z",
+  "bad": [
+   "코드펜스 2→12",
+   "제목 3→8"
+  ],
+  "dst": "50f1a4054e62ff00",
+  "model": "google/gemini-2.5-flash",
+  "src": "6572caba08e70b6e",
+  "usage": 3931
+ },
+ "Front-End/JS/array2.md": {
+  "at": "2026-09-17T10:25:10Z",
+  "bad": [],
+  "dst": "f71ff31e0b21d6c9",
+  "model": "google/gemini-2.5-flash",
+  "src": "9d572b0de24713be",
+  "usage": 3693
+ },
+ "Front-End/JS/class.md": {
+  "at": "2026-09-17T10:25:09Z",
+  "bad": [],
+  "dst": "e9fe27dd1910f4f3",
+  "model": "google/gemini-2.5-flash",
+  "src": "5ccf8921ed92a0f2",
+  "usage": 2873
+ },
+ "Front-End/JS/constructor.md": {
+  "at": "2026-09-17T10:25:10Z",
+  "bad": [],
+  "dst": "70b78f29c7fb85cd",
+  "model": "google/gemini-2.5-flash",
+  "src": "85b04e9cab0e5d2c",
+  "usage": 3522
+ },
+ "Front-End/JS/destruct.md": {
+  "at": "2026-09-17T10:25:07Z",
+  "bad": [],
+  "dst": "65ac60a24368aa3e",
+  "model": "google/gemini-2.5-flash",
+  "src": "a4acfe64441544b9",
+  "usage": 1479
+ },
+ "Front-End/JS/export.md": {
+  "at": "2026-09-17T10:25:09Z",
+  "bad": [],
+  "dst": "6a593882543a4edc",
+  "model": "google/gemini-2.5-flash",
+  "src": "910adc4431e6e3b9",
+  "usage": 1892
+ },
+ "Front-End/JS/fetch.md": {
+  "at": "2026-09-17T10:25:14Z",
+  "bad": [],
+  "dst": "43380207f9ac9346",
+  "model": "google/gemini-2.5-flash",
+  "src": "a6b928577f9d675d",
+  "usage": 3046
+ },
+ "Front-End/JS/function.md": {
+  "at": "2026-09-17T10:25:16Z",
+  "bad": [],
+  "dst": "d11fc2ac334ca44e",
+  "model": "google/gemini-2.5-flash",
+  "src": "d1e32b447e47d01e",
+  "usage": 3208
+ },
+ "Front-End/JS/garbage.md": {
+  "at": "2026-09-17T10:25:15Z",
+  "bad": [],
+  "dst": "8d8613d83ef6ff8f",
+  "model": "google/gemini-2.5-flash",
+  "src": "b9c7acab22e5ede6",
+  "usage": 2526
+ },
+ "Front-End/JS/import.md": {
+  "at": "2026-09-17T10:25:15Z",
+  "bad": [],
+  "dst": "3975cf47ce3a5fe8",
+  "model": "google/gemini-2.5-flash",
+  "src": "aaebc88bed8bfc95",
+  "usage": 2053
+ },
+ "Front-End/JS/promise.md": {
+  "at": "2026-09-17T10:25:43Z",
+  "bad": [],
+  "dst": "5fa7f6f221527aad",
+  "model": "google/gemini-2.5-flash",
+  "src": "c4ebdebaccd4c4c3",
+  "usage": 9335
+ },
+ "Front-End/JS/typeString.md": {
+  "at": "2026-09-17T10:25:19Z",
+  "bad": [],
+  "dst": "c85e176cc19bbcd1",
+  "model": "google/gemini-2.5-flash",
+  "src": "65f43e89a7323548",
+  "usage": 2502
+ },
+ "Front-End/JS/정규표현식.md": {
+  "at": "2026-09-17T10:25:27Z",
+  "bad": [],
+  "dst": "ff76021ad908d44b",
+  "model": "google/gemini-2.5-flash",
+  "src": "1d0adb9dbabfd581",
+  "usage": 6623
+ },
+ "Front-End/React/classcompo.md": {
+  "at": "2026-09-17T10:25:19Z",
+  "bad": [],
+  "dst": "d292ebe043f9049b",
+  "model": "google/gemini-2.5-flash",
+  "src": "9a6d765aab9c9468",
+  "usage": 3112
+ },
+ "Front-End/React/component.md": {
+  "at": "2026-09-17T10:25:19Z",
+  "bad": [],
+  "dst": "74b85b6c884cefd1",
+  "model": "google/gemini-2.5-flash",
+  "src": "1cc821ecced17c6c",
+  "usage": 2754
+ },
+ "Front-End/React/funcompo.md": {
+  "at": "2026-09-17T10:25:19Z",
+  "bad": [],
+  "dst": "3004bd76a6685558",
+  "model": "google/gemini-2.5-flash",
+  "src": "a4ae9a78a1dc636d",
+  "usage": 1812
+ },
+ "Front-End/React/react.md": {
+  "at": "2026-09-17T10:25:24Z",
+  "bad": [],
+  "dst": "538d923918ad36fa",
+  "model": "google/gemini-2.5-flash",
+  "src": "9c41ec02327bc898",
+  "usage": 2977
+ },
+ "Front-End/TS/TS_Type.md": {
+  "at": "2026-09-17T10:25:28Z",
+  "bad": [],
+  "dst": "9545757cabaa78cb",
+  "model": "google/gemini-2.5-flash",
+  "src": "44602cac1281fea2",
+  "usage": 4308
+ },
+ "Front-End/TS/TS_compiler.md": {
+  "at": "2026-09-17T10:25:30Z",
+  "bad": [],
+  "dst": "58c5328796dff17d",
+  "model": "google/gemini-2.5-flash",
+  "src": "afd92af1628cd9aa",
+  "usage": 3795
+ },
+ "Front-End/TS/TS_function.md": {
+  "at": "2026-09-17T10:25:29Z",
+  "bad": [],
+  "dst": "bedebde257102ba8",
+  "model": "google/gemini-2.5-flash",
+  "src": "d6674160f23788e9",
+  "usage": 3816
+ },
+ "Front-End/TS/TS_generic.md": {
+  "at": "2026-09-17T10:25:35Z",
+  "bad": [],
+  "dst": "f93d34c5159d4c8f",
+  "model": "google/gemini-2.5-flash",
+  "src": "96cc739bd52c57f5",
+  "usage": 5696
+ },
+ "Front-End/TS/TS_interface.md": {
+  "at": "2026-09-17T10:25:30Z",
+  "bad": [],
+  "dst": "7c906343e6b467b2",
+  "model": "google/gemini-2.5-flash",
+  "src": "2363e3a26db617a2",
+  "usage": 3897
+ },
+ "Front-End/TS/TS_interface2.md": {
+  "at": "2026-09-17T10:25:24Z",
+  "bad": [],
+  "dst": "b4cbcc9d8b3b6b66",
+  "model": "google/gemini-2.5-flash",
+  "src": "14356fb8146f70bd",
+  "usage": 1815
+ },
+ "Front-End/TS/TypeScript.md": {
+  "at": "2026-09-17T10:25:30Z",
+  "bad": [],
+  "dst": "1a9a0ec1370d7c94",
+  "model": "google/gemini-2.5-flash",
+  "src": "ffed270704a7e221",
+  "usage": 1701
+ },
+ "JVM/devirtual.md": {
+  "at": "2026-09-17T10:25:38Z",
+  "bad": [],
+  "dst": "f77549773f04fa02",
+  "model": "google/gemini-2.5-flash",
+  "src": "f4eeed85983d7748",
+  "usage": 5598
+ },
+ "JVM/jit_graal.md": {
+  "at": "2026-09-17T10:25:39Z",
+  "bad": [],
+  "dst": "d37621dcc2e4ac83",
+  "model": "google/gemini-2.5-flash",
+  "src": "91f67c0ed219e0ef",
+  "usage": 4227
+ },
+ "JVM/jmm.md": {
+  "at": "2026-09-17T10:25:38Z",
+  "bad": [],
+  "dst": "c5b48c82b420128c",
+  "model": "google/gemini-2.5-flash",
+  "src": "d9f2577573065b9a",
+  "usage": 3262
+ },
+ "JVM/jvm_command.md": {
+  "at": "2026-09-17T10:25:43Z",
+  "bad": [],
+  "dst": "ce641021f6c63098",
+  "model": "google/gemini-2.5-flash",
+  "src": "5505eb32089508a3",
+  "usage": 4861
+ },
+ "JVM/jvm_observability.md": {
+  "at": "2026-09-17T10:33:12Z",
+  "bad": [],
+  "dst": "5acecf580005d395",
+  "model": "google/gemini-2.5-flash",
+  "src": "2a8f89d30d262f42",
+  "usage": 9038
+ },
+ "JVM/marked_pointer.md": {
+  "at": "2026-09-17T10:25:33Z",
+  "bad": [],
+  "dst": "c48e9b05f6592226",
+  "model": "google/gemini-2.5-flash",
+  "src": "c48e9b05f6592226",
+  "usage": 668
+ },
+ "JVM/memory_concept_hard.md": {
+  "at": "2026-09-17T10:25:57Z",
+  "bad": [],
+  "dst": "74f8b16a93ed0b5a",
+  "model": "google/gemini-2.5-flash",
+  "src": "0236fe573723508a",
+  "usage": 9507
+ },
+ "JVM/pgo.md": {
+  "at": "2026-09-17T10:25:42Z",
+  "bad": [],
+  "dst": "fd36febe8ac510a0",
+  "model": "google/gemini-2.5-flash",
+  "src": "d0d18ab831b3e009",
+  "usage": 3123
+ },
+ "JVM/safepoint.md": {
+  "at": "2026-09-17T10:25:47Z",
+  "bad": [],
+  "dst": "f9409c97f3b21f44",
+  "model": "google/gemini-2.5-flash",
+  "src": "260c9739a5f6957b",
+  "usage": 4219
+ },
+ "Linux/buffer_head.md": {
+  "at": "2026-09-17T10:25:51Z",
+  "bad": [],
+  "dst": "4c5b7ad318c56776",
+  "model": "google/gemini-2.5-flash",
+  "src": "b13d53256a8cb96d",
+  "usage": 4144
+ },
+ "Linux/df.md": {
+  "at": "2026-09-17T10:25:47Z",
+  "bad": [],
+  "dst": "18565e2827e5d4e8",
+  "model": "google/gemini-2.5-flash",
+  "src": "ad0837c60e2ee4d2",
+  "usage": 2568
+ },
+ "Linux/dmesg.md": {
+  "at": "2026-09-17T10:32:56Z",
+  "bad": [],
+  "dst": "32cd7861b871b28f",
+  "model": "google/gemini-2.5-flash",
+  "src": "38a82f6291085ae3",
+  "usage": 3130
+ },
+ "Linux/epoll.md": {
+  "at": "2026-09-17T10:26:01Z",
+  "bad": [],
+  "dst": "50c4665aa247fac2",
+  "model": "google/gemini-2.5-flash",
+  "src": "51f99fc722fa78ef",
+  "usage": 6480
+ },
+ "Linux/free.md": {
+  "at": "2026-09-17T10:25:52Z",
+  "bad": [],
+  "dst": "c46c572d05a4c44e",
+  "model": "google/gemini-2.5-flash",
+  "src": "8a9a084f2382a138",
+  "usage": 3177
+ },
+ "Linux/ku.md": {
+  "at": "2026-09-17T10:26:04Z",
+  "bad": [],
+  "dst": "e60cdce078470c66",
+  "model": "google/gemini-2.5-flash",
+  "src": "e778603051d5ef66",
+  "usage": 7211
+ },
+ "Linux/linux_filesystem.md": {
+  "at": "2026-09-17T10:25:55Z",
+  "bad": [],
+  "dst": "154432b98db2b529",
+  "model": "google/gemini-2.5-flash",
+  "src": "b6457d7a0a9e6e10",
+  "usage": 3721
+ },
+ "Linux/netstat.md": {
+  "at": "2026-09-17T10:25:55Z",
+  "bad": [],
+  "dst": "3e7ffc5075f77ebd",
+  "model": "google/gemini-2.5-flash",
+  "src": "4621b58337172e87",
+  "usage": 2583
+ },
+ "Linux/syscall.md": {
+  "at": "2026-09-17T10:26:01Z",
+  "bad": [],
+  "dst": "1bd5628cf0aa3f2d",
+  "model": "google/gemini-2.5-flash",
+  "src": "a3e2340601bebb95",
+  "usage": 3275
+ },
+ "Linux/top.md": {
+  "at": "2026-09-17T10:26:01Z",
+  "bad": [],
+  "dst": "a8f3e9ce410efa0d",
+  "model": "google/gemini-2.5-flash",
+  "src": "c4e7e13a5b765834",
+  "usage": 2669
+ },
+ "Linux/uptime.md": {
+  "at": "2026-09-17T10:26:02Z",
+  "bad": [],
+  "dst": "94b3fcb5dfb946af",
+  "model": "google/gemini-2.5-flash",
+  "src": "d1db541c5db2023f",
+  "usage": 3051
+ },
+ "MLOps/cpu_gpu.md": {
+  "at": "2026-09-17T10:26:19Z",
+  "bad": [],
+  "dst": "ed02e3230eb22072",
+  "model": "google/gemini-2.5-flash",
+  "src": "5dfe61af3acc579e",
+  "usage": 8889
+ },
+ "MLOps/cuda.md": {
+  "at": "2026-09-17T10:26:23Z",
+  "bad": [],
+  "dst": "157a589aba81969c",
+  "model": "google/gemini-2.5-flash",
+  "src": "68271f17a780daf3",
+  "usage": 10196
+ },
+ "MLOps/distribute_serving.md": {
+  "at": "2026-09-17T10:26:59Z",
+  "bad": [],
+  "dst": "694bfbff0b88188a",
+  "model": "google/gemini-2.5-flash",
+  "src": "5131375bc66de921",
+  "usage": 21365
+ },
+ "MLOps/durable_agent/agent_component.md": {
+  "at": "2026-09-17T10:26:09Z",
+  "bad": [],
+  "dst": "c3187d3a7afe6711",
+  "model": "google/gemini-2.5-flash",
+  "src": "fd11fd7433511f16",
+  "usage": 4914
+ },
+ "MLOps/durable_agent/durableworkflow.md": {
+  "at": "2026-09-17T10:26:20Z",
+  "bad": [],
+  "dst": "aadfdd1fa59d6512",
+  "model": "google/gemini-2.5-flash",
+  "src": "0ca8a0384a2e3325",
+  "usage": 8429
+ },
+ "MLOps/durable_agent/tool_call.md": {
+  "at": "2026-09-17T10:26:12Z",
+  "bad": [],
+  "dst": "9cdd85330d930173",
+  "model": "google/gemini-2.5-flash",
+  "src": "51091a53945b9ea2",
+  "usage": 4713
+ },
+ "MLOps/gpu.md": {
+  "at": "2026-09-17T10:27:40Z",
+  "bad": [],
+  "dst": "de57e03e5d27d631",
+  "model": "google/gemini-2.5-flash",
+  "src": "0dcd59a7cc19ab4b",
+  "usage": 44935
+ },
+ "MLOps/gpu_mem.md": {
+  "at": "2026-09-17T10:26:26Z",
+  "bad": [],
+  "dst": "12bdf24106de3fed",
+  "model": "google/gemini-2.5-flash",
+  "src": "61a300890cb46ef9",
+  "usage": 9122
+ },
+ "MLOps/gpu_thread.md": {
+  "at": "2026-09-17T10:26:31Z",
+  "bad": [],
+  "dst": "55cfb6a7321ecafb",
+  "model": "google/gemini-2.5-flash",
+  "src": "633694ec9363c40f",
+  "usage": 10405
+ },
+ "MLOps/gpumodel.md": {
+  "at": "2026-09-17T10:27:26Z",
+  "bad": [],
+  "dst": "7315feb027370abb",
+  "model": "google/gemini-2.5-flash",
+  "src": "d77311883de0026c",
+  "usage": 32426
+ },
+ "MLOps/hbm.md": {
+  "at": "2026-09-17T10:26:26Z",
+  "bad": [],
+  "dst": "35f281719a9ba508",
+  "model": "google/gemini-2.5-flash",
+  "src": "4672b5e01d726a17",
+  "usage": 6776
+ },
+ "MLOps/llm_performance/bench.md": {
+  "at": "2026-09-17T10:26:39Z",
+  "bad": [],
+  "dst": "2a8b8e1b1a5cb49b",
+  "model": "google/gemini-2.5-flash",
+  "src": "13dba35fc190acae",
+  "usage": 8566
+ },
+ "MLOps/llm_performance/kvopt.md": {
+  "at": "2026-09-17T10:26:44Z",
+  "bad": [],
+  "dst": "d5e9d9666f9ec5e9",
+  "model": "google/gemini-2.5-flash",
+  "src": "5c327472f9293824",
+  "usage": 8943
+ },
+ "MLOps/llm_performance/llm_infer.md": {
+  "at": "2026-09-17T10:26:41Z",
+  "bad": [],
+  "dst": "9e195727816d34ec",
+  "model": "google/gemini-2.5-flash",
+  "src": "5d4a5cf71ce708e5",
+  "usage": 7740
+ },
+ "MLOps/llm_performance/quant.md": {
+  "at": "2026-09-17T10:26:51Z",
+  "bad": [],
+  "dst": "81d21a44cb49a03d",
+  "model": "google/gemini-2.5-flash",
+  "src": "1e1c315d26d60515",
+  "usage": 9684
+ },
+ "MLOps/llm_performance/serving.md": {
+  "at": "2026-09-17T10:26:45Z",
+  "bad": [],
+  "dst": "0d65995f2914065e",
+  "model": "google/gemini-2.5-flash",
+  "src": "5690d8977a39a4a2",
+  "usage": 7056
+ },
+ "MLOps/np.md": {
+  "at": "2026-09-17T10:53:43Z",
+  "bad": [],
+  "dst": "354507f2e97306fc",
+  "model": "google/gemini-2.5-flash",
+  "src": "2a861822bff2e659",
+  "usage": 51850
+ },
+ "MLOps/nv.md": {
+  "at": "2026-09-17T10:26:46Z",
+  "bad": [],
+  "dst": "fba97a7364eb4891",
+  "model": "google/gemini-2.5-flash",
+  "src": "17f1696254b75fca",
+  "usage": 5525
+ },
+ "MLOps/pcle.md": {
+  "at": "2026-09-17T10:27:02Z",
+  "bad": [],
+  "dst": "6a9ba01933e0a396",
+  "model": "google/gemini-2.5-flash",
+  "src": "40acdd2257dc298e",
+  "usage": 8095
+ },
+ "MLOps/serving.md": {
+  "at": "2026-09-17T10:29:51Z",
+  "bad": [],
+  "dst": "53ec255fe4b7a0d8",
+  "model": "google/gemini-2.5-flash",
+  "src": "53c84800fe573477",
+  "usage": 65464
+ },
+ "MLOps/sglang.md": {
+  "at": "2026-09-17T10:29:02Z",
+  "bad": [],
+  "dst": "d6196e90cba76cbe",
+  "model": "google/gemini-2.5-flash",
+  "src": "c88140909dbafd7c",
+  "usage": 64894
+ },
+ "MLOps/zeroopt.md": {
+  "at": "2026-09-17T10:27:19Z",
+  "bad": [],
+  "dst": "d8cad786860d442a",
+  "model": "google/gemini-2.5-flash",
+  "src": "ec62afa700fb757f",
+  "usage": 11294
+ },
+ "MSA/distribution.md": {
+  "at": "2026-09-17T10:27:07Z",
+  "bad": [],
+  "dst": "341abea542e0da0c",
+  "model": "google/gemini-2.5-flash",
+  "src": "921e9ec8eee5e443",
+  "usage": 7471
+ },
+ "MSA/ipc/async_message.md": {
+  "at": "2026-09-17T10:27:21Z",
+  "bad": [],
+  "dst": "02f4f9a2071750c7",
+  "model": "google/gemini-2.5-flash",
+  "src": "c2fdd7060acdb486",
+  "usage": 10319
+ },
+ "MSA/ipc/ipc.md": {
+  "at": "2026-09-17T10:27:03Z",
+  "bad": [],
+  "dst": "61bbbdd1bc9a5f80",
+  "model": "google/gemini-2.5-flash",
+  "src": "36c897efb59f0bb2",
+  "usage": 1372
+ },
+ "MSA/ipc/rpi.md": {
+  "at": "2026-09-17T10:27:08Z",
+  "bad": [],
+  "dst": "854668923b45059e",
+  "model": "google/gemini-2.5-flash",
+  "src": "0ad3d24b233a9175",
+  "usage": 1976
+ },
+ "MSA/pattern/cqrs.md": {
+  "at": "2026-09-17T10:27:09Z",
+  "bad": [],
+  "dst": "68441578e0e64036",
+  "model": "google/gemini-2.5-flash",
+  "src": "9eece708fbcdc8ad",
+  "usage": 1759
+ },
+ "MSA/pattern/event_sourcing.md": {
+  "at": "2026-09-17T10:27:15Z",
+  "bad": [],
+  "dst": "f52a97b43e425624",
+  "model": "google/gemini-2.5-flash",
+  "src": "101369e6a767712e",
+  "usage": 2383
+ },
+ "MSA/pattern/outbox.md": {
+  "at": "2026-09-17T10:27:26Z",
+  "bad": [],
+  "dst": "e21de504e60c6fdb",
+  "model": "google/gemini-2.5-flash",
+  "src": "1bb7fb66a0c59f58",
+  "usage": 6540
+ },
+ "MSA/pattern/saga.md": {
+  "at": "2026-09-17T10:27:20Z",
+  "bad": [],
+  "dst": "f3b9dfd9be10b8f5",
+  "model": "google/gemini-2.5-flash",
+  "src": "e436e48aca29bbbe",
+  "usage": 4436
+ },
+ "MSA/pattern/two_phase_commit.md": {
+  "at": "2026-09-17T10:27:25Z",
+  "bad": [],
+  "dst": "3eca0dfe0e38c0ba",
+  "model": "google/gemini-2.5-flash",
+  "src": "7906d83fa6d97fcb",
+  "usage": 3226
+ },
+ "MSA/recover.md": {
+  "at": "2026-09-17T10:27:32Z",
+  "bad": [],
+  "dst": "822b75d5a26bf9b8",
+  "model": "google/gemini-2.5-flash",
+  "src": "9811fe5b0d215cd2",
+  "usage": 4240
+ },
+ "MSA/service_discovery.md": {
+  "at": "2026-09-17T10:27:26Z",
+  "bad": [],
+  "dst": "e55ac4a889acffec",
+  "model": "google/gemini-2.5-flash",
+  "src": "800fdb20630e4a23",
+  "usage": 1965
+ },
+ "MSA/service_discovery_dns.md": {
+  "at": "2026-09-17T10:27:34Z",
+  "bad": [],
+  "dst": "de15f642f11d2cd0",
+  "model": "google/gemini-2.5-flash",
+  "src": "1b904762da9afbaa",
+  "usage": 3956
+ },
+ "MSA/soa.md": {
+  "at": "2026-09-17T10:27:37Z",
+  "bad": [],
+  "dst": "b9adc94d4b72b488",
+  "model": "google/gemini-2.5-flash",
+  "src": "b4996a7a919a6e69",
+  "usage": 3778
+ },
+ "MSA/확장큐브.md": {
+  "at": "2026-09-17T10:27:36Z",
+  "bad": [],
+  "dst": "9df675c7c56c4cfb",
+  "model": "google/gemini-2.5-flash",
+  "src": "39baf8233675bcf7",
+  "usage": 3275
+ },
+ "Math/README.md": {
+  "at": "2026-09-17T10:27:31Z",
+  "bad": [],
+  "dst": "769de9e7d471ed1b",
+  "model": "google/gemini-2.5-flash",
+  "src": "098721b98120379f",
+  "usage": 1518
+ },
+ "Math/math1.md": {
+  "at": "2026-09-17T10:27:55Z",
+  "bad": [],
+  "dst": "84852dd8993ea689",
+  "model": "google/gemini-2.5-flash",
+  "src": "f1f4c5815a504c85",
+  "usage": 10809
+ },
+ "Math/math2.md": {
+  "at": "2026-09-17T10:27:58Z",
+  "bad": [],
+  "dst": "8434a5d74d094d41",
+  "model": "google/gemini-2.5-flash",
+  "src": "a5b02426252f9453",
+  "usage": 9742
+ },
+ "Math/math3.md": {
+  "at": "2026-09-17T10:27:56Z",
+  "bad": [],
+  "dst": "d3db186a23fd935d",
+  "model": "google/gemini-2.5-flash",
+  "src": "3e549c8ffcc838e2",
+  "usage": 8847
+ },
+ "Math/math4.md": {
+  "at": "2026-09-17T10:27:48Z",
+  "bad": [],
+  "dst": "07ed2c37d2f0178c",
+  "model": "google/gemini-2.5-flash",
+  "src": "1e9f6c9049d0284f",
+  "usage": 5192
+ },
+ "Math/math5.md": {
+  "at": "2026-09-17T10:28:02Z",
+  "bad": [],
+  "dst": "e4d3c8a064ccbf8f",
+  "model": "google/gemini-2.5-flash",
+  "src": "783734be27d1a83d",
+  "usage": 8570
+ },
+ "Math/math6.md": {
+  "at": "2026-09-17T10:27:51Z",
+  "bad": [],
+  "dst": "226f80b6122bffeb",
+  "model": "google/gemini-2.5-flash",
+  "src": "985c44bd2d0769aa",
+  "usage": 4428
+ },
+ "Network/VLAN.md": {
+  "at": "2026-09-17T10:27:59Z",
+  "bad": [],
+  "dst": "223d5e8726206496",
+  "model": "google/gemini-2.5-flash",
+  "src": "afce04a31a0c8290",
+  "usage": 6310
+ },
+ "Network/addr.md": {
+  "at": "2026-09-17T10:28:12Z",
+  "bad": [],
+  "dst": "1d212f4a444af347",
+  "model": "google/gemini-2.5-flash",
+  "src": "9faac5da1a2771ac",
+  "usage": 8316
+ },
+ "Network/bbrquic.md": {
+  "at": "2026-09-17T10:28:04Z",
+  "bad": [],
+  "dst": "a301dec6affd0347",
+  "model": "google/gemini-2.5-flash",
+  "src": "d10c524659f22cb5",
+  "usage": 4432
+ },
+ "Network/bgp.md": {
+  "at": "2026-09-17T10:33:09Z",
+  "bad": [],
+  "dst": "52f5168630843c48",
+  "model": "google/gemini-2.5-flash",
+  "src": "e087e27acd15909d",
+  "usage": 3990
+ },
+ "Network/component.md": {
+  "at": "2026-09-17T10:28:08Z",
+  "bad": [],
+  "dst": "341f9a37899344d3",
+  "model": "google/gemini-2.5-flash",
+  "src": "cb4b995a023d704c",
+  "usage": 4445
+ },
+ "Network/conn.md": {
+  "at": "2026-09-17T10:28:14Z",
+  "bad": [],
+  "dst": "bcd90a6e97dc5740",
+  "model": "google/gemini-2.5-flash",
+  "src": "4a99a225d85e49d7",
+  "usage": 4858
+ },
+ "Network/dhcp.md": {
+  "at": "2026-09-17T10:28:09Z",
+  "bad": [],
+  "dst": "2dbf854992df30e2",
+  "model": "google/gemini-2.5-flash",
+  "src": "d606806ec1f6462b",
+  "usage": 3058
+ },
+ "Network/et.md": {
+  "at": "2026-09-17T10:28:10Z",
+  "bad": [],
+  "dst": "30b98416c867bc6d",
+  "model": "google/gemini-2.5-flash",
+  "src": "71d2aeb46bfd9c1a",
+  "usage": 2495
+ },
+ "Network/fd.md": {
+  "at": "2026-09-17T10:28:18Z",
+  "bad": [],
+  "dst": "5e0f20b6d9dc8b5a",
+  "model": "google/gemini-2.5-flash",
+  "src": "686b3f3b5d6f2aee",
+  "usage": 4504
+ },
+ "Network/httpka.md": {
+  "at": "2026-09-17T10:28:25Z",
+  "bad": [],
+  "dst": "4a382617c52ad078",
+  "model": "google/gemini-2.5-flash",
+  "src": "639583394b9fd9bc",
+  "usage": 5860
+ },
+ "Network/ipsec.md": {
+  "at": "2026-09-17T10:28:21Z",
+  "bad": [],
+  "dst": "bdad13a344442afc",
+  "model": "google/gemini-2.5-flash",
+  "src": "2a053badf388a805",
+  "usage": 3883
+ },
+ "Network/keepalive.md": {
+  "at": "2026-09-17T10:28:18Z",
+  "bad": [],
+  "dst": "15fec5ffe502345a",
+  "model": "google/gemini-2.5-flash",
+  "src": "2ff37eb1b66eaf80",
+  "usage": 3074
+ },
+ "Network/lossbased.md": {
+  "at": "2026-09-17T10:33:20Z",
+  "bad": [],
+  "dst": "1d54b4fd8099b19e",
+  "model": "google/gemini-2.5-flash",
+  "src": "d6238feedf76a516",
+  "usage": 5493
+ },
+ "Network/qos.md": {
+  "at": "2026-09-17T10:28:23Z",
+  "bad": [],
+  "dst": "faefbdde6dc78408",
+  "model": "google/gemini-2.5-flash",
+  "src": "cee0e10cc28438f9",
+  "usage": 3392
+ },
+ "Network/router.md": {
+  "at": "2026-09-17T10:28:26Z",
+  "bad": [],
+  "dst": "a02438234021d4ad",
+  "model": "google/gemini-2.5-flash",
+  "src": "cf3533085005964b",
+  "usage": 3591
+ },
+ "Network/ssl_handshake.md": {
+  "at": "2026-09-17T10:28:35Z",
+  "bad": [],
+  "dst": "06ed76f4dcde8321",
+  "model": "google/gemini-2.5-flash",
+  "src": "5379622028eab489",
+  "usage": 5368
+ },
+ "Network/subn.md": {
+  "at": "2026-09-17T10:28:25Z",
+  "bad": [],
+  "dst": "68d69fd29f204b41",
+  "model": "google/gemini-2.5-flash",
+  "src": "2979f5af24a9bde9",
+  "usage": 2388
+ },
+ "Network/switch_act.md": {
+  "at": "2026-09-17T10:28:41Z",
+  "bad": [],
+  "dst": "065bb391d36ee615",
+  "model": "google/gemini-2.5-flash",
+  "src": "110eb82b5f4cf9e3",
+  "usage": 7174
+ },
+ "Network/syncookie.md": {
+  "at": "2026-09-17T10:28:33Z",
+  "bad": [],
+  "dst": "2191148052f36a2b",
+  "model": "google/gemini-2.5-flash",
+  "src": "f5c05d5ce3cd0cbe",
+  "usage": 3796
+ },
+ "Network/tcp.md": {
+  "at": "2026-09-17T10:28:45Z",
+  "bad": [],
+  "dst": "82cec324273ade43",
+  "model": "google/gemini-2.5-flash",
+  "src": "5dc7b581decf4e3e",
+  "usage": 8572
+ },
+ "Network/tcp_control.md": {
+  "at": "2026-09-17T10:28:57Z",
+  "bad": [],
+  "dst": "f489cf3b5131237c",
+  "model": "google/gemini-2.5-flash",
+  "src": "91adaef5e31dec55",
+  "usage": 10205
+ },
+ "Network/tcp_flag.md": {
+  "at": "2026-09-17T10:28:46Z",
+  "bad": [],
+  "dst": "20fc1db682dd5294",
+  "model": "google/gemini-2.5-flash",
+  "src": "11093e3e9f377149",
+  "usage": 6739
+ },
+ "Network/tcp_header.md": {
+  "at": "2026-09-17T10:28:45Z",
+  "bad": [],
+  "dst": "bcedb01febff2a25",
+  "model": "google/gemini-2.5-flash",
+  "src": "af9460e4fc5853ad",
+  "usage": 6200
+ },
+ "Network/tcp_keepalive.md": {
+  "at": "2026-09-17T10:28:48Z",
+  "bad": [],
+  "dst": "5419accc5ff77afa",
+  "model": "google/gemini-2.5-flash",
+  "src": "59994406b34a03bf",
+  "usage": 7153
+ },
+ "Network/tcpqueue.md": {
+  "at": "2026-09-17T10:28:49Z",
+  "bad": [],
+  "dst": "8c420bb850e69b82",
+  "model": "google/gemini-2.5-flash",
+  "src": "fb0f76b4a2aa70a7",
+  "usage": 5292
+ },
+ "Network/tcpwin.md": {
+  "at": "2026-09-17T10:28:51Z",
+  "bad": [],
+  "dst": "27a605ceef280b07",
+  "model": "google/gemini-2.5-flash",
+  "src": "db57713315e2e754",
+  "usage": 5002
+ },
+ "Network/vlan2.md": {
+  "at": "2026-09-17T10:29:00Z",
+  "bad": [],
+  "dst": "70a3e97a3626597d",
+  "model": "google/gemini-2.5-flash",
+  "src": "0cbf6e15ca18af3f",
+  "usage": 6125
+ },
+ "Operating-System/cache_memory.md": {
+  "at": "2026-09-17T10:29:07Z",
+  "bad": [],
+  "dst": "d7e1898cbd91e62f",
+  "model": "google/gemini-2.5-flash",
+  "src": "cfe23d83b2efc0b6",
+  "usage": 8042
+ },
+ "Operating-System/casaba.md": {
+  "at": "2026-09-17T10:29:03Z",
+  "bad": [],
+  "dst": "fed1b7dd6acce312",
+  "model": "google/gemini-2.5-flash",
+  "src": "30c6eecf5e3108e1",
+  "usage": 5945
+ },
+ "Operating-System/compiler_optimize.md": {
+  "at": "2026-09-17T10:28:58Z",
+  "bad": [],
+  "dst": "06d8a85c97ae4872",
+  "model": "google/gemini-2.5-flash",
+  "src": "e2308e5a762f5ce3",
+  "usage": 4301
+ },
+ "Operating-System/computingsystem.md": {
+  "at": "2026-09-17T10:29:04Z",
+  "bad": [],
+  "dst": "ecb42727959a3de1",
+  "model": "google/gemini-2.5-flash",
+  "src": "76fcec77d0bbe6af",
+  "usage": 4756
+ },
+ "Operating-System/cow.md": {
+  "at": "2026-09-17T10:29:05Z",
+  "bad": [],
+  "dst": "7992e1726b4ac217",
+  "model": "google/gemini-2.5-flash",
+  "src": "755555ccb30e9a17",
+  "usage": 4774
+ },
+ "Operating-System/cpuooo.md": {
+  "at": "2026-09-17T10:29:06Z",
+  "bad": [],
+  "dst": "18112f64efaa47fa",
+  "model": "google/gemini-2.5-flash",
+  "src": "2ea4bb232c42775e",
+  "usage": 5133
+ },
+ "Operating-System/fragmentation.md": {
+  "at": "2026-09-17T10:29:07Z",
+  "bad": [],
+  "dst": "3b4f6d04bac1f171",
+  "model": "google/gemini-2.5-flash",
+  "src": "ffeb73d2f8d155de",
+  "usage": 3308
+ },
+ "Operating-System/hypervisor.md": {
+  "at": "2026-09-17T10:29:06Z",
+  "bad": [],
+  "dst": "ec4a37c5dab29a64",
+  "model": "google/gemini-2.5-flash",
+  "src": "edf9095a8c3e4491",
+  "usage": 3310
+ },
+ "Operating-System/inode.md": {
+  "at": "2026-09-17T10:29:13Z",
+  "bad": [],
+  "dst": "76854bd9bf5e6775",
+  "model": "google/gemini-2.5-flash",
+  "src": "3d881e2544d79a0b",
+  "usage": 4205
+ },
+ "Operating-System/ipc.md": {
+  "at": "2026-09-17T10:29:18Z",
+  "bad": [],
+  "dst": "7f85f03231be0bd6",
+  "model": "google/gemini-2.5-flash",
+  "src": "e23c4edb0c016066",
+  "usage": 4592
+ },
+ "Operating-System/lockfree.md": {
+  "at": "2026-09-17T10:29:18Z",
+  "bad": [],
+  "dst": "71f1f2a1f97219a6",
+  "model": "google/gemini-2.5-flash",
+  "src": "ee9bfff20381dc3e",
+  "usage": 5417
+ },
+ "Operating-System/mm.md": {
+  "at": "2026-09-17T10:29:20Z",
+  "bad": [],
+  "dst": "5e3d75b2ca3eac43",
+  "model": "google/gemini-2.5-flash",
+  "src": "f2b3cbe0c02284ad",
+  "usage": 5209
+ },
+ "Operating-System/mmu.md": {
+  "at": "2026-09-17T10:29:24Z",
+  "bad": [],
+  "dst": "66694964f7ec27f9",
+  "model": "google/gemini-2.5-flash",
+  "src": "3af0c5e3931377db",
+  "usage": 6848
+ },
+ "Operating-System/mutex_semaphore.md": {
+  "at": "2026-09-17T10:29:20Z",
+  "bad": [],
+  "dst": "18b2673be64ffb6b",
+  "model": "google/gemini-2.5-flash",
+  "src": "c0f6a4239a7eec3e",
+  "usage": 5591
+ },
+ "Operating-System/mutual_exclusion.md": {
+  "at": "2026-09-17T10:29:14Z",
+  "bad": [],
+  "dst": "3c65f87c7a10ada6",
+  "model": "google/gemini-2.5-flash",
+  "src": "b2c3fb927c8a314a",
+  "usage": 2602
+ },
+ "Operating-System/numa.md": {
+  "at": "2026-09-17T10:29:15Z",
+  "bad": [],
+  "dst": "cc1be0bd1d617892",
+  "model": "google/gemini-2.5-flash",
+  "src": "afb7fdf257c94265",
+  "usage": 2690
+ },
+ "Operating-System/numa2.md": {
+  "at": "2026-09-17T10:29:19Z",
+  "bad": [],
+  "dst": "f53998723fd0f475",
+  "model": "google/gemini-2.5-flash",
+  "src": "654467516b29035d",
+  "usage": 3829
+ },
+ "Operating-System/page.md": {
+  "at": "2026-09-17T10:29:30Z",
+  "bad": [],
+  "dst": "467e92eb270b203e",
+  "model": "google/gemini-2.5-flash",
+  "src": "8a436e9f8a3d9d3f",
+  "usage": 6154
+ },
+ "Operating-System/paritiy.md": {
+  "at": "2026-09-17T10:29:27Z",
+  "bad": [],
+  "dst": "3e8a4e86f64e4331",
+  "model": "google/gemini-2.5-flash",
+  "src": "5e14c02b59c056f6",
+  "usage": 4288
+ },
+ "Operating-System/pbcache.md": {
+  "at": "2026-09-17T10:29:27Z",
+  "bad": [],
+  "dst": "17349f7f8dd771a3",
+  "model": "google/gemini-2.5-flash",
+  "src": "32f0b8e97061379a",
+  "usage": 4265
+ },
+ "Operating-System/procarc.md": {
+  "at": "2026-09-17T10:29:30Z",
+  "bad": [],
+  "dst": "b9710a7a371bf45a",
+  "model": "google/gemini-2.5-flash",
+  "src": "9990d9165c9a0452",
+  "usage": 4160
+ },
+ "Operating-System/process_memory.md": {
+  "at": "2026-09-17T10:29:29Z",
+  "bad": [],
+  "dst": "da1a69f1d4558c9c",
+  "model": "google/gemini-2.5-flash",
+  "src": "eedca21514db0b3f",
+  "usage": 3599
+ },
+ "Operating-System/swapping.md": {
+  "at": "2026-09-17T10:29:25Z",
+  "bad": [],
+  "dst": "dfc6a9f94ecd2c91",
+  "model": "google/gemini-2.5-flash",
+  "src": "0d5d3ac376f9a648",
+  "usage": 2052
+ },
+ "Operating-System/tlb.md": {
+  "at": "2026-09-17T10:29:52Z",
+  "bad": [],
+  "dst": "6a7298769acafde3",
+  "model": "google/gemini-2.5-flash",
+  "src": "11014d5bdd366176",
+  "usage": 11717
+ },
+ "Operating-System/uds.md": {
+  "at": "2026-09-17T10:29:34Z",
+  "bad": [],
+  "dst": "9de239059f3dc9be",
+  "model": "google/gemini-2.5-flash",
+  "src": "0a5a4cf4ac4f5344",
+  "usage": 4596
+ },
+ "Operating-System/vm.md": {
+  "at": "2026-09-17T10:29:39Z",
+  "bad": [],
+  "dst": "36a61c9da4d0f613",
+  "model": "google/gemini-2.5-flash",
+  "src": "c95f9c7196e60160",
+  "usage": 5112
+ },
+ "SRE/question/q_1.md": {
+  "at": "2026-09-17T10:29:34Z",
+  "bad": [],
+  "dst": "a81e5c0e0c834824",
+  "model": "google/gemini-2.5-flash",
+  "src": "e2aadeda66cd304c",
+  "usage": 3044
+ },
+ "SRE/question/q_10.md": {
+  "at": "2026-09-17T10:29:43Z",
+  "bad": [],
+  "dst": "d9f0a6cee979a49e",
+  "model": "google/gemini-2.5-flash",
+  "src": "112b05d22abf0e1e",
+  "usage": 4559
+ },
+ "SRE/question/q_11.md": {
+  "at": "2026-09-17T10:29:37Z",
+  "bad": [],
+  "dst": "f826df883137c2ac",
+  "model": "google/gemini-2.5-flash",
+  "src": "99288729b7dd3712",
+  "usage": 3231
+ },
+ "SRE/question/q_12.md": {
+  "at": "2026-09-17T10:29:40Z",
+  "bad": [],
+  "dst": "4dc11f45b3fe8850",
+  "model": "google/gemini-2.5-flash",
+  "src": "0c3b453b0f399204",
+  "usage": 3572
+ },
+ "SRE/question/q_13.md": {
+  "at": "2026-09-17T10:29:46Z",
+  "bad": [],
+  "dst": "048452586b8b1a77",
+  "model": "google/gemini-2.5-flash",
+  "src": "94478a427840a925",
+  "usage": 3776
+ },
+ "SRE/question/q_14.md": {
+  "at": "2026-09-17T10:29:38Z",
+  "bad": [],
+  "dst": "65c6976979e7ac80",
+  "model": "google/gemini-2.5-flash",
+  "src": "d05bad458b5e21a9",
+  "usage": 2615
+ },
+ "SRE/question/q_15.md": {
+  "at": "2026-09-17T10:29:46Z",
+  "bad": [],
+  "dst": "19b4a6379d6b02b1",
+  "model": "google/gemini-2.5-flash",
+  "src": "a5e594c07e2475f4",
+  "usage": 3963
+ },
+ "SRE/question/q_16.md": {
+  "at": "2026-09-17T10:29:46Z",
+  "bad": [],
+  "dst": "534a4bb2e13da0b1",
+  "model": "google/gemini-2.5-flash",
+  "src": "b48bc98fafb0edeb",
+  "usage": 3911
+ },
+ "SRE/question/q_17.md": {
+  "at": "2026-09-17T10:29:51Z",
+  "bad": [],
+  "dst": "9249e4b912624f73",
+  "model": "google/gemini-2.5-flash",
+  "src": "1079b872a16d7ccf",
+  "usage": 4610
+ },
+ "SRE/question/q_18.md": {
+  "at": "2026-09-17T10:30:02Z",
+  "bad": [],
+  "dst": "99a640071d3931a6",
+  "model": "google/gemini-2.5-flash",
+  "src": "047585ab14cd7e46",
+  "usage": 8670
+ },
+ "SRE/question/q_19.md": {
+  "at": "2026-09-17T10:29:50Z",
+  "bad": [],
+  "dst": "447727ea8c4502be",
+  "model": "google/gemini-2.5-flash",
+  "src": "96b3a35459426c3c",
+  "usage": 3871
+ },
+ "SRE/question/q_2.md": {
+  "at": "2026-09-17T10:29:46Z",
+  "bad": [],
+  "dst": "2a4f2f4dcee8320e",
+  "model": "google/gemini-2.5-flash",
+  "src": "ebf61953b5d077d4",
+  "usage": 2009
+ },
+ "SRE/question/q_20.md": {
+  "at": "2026-09-17T10:30:00Z",
+  "bad": [],
+  "dst": "91864c4ff41838ac",
+  "model": "google/gemini-2.5-flash",
+  "src": "cb158894f71edb20",
+  "usage": 5862
+ },
+ "SRE/question/q_21.md": {
+  "at": "2026-09-17T10:30:02Z",
+  "bad": [],
+  "dst": "5e5126bc2b4c705a",
+  "model": "google/gemini-2.5-flash",
+  "src": "e29b89173f5e5f14",
+  "usage": 5724
+ },
+ "SRE/question/q_22.md": {
+  "at": "2026-09-17T10:30:05Z",
+  "bad": [],
+  "dst": "664438eb598d5881",
+  "model": "google/gemini-2.5-flash",
+  "src": "1086b2497d08ad65",
+  "usage": 7131
+ },
+ "SRE/question/q_23.md": {
+  "at": "2026-09-17T10:29:54Z",
+  "bad": [],
+  "dst": "185dd96db244bea3",
+  "model": "google/gemini-2.5-flash",
+  "src": "317701a9f5cccc5b",
+  "usage": 3101
+ },
+ "SRE/question/q_24.md": {
+  "at": "2026-09-17T10:30:08Z",
+  "bad": [],
+  "dst": "b021437dcafb0f50",
+  "model": "google/gemini-2.5-flash",
+  "src": "1bb365b30b353194",
+  "usage": 8105
+ },
+ "SRE/question/q_25.md": {
+  "at": "2026-09-17T10:30:06Z",
+  "bad": [],
+  "dst": "e41d5c560e59684f",
+  "model": "google/gemini-2.5-flash",
+  "src": "decc0f6cd88451c7",
+  "usage": 5232
+ },
+ "SRE/question/q_26.md": {
+  "at": "2026-09-17T10:30:10Z",
+  "bad": [],
+  "dst": "5bfa99b3a7141929",
+  "model": "google/gemini-2.5-flash",
+  "src": "8d00e9e1264d1a48",
+  "usage": 4217
+ },
+ "SRE/question/q_27.md": {
+  "at": "2026-09-17T10:30:04Z",
+  "bad": [],
+  "dst": "d6052147f78b8efd",
+  "model": "google/gemini-2.5-flash",
+  "src": "9491dbe7b2833154",
+  "usage": 4960
+ },
+ "SRE/question/q_28.md": {
+  "at": "2026-09-17T10:30:07Z",
+  "bad": [],
+  "dst": "c642475121d25cf1",
+  "model": "google/gemini-2.5-flash",
+  "src": "c222ea23d84b4ce2",
+  "usage": 5117
+ },
+ "SRE/question/q_29.md": {
+  "at": "2026-09-17T10:30:12Z",
+  "bad": [],
+  "dst": "979c404e36addaf7",
+  "model": "google/gemini-2.5-flash",
+  "src": "7065b4a4b39fb0de",
+  "usage": 5885
+ },
+ "SRE/question/q_3.md": {
+  "at": "2026-09-17T10:30:10Z",
+  "bad": [],
+  "dst": "4e043187a8eb7bb0",
+  "model": "google/gemini-2.5-flash",
+  "src": "b07d4bbbc1f7bd9f",
+  "usage": 3207
+ },
+ "SRE/question/q_30.md": {
+  "at": "2026-09-17T10:30:18Z",
+  "bad": [],
+  "dst": "c857ab71628d52bc",
+  "model": "google/gemini-2.5-flash",
+  "src": "9cc07351c011fa1e",
+  "usage": 5601
+ },
+ "SRE/question/q_31.md": {
+  "at": "2026-09-17T10:30:21Z",
+  "bad": [],
+  "dst": "79da9fc20001ea77",
+  "model": "google/gemini-2.5-flash",
+  "src": "d99055be13cffeaf",
+  "usage": 6022
+ },
+ "SRE/question/q_32.md": {
+  "at": "2026-09-17T10:30:25Z",
+  "bad": [],
+  "dst": "7e14cd276638af41",
+  "model": "google/gemini-2.5-flash",
+  "src": "00e7259a703f0f50",
+  "usage": 8239
+ },
+ "SRE/question/q_33.md": {
+  "at": "2026-09-17T10:30:25Z",
+  "bad": [],
+  "dst": "69787b9ed108f6c1",
+  "model": "google/gemini-2.5-flash",
+  "src": "4cdcaebd7dd116a2",
+  "usage": 6738
+ },
+ "SRE/question/q_34.md": {
+  "at": "2026-09-17T10:30:30Z",
+  "bad": [],
+  "dst": "b5d9540ed419396c",
+  "model": "google/gemini-2.5-flash",
+  "src": "80f790b8dbdd42b7",
+  "usage": 8010
+ },
+ "SRE/question/q_35.md": {
+  "at": "2026-09-17T10:30:28Z",
+  "bad": [],
+  "dst": "fe66304171dcf60c",
+  "model": "google/gemini-2.5-flash",
+  "src": "d9b890fdaee4fcdf",
+  "usage": 6961
+ },
+ "SRE/question/q_36.md": {
+  "at": "2026-09-17T10:30:25Z",
+  "bad": [],
+  "dst": "8b2988f6345b21e6",
+  "model": "google/gemini-2.5-flash",
+  "src": "e2a78b4e15131a02",
+  "usage": 6113
+ },
+ "SRE/question/q_37.md": {
+  "at": "2026-09-17T10:30:23Z",
+  "bad": [],
+  "dst": "af5b1c647d440e1a",
+  "model": "google/gemini-2.5-flash",
+  "src": "138b864ad286cd4c",
+  "usage": 4865
+ },
+ "SRE/question/q_38.md": {
+  "at": "2026-09-17T10:30:28Z",
+  "bad": [],
+  "dst": "5d28608000ba6db2",
+  "model": "google/gemini-2.5-flash",
+  "src": "e4fce14b3ce86e4b",
+  "usage": 5732
+ },
+ "SRE/question/q_39.md": {
+  "at": "2026-09-17T10:30:33Z",
+  "bad": [],
+  "dst": "34ba61530d3f2538",
+  "model": "google/gemini-2.5-flash",
+  "src": "7931e04729b3f6b5",
+  "usage": 6173
+ },
+ "SRE/question/q_4.md": {
+  "at": "2026-09-17T10:30:32Z",
+  "bad": [],
+  "dst": "e273171affee080f",
+  "model": "google/gemini-2.5-flash",
+  "src": "c09f470d4c937217",
+  "usage": 4594
+ },
+ "SRE/question/q_40.md": {
+  "at": "2026-09-17T10:30:38Z",
+  "bad": [],
+  "dst": "0b5eb78217b0213a",
+  "model": "google/gemini-2.5-flash",
+  "src": "a874150b0cbce3b9",
+  "usage": 6275
+ },
+ "SRE/question/q_41.md": {
+  "at": "2026-09-17T10:30:38Z",
+  "bad": [],
+  "dst": "750890039d00a5a2",
+  "model": "google/gemini-2.5-flash",
+  "src": "b40e489fb8fb587a",
+  "usage": 4976
+ },
+ "SRE/question/q_42.md": {
+  "at": "2026-09-17T10:30:46Z",
+  "bad": [],
+  "dst": "3caa976eaede6e3e",
+  "model": "google/gemini-2.5-flash",
+  "src": "adb4c2f7f1c18d31",
+  "usage": 6707
+ },
+ "SRE/question/q_43.md": {
+  "at": "2026-09-17T10:30:44Z",
+  "bad": [],
+  "dst": "4303aed066d0b431",
+  "model": "google/gemini-2.5-flash",
+  "src": "60f7fdd3e20e3624",
+  "usage": 6153
+ },
+ "SRE/question/q_44.md": {
+  "at": "2026-09-17T10:30:38Z",
+  "bad": [],
+  "dst": "b206adf35930baee",
+  "model": "google/gemini-2.5-flash",
+  "src": "ffc8b3730dde4d5b",
+  "usage": 4627
+ },
+ "SRE/question/q_45.md": {
+  "at": "2026-09-17T10:30:41Z",
+  "bad": [],
+  "dst": "bd6fbf87a62d1805",
+  "model": "google/gemini-2.5-flash",
+  "src": "37b995d5462cba16",
+  "usage": 4362
+ },
+ "SRE/question/q_46.md": {
+  "at": "2026-09-17T10:33:28Z",
+  "bad": [],
+  "dst": "fcb10faa2781faff",
+  "model": "google/gemini-2.5-flash",
+  "src": "2b4556aa03879e44",
+  "usage": 5576
+ },
+ "SRE/question/q_47.md": {
+  "at": "2026-09-17T10:30:48Z",
+  "bad": [],
+  "dst": "dc4400cbdb19a6d7",
+  "model": "google/gemini-2.5-flash",
+  "src": "e93ed69fd618805f",
+  "usage": 5956
+ },
+ "SRE/question/q_48.md": {
+  "at": "2026-09-17T10:30:44Z",
+  "bad": [],
+  "dst": "4d7469b5c6f0540d",
+  "model": "google/gemini-2.5-flash",
+  "src": "5a8d4555eed5c660",
+  "usage": 4422
+ },
+ "SRE/question/q_49.md": {
+  "at": "2026-09-17T10:30:46Z",
+  "bad": [],
+  "dst": "f91fb51f6f95ecfc",
+  "model": "google/gemini-2.5-flash",
+  "src": "22ca29ea1a27d590",
+  "usage": 5167
+ },
+ "SRE/question/q_5.md": {
+  "at": "2026-09-17T10:30:52Z",
+  "bad": [],
+  "dst": "64d736adbd459f4c",
+  "model": "google/gemini-2.5-flash",
+  "src": "c6db163263e4e03d",
+  "usage": 4792
+ },
+ "SRE/question/q_50.md": {
+  "at": "2026-09-17T10:31:02Z",
+  "bad": [],
+  "dst": "eae371a2e95ffe8f",
+  "model": "google/gemini-2.5-flash",
+  "src": "a47f8b8927b49baa",
+  "usage": 7097
+ },
+ "SRE/question/q_6.md": {
+  "at": "2026-09-17T10:30:49Z",
+  "bad": [],
+  "dst": "4a1ec9fa2419699b",
+  "model": "google/gemini-2.5-flash",
+  "src": "7c675cb9123b1443",
+  "usage": 3906
+ },
+ "SRE/question/q_7.md": {
+  "at": "2026-09-17T10:31:04Z",
+  "bad": [],
+  "dst": "31a437713017d347",
+  "model": "google/gemini-2.5-flash",
+  "src": "bcbfadde2714e3a8",
+  "usage": 7916
+ },
+ "SRE/question/q_8.md": {
+  "at": "2026-09-17T10:30:56Z",
+  "bad": [],
+  "dst": "0b25ad938bccb18d",
+  "model": "google/gemini-2.5-flash",
+  "src": "4e72222352ad56e6",
+  "usage": 3916
+ },
+ "SRE/question/q_9.md": {
+  "at": "2026-09-17T10:31:06Z",
+  "bad": [],
+  "dst": "7dddea72164c0e9b",
+  "model": "google/gemini-2.5-flash",
+  "src": "a412426470451569",
+  "usage": 4310
+ },
+ "SRE/slo.md": {
+  "at": "2026-09-17T10:31:05Z",
+  "bad": [],
+  "dst": "e640982b047426b1",
+  "model": "google/gemini-2.5-flash",
+  "src": "8649b357f45825ef",
+  "usage": 4374
+ },
+ "정보처리/Java.md": {
+  "at": "2026-09-17T10:30:52Z",
+  "bad": [],
+  "dst": "bb0b590286b9728a",
+  "model": "google/gemini-2.5-flash",
+  "src": "1e56854d5859e320",
+  "usage": 2103
+ },
+ "정보처리/comrun.md": {
+  "at": "2026-09-17T10:30:53Z",
+  "bad": [],
+  "dst": "86efceda2cfb3023",
+  "model": "google/gemini-2.5-flash",
+  "src": "53f7fc95e7e75f74",
+  "usage": 1566
+ },
+ "정보처리/cpus.md": {
+  "at": "2026-09-17T10:31:08Z",
+  "bad": [],
+  "dst": "bbf39a9c07f144d8",
+  "model": "google/gemini-2.5-flash",
+  "src": "6d4d29982431924e",
+  "usage": 4034
+ },
+ "정보처리/database.md": {
+  "at": "2026-09-17T10:31:03Z",
+  "bad": [],
+  "dst": "b790adfc68ddd4f4",
+  "model": "google/gemini-2.5-flash",
+  "src": "0782c1071e95d134",
+  "usage": 4562
+ },
+ "정보처리/database2.md": {
+  "at": "2026-09-17T10:31:06Z",
+  "bad": [],
+  "dst": "8b6446f8e64ab766",
+  "model": "google/gemini-2.5-flash",
+  "src": "8ac4062aad5e3847",
+  "usage": 4894
+ },
+ "정보처리/ddl.md": {
+  "at": "2026-09-17T10:31:00Z",
+  "bad": [],
+  "dst": "7b31539d8f79311a",
+  "model": "google/gemini-2.5-flash",
+  "src": "036f6c02699ece90",
+  "usage": 2607
+ },
+ "정보처리/doker.md": {
+  "at": "2026-09-17T10:31:00Z",
+  "bad": [],
+  "dst": "22b47b3728b23aed",
+  "model": "google/gemini-2.5-flash",
+  "src": "6fcc347c6997e668",
+  "usage": 2344
+ },
+ "정보처리/httpmethod.md": {
+  "at": "2026-09-17T10:31:12Z",
+  "bad": [],
+  "dst": "c808fd8fe5cc7ed3",
+  "model": "google/gemini-2.5-flash",
+  "src": "14def4dc4d3d5546",
+  "usage": 5166
+ },
+ "정보처리/network.md": {
+  "at": "2026-09-17T10:31:15Z",
+  "bad": [],
+  "dst": "327bb365cfb90ca0",
+  "model": "google/gemini-2.5-flash",
+  "src": "bec599ae3523b7db",
+  "usage": 5070
+ },
+ "정보처리/os.md": {
+  "at": "2026-09-17T10:31:13Z",
+  "bad": [],
+  "dst": "98d7d4a5d5534bb1",
+  "model": "google/gemini-2.5-flash",
+  "src": "2aee8344a8d6b446",
+  "usage": 4245
+ },
+ "정보처리/osiproto.md": {
+  "at": "2026-09-17T10:31:14Z",
+  "bad": [],
+  "dst": "829fddf7afebd882",
+  "model": "google/gemini-2.5-flash",
+  "src": "a852d24a67707412",
+  "usage": 3806
+ },
+ "정보처리/processthread.md": {
+  "at": "2026-09-17T10:31:22Z",
+  "bad": [],
+  "dst": "740a3e7c2c757820",
+  "model": "google/gemini-2.5-flash",
+  "src": "e589045caf8ecf1c",
+  "usage": 6574
+ },
+ "정보처리/protocall.md": {
+  "at": "2026-09-17T10:31:19Z",
+  "bad": [],
+  "dst": "22a4703a38eb9326",
+  "model": "google/gemini-2.5-flash",
+  "src": "4c543db6f0398e99",
+  "usage": 4593
+ },
+ "정보처리/rest.md": {
+  "at": "2026-09-17T10:31:15Z",
+  "bad": [],
+  "dst": "5f6a566e2942ee38",
+  "model": "google/gemini-2.5-flash",
+  "src": "5401cad5a75ff4a2",
+  "usage": 3759
+ },
+ "정보처리/sql.md": {
+  "at": "2026-09-17T10:31:13Z",
+  "bad": [],
+  "dst": "872a9eadce1c02bf",
+  "model": "google/gemini-2.5-flash",
+  "src": "69e0df46f5c9b723",
+  "usage": 2667
+ },
+ "정보처리/test.md": {
+  "at": "2026-09-17T10:31:29Z",
+  "bad": [],
+  "dst": "a97a3be3e4da6f9b",
+  "model": "google/gemini-2.5-flash",
+  "src": "eb28fa2cf21c3dc0",
+  "usage": 7647
+ },
+ "정보처리/검토.md": {
+  "at": "2026-09-17T10:31:13Z",
+  "bad": [],
+  "dst": "517c251e637d0b94",
+  "model": "google/gemini-2.5-flash",
+  "src": "022400c160e929bf",
+  "usage": 1542
+ },
+ "정보처리/동기화.md": {
+  "at": "2026-09-17T10:31:43Z",
+  "bad": [],
+  "dst": "3c5a320c9ebdcb17",
+  "model": "google/gemini-2.5-flash",
+  "src": "811e5e5ee20a5397",
+  "usage": 9593
+ },
+ "정보처리/스레드.md": {
+  "at": "2026-09-17T10:31:19Z",
+  "bad": [],
+  "dst": "3102abc86126d4a2",
+  "model": "google/gemini-2.5-flash",
+  "src": "c227cf8b1a6f464a",
+  "usage": 1981
+ },
+ "정보처리/응용SW.md": {
+  "at": "2026-09-17T10:31:23Z",
+  "bad": [],
+  "dst": "a94062d001f33a3b",
+  "model": "google/gemini-2.5-flash",
+  "src": "26c4c4c28410320e",
+  "usage": 3261
+ },
+ "정보처리/응용SW2.md": {
+  "at": "2026-09-17T10:31:21Z",
+  "bad": [],
+  "dst": "1985c2d2ff2b308c",
+  "model": "google/gemini-2.5-flash",
+  "src": "ddac115e873cd537",
+  "usage": 2301
+ },
+ "정보처리/자료구조알고리즘.md": {
+  "at": "2026-09-17T10:31:25Z",
+  "bad": [],
+  "dst": "af9aaf3af17bf52b",
+  "model": "google/gemini-2.5-flash",
+  "src": "1bdb949b4712be09",
+  "usage": 4022
+ }
+}
