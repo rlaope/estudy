@@ -53,9 +53,13 @@ FORCE_CHUNK = False
 
 def api_key() -> str:
     """API 키: 로컬은 키체인(og-api-key), CI는 환경변수 OG_API_KEY 에서 읽는다."""
-    out = subprocess.run(['security', 'find-generic-password', '-s', 'og-api-key', '-w'],
-                         capture_output=True, text=True)
-    key = out.stdout.strip()
+    key = ''
+    try:
+        out = subprocess.run(['security', 'find-generic-password', '-s', 'og-api-key', '-w'],
+                             capture_output=True, text=True)
+        key = out.stdout.strip()
+    except OSError:
+        key = ''  # macOS 가 아닌 환경(CI)에는 security 명령이 없다 -> 환경변수 사용
     if not key:
         key = os.environ.get('OG_API_KEY', '').strip()
     if not key:
