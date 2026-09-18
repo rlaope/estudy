@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -54,6 +54,26 @@ jobs:
         run: |
           hugo --config site/hugo.toml --contentDir .cache/content \
             --destination public --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Sync English notes (auto-translate new/changed)
+        if: ${{ secrets.OG_API_KEY != '' }}
+        env:
+          OG_API_KEY: ${{ secrets.OG_API_KEY }}
+        run: |
+          python3 tools/i18n/translate.py --all --workers 6 2>&1 | tail -6 || true
+
+      - name: Commit synced English notes
+        run: |
+          if [ -n "$(git status --porcelain brains-en)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add brains-en
+            git commit -m "chore(i18n): 영어 노트 자동 동기화 [skip ci]"
+            git push
+            echo "영어 노트 커밋/푸시 완료"
+          else
+            echo "동기화할 영어 노트 없음"
+          fi
 
       - name: Build EN site (/en/)
         if: ${{ hashFiles('brains-en/**/*.md') != '' }}

@@ -17,6 +17,7 @@ import argparse
 import concurrent.futures as cf
 import hashlib
 import json
+import os
 import pathlib
 import re
 import subprocess
@@ -51,11 +52,14 @@ FORCE_CHUNK = False
 
 
 def api_key() -> str:
+    """API 키: 로컬은 키체인(og-api-key), CI는 환경변수 OG_API_KEY 에서 읽는다."""
     out = subprocess.run(['security', 'find-generic-password', '-s', 'og-api-key', '-w'],
                          capture_output=True, text=True)
     key = out.stdout.strip()
     if not key:
-        raise SystemExit('키체인에 og-api-key 가 없습니다')
+        key = os.environ.get('OG_API_KEY', '').strip()
+    if not key:
+        raise SystemExit('키 없음: 키체인 og-api-key 또는 환경변수 OG_API_KEY 가 필요합니다')
     return key
 
 
