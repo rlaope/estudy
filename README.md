@@ -996,9 +996,10 @@
 - [Agent Long Term Memory System](http://github.com/rlaope/estudy/blob/master/brains/AI/longterm.md)
 - [QWEN 모델 분석](http://github.com/rlaope/estudy/blob/master/brains/AI/ow/qwen_deepdive.md)
 - [Kimi 모델 분석](http://github.com/rlaope/estudy/blob/master/brains/AI/ow/kimi_deepdive.md)
+- [GLM-5.3 모델 분석](http://github.com/rlaope/estudy/blob/master/brains/AI/ow/glm53.md)
 - [DeepSeek V4.1 Flash 분석](http://github.com/rlaope/estudy/blob/master/brains/AI/deepseek41.md)
-
 - [SIFT, SURF](http://github.com/rlaope/estudy/blob/master/brains/AI/sift.md)
+
 ----
 
 #### AI/MLOps
