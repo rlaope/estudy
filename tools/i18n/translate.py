@@ -30,7 +30,7 @@ import urllib.request
 REPO = pathlib.Path(__file__).resolve().parents[2]
 SRC = REPO / 'brains'
 DST = REPO / 'brains-en'
-CACHE = REPO / '.cache/i18n'
+CACHE = REPO / 'tools/i18n/cache'
 INDEX = CACHE / 'index.json'
 BASE_URL = 'https://apis.opengateway.ai/v1'
 MODEL = 'google/gemini-2.5-flash'

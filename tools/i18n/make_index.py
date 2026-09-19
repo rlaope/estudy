@@ -27,7 +27,7 @@ EN_README = REPO / 'README.en.md'   # 영어판(이 스크립트가 생성)
 EN_ROOT = REPO / 'brains-en'
 # 기본은 파이프라인 EN 스테이지 위치. 로컬 실험/다른 스테이지에는 환경변수로 덮어쓴다.
 OUT = pathlib.Path(os.environ.get('ESTUDY_EN_README_OUT', REPO / '.cache/content-en/README.md'))
-INTRO_CACHE = REPO / '.cache/i18n/en-readme-intro.json'
+INTRO_CACHE = REPO / 'tools/i18n/cache/en-readme-intro.json'
 LINK_RE = re.compile(r'https?://github\.com/rlaope/estudy/blob/master/([^)\s]+)')
 
 INTRO_SYSTEM = """You translate the opening section of a Korean software-engineering notes repository README into natural English.

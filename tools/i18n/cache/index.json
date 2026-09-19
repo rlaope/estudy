@@ -530,12 +530,12 @@
   "usage": 6459
  },
  "AI/ow/glm53.md": {
-  "at": "2026-09-18T08:51:43Z",
+  "at": "2026-09-19T06:21:58Z",
   "bad": [],
-  "dst": "565ed86a783cfdf8",
-  "model": "(skip: 빈 노트)",
-  "src": "565ed86a783cfdf8",
-  "usage": 0
+  "dst": "91dd84a8081b76d2",
+  "model": "google/gemini-2.5-flash",
+  "src": "bbd02ccb075797e7",
+  "usage": 19142
  },
  "AI/ow/kimi.md": {
   "at": "2026-09-17T10:10:14Z",

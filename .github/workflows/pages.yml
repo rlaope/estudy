@@ -63,11 +63,11 @@ jobs:
             echo "OG_API_KEY 시크릿이 없어 영어 자동 동기화를 건너뜁니다"
             exit 0
           fi
-          python3 tools/i18n/translate.py --all --workers 6 2>&1 | tail -6 || true
+          python3 tools/i18n/translate.py --all --workers 6 2>&1 | tail -6
 
       - name: Commit synced English notes
         run: |
-          git add -f brains-en .cache/i18n
+          git add brains-en tools/i18n/cache
           if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
