@@ -261,8 +261,8 @@ Some content might not be helpful to you, but I hope some might become a turning
 - [MicroService Monitoring System (cc. Loki/Grafana)](http://github.com/rlaope/estudy/blob/master/brains/DevOps/msa_monitoring.md)
 - [Presto](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws/presto.md)
 - [Service Discovery Patterns in MSA](http://github.com/rlaope/estudy/blob/master/brains/DevOps/service_discovery.md)
-
 - [IAM (Identity and Access Management)](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws/iam.md)
+
 ---
 
 #### SRE
@@ -498,15 +498,12 @@ Some content might not be helpful to you, but I hope some might become a turning
 - [Interface2](https://github.com/rlaope/estudy/blob/master/brains/Front-End/TS/TS_interface2.md)
   - [클래스 (class)](https://github.com/rlaope/Study_TypeScript/tree/main/class)
 - [Generic](https://github.com/rlaope/estudy/blob/master/brains/Front-End/TS/TS_generic.md)
-
 - [Component](http://github.com/rlaope/estudy/blob/master/brains/Front-End/React/component.md)
----
-- [What is GIT?](http://github.com/rlaope/estudy/blob/master/brains/Back-End/git/basic.md)
 
-- [Issue](http://github.com/rlaope/estudy/blob/master/brains/Back-End/git/issue.md)
+---
+
 #### Frameworks
 - [Node.js](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Node/node.md)
-
 - [Npm(Node.js) - Basic Command Usage Summary](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Node/npm.md)
 - [What is the MVC Pattern?](http://github.com/rlaope/estudy/blob/master/brains/Back-End/spring/mvc.md)
   - [React](http://github.com/rlaope/estudy/blob/master/brains/Front-End/React/react.md)
