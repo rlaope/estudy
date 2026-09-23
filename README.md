@@ -262,7 +262,6 @@
 - [MicroService Monitoring System (cc. Loki/Grafana)](http://github.com/rlaope/estudy/blob/master/brains/DevOps/msa_monitoring.md)
 - [Presto](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws/presto.md)
 - [MSA에서의 Service discovery 패턴](http://github.com/rlaope/estudy/blob/master/brains/DevOps/service_discovery.md)
-
 - [IAM(Identity and Access Management)](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws/iam.md)
 ---
 
@@ -499,13 +498,12 @@
 - [인터페이스2 (interface2)](https://github.com/rlaope/estudy/blob/master/brains/Front-End/TS/TS_interface2.md)
   - [클래스 (class)](https://github.com/rlaope/Study_TypeScript/tree/main/class)
 - [Generic 알아보기](https://github.com/rlaope/estudy/blob/master/brains/Front-End/TS/TS_generic.md)
-
 - [Component](http://github.com/rlaope/estudy/blob/master/brains/Front-End/React/component.md)
----
-- [GIT 이란? 무엇인가](http://github.com/rlaope/estudy/blob/master/brains/Back-End/git/basic.md)
 
-- [Issue](http://github.com/rlaope/estudy/blob/master/brains/Back-End/git/issue.md)
+---
+
 #### Frameworks
+
 - [Node.js](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Node/node.md)
 
 - [Npm(Node.js) - 기초 명령어 사용법 정리](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Node/npm.md)
