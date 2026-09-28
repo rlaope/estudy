@@ -996,6 +996,7 @@
 - [GLM-5.3 모델 분석](http://github.com/rlaope/estudy/blob/master/brains/AI/ow/glm53.md)
 - [DeepSeek V4.1 Flash 분석](http://github.com/rlaope/estudy/blob/master/brains/AI/deepseek41.md)
 - [SIFT, SURF](http://github.com/rlaope/estudy/blob/master/brains/AI/sift.md)
+- [에이전트의 Adaptive Retrival](http://github.com/rlaope/estudy/blob/master/brains/AI/adaptive_retrival.md)
 
 ----
 
