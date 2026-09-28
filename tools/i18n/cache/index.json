@@ -1,4 +1,12 @@
 {
+ "AI/adaptive_retrival.md": {
+  "at": "2026-09-28T13:58:43Z",
+  "bad": [],
+  "dst": "f80d67b90f8995a8",
+  "model": "google/gemini-2.5-flash",
+  "src": "b28317a8f1a35aa5",
+  "usage": 14140
+ },
  "AI/agent_state/README.md": {
   "at": "2026-09-17T10:06:14Z",
   "bad": [],
