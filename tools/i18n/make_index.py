@@ -17,6 +17,7 @@ import os
 import pathlib
 import re
 import sys
+import urllib.parse
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from translate import api_key, call_model, strip_wrapper  # noqa: E402 (같은 디렉터리 모듈)
@@ -95,7 +96,8 @@ def main() -> int:
         if not m:
             out_lines.append(line)
             continue
-        path = m.group(1).split('#')[0].split('?')[0]
+        # 링크는 한글 경로를 %EC.. 로 인코딩해 둔 경우가 있어 파일 조회 전에 디코딩한다.
+        path = urllib.parse.unquote(m.group(1).split('#')[0].split('?')[0])
         if path.startswith('brains/'):
             path = path[len('brains/'):]
         total += 1
