@@ -66,8 +66,13 @@ jobs:
           python3 tools/i18n/translate.py --all --workers 6 2>&1 | tail -6
 
       - name: Commit synced English notes
+        env:
+          OG_API_KEY: ${{ secrets.OG_API_KEY }}
         run: |
-          git add brains-en tools/i18n/cache
+          # README.en.md(영어 색인)는 brains-en 제목으로 만들어지므로 번역 직후·커밋 전에 생성한다.
+          # 같은 실행에서 .cache/content-en/README.md(EN 사이트 홈)도 함께 쓰인다.
+          python3 tools/i18n/make_index.py
+          git add brains-en tools/i18n/cache README.en.md
           if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -81,7 +86,6 @@ jobs:
       - name: Build EN site (/en/)
         if: ${{ hashFiles('brains-en/**/*.md') != '' }}
         run: |
-          python3 tools/i18n/make_index.py
           hugo --config site/hugo.toml,site/hugo.en.toml --contentDir .cache/content-en \
             --destination public/en --minify --baseURL "${{ steps.pages.outputs.base_url }}/en/"
           # 공용 자산(CSS/JS·파비콘·그래프 데이터)은 EN 트리에도 복사한다(상대 경로로 참조됨).

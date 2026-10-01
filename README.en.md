@@ -262,7 +262,6 @@ Some content might not be helpful to you, but I hope some might become a turning
 - [Presto](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws/presto.md)
 - [Service Discovery Patterns in MSA](http://github.com/rlaope/estudy/blob/master/brains/DevOps/service_discovery.md)
 - [IAM (Identity and Access Management)](http://github.com/rlaope/estudy/blob/master/brains/DevOps/aws/iam.md)
-
 ---
 
 #### SRE
@@ -503,6 +502,7 @@ Some content might not be helpful to you, but I hope some might become a turning
 ---
 
 #### Frameworks
+
 - [Node.js](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Node/node.md)
 - [Npm(Node.js) - Basic Command Usage Summary](http://github.com/rlaope/estudy/blob/master/brains/Back-End/Node/npm.md)
 - [What is the MVC Pattern?](http://github.com/rlaope/estudy/blob/master/brains/Back-End/spring/mvc.md)
@@ -992,9 +992,11 @@ Some content might not be helpful to you, but I hope some might become a turning
 - [Long-Term Memory Research](http://github.com/rlaope/estudy/blob/master/brains/AI/longterm.md)
 - [QWEN Model Analysis](http://github.com/rlaope/estudy/blob/master/brains/AI/ow/qwen_deepdive.md)
 - [Kimi Model Analysis](http://github.com/rlaope/estudy/blob/master/brains/AI/ow/kimi_deepdive.md)
+- [GLM-5.3 Analysis](http://github.com/rlaope/estudy/blob/master/brains/AI/ow/glm53.md)
 - [DeepSeek V4.1 Flash Archaeology](http://github.com/rlaope/estudy/blob/master/brains/AI/deepseek41.md)
-
 - [SIFT, SURF](http://github.com/rlaope/estudy/blob/master/brains/AI/sift.md)
+- [Adaptive Retrieval for Agents](http://github.com/rlaope/estudy/blob/master/brains/AI/adaptive_retrival.md)
+
 ----
 
 #### AI/MLOps

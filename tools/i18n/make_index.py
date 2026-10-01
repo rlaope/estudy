@@ -118,7 +118,7 @@ def main() -> int:
     if not args.no_intro and intro_ko:
         try:
             intro_en = translate_intro(intro_ko)
-        except Exception as e:
+        except (Exception, SystemExit) as e:  # 키 없음(api_key 의 SystemExit)도 한국어 폴백
             print(f'인트로 번역 실패({str(e)[:80]}) — 한국어 유지')
     # 레포 기본 문서는 한국어 README.md 이고, 이 파일은 영어판이다(헤더 장식 없이 본문만).
     header = ''
