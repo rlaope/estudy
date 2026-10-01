@@ -106,10 +106,13 @@ def main() -> int:
             missing += 1
             out_lines.append(line)  # 번역이 아직 없으면 KO 라벨 유지
             continue
-        # 라벨만 교체: [ ... ](<원래 url>)
+        # 라벨만 교체: [ ... ](<원래 url>). 라벨 안의 `[OS]` 같은 대괄호 1단계까지 허용한다.
         url = m.group(0)
-        out_lines.append(re.sub(r'\[[^\]]*\]\(' + re.escape(url) + r'\)',
-                                lambda _m, u=url, t=title: f'[{t}]({u})', line))
+        new, n = re.subn(r'\[(?:[^\[\]]|\[[^\[\]]*\])*\]\(' + re.escape(url) + r'\)',
+                         lambda _m, u=url, t=title: f'[{t}]({u})', line)
+        if n == 0:
+            missing += 1  # 라벨 형식을 못 읽음 -> KO 라벨 유지(미번역으로 집계)
+        out_lines.append(new)
 
     if args.check:
         print(f'링크 {total} · 영어 제목 있음 {total - missing} · 아직 없음 {missing}')
