@@ -724,7 +724,7 @@
 - [스테이트 패턴](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/state.md)
 - [책임 연쇄 패턴](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/chain_of_resp.md)
 - [커맨드 패턴](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/command.md)
-- [인터프리터 패턴](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/interpreter.md)
+- [인터프리터 패턴](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/Interpreter.md)
 - [이터레이터 패턴](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/iterator.md)
 - [중재자 패턴](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/mediator.md)
   - 구조 패턴
