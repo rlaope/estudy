@@ -723,7 +723,7 @@ Some content might not be helpful to you, but I hope some might become a turning
 - [State Pattern](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/state.md)
 - [Chain of Responsibility Pattern](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/chain_of_resp.md)
 - [Command Pattern](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/command.md)
-- [Interpreter Pattern](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/interpreter.md)
+- [인터프리터 패턴](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/interpreter.md)
 - [Iterator Pattern](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/iterator.md)
 - [Mediator Pattern](http://github.com/rlaope/estudy/blob/master/brains/Design-Pattern/행동/mediator.md)
   - 구조 패턴
