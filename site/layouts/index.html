@@ -83,15 +83,6 @@
     <p class="profile-role">{{ site.Params.authorRole | default "SWE & Researcher" }}</p>
   </div>
   <div class="home-layout">
-    <nav class="cat-rail" aria-label="{{ partial "t.html" "index" }}">
-      <ul>
-        {{- range $i, $g := $groups }}
-        {{- if $g.links }}
-        <li><a href="#g-{{ $i }}"><span class="nm">{{ $g.name }}</span><span class="cnt">· {{ len $g.links }}</span></a></li>
-        {{- end }}
-        {{- end }}
-      </ul>
-    </nav>
     <div class="index-groups">
       {{- range $i, $g := $groups }}
       {{- if $g.links }}
