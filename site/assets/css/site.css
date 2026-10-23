@@ -192,7 +192,7 @@ h4, h5, h6 { font-size: 17px; }
 .lang-switch .sep { opacity: 0.45; }
 
 .index-groups { margin: 0; }
-.index-group { margin: 0 0 calc(var(--space-5) + 4px); }
+.index-group { margin: 0 0 calc((var(--space-5) + 4px) * 1.15); } /* 그룹 사이 28px → +15% */
 .index-group > h2 {
   font-size: 20px;
   margin: 0 0 var(--space-3);
