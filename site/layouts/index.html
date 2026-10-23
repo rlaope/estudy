@@ -79,9 +79,9 @@
 <main id="main" class="main">
   <div class="profile">
     <img class="avatar" src="{{ site.Params.avatarURL | default "https://github.com/rlaope.png" }}" alt="" width="96" height="96" loading="lazy">
-    <p class="profile-name">{{ site.Params.authorName | default "rlaope" }}</p>
+    <h1 class="profile-name">{{ site.Params.authorName | default "rlaope" }}</h1>
+    <p class="profile-role">{{ site.Params.authorRole | default "SWE & Researcher" }}</p>
   </div>
-  <h1 class="home-title">estudy</h1>
   <div class="home-layout">
     <nav class="cat-rail" aria-label="{{ partial "t.html" "index" }}">
       <ul>

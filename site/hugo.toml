@@ -101,6 +101,7 @@ disableKinds = ['taxonomy', 'term', 'rss']
   description = ''
   repoURL = 'https://github.com/rlaope/estudy'
   repoBranch = 'master'
+  authorRole = 'SWE & Researcher'
   graphPath = 'graph.html'   # built by L2; home links to it
   lang = 'ko'
   koBase = 'https://rlaope.github.io/ko'

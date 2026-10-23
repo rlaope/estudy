@@ -167,7 +167,7 @@ h4, h5, h6 { font-size: 17px; }
 :root[data-mode="dark"] .theme-btn .ic-dark,
 :root[data-mode="system"] .theme-btn .ic-system { display: block; }
 
-/* ---------- 홈: 프로필 → estudy → 카테고리별 한 줄 리스트 ---------- */
+/* ---------- 홈: 프로필(이름 · 역할) → 카테고리별 한 줄 리스트 ---------- */
 .profile { text-align: center; margin: var(--space-6) 0 0; }
 .avatar {
   width: 96px;
@@ -176,8 +176,9 @@ h4, h5, h6 { font-size: 17px; }
   display: block;
   margin: 0 auto var(--space-3);
 }
-.profile-name { margin: 0; color: var(--muted); font-size: 15px; }
-.home-title { text-align: center; margin: var(--space-4) 0 var(--space-6); font-size: 36px; }
+.profile { margin-bottom: var(--space-6); }
+.profile-name { margin: 0; font-size: 36px; }
+.profile-role { margin: var(--space-2) 0 0; color: var(--muted); font-size: 15px; }
 
 /* 홈: 카테고리 레일 + 목록
    - 넓은 화면(≥1200px): 본문 컬럼은 640px 그대로 중앙 정렬하고, 레일은 컬럼 바깥 왼쪽에 고정
