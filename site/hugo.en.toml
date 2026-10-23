@@ -3,7 +3,7 @@
 # KO 판과 같은 템플릿/레이아웃을 그대로 쓰고, 베이스 URL·홈 색인 출처·언어 표시만 바꾼다.
 # 영어판이 기본 사이트(루트 /)이고 KO 판은 /ko/ 아래에 있다. 페이지 경로 구조는 같아 노트 안의 상대 링크도 그대로 맞는다.
 baseURL = 'https://rlaope.github.io/'
-title = 'estudy'
+title = 'rlaope'
 
 [params]
   lang = 'en'

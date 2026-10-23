@@ -144,7 +144,8 @@ h4, h5, h6 { font-size: 17px; }
   .site-header { margin-left: -32px; margin-right: -32px; }
 }
 .brand { font-weight: 700; }
-.brand a { color: inherit; text-decoration: none; }
+.brand a { color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.brand-logo { width: 28px; height: 28px; display: block; }
 .brand a:hover { text-decoration: underline; }
 .corner { display: flex; align-items: center; gap: var(--space-2); }
 .icon-btn {

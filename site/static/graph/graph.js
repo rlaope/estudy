@@ -176,7 +176,7 @@ async function main() {
     S.hubs.push(id);
     S.nodes.push({ id, title: name, url: HUB_URL(name), section: name, path: name + '/', degree: S.offsets[id + 1] - S.offsets[id], hub: true });
   });
-  S.nodes.push({ id: S.rootId, title: 'estudy', url: ROOT_URL, section: 'root', path: '/', degree: S.offsets[n] - S.offsets[n - 1], hub: true });
+  S.nodes.push({ id: S.rootId, title: 'rlaope', url: ROOT_URL, section: 'root', path: '/', degree: S.offsets[n] - S.offsets[n - 1], hub: true });
   S.hubs.push(S.rootId);
   S.hubIndex = hubIndex;
   S.hubMask = new Uint8Array(n); for (const id of S.hubs) S.hubMask[id] = 1;

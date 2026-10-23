@@ -6,7 +6,7 @@
 # (that drops the 75 DataBase notes: DataBase/index.md makes a leaf bundle — expected).
 
 baseURL = 'https://rlaope.github.io/ko/'
-title = 'estudy'
+title = 'rlaope'
 locale = 'ko'
 defaultContentLanguage = 'ko'
 hasCJKLanguage = true
