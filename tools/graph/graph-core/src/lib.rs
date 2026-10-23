@@ -29,7 +29,7 @@ pub struct Options {
     pub root: PathBuf,
     pub out: PathBuf,
     pub stage: PathBuf,
-    /// 사이트 루트 기준 경로(앞뒤 슬래시 포함). GitHub Pages 프로젝트 사이트는 `/estudy/`.
+    /// 사이트 루트 기준 경로(앞뒤 슬래시 포함). KO 판은 `/ko/` (EN 판이 사이트 루트).
     pub base_path: String,
     /// 레이아웃 방식: `spiral`(섹션 순서 나선, 기본) 또는 `fa2`(ForceAtlas2).
     pub layout_kind: String,
@@ -47,7 +47,7 @@ impl Default for Options {
             root: PathBuf::from("."),
             out: PathBuf::from("site/generated"),
             stage: PathBuf::from(".cache/content"),
-            base_path: "/estudy/".to_string(),
+            base_path: "/ko/".to_string(),
             layout_kind: "spiral".to_string(),
             content_prefix: "brains".to_string(),
             stage_en: None,

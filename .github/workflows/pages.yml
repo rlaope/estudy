@@ -5,10 +5,10 @@ on:
     branches: [master]
   workflow_dispatch:
 
+# 블로그는 사용자 사이트 https://rlaope.github.io/ 로 배포한다(EN = 루트, KO = /ko/).
+# 산출물은 rlaope/rlaope.github.io 의 gh-pages 브랜치로 푸시한다(PAGES_DEPLOY_KEY = 그 리포의 쓰기 deploy key).
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -37,23 +37,20 @@ jobs:
         with:
           tool: wasm-pack
 
-      - uses: actions/configure-pages@v6.0.0
-        id: pages
-
       - name: Build graph artifacts and staged content tree
         run: |
           cargo run --release -p graph-build -- \
-            --root . --out site/generated --stage .cache/content --stage-en .cache/content-en
+            --root . --out site/generated --stage .cache/content --stage-en .cache/content-en --base-path /ko/
 
       - name: Build WASM graph module
         run: |
           wasm-pack build site/graph/crates/graph-wasm --release --target web \
             --out-dir ../../../static/graph/pkg --out-name graph_wasm
 
-      - name: Build site
+      - name: Build KO site (/ko/)
         run: |
           hugo --config site/hugo.toml --contentDir .cache/content \
-            --destination public --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --destination public/ko --minify --baseURL "https://rlaope.github.io/ko/"
 
       - name: Sync English notes (auto-translate new/changed)
         env:
@@ -83,21 +80,20 @@ jobs:
             echo "동기화할 영어 노트 없음"
           fi
 
-      - name: Build EN site (/en/)
-        if: ${{ hashFiles('brains-en/**/*.md') != '' }}
+      - name: Build EN site (root, default)
         run: |
           hugo --config site/hugo.toml,site/hugo.en.toml --contentDir .cache/content-en \
-            --destination public/en --minify --baseURL "${{ steps.pages.outputs.base_url }}/en/"
-          # 공용 자산(CSS/JS·파비콘·그래프 데이터)은 EN 트리에도 복사한다(상대 경로로 참조됨).
-          cp -r public/assets public/en/ 2>/dev/null || true
-          cp public/favicon-*.png public/en/ 2>/dev/null || true
-          mkdir -p public/en/generated && cp site/generated/*.bin site/generated/*.json public/en/generated/
-          echo "en pages: $(find public/en -name '*.html' | wc -l)"
+            --destination public --minify --baseURL "https://rlaope.github.io/"
+          # 공용 자산(CSS/JS·파비콘)은 EN 트리에도 복사한다(상대 경로로 참조됨).
+          cp -r public/ko/assets public/ 2>/dev/null || true
+          cp public/ko/favicon-*.png public/ 2>/dev/null || true
+          echo "en pages: $(find public -path public/ko -prune -o -name '*.html' -print | wc -l)"
 
       - name: Publish graph data artifacts
         run: |
-          mkdir -p public/generated
-          cp site/generated/*.bin site/generated/*.json public/generated/
+          for d in public/generated public/ko/generated; do
+            mkdir -p "$d" && cp site/generated/*.bin site/generated/*.json "$d/"
+          done
           ls -l public/generated
 
       - name: Report build output
@@ -107,16 +103,14 @@ jobs:
           echo "wasm: $(find public -name '*.wasm' -exec ls -l {} \; | awk '{print $5, $9}')"
           du -sh public
 
-      - uses: actions/upload-pages-artifact@v5.0.0
+      - name: Deploy to rlaope.github.io (gh-pages)
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: public
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v5.0.1
+          deploy_key: ${{ secrets.PAGES_DEPLOY_KEY }}
+          external_repository: rlaope/rlaope.github.io
+          publish_branch: gh-pages
+          publish_dir: ./public
+          force_orphan: true
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_message: deploy estudy

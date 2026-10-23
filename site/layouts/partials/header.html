@@ -3,8 +3,8 @@
   <span class="corner">
     {{- /* 언어 전환: 절대 퍼머링크에서 언어 경로 접두만 바꾼다(어떤 baseURL 에서도 정확). */ -}}
     {{- $u := urls.Parse .Permalink -}}
-    {{- $koPath := site.Params.koPath | default "/estudy/" -}}
-    {{- $enPath := site.Params.enPath | default "/estudy/en/" -}}
+    {{- $koPath := site.Params.koPath | default "/ko/" -}}
+    {{- $enPath := site.Params.enPath | default "/" -}}
     <span class="lang-switch" role="group" aria-label="언어 / Language">
       {{- if eq (site.Params.lang | default "ko") "en" -}}
         {{- $rel := strings.TrimPrefix (strings.TrimSuffix "/" $enPath) $u.Path -}}

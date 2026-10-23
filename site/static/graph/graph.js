@@ -4,7 +4,7 @@
 // 이 파일은 사이트에서 유일하게 JS 가 실행되는 페이지(graph.html) 에서만 로드된다.
 
 // ---- 설정 ---------------------------------------------------------------
-// 데이터 베이스 경로: 페이지(graph.html) 기준 상대 경로. 배포는 /estudy/generated/ 가 된다.
+// 데이터 베이스 경로: 페이지(graph.html) 기준 상대 경로. 배포는 /generated/ (EN) 와 /ko/generated/ (KO) 가 된다.
 // 로컬 테스트: graph.html?data=http://127.0.0.1:8123/generated/
 const DATA_BASE = 'generated/';
 // 섹션 허브 링크 (graph.html 기준 상대). Hugo uglyURLs=true → <Section>.html

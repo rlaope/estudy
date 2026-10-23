@@ -3,4 +3,12 @@
   <h1 class="article-title">404</h1>
   <p>{{ partial "t.html" "notfound" }} <a href="{{ site.Home.RelPermalink }}">{{ partial "t.html" "notfoundCta" }}</a></p>
 </main>
+{{- /* 예전 프로젝트 사이트 주소(/estudy/...)는 KO 판(/ko/...)으로 옮겨졌다. GitHub Pages 는 루트 404.html 을 내주므로 여기서 넘긴다. */ -}}
+<script>
+(function () {
+  var p = location.pathname;
+  if (p.indexOf('/estudy/en/') === 0) location.replace('/' + p.slice(11) + location.search + location.hash);
+  else if (p === '/estudy' || p.indexOf('/estudy/') === 0) location.replace('/ko/' + p.slice(8) + location.search + location.hash);
+})();
+</script>
 {{- end }}

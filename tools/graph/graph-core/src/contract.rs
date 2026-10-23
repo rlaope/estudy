@@ -117,7 +117,7 @@ pub fn render(r: &Report) -> String {
     out.push_str("| 그 밖의 저장소 파일 (`*.png`, `*.ipynb`) | 스테이지 안 같은 경로 상대 URL(사이트 밖으로 나가지 않게) |\n");
     out.push_str("| 외부 URL, `#anchor`, `mailto:` | 손대지 않음 |\n\n");
     out.push_str("해석 순서: (1) `.md` 정확 일치 → (2) `.md` 대소문자 무시 일치 → (3) 디렉터리면 섹션 페이지 → (4) 파일 정확/대소문자 무시 일치 → (5) 저장소 전체에서 basename 이 유일한 파일 → (6) 확장자 교정(`paxra.m` → `paxra.md`). (5)(6) 은 원문이 옮겨졌거나 오타인 경우를 복구한다.\n\n");
-    out.push_str("링크 URL 은 원본 페이지 기준 **상대 경로**로 쓴다(`../JAVA/jvm.html`). base path 가 `/` 든 `/estudy/` 든, `hugo server` 든 GitHub Pages 든 동일하게 동작하기 때문이다. 공백/`%`/`#`/`?`/괄호는 퍼센트 인코딩하고 한글은 그대로 둔다(NFC).\n\n");
+    out.push_str("링크 URL 은 원본 페이지 기준 **상대 경로**로 쓴다(`../JAVA/jvm.html`). base path 가 `/` 든 `/ko/` 든, `hugo server` 든 GitHub Pages 든 동일하게 동작하기 때문이다. 공백/`%`/`#`/`?`/괄호는 퍼센트 인코딩하고 한글은 그대로 둔다(NFC).\n\n");
     out.push_str("스테이지 규칙:\n\n");
     out.push_str("- 트리 구조를 그대로 복사한다(이미지 포함). 제외: `.git`, `.omh`, `site`, `.cache`, `public`, `.github`, `tools`, `target`, `.cargo`, 루트의 `Cargo.toml`/`Cargo.lock`.\n");
     out.push_str("- `DataBase/index.md` → `DataBase/_index.md` 로 이름만 바꾼다. Hugo 가 `index.md` 를 leaf bundle 로 보고 형제 노트 75개를 흡수하기 때문이다(실측).\n");

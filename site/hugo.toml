@@ -5,7 +5,7 @@
 # Override with `--contentDir .` to build straight from the raw repo
 # (that drops the 75 DataBase notes: DataBase/index.md makes a leaf bundle — expected).
 
-baseURL = 'https://rlaope.github.io/estudy/'
+baseURL = 'https://rlaope.github.io/ko/'
 title = 'estudy'
 locale = 'ko'
 defaultContentLanguage = 'ko'
@@ -103,13 +103,13 @@ disableKinds = ['taxonomy', 'term', 'rss']
   repoBranch = 'master'
   graphPath = 'graph.html'   # built by L2; home links to it
   lang = 'ko'
-  koBase = 'https://rlaope.github.io/estudy'
-  enBase = 'https://rlaope.github.io/estudy/en'
+  koBase = 'https://rlaope.github.io/ko'
+  enBase = 'https://rlaope.github.io'
   # KO 홈 색인의 출처(한국어 README). 영어 README.md 는 도구가 생성하는 GitHub 기본 문서다.
   readmeFile = 'README.md'
   # 언어 전환에서 바꿔 끼울 사이트 경로(운영 기준). 다른 호스트로 배포하면 여기만 바꾸면 된다.
-  koPath = '/estudy/'
-  enPath = '/estudy/en/'
+  koPath = '/ko/'
+  enPath = '/'
 
 [minify]
   disableXML = true

@@ -7,7 +7,7 @@
 //!   --root <dir>        리포 루트 (기본 `.`)
 //!   --out <dir>         동결 산출물 출력 디렉터리 (기본 `site/generated`)
 //!   --stage <dir>       Hugo 가 contentDir 로 쓸 스테이지 트리 (기본 `.cache/content`)
-//!   --base-path <path>  사이트 루트 경로 (기본 `/estudy/`)
+//!   --base-path <path>  사이트 루트 경로 (기본 `/ko/`)
 //!   --seed <u64>        레이아웃 시드 (기본 20260917)
 //!   --iterations <n>    ForceAtlas2 반복 횟수 (기본 300)
 
@@ -48,7 +48,7 @@ fn main() -> ExitCode {
             "-h" | "--help" => {
                 println!(
                     "graph-build --root <dir> --out <dir> --stage <dir>\n\
-                     \x20 [--content-prefix brains] [--layout spiral|fa2] [--base-path /estudy/] [--seed 20260917] [--iterations 300]"
+                     \x20 [--content-prefix brains] [--layout spiral|fa2] [--base-path /ko/] [--seed 20260917] [--iterations 300]"
                 );
                 return ExitCode::SUCCESS;
             }

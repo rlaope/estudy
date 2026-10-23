@@ -2,14 +2,14 @@
 # 배포된 estudy 블로그를 실제 URL로 검증한다.
 #
 # 사용법:
-#   site/scripts/verify_deploy.sh                       # 기본: https://rlaope.github.io/estudy
+#   site/scripts/verify_deploy.sh                       # 기본: https://rlaope.github.io/ko (KO 판)
 #   site/scripts/verify_deploy.sh https://example.com/  # 다른 base URL
 #
 # 검사 항목: 홈/섹션/노트/이미지/그래프 자산 응답 코드, 노트 본문 JS 0, wasm MIME,
 #            README 색인의 github blob 링크 잔존 수, 한국어 파일명 200.
 set -uo pipefail
 
-BASE="${1:-https://rlaope.github.io/estudy}"
+BASE="${1:-https://rlaope.github.io/ko}"
 BASE="${BASE%/}"
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 SEARCH_JSON="$REPO_ROOT/site/generated/search.json"
@@ -58,12 +58,12 @@ from urllib.parse import urlsplit
 search_json, base, repo = sys.argv[1], sys.argv[2].rstrip("/"), sys.argv[3]
 sp = urlsplit(base)
 origin = f"{sp.scheme}://{sp.netloc}"
-prefix = sp.path.rstrip("/")            # 예: /estudy
+prefix = sp.path.rstrip("/")            # 예: /ko
 
 data = json.load(open(search_json, encoding="utf-8"))
 
 def absolute(u):
-    """search.json 의 url 은 루트 기준 절대경로(/estudy/...)라 origin 만 붙인다."""
+    """search.json 의 url 은 루트 기준 절대경로(/ko/...)라 origin 만 붙인다."""
     if u.startswith("http"):
         return u
     return origin + (u if u.startswith("/") else "/" + u)
