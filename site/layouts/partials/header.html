@@ -1,5 +1,5 @@
 <header class="site-header">
-  <span class="brand"><a href="{{ site.Home.RelPermalink }}">estudy</a></span>
+  <span class="brand"><a href="{{ site.Home.RelPermalink }}">{{ site.Params.authorName | default "rlaope" }}</a></span>
   <span class="corner">
     {{- /* 언어 전환: 절대 퍼머링크에서 언어 경로 접두만 바꾼다(어떤 baseURL 에서도 정확). */ -}}
     {{- $u := urls.Parse .Permalink -}}
