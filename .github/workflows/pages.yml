@@ -46,6 +46,8 @@ jobs:
         run: |
           wasm-pack build site/graph/crates/graph-wasm --release --target web \
             --out-dir ../../../static/graph/pkg --out-name graph_wasm
+          # wasm-pack 이 만드는 .gitignore('*') 가 있으면 gh-pages 푸시에서 pkg 가 통째로 빠진다.
+          rm -f site/static/graph/pkg/.gitignore
 
       - name: Build KO site (/ko/)
         run: |
