@@ -609,6 +609,14 @@
   "src": "d545e5ec0d2c171c",
   "usage": 13064
  },
+ "AI/rl/README.md": {
+  "at": "2026-11-15T14:10:18Z",
+  "bad": [],
+  "dst": "2bba7d0002f02157",
+  "model": "google/gemini-2.5-flash",
+  "src": "456c216c3485179c",
+  "usage": 30621
+ },
  "AI/rl2.md": {
   "at": "2026-11-15T14:06:59Z",
   "bad": [],
@@ -6103,6 +6111,16 @@
   "model": "google/gemini-2.5-flash",
   "src": "53c84800fe573477",
   "usage": 65464
+ },
+ "MLOps/serving2.md": {
+  "at": "2026-11-15T14:13:25Z",
+  "bad": [
+   "코드펜스 72→74"
+  ],
+  "dst": "ddfa6fdb1b21526d",
+  "model": "google/gemini-2.5-flash",
+  "src": "55f9b4474367a094",
+  "usage": 99270
  },
  "MLOps/sglang.md": {
   "at": "2026-09-17T10:29:02Z",
