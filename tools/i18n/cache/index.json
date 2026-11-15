@@ -609,6 +609,14 @@
   "src": "d545e5ec0d2c171c",
   "usage": 13064
  },
+ "AI/rl2.md": {
+  "at": "2026-11-15T14:06:59Z",
+  "bad": [],
+  "dst": "24e44870cdd75d03",
+  "model": "(skip: 빈 노트)",
+  "src": "24e44870cdd75d03",
+  "usage": 0
+ },
  "AI/rnn.md": {
   "at": "2026-09-17T10:10:21Z",
   "bad": [],
@@ -6015,6 +6023,14 @@
   "model": "google/gemini-2.5-flash",
   "src": "4672b5e01d726a17",
   "usage": 6776
+ },
+ "MLOps/infiniband.md": {
+  "at": "2026-11-15T14:07:00Z",
+  "bad": [],
+  "dst": "84a5e715899e1c4b",
+  "model": "(skip: 빈 노트)",
+  "src": "84a5e715899e1c4b",
+  "usage": 0
  },
  "MLOps/llm_performance/bench.md": {
   "at": "2026-09-17T10:26:39Z",

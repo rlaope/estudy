@@ -1023,6 +1023,7 @@ Some content might not be helpful to you, but I hope some might become a turning
 - [Parallelization Strategies — TP, PP, EP, DP](http://github.com/rlaope/estudy/blob/master/brains/MLOps/np.md)
 - [How a Model Loads onto a GPU](http://github.com/rlaope/estudy/blob/master/brains/MLOps/gpumodel.md)
 - [Distributed Serving and Communication](http://github.com/rlaope/estudy/blob/master/brains/MLOps/distribute_serving.md)
+- [LLM 서빙에서 라우팅, 스케줄링, 오토스케일링, 멀티 LoRA](http://github.com/rlaope/estudy/blob/master/brains/MLOps/serving2.md)
 
 ----
 
