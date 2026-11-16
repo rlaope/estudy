@@ -344,10 +344,29 @@ pub fn run(opts: &Options) -> Result<Report, String> {
                 .collect();
             en_dirs.sort();
             en_dirs.dedup();
-            let en_notes: Vec<String> = en_sc.notes.iter().map(|i| en_sc.files[*i].rel.clone()).collect();
+            // 아직 번역이 없는 KO 노트는 KO 원문으로 채운다 — EN 사이트(루트)와 언어 전환 링크가
+            // 번역 지연·실패 때문에 404 가 되지 않게 한다. 번역이 생기면 다음 빌드에서 자동 교체된다.
+            let mut en_src: Vec<(String, PathBuf)> = en_sc
+                .notes
+                .iter()
+                .map(|i| (en_sc.files[*i].rel.clone(), en_sc.files[*i].abs.clone()))
+                .collect();
+            let en_have: std::collections::HashSet<String> =
+                en_src.iter().map(|(r, _)| r.clone()).collect();
+            let mut ko_fallback = 0usize;
+            for i in &sc.notes {
+                let e = &sc.files[*i];
+                if !en_have.contains(&e.rel) {
+                    en_src.push((e.rel.clone(), e.abs.clone()));
+                    ko_fallback += 1;
+                }
+            }
+            en_src.sort_by(|a, b| a.0.cmp(&b.0));
+            let en_notes: Vec<String> = en_src.iter().map(|(r, _)| r.clone()).collect();
             // 자산(.md 이외)은 KO 트리에서 복사하므로, 리졸버 파일 목록에도 넣어야
             // `image/foo.png` 같은 상대 링크가 미해석으로 세어지지 않는다.
             let mut en_files: Vec<String> = en_sc.files.iter().map(|f| f.rel.clone()).collect();
+            en_files.extend(en_notes.iter().cloned());
             for e in &sc.files {
                 if !e.rel.ends_with(".md") && !e.rel.is_empty() {
                     en_files.push(e.rel.clone());
@@ -358,12 +377,11 @@ pub fn run(opts: &Options) -> Result<Report, String> {
             let en_resolver = links::Resolver::new(&en_notes, &en_files, &en_dirs, &prefix);
             stage::prepare_stage(&en_stage_abs, &en_root)?;
             let mut en_stats = links::Stats::default();
-            for (i, entry_idx) in en_sc.notes.iter().enumerate() {
-                let e = &en_sc.files[*entry_idx];
-                let bytes = std::fs::read(&e.abs)
-                    .map_err(|err| format!("읽기 실패 {}: {}", e.abs.display(), err))?;
+            for (i, (rel, abs)) in en_src.iter().enumerate() {
+                let bytes = std::fs::read(abs)
+                    .map_err(|err| format!("읽기 실패 {}: {}", abs.display(), err))?;
                 let content = String::from_utf8(bytes)
-                    .map_err(|err| format!("UTF-8 디코딩 실패 {}: {}", e.rel, err))?;
+                    .map_err(|err| format!("UTF-8 디코딩 실패 {}: {}", rel, err))?;
                 let (new_content, _) = links::rewrite_note(&content, i, &en_resolver, &mut en_stats);
                 let staged = &en_resolver.staged_notes[i];
                 let dst = stage::stage_path(&en_stage_abs, staged)?;
@@ -379,12 +397,16 @@ pub fn run(opts: &Options) -> Result<Report, String> {
                 en_assets += 1;
             }
             println!(
-                "[L1] EN 스테이지: 노트 {} 개 + 자산 {} 개 → {} (미해석 링크 {} 개)",
+                "[L1] EN 스테이지: 노트 {} 개(번역 없어 KO 원문 대체 {} 개) + 자산 {} 개 → {} (미해석 링크 {} 개)",
                 en_notes.len(),
+                ko_fallback,
                 en_assets,
                 en_stage_abs.display(),
                 en_stats.unresolved.len()
             );
+            for u in en_stats.unresolved.iter().take(20) {
+                println!("      - EN 미해석: {}", u);
+            }
         }
     }
 

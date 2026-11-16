@@ -45,7 +45,7 @@ Loosely coupled system - Each processor has its own local memory.
 
 This is a difference from parallel systems (parallel systems share memory). Also, communication with other processors occurs via high-speed buses and networks.
 
-![Alt text](./image/image.1.png)
+![Alt text](./image/image-1.png)
 
 ### Advantages
 

@@ -10,7 +10,7 @@
       <h1 class="article-title">{{ $title }}</h1>
       <p class="meta">
         <span>{{ .WordCount | lang.FormatNumberCustom 0 }} 단어</span><span class="sep">·</span><span>{{ .ReadingTime }} 분</span>
-        {{- with .File }}<span class="sep">·</span><a href="{{ site.Params.repoURL }}/blob/{{ site.Params.repoBranch }}/{{ .Path }}" rel="noopener">원문(.md)</a>{{ end }}
+        {{- with .File }}<span class="sep">·</span><a href="{{ site.Params.repoURL }}/blob/{{ site.Params.repoBranch }}/{{ if ne .Path "README.md" }}{{ with site.Params.contentPrefix }}{{ . }}/{{ end }}{{ end }}{{ .Path }}" rel="noopener">원문(.md)</a>{{ end }}
       </p>
     </header>
     <div class="prose">

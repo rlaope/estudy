@@ -36,7 +36,7 @@ titleCaseStyle = 'none'
 
 # Raw-repo builds (--contentDir .) must not ingest the shell, tools or notebooks.
 # Matched against the absolute source path — never list `.cache/` here (it would hide the staged content tree itself).
-ignoreFiles = ['/site/', '/tools/', '/\.omh/', '/\.cargo/', '/\.github/', '/target/', '\.ipynb$', '/Cargo\.(toml|lock)$']
+ignoreFiles = ['/site/', '/tools/', '/\.omh/', '/\.cargo/', '/\.github/', '/target/', '/Cargo\.(toml|lock)$']
 
 disableKinds = ['taxonomy', 'term', 'rss']
 
@@ -101,6 +101,8 @@ disableKinds = ['taxonomy', 'term', 'rss']
   description = ''
   repoURL = 'https://github.com/rlaope/estudy'
   repoBranch = 'master'
+  # 노트 원본 폴더(리포 기준). '원문(.md)' 링크가 blob/master/brains/<경로> 로 가야 404 가 안 난다.
+  contentPrefix = 'brains'
   authorRole = 'SWE & Researcher'
   graphPath = 'graph.html'   # built by L2; home links to it
   lang = 'ko'
