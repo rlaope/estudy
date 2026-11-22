@@ -86,7 +86,8 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit -m "chore(i18n): 영어 노트 자동 동기화 [skip ci]"
             # 번역하는 동안 master 에 새 커밋이 올라왔으면 그 위로 올린다.
-            git pull --rebase origin master
+            # wasm-pack 이 추적 중인 site/static/graph/pkg/* 를 다시 써서 working tree 가 dirty 하므로 autostash 필요.
+            git pull --rebase --autostash origin master
             git push
             echo "영어 노트 커밋/푸시 완료"
           else
