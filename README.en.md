@@ -996,6 +996,7 @@ Some content might not be helpful to you, but I hope some might become a turning
 - [DeepSeek V4.1 Flash Archaeology](http://github.com/rlaope/estudy/blob/master/brains/AI/deepseek41.md)
 - [SIFT, SURF](http://github.com/rlaope/estudy/blob/master/brains/AI/sift.md)
 - [Adaptive Retrieval for Agents](http://github.com/rlaope/estudy/blob/master/brains/AI/adaptive_retrival.md)
+- [GDN(Gated DeltaNet)](http://github.com/rlaope/estudy/blob/master/brains/AI/gdn.md)
 
 ----
 
@@ -1024,6 +1025,7 @@ Some content might not be helpful to you, but I hope some might become a turning
 - [How a Model Loads onto a GPU](http://github.com/rlaope/estudy/blob/master/brains/MLOps/gpumodel.md)
 - [Distributed Serving and Communication](http://github.com/rlaope/estudy/blob/master/brains/MLOps/distribute_serving.md)
 - [Routing, Scheduling, Autoscaling, and Multi-LoRA in Model Serving](http://github.com/rlaope/estudy/blob/master/brains/MLOps/serving2.md)
+- [Vera Rubin Analysis](http://github.com/rlaope/estudy/blob/master/brains/MLOps/rubin.md)
 
 ----
 

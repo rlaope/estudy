@@ -121,6 +121,16 @@
   "src": "4600d5d61c72c434",
   "usage": 7368
  },
+ "AI/gdn.md": {
+  "at": "2026-11-22T12:35:19Z",
+  "bad": [
+   "제목 32→21"
+  ],
+  "dst": "08a15796123788fd",
+  "model": "google/gemini-2.5-flash",
+  "src": "4a46ea9b8bb69342",
+  "usage": 23469
+ },
  "AI/gpu.md": {
   "at": "2026-09-17T10:07:18Z",
   "bad": [],
@@ -6103,6 +6113,14 @@
   "model": "google/gemini-2.5-flash",
   "src": "40acdd2257dc298e",
   "usage": 8095
+ },
+ "MLOps/rubin.md": {
+  "at": "2026-11-22T12:36:57Z",
+  "bad": [],
+  "dst": "484224145c9152f9",
+  "model": "google/gemini-2.5-flash",
+  "src": "1a9679dc4ed1ddbf",
+  "usage": 59640
  },
  "MLOps/serving.md": {
   "at": "2026-09-17T10:29:51Z",
