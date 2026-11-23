@@ -1039,3 +1039,4 @@ Some content might not be helpful to you, but I hope some might become a turning
 - [Eigenvalues and the Cayley-Hamilton Theorem](http://github.com/rlaope/estudy/blob/master/brains/Math/math5.md)
 - [Matrix Decomposition](http://github.com/rlaope/estudy/blob/master/brains/Math/math6.md)
 - [선형대수 실습 노트북 (LU·QR·고윳값·SVD)](http://github.com/rlaope/estudy/blob/master/brains/Math/linear_algebra_lab.ipynb)
+- [Minimum Linear Algebra Set for Deep Learning](http://github.com/rlaope/estudy/blob/master/brains/Math/linear.md)

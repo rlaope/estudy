@@ -6274,6 +6274,14 @@
   "src": "098721b98120379f",
   "usage": 1518
  },
+ "Math/linear.md": {
+  "at": "2026-11-23T14:54:24Z",
+  "bad": [],
+  "dst": "60f6dc1c2c4d53c8",
+  "model": "google/gemini-2.5-flash",
+  "src": "56fbba9f8cf00d5d",
+  "usage": 73721
+ },
  "Math/math1.md": {
   "at": "2026-09-17T10:27:55Z",
   "bad": [],
