@@ -1026,6 +1026,7 @@ Some content might not be helpful to you, but I hope some might become a turning
 - [Distributed Serving and Communication](http://github.com/rlaope/estudy/blob/master/brains/MLOps/distribute_serving.md)
 - [Routing, Scheduling, Autoscaling, and Multi-LoRA in Model Serving](http://github.com/rlaope/estudy/blob/master/brains/MLOps/serving2.md)
 - [Vera Rubin Analysis](http://github.com/rlaope/estudy/blob/master/brains/MLOps/rubin.md)
+- [Speculative Decoding](http://github.com/rlaope/estudy/blob/master/brains/AI/spedeco.md)
 
 ----
 
@@ -1033,10 +1034,10 @@ Some content might not be helpful to you, but I hope some might become a turning
 
 - [Mathematics](http://github.com/rlaope/estudy/blob/master/brains/Math/README.md)
   - [Systems of Linear Equations and Matrices](http://github.com/rlaope/estudy/blob/master/brains/Math/math1.md) 
-- [Gauss-Jordan Elimination and Various Matrices](http://github.com/rlaope/estudy/blob/master/brains/Math/math2.md)
-- [Vector Spaces and Inner Products](http://github.com/rlaope/estudy/blob/master/brains/Math/math3.md)
-- [Linear Transformations and the Rank-Nullity Theorem](http://github.com/rlaope/estudy/blob/master/brains/Math/math4.md)
-- [Eigenvalues and the Cayley-Hamilton Theorem](http://github.com/rlaope/estudy/blob/master/brains/Math/math5.md)
-- [Matrix Decomposition](http://github.com/rlaope/estudy/blob/master/brains/Math/math6.md)
-- [선형대수 실습 노트북 (LU·QR·고윳값·SVD)](http://github.com/rlaope/estudy/blob/master/brains/Math/linear_algebra_lab.ipynb)
-- [Minimum Linear Algebra Set for Deep Learning](http://github.com/rlaope/estudy/blob/master/brains/Math/linear.md)
+  - [Gauss-Jordan Elimination and Various Matrices](http://github.com/rlaope/estudy/blob/master/brains/Math/math2.md)
+  - [Vector Spaces and Inner Products](http://github.com/rlaope/estudy/blob/master/brains/Math/math3.md)
+  - [Linear Transformations and the Rank-Nullity Theorem](http://github.com/rlaope/estudy/blob/master/brains/Math/math4.md)
+  - [Eigenvalues and the Cayley-Hamilton Theorem](http://github.com/rlaope/estudy/blob/master/brains/Math/math5.md)
+  - [Matrix Decomposition](http://github.com/rlaope/estudy/blob/master/brains/Math/math6.md)
+  - [선형대수 실습 노트북 (LU·QR·고윳값·SVD)](http://github.com/rlaope/estudy/blob/master/brains/Math/linear_algebra_lab.ipynb)
+  - [Minimum Linear Algebra Set for Deep Learning](http://github.com/rlaope/estudy/blob/master/brains/Math/linear.md)
