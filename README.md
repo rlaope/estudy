@@ -1027,6 +1027,7 @@
 - [분산 서빙과 통신](http://github.com/rlaope/estudy/blob/master/brains/MLOps/distribute_serving.md)
 - [LLM 서빙에서 라우팅, 스케줄링, 오토스케일링, 멀티 LoRA](http://github.com/rlaope/estudy/blob/master/brains/MLOps/serving2.md)
 - [Vera Rubin 분석](http://github.com/rlaope/estudy/blob/master/brains/MLOps/rubin.md)
+- [Speculative Decoding](http://github.com/rlaope/estudy/blob/master/brains/AI/spedeco.md)
 
 ----
 
