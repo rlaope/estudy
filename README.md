@@ -26,6 +26,7 @@
 - [나만의 역량 강화, 지속 가능한 성장 방법](http://github.com/rlaope/estudy/blob/master/brains/Essentials/steady.md)
 - [카르페디엠(Carpe Diem)](http://github.com/rlaope/estudy/blob/master/brains/Essentials/carpedm.md)
 - [AI 시대에서 살아남는 방법](http://github.com/rlaope/estudy/blob/master/brains/Essentials/ai_ithink.md)
+- [Done is Better Than Perfect](http://github.com/rlaope/estudy/blob/master/brains/Essentials/perfect.md)
 
 ---
 
