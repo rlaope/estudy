@@ -25,6 +25,7 @@ Some content might not be helpful to you, but I hope some might become a turning
 - [Enhancing My Competency: A Path to Sustainable Growth](http://github.com/rlaope/estudy/blob/master/brains/Essentials/steady.md)
 - [Carpe diem](http://github.com/rlaope/estudy/blob/master/brains/Essentials/carpedm.md)
 - [How to Survive in the AI Era](http://github.com/rlaope/estudy/blob/master/brains/Essentials/ai_ithink.md)
+- [Done is Better Than Perfect](http://github.com/rlaope/estudy/blob/master/brains/Essentials/perfect.md)
 
 ---
 
