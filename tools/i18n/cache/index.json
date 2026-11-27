@@ -691,6 +691,17 @@
   "src": "1e7a7eb5e08d762b",
   "usage": 3051
  },
+ "AI/spedeco.md": {
+  "at": "2026-11-25T06:04:09Z",
+  "bad": [
+   "코드펜스 34→24",
+   "제목 39→25"
+  ],
+  "dst": "f3a892e41597585f",
+  "model": "google/gemini-2.5-flash",
+  "src": "aac48fd4c9b5fc1a",
+  "usage": 23517
+ },
  "AI/svm.md": {
   "at": "2026-09-17T10:11:06Z",
   "bad": [],
